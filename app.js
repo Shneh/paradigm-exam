@@ -735,19 +735,20 @@ class App {
       timestamp: new Date().toLocaleString()
     };
 
-    // Save to Database API Server — save ONCE, never in renderResultsScreen()
-    let savedOk = false;
-    try {
-      await window.api.submitExam(submissionPayload);
-      savedOk = true;
-    } catch (e) {
-      console.warn("API submit failed, falling back to localStorage:", e.message);
-      window.quizManager.addSubmission(submissionPayload);
-      window.quizManager.recordStudentAttempt(this.candidateId, this.currentQuiz.id);
-    }
+    // 1. Immediately record attempt & submission in local storage for instant zero-latency UI transition
+    window.quizManager.addSubmission(submissionPayload);
+    window.quizManager.recordStudentAttempt(this.candidateId, this.currentQuiz.id);
 
+    // 2. Render Results screen and transition UI immediately
     this.renderResultsScreen(isDisqualified);
     this.showView("results");
+
+    // 3. Sync to Firebase Cloud in background
+    window.api.submitExam(submissionPayload).then(() => {
+      console.log("🔥 Firebase Cloud: Submission & attempt lock synced!");
+    }).catch(e => {
+      console.warn("Firebase Cloud sync notice:", e.message);
+    });
   }
 
   renderResultsScreen(isDisqualified) {
