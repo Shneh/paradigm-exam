@@ -729,7 +729,8 @@ class App {
       userAnswers: this.userAnswers,
       startTime: this.examStartTime ? this.examStartTime.toISOString() : null,
       endTime: this.examEndTime ? this.examEndTime.toISOString() : null,
-      violationsCount: window.proctorEngine.violationCount,
+      violationsCount: (window.proctorEngine && window.proctorEngine.violationCount) ? window.proctorEngine.violationCount : 0,
+      violationsLog: (window.proctorEngine && window.proctorEngine.violationsLog) ? window.proctorEngine.violationsLog : [],
       isDisqualified,
       timestamp: new Date().toLocaleString()
     };

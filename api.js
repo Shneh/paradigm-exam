@@ -269,12 +269,15 @@ class ApiClient {
     const normStudent = (submission.candidateId || '').trim().toUpperCase();
     const quizId = submission.quizId;
     const attemptKey = `${normStudent}_${quizId}`;
+    const subId = submission.id || `SUB-${Date.now()}`;
+
+    // Clean payload to prevent undefined property errors in Firestore
+    const cleanSubmission = JSON.parse(JSON.stringify(submission));
 
     if (this.db) {
       try {
-        // Save submission doc
-        const subId = submission.id || `SUB-${Date.now()}`;
-        await this.db.collection('submissions').doc(subId).set(submission);
+        // Save submission doc via Firebase SDK
+        await this.db.collection('submissions').doc(subId).set(cleanSubmission);
 
         // Record attempt lock in Firestore
         await this.db.collection('attempts').doc(attemptKey).set({
@@ -283,15 +286,61 @@ class ApiClient {
           timestamp: new Date().toLocaleString()
         });
 
-        console.log("🔥 Firebase: Exam submission & attempt lock saved successfully");
+        console.log("🔥 Firebase SDK: Exam submission & attempt lock saved successfully");
         return { success: true };
       } catch (e) {
-        console.warn("Firestore submitExam fallback:", e.message);
+        console.warn("Firestore SDK submitExam error, trying REST API fallback:", e.message);
       }
     }
 
+    // Direct REST API Fallback to Firebase Firestore
+    try {
+      const BASE_URL = `https://firestore.googleapis.com/v1/projects/paradigm-exam/databases/(default)/documents`;
+      const API_KEY = `AIzaSyDeW2w-xOYLCXVlMYeARvKbjkWHDdxFEXM`;
+      
+      const toValue = (v) => {
+        if (v === null || v === undefined) return { nullValue: null };
+        if (typeof v === 'boolean') return { booleanValue: v };
+        if (typeof v === 'number') return Number.isInteger(v) ? { integerValue: String(v) } : { doubleValue: v };
+        if (typeof v === 'string') return { stringValue: v };
+        if (Array.isArray(v)) return { arrayValue: { values: v.map(toValue) } };
+        if (typeof v === 'object') {
+          const fields = {};
+          for (const [k, val] of Object.entries(v)) fields[k] = toValue(val);
+          return { mapValue: { fields } };
+        }
+        return { stringValue: String(v) };
+      };
+
+      const fields = {};
+      for (const [k, v] of Object.entries(cleanSubmission)) fields[k] = toValue(v);
+
+      await fetch(`${BASE_URL}/submissions/${subId}?key=${API_KEY}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fields })
+      });
+
+      const attemptFields = {
+        studentId: { stringValue: normStudent },
+        quizId: { stringValue: quizId },
+        timestamp: { stringValue: new Date().toLocaleString() }
+      };
+
+      await fetch(`${BASE_URL}/attempts/${attemptKey}?key=${API_KEY}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fields: attemptFields })
+      });
+
+      console.log("🔥 Firebase REST API: Exam submission & attempt lock saved successfully");
+      return { success: true };
+    } catch (restErr) {
+      console.warn("Firestore REST submitExam error:", restErr.message);
+    }
+
     if (window.quizManager) {
-      window.quizManager.addSubmission(submission);
+      window.quizManager.addSubmission(cleanSubmission);
       window.quizManager.recordStudentAttempt(normStudent, quizId);
     }
     return { success: true };
