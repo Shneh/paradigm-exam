@@ -60,7 +60,7 @@ class ProctorEngine {
   stop() {
     this.isActive = false;
 
-    // Remove security event listeners
+    // Remove security event listeners FIRST
     document.removeEventListener("fullscreenchange", this.handleFullscreenChange);
     document.removeEventListener("visibilitychange", this.handleVisibilityChange);
     window.removeEventListener("blur", this.handleWindowBlur);
@@ -72,7 +72,20 @@ class ProctorEngine {
     document.removeEventListener("dragstart", this.handleDragStart);
 
     document.body.classList.remove("proctor-strict-mode");
-    this.exitFullscreen();
+
+    // Always hide the fullscreen overlay — it may be visible if student
+    // had previously exited fullscreen, and exitFullscreen() below fires
+    // another fullscreenchange event asynchronously
+    this.hideFullscreenLockOverlay();
+
+    // Exit fullscreen gracefully; hide overlay again after it resolves
+    // to cover the async fullscreenchange event race condition
+    const exitPromise = this.exitFullscreen();
+    if (exitPromise && typeof exitPromise.then === "function") {
+      exitPromise.then(() => this.hideFullscreenLockOverlay()).catch(() => {});
+    }
+    // Belt-and-suspenders: hide overlay 300ms later in case of async delay
+    setTimeout(() => this.hideFullscreenLockOverlay(), 300);
   }
 
   /**
@@ -103,12 +116,13 @@ class ProctorEngine {
     try {
       if (document.fullscreenElement) {
         if (document.exitFullscreen) {
-          document.exitFullscreen().catch(() => {});
+          return document.exitFullscreen().catch(() => {});
         } else if (document.webkitExitFullscreen) {
           document.webkitExitFullscreen();
         }
       }
     } catch (e) {}
+    return Promise.resolve();
   }
 
   /**
