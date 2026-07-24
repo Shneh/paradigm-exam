@@ -1,0 +1,16 @@
+{
+  "name": "paradigm-exam",
+  "version": "2.0.0",
+  "description": "Paradigm Exam - Fullstack Secure Web Examination System with Backend Database API",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.6",
+    "cors": "^2.8.6",
+    "express": "^4.22.2"
+  }
+}

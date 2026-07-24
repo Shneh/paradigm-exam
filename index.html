@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradigm Exam - Online Assessment Platform</title>
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body class="proctor-strict-mode">
+
+  <!-- Toast Notification Container -->
+  <div id="proctor-toast-container"></div>
+
+  <!-- Fullscreen Recovery Lock Overlay -->
+  <div id="proctor-fullscreen-overlay" class="hidden">
+    <div class="lock-modal glass-card">
+      <div class="lock-icon">🔒</div>
+      <h2>FULL SCREEN REQUIRED</h2>
+      <p class="lock-desc">
+        Security Policy Violation: You have exited full-screen mode. Exam content has been temporarily locked to maintain test integrity.
+      </p>
+      <div class="lock-warning-box">
+        ⚠️ Exiting full-screen or switching tabs is logged as a security violation.
+      </div>
+      <button id="btn-reenter-fullscreen" class="btn btn-primary btn-glow btn-large">
+        ▶ Re-enter Full Screen Mode
+      </button>
+    </div>
+  </div>
+
+  <!-- TOP APP NAVIGATION BAR -->
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-icon">🎓</span>
+      <span class="brand-name">Paradigm <span class="highlight">Exam</span></span>
+      <span class="brand-badge">PROCTOR ACTIVE</span>
+    </div>
+    <div class="header-actions">
+      <button id="btn-theme-toggle" class="btn btn-secondary btn-sm" title="Toggle Theme UI">
+        ☀️ Light Mode
+      </button>
+      <button id="btn-open-admin" class="btn btn-secondary btn-sm">🛠️ Test Builder / Admin</button>
+    </div>
+  </header>
+
+  <main class="main-layout">
+
+    <!-- 1. INDEX / STUDENT LOGIN VIEW -->
+    <section id="view-login" class="view-section">
+      <div class="welcome-container glass-card">
+        <div class="welcome-header">
+          <h1>Student Portal Login</h1>
+          <p>Please enter your registered Student Roll ID and Password to log in.</p>
+        </div>
+
+        <form id="form-candidate-login">
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label for="candidate-id">Student Roll ID *</label>
+              <input type="text" id="candidate-id" class="form-control" placeholder="e.g. STU-101" required autocomplete="username">
+            </div>
+            <div class="form-group flex-1">
+              <label for="candidate-password">Password *</label>
+              <input type="password" id="candidate-password" class="form-control" placeholder="Enter student password" required autocomplete="current-password">
+            </div>
+          </div>
+
+          <div class="proctor-feature-notice" style="background: rgba(99, 102, 241, 0.08); border-color: rgba(99, 102, 241, 0.25); margin-bottom: 1.5rem;">
+            <h4 style="color: var(--primary);">💡 Registered Demo Student Credentials:</h4>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">
+              • ID: <strong>STU-101</strong> | Pass: <strong>stu101@password</strong> (Alex Johnson)<br>
+              • ID: <strong>STU-102</strong> | Pass: <strong>stu102@password</strong> (Rahul Sharma)<br>
+              • ID: <strong>STU-103</strong> | Pass: <strong>stu103@password</strong> (Priya Singh)
+            </span>
+          </div>
+
+          <button id="btn-student-login" type="submit" class="btn btn-primary btn-large btn-block btn-glow">
+            🔓 Login to Student Dashboard ➡️
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 2. STUDENT DASHBOARD MENU VIEW (AFTER LOGIN) -->
+    <section id="view-student-menu" class="view-section hidden">
+      <div class="welcome-container glass-card">
+        <div class="section-title-bar" style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+          <div>
+            <h1 id="menu-student-name">Welcome, Student</h1>
+            <span id="menu-student-id" class="sub-info">Roll ID: -</span>
+          </div>
+          <button id="btn-student-logout" class="btn btn-secondary btn-sm">🚪 Logout</button>
+        </div>
+
+        <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Please select an action from your student dashboard:</p>
+
+        <div class="dashboard-menu-grid">
+          <div id="btn-menu-attempt-test" class="dashboard-menu-card">
+            <span class="menu-card-icon">📝</span>
+            <h3>Attempt Test</h3>
+            <p>View all active examination papers and attempt your assigned test paper in secure full-screen mode.</p>
+            <span class="menu-card-action">View Test Papers ➡️</span>
+          </div>
+
+          <div id="btn-menu-check-results" class="dashboard-menu-card">
+            <span class="menu-card-icon">📊</span>
+            <h3>Check Results</h3>
+            <p>Check your scorecards, percentage marks, proctoring audit logs, and question review for published tests.</p>
+            <span class="menu-card-action">View My Results ➡️</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. AVAILABLE TESTS CATALOG VIEW -->
+    <section id="view-available-tests" class="view-section hidden">
+      <div class="admin-container glass-card">
+        <div class="section-title-bar" style="margin-bottom: 1.5rem;">
+          <div>
+            <h2>📝 Available Examination Papers</h2>
+            <span class="sub-info">Select an active test paper to proceed to the instructions page.</span>
+          </div>
+          <button class="btn btn-secondary btn-sm btn-back-dashboard">⬅️ Back to Dashboard</button>
+        </div>
+
+        <div id="available-quizzes-grid" class="quiz-grid">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PUBLISHED TEST RESULTS VIEW FOR STUDENT -->
+    <section id="view-published-results" class="view-section hidden">
+      <div class="admin-container glass-card">
+        <div class="section-title-bar" style="margin-bottom: 1.5rem;">
+          <div>
+            <h2>📊 Published Examination Results</h2>
+            <span class="sub-info">View scorecards for tests published by your teacher.</span>
+          </div>
+          <button class="btn btn-secondary btn-sm btn-back-dashboard">⬅️ Back to Dashboard</button>
+        </div>
+
+        <div id="student-published-results-container">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PRE-EXAM INSTRUCTIONS VIEW -->
+    <section id="view-instructions" class="view-section hidden">
+      <div class="instructions-modal glass-card">
+        <div class="inst-header">
+          <h2>Examination Instructions & Honor Code</h2>
+          <span class="inst-badge">Action Required</span>
+        </div>
+
+        <div class="inst-details-grid">
+          <div class="inst-detail-box">
+            <span class="label">Candidate:</span>
+            <strong id="inst-candidate-name">-</strong>
+          </div>
+          <div class="inst-detail-box">
+            <span class="label">Test Paper:</span>
+            <strong id="inst-quiz-title">-</strong>
+          </div>
+          <div class="inst-detail-box">
+            <span class="label">Total Questions:</span>
+            <strong id="inst-total-q">-</strong>
+          </div>
+          <div class="inst-detail-box">
+            <span class="label">Time Allowed:</span>
+            <strong id="inst-time-limit">-</strong>
+          </div>
+          <div class="inst-detail-box">
+            <span class="label">Total Marks & Scheme:</span>
+            <strong id="inst-total-marks" class="text-green">-</strong>
+          </div>
+          <div class="inst-detail-box">
+            <span class="label">Max Warnings Allowed:</span>
+            <strong id="inst-max-warnings" class="text-warning">-</strong>
+          </div>
+        </div>
+
+        <div class="rules-list-container">
+          <h3>Mandatory Rules & Security Compliance:</h3>
+          <ol>
+            <li><strong>Full Screen Lock:</strong> Clicking 'Start Test' will immediately enter browser full-screen. Exiting full-screen locks the test form until re-entered.</li>
+            <li><strong>No Tab / Window Change:</strong> Switching tabs or navigating outside the test window logs a major violation. Exceeding allowed warnings auto-submits your test.</li>
+            <li><strong>Strict Clipboard & Selection Interception:</strong> Text copying, cut, paste, right-clicking, and DevTools inspection are strictly blocked and monitored.</li>
+            <li><strong>Auto-Submit Timer:</strong> The exam will automatically submit when the countdown reaches 00:00.</li>
+          </ol>
+        </div>
+
+        <div class="inst-actions" style="display: flex; flex-direction: column; gap: 0.8rem;">
+          <button id="btn-begin-exam" class="btn btn-primary btn-glow btn-large btn-block">
+            🔒 I Agree & Start Test in Full Screen
+          </button>
+          <button type="button" class="btn btn-secondary btn-block btn-back-dashboard">
+            ⬅️ Cancel & Back to Dashboard
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ACTIVE EXAM VIEW -->
+    <section id="view-exam" class="view-section hidden">
+      <!-- Exam Control Bar -->
+      <div class="exam-header-bar glass-card">
+        <div class="exam-info">
+          <h2 id="exam-title">Examination Paper</h2>
+          <span id="header-candidate-info" class="sub-info">Candidate</span>
+        </div>
+
+        <div class="proctor-status-cluster">
+          <span id="proctor-violation-badge" class="badge badge-warning">
+            ⚠️ Warnings: 0/3
+          </span>
+          <div class="timer-box">
+            <span class="timer-label">TIME REMAINING</span>
+            <span id="timer-display" class="timer-digits">00:00</span>
+          </div>
+          <button id="btn-submit-exam" class="btn btn-danger btn-sm">
+            📥 Submit Form
+          </button>
+        </div>
+      </div>
+
+      <!-- Exam Main Split View -->
+      <div class="exam-split-container">
+        <!-- Main Form Container -->
+        <div class="question-main-card glass-card">
+          <div class="q-card-header">
+            <span id="q-number-badge" class="q-badge">Question 1 of 10</span>
+            <button id="btn-flag" class="btn btn-outline btn-sm">
+              🏳️ Mark for Review
+            </button>
+          </div>
+
+          <div class="q-card-body">
+            <h3 id="q-text" class="q-statement">
+              Loading question...
+            </h3>
+
+            <!-- MCQ Options List -->
+            <div id="q-options-container" class="options-container">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <div class="q-card-footer">
+            <button id="btn-prev" class="btn btn-secondary">
+              ⬅️ Previous
+            </button>
+
+            <div class="footer-center-actions">
+              <button id="btn-clear" class="btn btn-link">
+                Clear Response
+              </button>
+            </div>
+
+            <button id="btn-next" class="btn btn-primary">
+              Next Question ➡️
+            </button>
+          </div>
+        </div>
+
+        <!-- Sidebar Question Status Grid Navigator -->
+        <div class="question-sidebar glass-card">
+          <div class="sidebar-header">
+            <h3>Question Status Grid</h3>
+          </div>
+
+          <!-- Status Legend -->
+          <div class="grid-legend">
+            <div class="legend-item"><span class="dot dot-answered"></span> Answered</div>
+            <div class="legend-item"><span class="dot dot-unanswered"></span> Unanswered</div>
+            <div class="legend-item"><span class="dot dot-flagged"></span> Flagged</div>
+          </div>
+
+          <!-- Grid Items -->
+          <div id="question-nav-grid" class="nav-grid">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Summary Stats Box -->
+          <div class="sidebar-stats-box">
+            <div class="stat-row">
+              <span>Answered:</span>
+              <strong id="stat-answered" class="text-green">0</strong>
+            </div>
+            <div class="stat-row">
+              <span>Unanswered:</span>
+              <strong id="stat-unanswered">0</strong>
+            </div>
+            <div class="stat-row">
+              <span>Marked for Review:</span>
+              <strong id="stat-flagged" class="text-yellow">0</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. RESULTS & ANALYTICS VIEW -->
+    <section id="view-results" class="view-section hidden">
+      <div class="results-container glass-card">
+        
+        <div id="res-status-banner" class="results-banner">
+          <h2>EXAMINATION COMPLETED</h2>
+        </div>
+
+        <div class="results-summary-grid">
+          <div class="res-card">
+            <span class="res-label">Score Percentage</span>
+            <h1 id="res-score-percent" class="res-value">0%</h1>
+          </div>
+          <div class="res-card">
+            <span class="res-label">Marks Obtained</span>
+            <h2 id="res-score-detail" class="res-value">0 / 0</h2>
+          </div>
+          <div class="res-card">
+            <span class="res-label">Time Elapsed</span>
+            <h2 id="res-time-taken" class="res-value">0 min</h2>
+          </div>
+          <div class="res-card">
+            <span class="res-label">Candidate Name</span>
+            <h3 id="res-candidate-name" class="res-value">-</h3>
+            <span id="res-quiz-title" class="sub-text">-</span>
+          </div>
+        </div>
+
+        <!-- Proctor Integrity Violation Log -->
+        <div id="res-violations-summary" class="violations-summary-box">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Question Breakdown Review -->
+        <div class="results-breakdown-section">
+          <h3>Detailed Question Review & Explanations</h3>
+          <div id="res-breakdown-container" class="breakdown-list">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <div class="results-actions">
+          <button id="btn-back-home" class="btn btn-primary btn-large">
+            🏠 Return to Portal Main Menu
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ADMIN / TEST BUILDER VIEW -->
+    <section id="view-admin" class="view-section hidden">
+      <div class="admin-container glass-card">
+        <div class="admin-header">
+          <div>
+            <h2>🛡️ Admin Control Panel</h2>
+            <span class="sub-info">Logged in as Administrator (shneh)</span>
+          </div>
+          <button id="btn-admin-logout" class="btn btn-danger btn-sm">🚪 Logout Admin</button>
+        </div>
+
+        <!-- Admin Tab Navigation -->
+        <div class="admin-tabs">
+          <button class="admin-tab-btn active" data-tab="admin-tab-papers">📋 Test Papers & Activation Controls</button>
+          <button class="admin-tab-btn" data-tab="admin-tab-builder">➕ Create Test Paper</button>
+          <button class="admin-tab-btn" data-tab="admin-tab-students">👥 Student Roster</button>
+          <button class="admin-tab-btn" data-tab="admin-tab-submissions">📊 Exam Submissions</button>
+        </div>
+
+        <!-- TAB 1: TEST PAPERS & ACTIVATION CONTROLS -->
+        <div id="admin-tab-papers" class="admin-tab-content">
+          <div class="section-title-bar">
+            <h3>All Test Papers & Activation Statuses</h3>
+            <span class="sub-info">Toggle 'Activate Test' to allow students to take an exam.</span>
+          </div>
+          <div id="admin-papers-list" class="admin-papers-grid">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- TAB 2: CREATE TEST PAPER BUILDER -->
+        <div id="admin-tab-builder" class="admin-tab-content hidden">
+          <form id="admin-form-quiz">
+            <div class="admin-meta-card">
+              <h3>1. Test Form Configuration</h3>
+              <div class="form-row">
+                <div class="form-group flex-2">
+                  <label for="admin-quiz-title">Assessment Title *</label>
+                  <input type="text" id="admin-quiz-title" class="form-control" placeholder="e.g. Midterm Physics & Data Analysis Test" required>
+                </div>
+                <div class="form-group flex-1">
+                  <label for="admin-quiz-time">Time Limit (Mins) *</label>
+                  <input type="number" id="admin-quiz-time" class="form-control" value="15" min="1" max="180" required>
+                </div>
+                <div class="form-group flex-1">
+                  <label for="admin-quiz-pass">Passing Marks *</label>
+                  <input type="number" id="admin-quiz-pass" class="form-control" value="40" min="0" required>
+                </div>
+                <div class="form-group flex-1">
+                  <label for="admin-quiz-warnings">Max Warnings *</label>
+                  <input type="number" id="admin-quiz-warnings" class="form-control" value="3" min="1" max="10" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="admin-quiz-desc">Test Description & Instructions</label>
+                <textarea id="admin-quiz-desc" class="form-control" rows="2" placeholder="Brief outline for candidates..."></textarea>
+              </div>
+            </div>
+
+            <div class="admin-questions-section">
+              <div class="section-title-bar">
+                <h3>2. Multiple Choice Questions</h3>
+                <button id="admin-add-question" type="button" class="btn btn-outline btn-sm">
+                  ➕ Add Question Item
+                </button>
+              </div>
+
+              <div id="admin-questions-container" class="admin-q-list">
+                <!-- Dynamically added question cards -->
+              </div>
+            </div>
+
+            <div class="admin-actions-bar">
+              <div class="import-export-controls">
+                <button id="admin-export-json" type="button" class="btn btn-secondary btn-sm">
+                  📥 Export All Quizzes (JSON)
+                </button>
+                <label class="btn btn-secondary btn-sm import-label">
+                  📤 Import Quiz JSON
+                  <input type="file" id="admin-import-file" accept=".json" class="hidden">
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-large btn-glow">
+                💾 Save & Publish Test Form
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- TAB 3: STUDENT ROSTER MANAGEMENT -->
+        <div id="admin-tab-students" class="admin-tab-content hidden">
+          <div class="admin-meta-card">
+            <h3>Add New Student to Directory</h3>
+            <form id="admin-form-add-student" class="form-row">
+              <div class="form-group flex-1">
+                <label>Student Roll ID *</label>
+                <input type="text" id="new-stu-id" class="form-control" placeholder="e.g. STU-104" required>
+              </div>
+              <div class="form-group flex-2">
+                <label>Student Full Name *</label>
+                <input type="text" id="new-stu-name" class="form-control" placeholder="e.g. Sarah Miller" required>
+              </div>
+              <div class="form-group flex-1">
+                <label>Password *</label>
+                <input type="password" id="new-stu-pass" class="form-control" placeholder="Create password" required>
+              </div>
+              <div class="form-group flex-1">
+                <label>Class / Batch *</label>
+                <input type="text" id="new-stu-class" class="form-control" placeholder="e.g. NDA Prep" required>
+              </div>
+              <div class="form-group" style="align-self: flex-end;">
+                <button type="submit" class="btn btn-primary">➕ Register Student</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="section-title-bar">
+            <h3>Registered Students Roster</h3>
+          </div>
+          <div id="admin-students-list">
+            <!-- Dynamically populated table -->
+          </div>
+        </div>
+
+        <!-- TAB 4: EXAM SUBMISSIONS & PROCTOR AUDIT LOGS -->
+        <div id="admin-tab-submissions" class="admin-tab-content hidden">
+          <div class="section-title-bar">
+            <h3>Candidate Submissions & Security Audit Log</h3>
+          </div>
+          <div id="admin-submissions-list">
+            <!-- Dynamically populated table -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ADMIN LOGIN MODAL OVERLAY -->
+  <div id="modal-admin-login" class="modal-overlay hidden">
+    <div class="login-modal glass-card">
+      <div class="login-header">
+        <span class="lock-icon">🔑</span>
+        <h2>ADMIN LOGIN</h2>
+        <p>Enter Administrator credentials to access paper controls and student roster.</p>
+      </div>
+
+      <form id="form-admin-login" onsubmit="return false;">
+        <div class="form-group">
+          <label for="admin-user-id">Admin ID *</label>
+          <input type="text" id="admin-user-id" class="form-control" placeholder="Enter Admin ID" required autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="admin-user-pass">Password *</label>
+          <input type="password" id="admin-user-pass" class="form-control" placeholder="Enter Password" required>
+        </div>
+
+        <div id="admin-login-error" class="login-error-msg hidden">
+          ⚠️ Invalid Admin ID or Password!
+        </div>
+
+        <div class="login-modal-actions">
+          <button type="button" id="btn-cancel-admin-login" class="btn btn-secondary">Cancel</button>
+          <button type="button" id="btn-do-admin-login" class="btn btn-primary btn-glow">🔓 Login to Admin</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <footer class="app-footer">
+    <p>Paradigm Exam • Secure Web Examination System • Protected by Anti-Copy & Focus Verification</p>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="api.js?v=3"></script>
+  <script src="questions.js?v=3"></script>
+  <script src="proctor.js?v=3"></script>
+  <script src="app.js?v=3"></script>
+  <script src="admin.js?v=3"></script>
+</body>
+</html>
