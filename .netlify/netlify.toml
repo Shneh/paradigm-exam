@@ -9,7 +9,6 @@ headers = []
 [build]
 publish = "/Users/shnehrawat/testSite"
 publishOrigin = "config"
-base = "/Users/shnehrawat/testSite"
 
 [build.environment]
 
