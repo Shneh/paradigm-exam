@@ -472,6 +472,15 @@ class App {
     this.isExamActive = true;
     this.examStartTime = new Date();
 
+    // Ensure every question has a unique ID for proper answer and flag tracking
+    if (this.currentQuiz && this.currentQuiz.questions) {
+      this.currentQuiz.questions.forEach((q, idx) => {
+        if (!q.id) {
+          q.id = `${this.currentQuiz.id || 'quiz'}_q_${idx + 1}`;
+        }
+      });
+    }
+
     // Set timer
     this.remainingSeconds = this.currentQuiz.timeLimitMinutes * 60;
     this.startTimer();
@@ -629,11 +638,13 @@ class App {
   toggleFlagQuestion() {
     const question = this.currentQuiz.questions[this.currentQuestionIndex];
     if (!question) return;
+    const qId = question.id || `${this.currentQuiz.id || 'quiz'}_q_${this.currentQuestionIndex + 1}`;
+    question.id = qId;
 
-    if (this.flaggedQuestions.has(question.id)) {
-      this.flaggedQuestions.delete(question.id);
+    if (this.flaggedQuestions.has(qId)) {
+      this.flaggedQuestions.delete(qId);
     } else {
-      this.flaggedQuestions.add(question.id);
+      this.flaggedQuestions.add(qId);
     }
     this.renderCurrentQuestion();
     this.renderQuestionNavigator();

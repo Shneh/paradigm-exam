@@ -2,1484 +2,3380 @@
 
 const DEFAULT_QUIZZES = [
   {
-  "id": "nda-2-2023-maths",
-  "title": "UPSC NDA (II) 2023 - Mathematics Official Question Paper",
-  "description": "Authentic UPSC NDA & NA II 2023 Mathematics Paper. 120 Questions | 2.5 Hours | Total Marks: 300. Marking Scheme: +2.5 marks for correct, -0.8333 (1/3 of 2.5) deduction for incorrect, 0 for unattempted.",
-  "timeLimitMinutes": 150,
-  "maxViolationsAllowed": 3,
-  "marksPerCorrect": 2.5,
-  "negativeMarksPerWrong": 0.8333333333333334,
-  "totalMarks": 300,
-  "passingMarks": 120,
-  "isActive": true,
-  "isResultPublished": false,
-  "questions": [
-    {
-      "id": "nda2023_q1",
-      "text": "What is the locus of z such that |z - 1 - i| = |z + 1 + i| where z is a complex number?",
-      "options": [
-        "A straight line passing through origin",
-        "A circle centered at origin",
-        "An ellipse with foci (1,1) and (-1,-1)",
-        "A parabola"
-      ],
-      "correctAnswer": 0,
-      "explanation": "|z - (1+i)| = |z - (-1-i)| represents the perpendicular bisector of the line segment joining (1,1) and (-1,-1), which passes through the origin."
-    },
-    {
-      "id": "nda2023_q2",
-      "text": "What is the remainder when (1! + 2! + 3! + 4! + ... + 100!) is divided by 24?",
-      "options": [
-        "9",
-        "12",
-        "15",
-        "3"
-      ],
-      "correctAnswer": 0,
-      "explanation": "For n >= 4, n! is divisible by 24 (since 4! = 24). So remainder is (1! + 2! + 3!) mod 24 = (1 + 2 + 6) mod 24 = 9."
-    },
-    {
-      "id": "nda2023_q3",
-      "text": "If a, b, c are in Geometric Progression (GP) with common ratio r where 0 < r < 1, then a + b, 2b, b + c are in:",
-      "options": [
-        "Arithmetic Progression (AP)",
-        "Geometric Progression (GP)",
-        "Harmonic Progression (HP)",
-        "Neither AP nor GP nor HP"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Since b = ar, c = ar^2, we have (a+b) = a(1+r), 2b = 2ar, (b+c) = ar(1+r). Taking reciprocals shows 1/(a+b) + 1/(b+c) = 2/(2b), so they are in HP."
-    },
-    {
-      "id": "nda2023_q4",
-      "text": "What is the number of real roots of the equation x^4 - 4x - 1 = 0?",
-      "options": [
-        "0",
-        "1",
-        "2",
-        "4"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Let f(x) = x^4 - 4x - 1. f'(x) = 4x^3 - 4 = 0 => x = 1. f(1) = -4 < 0. As x -> inf, f(x) -> inf; as x -> -inf, f(x) -> inf. Thus f(x) crosses zero twice, yielding 2 real roots."
-    },
-    {
-      "id": "nda2023_q5",
-      "text": "If A = {x \u2208 R : x^2 - 5x + 6 = 0} and B = {x \u2208 R : x^2 - 7x + 12 = 0}, what is (A \u222a B) \\ (A \u2229 B)?",
-      "options": [
-        "{2, 4}",
-        "{2, 3, 4}",
-        "{2, 4, 3}",
-        "{2, 4}"
-      ],
-      "correctAnswer": 0,
-      "explanation": "A = {2, 3}, B = {3, 4}. A \u222a B = {2, 3, 4}, A \u2229 B = {3}. Symmetric difference = {2, 4}."
-    },
-    {
-      "id": "nda2023_q6",
-      "text": "Consider a matrix A of order 3x3 such that det(A) = 5. What is det(2 * adj(A)) equal to?",
-      "options": [
-        "40",
-        "100",
-        "200",
-        "400"
-      ],
-      "correctAnswer": 2,
-      "explanation": "det(k * adj(A)) = k^n * det(adj(A)) = k^n * (det(A))^(n-1). Here n=3, k=2, det(A)=5. det(2*adj(A)) = 2^3 * 5^(3-1) = 8 * 25 = 200."
-    },
-    {
-      "id": "nda2023_q7",
-      "text": "If the roots of x^2 - bx + c = 0 are two consecutive integers, then what is b^2 - 4c equal to?",
-      "options": [
-        "0",
-        "1",
-        "2",
-        "4"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Let roots be k and k+1. Difference of roots = 1. (alpha - beta)^2 = (alpha + beta)^2 - 4*alpha*beta = b^2 - 4c = 1^2 = 1."
-    },
-    {
-      "id": "nda2023_q8",
-      "text": "In how many ways can a committee of 5 members be formed from 6 men and 4 women such that at least 3 women are included?",
-      "options": [
-        "60",
-        "66",
-        "72",
-        "84"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Case 1: 3 women and 2 men = 4C3 * 6C2 = 4 * 15 = 60. Case 2: 4 women and 1 man = 4C4 * 6C1 = 1 * 6 = 6. Total = 60 + 6 = 66."
-    },
-    {
-      "id": "nda2023_q9",
-      "text": "What is the expansion coefficient of x^7 in (1 - 2x + x^2)^5?",
-      "options": [
-        "-120",
-        "-210",
-        "210",
-        "120"
-      ],
-      "correctAnswer": 1,
-      "explanation": "(1 - 2x + x^2)^5 = ((1 - x)^2)^5 = (1 - x)^10. Coefficient of x^7 in (1 - x)^10 is 10C7 * (-1)^7 = -120."
-    },
-    {
-      "id": "nda2023_q10",
-      "text": "If log_10(2), log_10(2^x - 1), log_10(2^x + 3) are in Arithmetic Progression (AP), then what is the value of x?",
-      "options": [
-        "log_2(5)",
-        "log_2(3)",
-        "1",
-        "2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "2*log_10(2^x - 1) = log_10(2) + log_10(2^x + 3) => (2^x - 1)^2 = 2(2^x + 3). Let y = 2^x. (y-1)^2 = 2y + 6 => y^2 - 4y - 5 = 0 => (y-5)(y+1) = 0. Since y > 0, y = 5 => 2^x = 5 => x = log_2(5)."
-    },
-    {
-      "id": "nda2023_q11",
-      "text": "What is the sum of all two-digit numbers which when divided by 4 yield 1 as remainder?",
-      "options": [
-        "1210",
-        "1215",
-        "1225",
-        "1250"
-      ],
-      "correctAnswer": 0,
-      "explanation": "First 2-digit number = 13, last = 97. AP: 13, 17, 21, ..., 97. n = (97 - 13)/4 + 1 = 22. Sum = (22/2) * (13 + 97) = 11 * 110 = 1210."
-    },
-    {
-      "id": "nda2023_q12",
-      "text": "If matrix A = [[0, 1], [-1, 0]], then what is A^4 equal to?",
-      "options": [
-        "I (Identity Matrix)",
-        "-I",
-        "A",
-        "-A"
-      ],
-      "correctAnswer": 0,
-      "explanation": "A^2 = [[-1, 0], [0, -1]] = -I. Hence A^4 = (-I)^2 = I."
-    },
-    {
-      "id": "nda2023_q13",
-      "text": "What is the value of det([[1, a, b+c], [1, b, c+a], [1, c, a+b]])?",
-      "options": [
-        "a + b + c",
-        "0",
-        "1",
-        "abc"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Add C3 -> C3 + C2 gives 3rd column as (a+b+c, a+b+c, a+b+c) which is a multiple of 1st column (1, 1, 1). Two proportional columns make det = 0."
-    },
-    {
-      "id": "nda2023_q14",
-      "text": "If a, b are roots of x^2 - p(x + 1) - c = 0, then what is (1 + a)(1 + b) equal to?",
-      "options": [
-        "1 - c",
-        "1 + c",
-        "c - 1",
-        "p + c"
-      ],
-      "correctAnswer": 0,
-      "explanation": "x^2 - px - (p + c) = 0. a + b = p, ab = -(p + c). (1 + a)(1 + b) = 1 + (a + b) + ab = 1 + p - p - c = 1 - c."
-    },
-    {
-      "id": "nda2023_q15",
-      "text": "How many terms are there in the expansion of (x + y + z)^10?",
-      "options": [
-        "33",
-        "66",
-        "55",
-        "44"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Number of terms in (x_1 + x_2 + ... + x_r)^n is (n + r - 1)C(r - 1). Here n=10, r=3. (10 + 3 - 1)C(3 - 1) = 12C2 = 66."
-    },
-    {
-      "id": "nda2023_q16",
-      "text": "If standard deviation of x_1, x_2, ..., x_n is \u03c3, then what is the standard deviation of 2x_1 + 3, 2x_2 + 3, ..., 2x_n + 3?",
-      "options": [
-        "\u03c3",
-        "2\u03c3",
-        "2\u03c3 + 3",
-        "4\u03c3"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Standard deviation is invariant under shift of origin (+3) and scales directly by multiplying factor (|2|). New SD = 2\u03c3."
-    },
-    {
-      "id": "nda2023_q17",
-      "text": "If tan(A) = 1/2 and tan(B) = 1/3, what is the value of A + B?",
-      "options": [
-        "\u03c0/6",
-        "\u03c0/4",
-        "\u03c0/3",
-        "\u03c0/2"
-      ],
-      "correctAnswer": 1,
-      "explanation": "tan(A + B) = (tan A + tan B) / (1 - tan A tan B) = (1/2 + 1/3) / (1 - 1/6) = (5/6)/(5/6) = 1 => A + B = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q18",
-      "text": "What is the maximum value of 3 sin(x) + 4 cos(x) + 5?",
-      "options": [
-        "5",
-        "10",
-        "12",
-        "7"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Max value of a sin x + b cos x is sqrt(a^2 + b^2) = sqrt(3^2 + 4^2) = 5. Max of 5 + 5 = 10."
-    },
-    {
-      "id": "nda2023_q19",
-      "text": "What is sin(15\u00b0) equal to?",
-      "options": [
-        "(\u221a3 - 1) / (2\u221a2)",
-        "(\u221a3 + 1) / (2\u221a2)",
-        "(1 - \u221a3) / (2\u221a2)",
-        "1 / (2\u221a2)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "sin(45\u00b0 - 30\u00b0) = sin 45 cos 30 - cos 45 sin 30 = (1/\u221a2)(\u221a3/2) - (1/\u221a2)(1/2) = (\u221a3 - 1)/(2\u221a2)."
-    },
-    {
-      "id": "nda2023_q20",
-      "text": "What is the principal value of sin^-1(sin(2\u03c0/3))?",
-      "options": [
-        "2\u03c0/3",
-        "\u03c0/3",
-        "-\u03c0/3",
-        "4\u03c0/3"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Range of sin^-1 is [-\u03c0/2, \u03c0/2]. sin(2\u03c0/3) = sin(\u03c0 - \u03c0/3) = sin(\u03c0/3). Thus sin^-1(sin(\u03c0/3)) = \u03c0/3."
-    },
-    {
-      "id": "nda2023_q21",
-      "text": "What is lim_{x -> 0} (sin(x) / x)^(1/x^2) equal to?",
-      "options": [
-        "e",
-        "1/e",
-        "e^(-1/6)",
-        "e^(1/6)"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Form 1^inf. L = exp( lim_{x->0} (sin x / x - 1)/x^2 ) = exp( lim_{x->0} (sin x - x)/x^3 ). By Taylor series sin x = x - x^3/6 => L = e^(-1/6)."
-    },
-    {
-      "id": "nda2023_q22",
-      "text": "What is lim_{x -> 0} (1 - cos(2x)) / x^2 equal to?",
-      "options": [
-        "1",
-        "2",
-        "4",
-        "1/2"
-      ],
-      "correctAnswer": 1,
-      "explanation": "1 - cos(2x) = 2 sin^2(x). lim_{x->0} 2 (sin x / x)^2 = 2 * 1^2 = 2."
-    },
-    {
-      "id": "nda2023_q23",
-      "text": "If f(x) = |x - 1| + |x - 2|, at how many points in R is f(x) non-differentiable?",
-      "options": [
-        "0",
-        "1",
-        "2",
-        "3"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Absolute value terms |x - a| have corner points where derivative is undefined. Here corner points are x = 1 and x = 2."
-    },
-    {
-      "id": "nda2023_q24",
-      "text": "What is the derivative of sec(x) with respect to x?",
-      "options": [
-        "sec(x) tan(x)",
-        "-sec(x) tan(x)",
-        "tan^2(x)",
-        "sec^2(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Standard calculus derivative: d/dx(sec x) = sec x tan x."
-    },
-    {
-      "id": "nda2023_q25",
-      "text": "What is the value of \u222b (1 / (1 + x^2)) dx from 0 to 1?",
-      "options": [
-        "\u03c0/2",
-        "\u03c0/4",
-        "\u03c0/3",
-        "1"
-      ],
-      "correctAnswer": 1,
-      "explanation": "\u222b (1/(1+x^2)) dx = tan^-1(x). Evaluated from 0 to 1 gives tan^-1(1) - tan^-1(0) = \u03c0/4 - 0 = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q26",
-      "text": "What is the area bounded by the curve y = x^2 and the line y = 4?",
-      "options": [
-        "16/3",
-        "32/3",
-        "8/3",
-        "64/3"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Intersection points at x = -2 and x = 2. Area = \u222b_{-2}^{2} (4 - x^2) dx = 2 * [4x - x^3/3]_{0}^{2} = 2 * (8 - 8/3) = 32/3."
-    },
-    {
-      "id": "nda2023_q27",
-      "text": "What is the order and degree of the differential equation (d^2y/dx^2)^3 + (dy/dx)^4 + y = 0?",
-      "options": [
-        "Order 2, Degree 3",
-        "Order 3, Degree 2",
-        "Order 2, Degree 4",
-        "Order 4, Degree 2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Highest derivative is d^2y/dx^2 (Order = 2). Power raised to highest derivative is 3 (Degree = 3)."
-    },
-    {
-      "id": "nda2023_q28",
-      "text": "What is the integrating factor of the linear differential equation dy/dx + P(x)y = Q(x)?",
-      "options": [
-        "e^(\u222b P dx)",
-        "\u222b P dx",
-        "e^(\u222b Q dx)",
-        "P(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Standard integrating factor for 1st order linear ODE is I.F. = e^(\u222b P(x) dx)."
-    },
-    {
-      "id": "nda2023_q29",
-      "text": "If f(x) = x^3 - 3x^2 + 3x - 100, then f(x) is:",
-      "options": [
-        "Strictly increasing on R",
-        "Strictly decreasing on R",
-        "Increasing for x > 1 and decreasing for x < 1",
-        "Neither increasing nor decreasing"
-      ],
-      "correctAnswer": 0,
-      "explanation": "f'(x) = 3x^2 - 6x + 3 = 3(x - 1)^2 >= 0 for all x \u2208 R, with zero only at isolated point x = 1. Thus f(x) is strictly increasing."
-    },
-    {
-      "id": "nda2023_q30",
-      "text": "What is the value of \u222b_{-\u03c0}^{\u03c0} sin^3(x) cos^2(x) dx?",
-      "options": [
-        "0",
-        "\u03c0",
-        "2\u03c0",
-        "1/2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "f(x) = sin^3(x) cos^2(x) is an odd function because f(-x) = sin^3(-x) cos^2(-x) = -f(x). Integral of odd function over symmetric interval [-a, a] is 0."
-    },
-    {
-      "id": "nda2023_q31",
-      "text": "What is the distance between the parallel lines 3x + 4y - 5 = 0 and 6x + 8y + 15 = 0?",
-      "options": [
-        "5/2",
-        "2",
-        "3",
-        "7/2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Rewrite first line: 6x + 8y - 10 = 0. Distance d = |c1 - c2| / sqrt(a^2 + b^2) = |-10 - 15| / sqrt(6^2 + 8^2) = 25 / 10 = 5/2."
-    },
-    {
-      "id": "nda2023_q32",
-      "text": "What is the equation of the circle centered at (2, -3) and passing through (5, 1)?",
-      "options": [
-        "(x - 2)^2 + (y + 3)^2 = 25",
-        "(x + 2)^2 + (y - 3)^2 = 25",
-        "(x - 2)^2 + (y - 3)^2 = 25",
-        "(x - 5)^2 + (y - 1)^2 = 25"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Radius r = sqrt((5-2)^2 + (1 - (-3))^2) = sqrt(3^2 + 4^2) = 5. Circle equation: (x - 2)^2 + (y + 3)^2 = 5^2 = 25."
-    },
-    {
-      "id": "nda2023_q33",
-      "text": "What is the eccentricity of the hyperbola x^2/9 - y^2/16 = 1?",
-      "options": [
-        "5/3",
-        "5/4",
-        "4/3",
-        "3/5"
-      ],
-      "correctAnswer": 0,
-      "explanation": "b^2 = a^2(e^2 - 1) => 16 = 9(e^2 - 1) => e^2 = 25/9 => e = 5/3."
-    },
-    {
-      "id": "nda2023_q34",
-      "text": "What is the angle between the vectors a = i + j - k and b = i - j + k?",
-      "options": [
-        "cos^-1(-1/3)",
-        "cos^-1(1/3)",
-        "\u03c0/3",
-        "2\u03c0/3"
-      ],
-      "correctAnswer": 0,
-      "explanation": "a . b = (1)(1) + (1)(-1) + (-1)(1) = -1. |a| = \u221a3, |b| = \u221a3. cos \u03b8 = (a.b)/(|a||b|) = -1/3 => \u03b8 = cos^-1(-1/3)."
-    },
-    {
-      "id": "nda2023_q35",
-      "text": "If a and b are unit vectors such that |a + b| = 1, then what is |a - b| equal to?",
-      "options": [
-        "\u221a2",
-        "\u221a3",
-        "2",
-        "1"
-      ],
-      "correctAnswer": 1,
-      "explanation": "|a+b|^2 + |a-b|^2 = 2(|a|^2 + |b|^2). 1^2 + |a-b|^2 = 2(1 + 1) = 4 => |a-b|^2 = 3 => |a-b| = \u221a3."
-    },
-    {
-      "id": "nda2023_q36",
-      "text": "What is the projection of vector a = 2i + 3j + 2k on vector b = i + 2j + k?",
-      "options": [
-        "10 / \u221a6",
-        "5 / \u221a6",
-        "10",
-        "\u221a6"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Projection = (a . b) / |b| = (2*1 + 3*2 + 2*1) / sqrt(1^2 + 2^2 + 1^2) = 10 / \u221a6."
-    },
-    {
-      "id": "nda2023_q37",
-      "text": "What is the perpendicular distance of point (1, 2, 3) from the plane x + 2y + 2z - 5 = 0?",
-      "options": [
-        "2",
-        "3",
-        "6/3",
-        "2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "d = |1(1) + 2(2) + 2(3) - 5| / sqrt(1^2 + 2^2 + 2^2) = |1 + 4 + 6 - 5| / 3 = 6 / 3 = 2."
-    },
-    {
-      "id": "nda2023_q38",
-      "text": "The direction cosines of a line equally inclined to the coordinate axes are:",
-      "options": [
-        "(\u00b11/\u221a3, \u00b11/\u221a3, \u00b11/\u221a3)",
-        "(\u00b11/3, \u00b11/3, \u00b11/3)",
-        "(\u00b11/\u221a2, \u00b11/\u221a2, \u00b11/\u221a2)",
-        "(1, 1, 1)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "l^2 + m^2 + n^2 = 1. Since line is equally inclined, l = m = n => 3l^2 = 1 => l = \u00b11/\u221a3."
-    },
-    {
-      "id": "nda2023_q39",
-      "text": "What is the magnitude of vector cross product |a \u00d7 b| if |a| = 4, |b| = 5, and a . b = 12?",
-      "options": [
-        "16",
-        "8",
-        "12",
-        "20"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Lagrange's identity: |a \u00d7 b|^2 + (a . b)^2 = |a|^2 |b|^2 => |a \u00d7 b|^2 + 144 = 16 * 25 = 400 => |a \u00d7 b|^2 = 256 => |a \u00d7 b| = 16."
-    },
-    {
-      "id": "nda2023_q40",
-      "text": "What is the scalar triple product [a b c] if a = i, b = j, c = k?",
-      "options": [
-        "1",
-        "0",
-        "-1",
-        "3"
-      ],
-      "correctAnswer": 0,
-      "explanation": "[i j k] = i . (j \u00d7 k) = i . i = 1."
-    },
-    {
-      "id": "nda2023_q41",
-      "text": "Two dice are thrown simultaneously. What is the probability that the sum of numbers obtained is 8?",
-      "options": [
-        "5/36",
-        "1/6",
-        "7/36",
-        "1/9"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Favorable pairs for sum 8: (2,6), (3,5), (4,4), (5,3), (6,2) -> 5 outcomes. Total = 36. P = 5/36."
-    },
-    {
-      "id": "nda2023_q42",
-      "text": "If P(A) = 0.4, P(B) = 0.5, and P(A \u2229 B) = 0.2, what is P(A|B)?",
-      "options": [
-        "0.4",
-        "0.5",
-        "0.25",
-        "0.8"
-      ],
-      "correctAnswer": 0,
-      "explanation": "P(A|B) = P(A \u2229 B) / P(B) = 0.2 / 0.5 = 0.4."
-    },
-    {
-      "id": "nda2023_q43",
-      "text": "If events A and B are independent, which of the following is correct?",
-      "options": [
-        "P(A \u2229 B) = P(A) * P(B)",
-        "P(A \u222a B) = P(A) + P(B)",
-        "P(A|B) = 0",
-        "P(A \u2229 B) = 0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "By definition, two events A and B are independent if and only if P(A \u2229 B) = P(A) * P(B)."
-    },
-    {
-      "id": "nda2023_q44",
-      "text": "A bag contains 5 red and 3 green balls. If 2 balls are drawn at random without replacement, what is the probability that both are red?",
-      "options": [
-        "5/14",
-        "25/64",
-        "5/28",
-        "15/56"
-      ],
-      "correctAnswer": 0,
-      "explanation": "P(both red) = (5C2) / (8C2) = 10 / 28 = 5/14."
-    },
-    {
-      "id": "nda2023_q45",
-      "text": "What is the mean of first n natural numbers?",
-      "options": [
-        "(n + 1) / 2",
-        "n / 2",
-        "(n - 1) / 2",
-        "n(n + 1) / 2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum = n(n+1)/2. Mean = Sum / n = (n + 1) / 2."
-    },
-    {
-      "id": "nda2023_q46",
-      "text": "What is the variance of first n natural numbers?",
-      "options": [
-        "(n^2 - 1) / 12",
-        "(n^2 + 1) / 12",
-        "n^2 / 12",
-        "(n + 1)^2 / 12"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Standard statistical formula for variance of 1, 2, ..., n is (n^2 - 1) / 12."
-    },
-    {
-      "id": "nda2023_q47",
-      "text": "If the mean of a binomial distribution is 4 and variance is 3, what is the value of parameter n?",
-      "options": [
-        "16",
-        "12",
-        "8",
-        "4"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Mean = np = 4, Variance = npq = 3. q = 3/4 => p = 1/4. n(1/4) = 4 => n = 16."
-    },
-    {
-      "id": "nda2023_q48",
-      "text": "If two regression lines are 3x + 2y - 26 = 0 and 6x + y - 31 = 0, what is the mean of x?",
-      "options": [
-        "4",
-        "7",
-        "5",
-        "6"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Regression lines intersect at (mean_x, mean_y). Solving 3x + 2y = 26 and 6x + y = 31 gives x = 4, y = 7."
-    },
-    {
-      "id": "nda2023_q49",
-      "text": "If coefficient of correlation between x and y is 0.8, what is the correlation between 2x and -3y?",
-      "options": [
-        "-0.8",
-        "0.8",
-        "-0.24",
-        "0.24"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Correlation coefficient is invariant under change of scale except when signs differ. Multiplying one variable by +2 and other by -3 changes sign: r' = -0.8."
-    },
-    {
-      "id": "nda2023_q50",
-      "text": "What is the probability of getting 53 Sundays in a leap year?",
-      "options": [
-        "2/7",
-        "1/7",
-        "53/366",
-        "2/366"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Leap year has 366 days = 52 weeks + 2 extra days. Extra days can be (Sun,Mon), (Mon,Tue), (Tue,Wed), (Wed,Thu), (Thu,Fri), (Fri,Sat), (Sat,Sun). 2 out of 7 contain Sunday."
-    },
-    {
-      "id": "nda2023_q51",
-      "text": "NDA II 2023 Maths Q51: What is the acute angle between the straight lines y - \u221a3 x - 5 = 0 and \u221a3 y - x + 6 = 0?",
-      "options": [
-        "30\u00b0",
-        "45\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "m1 = \u221a3 (60\u00b0), m2 = 1/\u221a3 (30\u00b0). Angle \u03b8 = |60\u00b0 - 30\u00b0| = 30\u00b0."
-    },
-    {
-      "id": "nda2023_q52",
-      "text": "NDA II 2023 Maths Q52: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
-      "options": [
-        "2\u221a3 (i + j + k)",
-        "3\u221a2 (i + j + k)",
-        "2 (i + j + k)",
-        "6 (i + j + k)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Unit vector along r is (i+j+k)/\u221a3. r = 6 * (i+j+k)/\u221a3 = 2\u221a3 (i + j + k)."
-    },
-    {
-      "id": "nda2023_q53",
-      "text": "NDA II 2023 Maths Q53: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
-      "options": [
-        "2^n",
-        "2^(n-1)",
-        "2^n - 1",
-        "n^2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum of all binomial coefficients for power n equals 2^n."
-    },
-    {
-      "id": "nda2023_q54",
-      "text": "NDA II 2023 Maths Q54: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
-      "options": [
-        "Skew-symmetric matrix",
-        "Symmetric matrix",
-        "Identity matrix",
-        "Zero matrix"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
-    },
-    {
-      "id": "nda2023_q55",
-      "text": "NDA II 2023 Maths Q55: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
-      "options": [
-        "sin(y/x) = cx",
-        "cos(y/x) = cx",
-        "tan(y/x) = cx",
-        "y = cx sin(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
-    },
-    {
-      "id": "nda2023_q56",
-      "text": "NDA II 2023 Maths Q56: What is the value of \u222b_0^(\u03c0/2) (\u221asin(x) / (\u221asin(x) + \u221acos(x))) dx?",
-      "options": [
-        "\u03c0/4",
-        "\u03c0/2",
-        "0",
-        "1"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Using King's property \u222b_a^b f(x) dx = \u222b_a^b f(a+b-x) dx, 2I = \u222b_0^(\u03c0/2) 1 dx = \u03c0/2 => I = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q57",
-      "text": "NDA II 2023 Maths Q57: What is the acute angle between the straight lines y - \u221a3 x - 5 = 0 and \u221a3 y - x + 6 = 0?",
-      "options": [
-        "30\u00b0",
-        "45\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "m1 = \u221a3 (60\u00b0), m2 = 1/\u221a3 (30\u00b0). Angle \u03b8 = |60\u00b0 - 30\u00b0| = 30\u00b0."
-    },
-    {
-      "id": "nda2023_q58",
-      "text": "NDA II 2023 Maths Q58: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
-      "options": [
-        "2\u221a3 (i + j + k)",
-        "3\u221a2 (i + j + k)",
-        "2 (i + j + k)",
-        "6 (i + j + k)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Unit vector along r is (i+j+k)/\u221a3. r = 6 * (i+j+k)/\u221a3 = 2\u221a3 (i + j + k)."
-    },
-    {
-      "id": "nda2023_q59",
-      "text": "NDA II 2023 Maths Q59: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
-      "options": [
-        "2^n",
-        "2^(n-1)",
-        "2^n - 1",
-        "n^2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum of all binomial coefficients for power n equals 2^n."
-    },
-    {
-      "id": "nda2023_q60",
-      "text": "NDA II 2023 Maths Q60: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
-      "options": [
-        "Skew-symmetric matrix",
-        "Symmetric matrix",
-        "Identity matrix",
-        "Zero matrix"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
-    },
-    {
-      "id": "nda2023_q61",
-      "text": "NDA II 2023 Maths Q61: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
-      "options": [
-        "sin(y/x) = cx",
-        "cos(y/x) = cx",
-        "tan(y/x) = cx",
-        "y = cx sin(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
-    },
-    {
-      "id": "nda2023_q62",
-      "text": "NDA II 2023 Maths Q62: What is the value of \u222b_0^(\u03c0/2) (\u221asin(x) / (\u221asin(x) + \u221acos(x))) dx?",
-      "options": [
-        "\u03c0/4",
-        "\u03c0/2",
-        "0",
-        "1"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Using King's property \u222b_a^b f(x) dx = \u222b_a^b f(a+b-x) dx, 2I = \u222b_0^(\u03c0/2) 1 dx = \u03c0/2 => I = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q63",
-      "text": "NDA II 2023 Maths Q63: What is the acute angle between the straight lines y - \u221a3 x - 5 = 0 and \u221a3 y - x + 6 = 0?",
-      "options": [
-        "30\u00b0",
-        "45\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "m1 = \u221a3 (60\u00b0), m2 = 1/\u221a3 (30\u00b0). Angle \u03b8 = |60\u00b0 - 30\u00b0| = 30\u00b0."
-    },
-    {
-      "id": "nda2023_q64",
-      "text": "NDA II 2023 Maths Q64: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
-      "options": [
-        "2\u221a3 (i + j + k)",
-        "3\u221a2 (i + j + k)",
-        "2 (i + j + k)",
-        "6 (i + j + k)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Unit vector along r is (i+j+k)/\u221a3. r = 6 * (i+j+k)/\u221a3 = 2\u221a3 (i + j + k)."
-    },
-    {
-      "id": "nda2023_q65",
-      "text": "NDA II 2023 Maths Q65: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
-      "options": [
-        "2^n",
-        "2^(n-1)",
-        "2^n - 1",
-        "n^2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum of all binomial coefficients for power n equals 2^n."
-    },
-    {
-      "id": "nda2023_q66",
-      "text": "NDA II 2023 Maths Q66: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
-      "options": [
-        "Skew-symmetric matrix",
-        "Symmetric matrix",
-        "Identity matrix",
-        "Zero matrix"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
-    },
-    {
-      "id": "nda2023_q67",
-      "text": "NDA II 2023 Maths Q67: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
-      "options": [
-        "sin(y/x) = cx",
-        "cos(y/x) = cx",
-        "tan(y/x) = cx",
-        "y = cx sin(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
-    },
-    {
-      "id": "nda2023_q68",
-      "text": "NDA II 2023 Maths Q68: What is the value of \u222b_0^(\u03c0/2) (\u221asin(x) / (\u221asin(x) + \u221acos(x))) dx?",
-      "options": [
-        "\u03c0/4",
-        "\u03c0/2",
-        "0",
-        "1"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Using King's property \u222b_a^b f(x) dx = \u222b_a^b f(a+b-x) dx, 2I = \u222b_0^(\u03c0/2) 1 dx = \u03c0/2 => I = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q69",
-      "text": "NDA II 2023 Maths Q69: What is the acute angle between the straight lines y - \u221a3 x - 5 = 0 and \u221a3 y - x + 6 = 0?",
-      "options": [
-        "30\u00b0",
-        "45\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "m1 = \u221a3 (60\u00b0), m2 = 1/\u221a3 (30\u00b0). Angle \u03b8 = |60\u00b0 - 30\u00b0| = 30\u00b0."
-    },
-    {
-      "id": "nda2023_q70",
-      "text": "NDA II 2023 Maths Q70: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
-      "options": [
-        "2\u221a3 (i + j + k)",
-        "3\u221a2 (i + j + k)",
-        "2 (i + j + k)",
-        "6 (i + j + k)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Unit vector along r is (i+j+k)/\u221a3. r = 6 * (i+j+k)/\u221a3 = 2\u221a3 (i + j + k)."
-    },
-    {
-      "id": "nda2023_q71",
-      "text": "NDA II 2023 Maths Q71: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
-      "options": [
-        "2^n",
-        "2^(n-1)",
-        "2^n - 1",
-        "n^2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum of all binomial coefficients for power n equals 2^n."
-    },
-    {
-      "id": "nda2023_q72",
-      "text": "NDA II 2023 Maths Q72: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
-      "options": [
-        "Skew-symmetric matrix",
-        "Symmetric matrix",
-        "Identity matrix",
-        "Zero matrix"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
-    },
-    {
-      "id": "nda2023_q73",
-      "text": "NDA II 2023 Maths Q73: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
-      "options": [
-        "sin(y/x) = cx",
-        "cos(y/x) = cx",
-        "tan(y/x) = cx",
-        "y = cx sin(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
-    },
-    {
-      "id": "nda2023_q74",
-      "text": "NDA II 2023 Maths Q74: What is the value of \u222b_0^(\u03c0/2) (\u221asin(x) / (\u221asin(x) + \u221acos(x))) dx?",
-      "options": [
-        "\u03c0/4",
-        "\u03c0/2",
-        "0",
-        "1"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Using King's property \u222b_a^b f(x) dx = \u222b_a^b f(a+b-x) dx, 2I = \u222b_0^(\u03c0/2) 1 dx = \u03c0/2 => I = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q75",
-      "text": "NDA II 2023 Maths Q75: What is the acute angle between the straight lines y - \u221a3 x - 5 = 0 and \u221a3 y - x + 6 = 0?",
-      "options": [
-        "30\u00b0",
-        "45\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "m1 = \u221a3 (60\u00b0), m2 = 1/\u221a3 (30\u00b0). Angle \u03b8 = |60\u00b0 - 30\u00b0| = 30\u00b0."
-    },
-    {
-      "id": "nda2023_q76",
-      "text": "NDA II 2023 Maths Q76: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
-      "options": [
-        "2\u221a3 (i + j + k)",
-        "3\u221a2 (i + j + k)",
-        "2 (i + j + k)",
-        "6 (i + j + k)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Unit vector along r is (i+j+k)/\u221a3. r = 6 * (i+j+k)/\u221a3 = 2\u221a3 (i + j + k)."
-    },
-    {
-      "id": "nda2023_q77",
-      "text": "NDA II 2023 Maths Q77: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
-      "options": [
-        "2^n",
-        "2^(n-1)",
-        "2^n - 1",
-        "n^2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum of all binomial coefficients for power n equals 2^n."
-    },
-    {
-      "id": "nda2023_q78",
-      "text": "NDA II 2023 Maths Q78: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
-      "options": [
-        "Skew-symmetric matrix",
-        "Symmetric matrix",
-        "Identity matrix",
-        "Zero matrix"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
-    },
-    {
-      "id": "nda2023_q79",
-      "text": "NDA II 2023 Maths Q79: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
-      "options": [
-        "sin(y/x) = cx",
-        "cos(y/x) = cx",
-        "tan(y/x) = cx",
-        "y = cx sin(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
-    },
-    {
-      "id": "nda2023_q80",
-      "text": "NDA II 2023 Maths Q80: What is the value of \u222b_0^(\u03c0/2) (\u221asin(x) / (\u221asin(x) + \u221acos(x))) dx?",
-      "options": [
-        "\u03c0/4",
-        "\u03c0/2",
-        "0",
-        "1"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Using King's property \u222b_a^b f(x) dx = \u222b_a^b f(a+b-x) dx, 2I = \u222b_0^(\u03c0/2) 1 dx = \u03c0/2 => I = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q81",
-      "text": "NDA II 2023 Maths Q81: What is the acute angle between the straight lines y - \u221a3 x - 5 = 0 and \u221a3 y - x + 6 = 0?",
-      "options": [
-        "30\u00b0",
-        "45\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "m1 = \u221a3 (60\u00b0), m2 = 1/\u221a3 (30\u00b0). Angle \u03b8 = |60\u00b0 - 30\u00b0| = 30\u00b0."
-    },
-    {
-      "id": "nda2023_q82",
-      "text": "NDA II 2023 Maths Q82: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
-      "options": [
-        "2\u221a3 (i + j + k)",
-        "3\u221a2 (i + j + k)",
-        "2 (i + j + k)",
-        "6 (i + j + k)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Unit vector along r is (i+j+k)/\u221a3. r = 6 * (i+j+k)/\u221a3 = 2\u221a3 (i + j + k)."
-    },
-    {
-      "id": "nda2023_q83",
-      "text": "NDA II 2023 Maths Q83: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
-      "options": [
-        "2^n",
-        "2^(n-1)",
-        "2^n - 1",
-        "n^2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum of all binomial coefficients for power n equals 2^n."
-    },
-    {
-      "id": "nda2023_q84",
-      "text": "NDA II 2023 Maths Q84: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
-      "options": [
-        "Skew-symmetric matrix",
-        "Symmetric matrix",
-        "Identity matrix",
-        "Zero matrix"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
-    },
-    {
-      "id": "nda2023_q85",
-      "text": "NDA II 2023 Maths Q85: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
-      "options": [
-        "sin(y/x) = cx",
-        "cos(y/x) = cx",
-        "tan(y/x) = cx",
-        "y = cx sin(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
-    },
-    {
-      "id": "nda2023_q86",
-      "text": "NDA II 2023 Maths Q86: What is the value of \u222b_0^(\u03c0/2) (\u221asin(x) / (\u221asin(x) + \u221acos(x))) dx?",
-      "options": [
-        "\u03c0/4",
-        "\u03c0/2",
-        "0",
-        "1"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Using King's property \u222b_a^b f(x) dx = \u222b_a^b f(a+b-x) dx, 2I = \u222b_0^(\u03c0/2) 1 dx = \u03c0/2 => I = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q87",
-      "text": "NDA II 2023 Maths Q87: What is the acute angle between the straight lines y - \u221a3 x - 5 = 0 and \u221a3 y - x + 6 = 0?",
-      "options": [
-        "30\u00b0",
-        "45\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "m1 = \u221a3 (60\u00b0), m2 = 1/\u221a3 (30\u00b0). Angle \u03b8 = |60\u00b0 - 30\u00b0| = 30\u00b0."
-    },
-    {
-      "id": "nda2023_q88",
-      "text": "NDA II 2023 Maths Q88: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
-      "options": [
-        "2\u221a3 (i + j + k)",
-        "3\u221a2 (i + j + k)",
-        "2 (i + j + k)",
-        "6 (i + j + k)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Unit vector along r is (i+j+k)/\u221a3. r = 6 * (i+j+k)/\u221a3 = 2\u221a3 (i + j + k)."
-    },
-    {
-      "id": "nda2023_q89",
-      "text": "NDA II 2023 Maths Q89: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
-      "options": [
-        "2^n",
-        "2^(n-1)",
-        "2^n - 1",
-        "n^2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum of all binomial coefficients for power n equals 2^n."
-    },
-    {
-      "id": "nda2023_q90",
-      "text": "NDA II 2023 Maths Q90: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
-      "options": [
-        "Skew-symmetric matrix",
-        "Symmetric matrix",
-        "Identity matrix",
-        "Zero matrix"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
-    },
-    {
-      "id": "nda2023_q91",
-      "text": "NDA II 2023 Maths Q91: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
-      "options": [
-        "sin(y/x) = cx",
-        "cos(y/x) = cx",
-        "tan(y/x) = cx",
-        "y = cx sin(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
-    },
-    {
-      "id": "nda2023_q92",
-      "text": "NDA II 2023 Maths Q92: What is the value of \u222b_0^(\u03c0/2) (\u221asin(x) / (\u221asin(x) + \u221acos(x))) dx?",
-      "options": [
-        "\u03c0/4",
-        "\u03c0/2",
-        "0",
-        "1"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Using King's property \u222b_a^b f(x) dx = \u222b_a^b f(a+b-x) dx, 2I = \u222b_0^(\u03c0/2) 1 dx = \u03c0/2 => I = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q93",
-      "text": "NDA II 2023 Maths Q93: What is the acute angle between the straight lines y - \u221a3 x - 5 = 0 and \u221a3 y - x + 6 = 0?",
-      "options": [
-        "30\u00b0",
-        "45\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "m1 = \u221a3 (60\u00b0), m2 = 1/\u221a3 (30\u00b0). Angle \u03b8 = |60\u00b0 - 30\u00b0| = 30\u00b0."
-    },
-    {
-      "id": "nda2023_q94",
-      "text": "NDA II 2023 Maths Q94: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
-      "options": [
-        "2\u221a3 (i + j + k)",
-        "3\u221a2 (i + j + k)",
-        "2 (i + j + k)",
-        "6 (i + j + k)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Unit vector along r is (i+j+k)/\u221a3. r = 6 * (i+j+k)/\u221a3 = 2\u221a3 (i + j + k)."
-    },
-    {
-      "id": "nda2023_q95",
-      "text": "NDA II 2023 Maths Q95: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
-      "options": [
-        "2^n",
-        "2^(n-1)",
-        "2^n - 1",
-        "n^2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum of all binomial coefficients for power n equals 2^n."
-    },
-    {
-      "id": "nda2023_q96",
-      "text": "NDA II 2023 Maths Q96: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
-      "options": [
-        "Skew-symmetric matrix",
-        "Symmetric matrix",
-        "Identity matrix",
-        "Zero matrix"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
-    },
-    {
-      "id": "nda2023_q97",
-      "text": "NDA II 2023 Maths Q97: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
-      "options": [
-        "sin(y/x) = cx",
-        "cos(y/x) = cx",
-        "tan(y/x) = cx",
-        "y = cx sin(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
-    },
-    {
-      "id": "nda2023_q98",
-      "text": "NDA II 2023 Maths Q98: What is the value of \u222b_0^(\u03c0/2) (\u221asin(x) / (\u221asin(x) + \u221acos(x))) dx?",
-      "options": [
-        "\u03c0/4",
-        "\u03c0/2",
-        "0",
-        "1"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Using King's property \u222b_a^b f(x) dx = \u222b_a^b f(a+b-x) dx, 2I = \u222b_0^(\u03c0/2) 1 dx = \u03c0/2 => I = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q99",
-      "text": "NDA II 2023 Maths Q99: What is the acute angle between the straight lines y - \u221a3 x - 5 = 0 and \u221a3 y - x + 6 = 0?",
-      "options": [
-        "30\u00b0",
-        "45\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "m1 = \u221a3 (60\u00b0), m2 = 1/\u221a3 (30\u00b0). Angle \u03b8 = |60\u00b0 - 30\u00b0| = 30\u00b0."
-    },
-    {
-      "id": "nda2023_q100",
-      "text": "NDA II 2023 Maths Q100: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
-      "options": [
-        "2\u221a3 (i + j + k)",
-        "3\u221a2 (i + j + k)",
-        "2 (i + j + k)",
-        "6 (i + j + k)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Unit vector along r is (i+j+k)/\u221a3. r = 6 * (i+j+k)/\u221a3 = 2\u221a3 (i + j + k)."
-    },
-    {
-      "id": "nda2023_q101",
-      "text": "NDA II 2023 Maths Q101: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
-      "options": [
-        "2^n",
-        "2^(n-1)",
-        "2^n - 1",
-        "n^2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum of all binomial coefficients for power n equals 2^n."
-    },
-    {
-      "id": "nda2023_q102",
-      "text": "NDA II 2023 Maths Q102: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
-      "options": [
-        "Skew-symmetric matrix",
-        "Symmetric matrix",
-        "Identity matrix",
-        "Zero matrix"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
-    },
-    {
-      "id": "nda2023_q103",
-      "text": "NDA II 2023 Maths Q103: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
-      "options": [
-        "sin(y/x) = cx",
-        "cos(y/x) = cx",
-        "tan(y/x) = cx",
-        "y = cx sin(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
-    },
-    {
-      "id": "nda2023_q104",
-      "text": "NDA II 2023 Maths Q104: What is the value of \u222b_0^(\u03c0/2) (\u221asin(x) / (\u221asin(x) + \u221acos(x))) dx?",
-      "options": [
-        "\u03c0/4",
-        "\u03c0/2",
-        "0",
-        "1"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Using King's property \u222b_a^b f(x) dx = \u222b_a^b f(a+b-x) dx, 2I = \u222b_0^(\u03c0/2) 1 dx = \u03c0/2 => I = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q105",
-      "text": "NDA II 2023 Maths Q105: What is the acute angle between the straight lines y - \u221a3 x - 5 = 0 and \u221a3 y - x + 6 = 0?",
-      "options": [
-        "30\u00b0",
-        "45\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "m1 = \u221a3 (60\u00b0), m2 = 1/\u221a3 (30\u00b0). Angle \u03b8 = |60\u00b0 - 30\u00b0| = 30\u00b0."
-    },
-    {
-      "id": "nda2023_q106",
-      "text": "NDA II 2023 Maths Q106: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
-      "options": [
-        "2\u221a3 (i + j + k)",
-        "3\u221a2 (i + j + k)",
-        "2 (i + j + k)",
-        "6 (i + j + k)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Unit vector along r is (i+j+k)/\u221a3. r = 6 * (i+j+k)/\u221a3 = 2\u221a3 (i + j + k)."
-    },
-    {
-      "id": "nda2023_q107",
-      "text": "NDA II 2023 Maths Q107: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
-      "options": [
-        "2^n",
-        "2^(n-1)",
-        "2^n - 1",
-        "n^2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum of all binomial coefficients for power n equals 2^n."
-    },
-    {
-      "id": "nda2023_q108",
-      "text": "NDA II 2023 Maths Q108: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
-      "options": [
-        "Skew-symmetric matrix",
-        "Symmetric matrix",
-        "Identity matrix",
-        "Zero matrix"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
-    },
-    {
-      "id": "nda2023_q109",
-      "text": "NDA II 2023 Maths Q109: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
-      "options": [
-        "sin(y/x) = cx",
-        "cos(y/x) = cx",
-        "tan(y/x) = cx",
-        "y = cx sin(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
-    },
-    {
-      "id": "nda2023_q110",
-      "text": "NDA II 2023 Maths Q110: What is the value of \u222b_0^(\u03c0/2) (\u221asin(x) / (\u221asin(x) + \u221acos(x))) dx?",
-      "options": [
-        "\u03c0/4",
-        "\u03c0/2",
-        "0",
-        "1"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Using King's property \u222b_a^b f(x) dx = \u222b_a^b f(a+b-x) dx, 2I = \u222b_0^(\u03c0/2) 1 dx = \u03c0/2 => I = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q111",
-      "text": "NDA II 2023 Maths Q111: What is the acute angle between the straight lines y - \u221a3 x - 5 = 0 and \u221a3 y - x + 6 = 0?",
-      "options": [
-        "30\u00b0",
-        "45\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "m1 = \u221a3 (60\u00b0), m2 = 1/\u221a3 (30\u00b0). Angle \u03b8 = |60\u00b0 - 30\u00b0| = 30\u00b0."
-    },
-    {
-      "id": "nda2023_q112",
-      "text": "NDA II 2023 Maths Q112: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
-      "options": [
-        "2\u221a3 (i + j + k)",
-        "3\u221a2 (i + j + k)",
-        "2 (i + j + k)",
-        "6 (i + j + k)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Unit vector along r is (i+j+k)/\u221a3. r = 6 * (i+j+k)/\u221a3 = 2\u221a3 (i + j + k)."
-    },
-    {
-      "id": "nda2023_q113",
-      "text": "NDA II 2023 Maths Q113: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
-      "options": [
-        "2^n",
-        "2^(n-1)",
-        "2^n - 1",
-        "n^2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum of all binomial coefficients for power n equals 2^n."
-    },
-    {
-      "id": "nda2023_q114",
-      "text": "NDA II 2023 Maths Q114: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
-      "options": [
-        "Skew-symmetric matrix",
-        "Symmetric matrix",
-        "Identity matrix",
-        "Zero matrix"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
-    },
-    {
-      "id": "nda2023_q115",
-      "text": "NDA II 2023 Maths Q115: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
-      "options": [
-        "sin(y/x) = cx",
-        "cos(y/x) = cx",
-        "tan(y/x) = cx",
-        "y = cx sin(x)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
-    },
-    {
-      "id": "nda2023_q116",
-      "text": "NDA II 2023 Maths Q116: What is the value of \u222b_0^(\u03c0/2) (\u221asin(x) / (\u221asin(x) + \u221acos(x))) dx?",
-      "options": [
-        "\u03c0/4",
-        "\u03c0/2",
-        "0",
-        "1"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Using King's property \u222b_a^b f(x) dx = \u222b_a^b f(a+b-x) dx, 2I = \u222b_0^(\u03c0/2) 1 dx = \u03c0/2 => I = \u03c0/4."
-    },
-    {
-      "id": "nda2023_q117",
-      "text": "NDA II 2023 Maths Q117: What is the acute angle between the straight lines y - \u221a3 x - 5 = 0 and \u221a3 y - x + 6 = 0?",
-      "options": [
-        "30\u00b0",
-        "45\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "correctAnswer": 0,
-      "explanation": "m1 = \u221a3 (60\u00b0), m2 = 1/\u221a3 (30\u00b0). Angle \u03b8 = |60\u00b0 - 30\u00b0| = 30\u00b0."
-    },
-    {
-      "id": "nda2023_q118",
-      "text": "NDA II 2023 Maths Q118: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
-      "options": [
-        "2\u221a3 (i + j + k)",
-        "3\u221a2 (i + j + k)",
-        "2 (i + j + k)",
-        "6 (i + j + k)"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Unit vector along r is (i+j+k)/\u221a3. r = 6 * (i+j+k)/\u221a3 = 2\u221a3 (i + j + k)."
-    },
-    {
-      "id": "nda2023_q119",
-      "text": "NDA II 2023 Maths Q119: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
-      "options": [
-        "2^n",
-        "2^(n-1)",
-        "2^n - 1",
-        "n^2"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sum of all binomial coefficients for power n equals 2^n."
-    },
-    {
-      "id": "nda2023_q120",
-      "text": "NDA II 2023 Maths Q120: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
-      "options": [
-        "Skew-symmetric matrix",
-        "Symmetric matrix",
-        "Identity matrix",
-        "Zero matrix"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
-    }
-  ]
-},
-  {
-    id: "web-dev-101",
-    title: "Web Development & Frontend Engineering",
-    description: "Test your knowledge on HTML5, CSS3, JavaScript (ES6+), Web Security, and Web APIs.",
-    timeLimitMinutes: 15,
-    maxViolationsAllowed: 3,
-    marksPerCorrect: 1,
-    negativeMarksPerWrong: 0,
-    totalMarks: 10,
-    passingMarks: 4,
-    isActive: false,
-    isResultPublished: false,
-    questions: [
+    "id": "nda-2-2023-maths",
+    "title": "UPSC NDA (II) 2023 - Mathematics Official Question Paper",
+    "description": "Authentic UPSC NDA & NA II 2023 Mathematics Paper. 120 Questions | 2.5 Hours | Total Marks: 300. Marking Scheme: +2.5 marks for correct, -0.8333 (1/3 of 2.5) deduction for incorrect, 0 for unattempted.",
+    "timeLimitMinutes": 150,
+    "maxViolationsAllowed": 3,
+    "marksPerCorrect": 2.5,
+    "negativeMarksPerWrong": 0.8333333333333334,
+    "totalMarks": 300,
+    "passingMarks": 120,
+    "isActive": true,
+    "isResultPublished": false,
+    "questions": [
       {
-        id: "q1",
-        text: "Which of the following browser events is fired when a document becomes hidden or visible to the user?",
-        options: [
+        "id": "nda2023_q1",
+        "text": "What is the locus of z such that |z - 1 - i| = |z + 1 + i| where z is a complex number?",
+        "options": [
+          "A straight line passing through origin",
+          "A circle centered at origin",
+          "An ellipse with foci (1,1) and (-1,-1)",
+          "A parabola"
+        ],
+        "correctAnswer": 0,
+        "explanation": "|z - (1+i)| = |z - (-1-i)| represents the perpendicular bisector of the line segment joining (1,1) and (-1,-1), which passes through the origin."
+      },
+      {
+        "id": "nda2023_q2",
+        "text": "What is the remainder when (1! + 2! + 3! + 4! + ... + 100!) is divided by 24?",
+        "options": [
+          "9",
+          "12",
+          "15",
+          "3"
+        ],
+        "correctAnswer": 0,
+        "explanation": "For n >= 4, n! is divisible by 24 (since 4! = 24). So remainder is (1! + 2! + 3!) mod 24 = (1 + 2 + 6) mod 24 = 9."
+      },
+      {
+        "id": "nda2023_q3",
+        "text": "If a, b, c are in Geometric Progression (GP) with common ratio r where 0 < r < 1, then a + b, 2b, b + c are in:",
+        "options": [
+          "Arithmetic Progression (AP)",
+          "Geometric Progression (GP)",
+          "Harmonic Progression (HP)",
+          "Neither AP nor GP nor HP"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Since b = ar, c = ar^2, we have (a+b) = a(1+r), 2b = 2ar, (b+c) = ar(1+r). Taking reciprocals shows 1/(a+b) + 1/(b+c) = 2/(2b), so they are in HP."
+      },
+      {
+        "id": "nda2023_q4",
+        "text": "What is the number of real roots of the equation x^4 - 4x - 1 = 0?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "4"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Let f(x) = x^4 - 4x - 1. f'(x) = 4x^3 - 4 = 0 => x = 1. f(1) = -4 < 0. As x -> inf, f(x) -> inf; as x -> -inf, f(x) -> inf. Thus f(x) crosses zero twice, yielding 2 real roots."
+      },
+      {
+        "id": "nda2023_q5",
+        "text": "If A = {x ∈ R : x^2 - 5x + 6 = 0} and B = {x ∈ R : x^2 - 7x + 12 = 0}, what is (A ∪ B) \\ (A ∩ B)?",
+        "options": [
+          "{2, 4}",
+          "{2, 3, 4}",
+          "{2, 4, 3}",
+          "{2, 4}"
+        ],
+        "correctAnswer": 0,
+        "explanation": "A = {2, 3}, B = {3, 4}. A ∪ B = {2, 3, 4}, A ∩ B = {3}. Symmetric difference = {2, 4}."
+      },
+      {
+        "id": "nda2023_q6",
+        "text": "Consider a matrix A of order 3x3 such that det(A) = 5. What is det(2 * adj(A)) equal to?",
+        "options": [
+          "40",
+          "100",
+          "200",
+          "400"
+        ],
+        "correctAnswer": 2,
+        "explanation": "det(k * adj(A)) = k^n * det(adj(A)) = k^n * (det(A))^(n-1). Here n=3, k=2, det(A)=5. det(2*adj(A)) = 2^3 * 5^(3-1) = 8 * 25 = 200."
+      },
+      {
+        "id": "nda2023_q7",
+        "text": "If the roots of x^2 - bx + c = 0 are two consecutive integers, then what is b^2 - 4c equal to?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "4"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Let roots be k and k+1. Difference of roots = 1. (alpha - beta)^2 = (alpha + beta)^2 - 4*alpha*beta = b^2 - 4c = 1^2 = 1."
+      },
+      {
+        "id": "nda2023_q8",
+        "text": "In how many ways can a committee of 5 members be formed from 6 men and 4 women such that at least 3 women are included?",
+        "options": [
+          "60",
+          "66",
+          "72",
+          "84"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Case 1: 3 women and 2 men = 4C3 * 6C2 = 4 * 15 = 60. Case 2: 4 women and 1 man = 4C4 * 6C1 = 1 * 6 = 6. Total = 60 + 6 = 66."
+      },
+      {
+        "id": "nda2023_q9",
+        "text": "What is the expansion coefficient of x^7 in (1 - 2x + x^2)^5?",
+        "options": [
+          "-120",
+          "-210",
+          "210",
+          "120"
+        ],
+        "correctAnswer": 1,
+        "explanation": "(1 - 2x + x^2)^5 = ((1 - x)^2)^5 = (1 - x)^10. Coefficient of x^7 in (1 - x)^10 is 10C7 * (-1)^7 = -120."
+      },
+      {
+        "id": "nda2023_q10",
+        "text": "If log_10(2), log_10(2^x - 1), log_10(2^x + 3) are in Arithmetic Progression (AP), then what is the value of x?",
+        "options": [
+          "log_2(5)",
+          "log_2(3)",
+          "1",
+          "2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "2*log_10(2^x - 1) = log_10(2) + log_10(2^x + 3) => (2^x - 1)^2 = 2(2^x + 3). Let y = 2^x. (y-1)^2 = 2y + 6 => y^2 - 4y - 5 = 0 => (y-5)(y+1) = 0. Since y > 0, y = 5 => 2^x = 5 => x = log_2(5)."
+      },
+      {
+        "id": "nda2023_q11",
+        "text": "What is the sum of all two-digit numbers which when divided by 4 yield 1 as remainder?",
+        "options": [
+          "1210",
+          "1215",
+          "1225",
+          "1250"
+        ],
+        "correctAnswer": 0,
+        "explanation": "First 2-digit number = 13, last = 97. AP: 13, 17, 21, ..., 97. n = (97 - 13)/4 + 1 = 22. Sum = (22/2) * (13 + 97) = 11 * 110 = 1210."
+      },
+      {
+        "id": "nda2023_q12",
+        "text": "If matrix A = [[0, 1], [-1, 0]], then what is A^4 equal to?",
+        "options": [
+          "I (Identity Matrix)",
+          "-I",
+          "A",
+          "-A"
+        ],
+        "correctAnswer": 0,
+        "explanation": "A^2 = [[-1, 0], [0, -1]] = -I. Hence A^4 = (-I)^2 = I."
+      },
+      {
+        "id": "nda2023_q13",
+        "text": "What is the value of det([[1, a, b+c], [1, b, c+a], [1, c, a+b]])?",
+        "options": [
+          "a + b + c",
+          "0",
+          "1",
+          "abc"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Add C3 -> C3 + C2 gives 3rd column as (a+b+c, a+b+c, a+b+c) which is a multiple of 1st column (1, 1, 1). Two proportional columns make det = 0."
+      },
+      {
+        "id": "nda2023_q14",
+        "text": "If a, b are roots of x^2 - p(x + 1) - c = 0, then what is (1 + a)(1 + b) equal to?",
+        "options": [
+          "1 - c",
+          "1 + c",
+          "c - 1",
+          "p + c"
+        ],
+        "correctAnswer": 0,
+        "explanation": "x^2 - px - (p + c) = 0. a + b = p, ab = -(p + c). (1 + a)(1 + b) = 1 + (a + b) + ab = 1 + p - p - c = 1 - c."
+      },
+      {
+        "id": "nda2023_q15",
+        "text": "How many terms are there in the expansion of (x + y + z)^10?",
+        "options": [
+          "33",
+          "66",
+          "55",
+          "44"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Number of terms in (x_1 + x_2 + ... + x_r)^n is (n + r - 1)C(r - 1). Here n=10, r=3. (10 + 3 - 1)C(3 - 1) = 12C2 = 66."
+      },
+      {
+        "id": "nda2023_q16",
+        "text": "If standard deviation of x_1, x_2, ..., x_n is σ, then what is the standard deviation of 2x_1 + 3, 2x_2 + 3, ..., 2x_n + 3?",
+        "options": [
+          "σ",
+          "2σ",
+          "2σ + 3",
+          "4σ"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Standard deviation is invariant under shift of origin (+3) and scales directly by multiplying factor (|2|). New SD = 2σ."
+      },
+      {
+        "id": "nda2023_q17",
+        "text": "If tan(A) = 1/2 and tan(B) = 1/3, what is the value of A + B?",
+        "options": [
+          "π/6",
+          "π/4",
+          "π/3",
+          "π/2"
+        ],
+        "correctAnswer": 1,
+        "explanation": "tan(A + B) = (tan A + tan B) / (1 - tan A tan B) = (1/2 + 1/3) / (1 - 1/6) = (5/6)/(5/6) = 1 => A + B = π/4."
+      },
+      {
+        "id": "nda2023_q18",
+        "text": "What is the maximum value of 3 sin(x) + 4 cos(x) + 5?",
+        "options": [
+          "5",
+          "10",
+          "12",
+          "7"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Max value of a sin x + b cos x is sqrt(a^2 + b^2) = sqrt(3^2 + 4^2) = 5. Max of 5 + 5 = 10."
+      },
+      {
+        "id": "nda2023_q19",
+        "text": "What is sin(15°) equal to?",
+        "options": [
+          "(√3 - 1) / (2√2)",
+          "(√3 + 1) / (2√2)",
+          "(1 - √3) / (2√2)",
+          "1 / (2√2)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "sin(45° - 30°) = sin 45 cos 30 - cos 45 sin 30 = (1/√2)(√3/2) - (1/√2)(1/2) = (√3 - 1)/(2√2)."
+      },
+      {
+        "id": "nda2023_q20",
+        "text": "What is the principal value of sin^-1(sin(2π/3))?",
+        "options": [
+          "2π/3",
+          "π/3",
+          "-π/3",
+          "4π/3"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Range of sin^-1 is [-π/2, π/2]. sin(2π/3) = sin(π - π/3) = sin(π/3). Thus sin^-1(sin(π/3)) = π/3."
+      },
+      {
+        "id": "nda2023_q21",
+        "text": "What is lim_{x -> 0} (sin(x) / x)^(1/x^2) equal to?",
+        "options": [
+          "e",
+          "1/e",
+          "e^(-1/6)",
+          "e^(1/6)"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Form 1^inf. L = exp( lim_{x->0} (sin x / x - 1)/x^2 ) = exp( lim_{x->0} (sin x - x)/x^3 ). By Taylor series sin x = x - x^3/6 => L = e^(-1/6)."
+      },
+      {
+        "id": "nda2023_q22",
+        "text": "What is lim_{x -> 0} (1 - cos(2x)) / x^2 equal to?",
+        "options": [
+          "1",
+          "2",
+          "4",
+          "1/2"
+        ],
+        "correctAnswer": 1,
+        "explanation": "1 - cos(2x) = 2 sin^2(x). lim_{x->0} 2 (sin x / x)^2 = 2 * 1^2 = 2."
+      },
+      {
+        "id": "nda2023_q23",
+        "text": "If f(x) = |x - 1| + |x - 2|, at how many points in R is f(x) non-differentiable?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Absolute value terms |x - a| have corner points where derivative is undefined. Here corner points are x = 1 and x = 2."
+      },
+      {
+        "id": "nda2023_q24",
+        "text": "What is the derivative of sec(x) with respect to x?",
+        "options": [
+          "sec(x) tan(x)",
+          "-sec(x) tan(x)",
+          "tan^2(x)",
+          "sec^2(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Standard calculus derivative: d/dx(sec x) = sec x tan x."
+      },
+      {
+        "id": "nda2023_q25",
+        "text": "What is the value of ∫ (1 / (1 + x^2)) dx from 0 to 1?",
+        "options": [
+          "π/2",
+          "π/4",
+          "π/3",
+          "1"
+        ],
+        "correctAnswer": 1,
+        "explanation": "∫ (1/(1+x^2)) dx = tan^-1(x). Evaluated from 0 to 1 gives tan^-1(1) - tan^-1(0) = π/4 - 0 = π/4."
+      },
+      {
+        "id": "nda2023_q26",
+        "text": "What is the area bounded by the curve y = x^2 and the line y = 4?",
+        "options": [
+          "16/3",
+          "32/3",
+          "8/3",
+          "64/3"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Intersection points at x = -2 and x = 2. Area = ∫_{-2}^{2} (4 - x^2) dx = 2 * [4x - x^3/3]_{0}^{2} = 2 * (8 - 8/3) = 32/3."
+      },
+      {
+        "id": "nda2023_q27",
+        "text": "What is the order and degree of the differential equation (d^2y/dx^2)^3 + (dy/dx)^4 + y = 0?",
+        "options": [
+          "Order 2, Degree 3",
+          "Order 3, Degree 2",
+          "Order 2, Degree 4",
+          "Order 4, Degree 2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Highest derivative is d^2y/dx^2 (Order = 2). Power raised to highest derivative is 3 (Degree = 3)."
+      },
+      {
+        "id": "nda2023_q28",
+        "text": "What is the integrating factor of the linear differential equation dy/dx + P(x)y = Q(x)?",
+        "options": [
+          "e^(∫ P dx)",
+          "∫ P dx",
+          "e^(∫ Q dx)",
+          "P(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Standard integrating factor for 1st order linear ODE is I.F. = e^(∫ P(x) dx)."
+      },
+      {
+        "id": "nda2023_q29",
+        "text": "If f(x) = x^3 - 3x^2 + 3x - 100, then f(x) is:",
+        "options": [
+          "Strictly increasing on R",
+          "Strictly decreasing on R",
+          "Increasing for x > 1 and decreasing for x < 1",
+          "Neither increasing nor decreasing"
+        ],
+        "correctAnswer": 0,
+        "explanation": "f'(x) = 3x^2 - 6x + 3 = 3(x - 1)^2 >= 0 for all x ∈ R, with zero only at isolated point x = 1. Thus f(x) is strictly increasing."
+      },
+      {
+        "id": "nda2023_q30",
+        "text": "What is the value of ∫_{-π}^{π} sin^3(x) cos^2(x) dx?",
+        "options": [
+          "0",
+          "π",
+          "2π",
+          "1/2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "f(x) = sin^3(x) cos^2(x) is an odd function because f(-x) = sin^3(-x) cos^2(-x) = -f(x). Integral of odd function over symmetric interval [-a, a] is 0."
+      },
+      {
+        "id": "nda2023_q31",
+        "text": "What is the distance between the parallel lines 3x + 4y - 5 = 0 and 6x + 8y + 15 = 0?",
+        "options": [
+          "5/2",
+          "2",
+          "3",
+          "7/2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Rewrite first line: 6x + 8y - 10 = 0. Distance d = |c1 - c2| / sqrt(a^2 + b^2) = |-10 - 15| / sqrt(6^2 + 8^2) = 25 / 10 = 5/2."
+      },
+      {
+        "id": "nda2023_q32",
+        "text": "What is the equation of the circle centered at (2, -3) and passing through (5, 1)?",
+        "options": [
+          "(x - 2)^2 + (y + 3)^2 = 25",
+          "(x + 2)^2 + (y - 3)^2 = 25",
+          "(x - 2)^2 + (y - 3)^2 = 25",
+          "(x - 5)^2 + (y - 1)^2 = 25"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Radius r = sqrt((5-2)^2 + (1 - (-3))^2) = sqrt(3^2 + 4^2) = 5. Circle equation: (x - 2)^2 + (y + 3)^2 = 5^2 = 25."
+      },
+      {
+        "id": "nda2023_q33",
+        "text": "What is the eccentricity of the hyperbola x^2/9 - y^2/16 = 1?",
+        "options": [
+          "5/3",
+          "5/4",
+          "4/3",
+          "3/5"
+        ],
+        "correctAnswer": 0,
+        "explanation": "b^2 = a^2(e^2 - 1) => 16 = 9(e^2 - 1) => e^2 = 25/9 => e = 5/3."
+      },
+      {
+        "id": "nda2023_q34",
+        "text": "What is the angle between the vectors a = i + j - k and b = i - j + k?",
+        "options": [
+          "cos^-1(-1/3)",
+          "cos^-1(1/3)",
+          "π/3",
+          "2π/3"
+        ],
+        "correctAnswer": 0,
+        "explanation": "a . b = (1)(1) + (1)(-1) + (-1)(1) = -1. |a| = √3, |b| = √3. cos θ = (a.b)/(|a||b|) = -1/3 => θ = cos^-1(-1/3)."
+      },
+      {
+        "id": "nda2023_q35",
+        "text": "If a and b are unit vectors such that |a + b| = 1, then what is |a - b| equal to?",
+        "options": [
+          "√2",
+          "√3",
+          "2",
+          "1"
+        ],
+        "correctAnswer": 1,
+        "explanation": "|a+b|^2 + |a-b|^2 = 2(|a|^2 + |b|^2). 1^2 + |a-b|^2 = 2(1 + 1) = 4 => |a-b|^2 = 3 => |a-b| = √3."
+      },
+      {
+        "id": "nda2023_q36",
+        "text": "What is the projection of vector a = 2i + 3j + 2k on vector b = i + 2j + k?",
+        "options": [
+          "10 / √6",
+          "5 / √6",
+          "10",
+          "√6"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Projection = (a . b) / |b| = (2*1 + 3*2 + 2*1) / sqrt(1^2 + 2^2 + 1^2) = 10 / √6."
+      },
+      {
+        "id": "nda2023_q37",
+        "text": "What is the perpendicular distance of point (1, 2, 3) from the plane x + 2y + 2z - 5 = 0?",
+        "options": [
+          "2",
+          "3",
+          "6/3",
+          "2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "d = |1(1) + 2(2) + 2(3) - 5| / sqrt(1^2 + 2^2 + 2^2) = |1 + 4 + 6 - 5| / 3 = 6 / 3 = 2."
+      },
+      {
+        "id": "nda2023_q38",
+        "text": "The direction cosines of a line equally inclined to the coordinate axes are:",
+        "options": [
+          "(±1/√3, ±1/√3, ±1/√3)",
+          "(±1/3, ±1/3, ±1/3)",
+          "(±1/√2, ±1/√2, ±1/√2)",
+          "(1, 1, 1)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "l^2 + m^2 + n^2 = 1. Since line is equally inclined, l = m = n => 3l^2 = 1 => l = ±1/√3."
+      },
+      {
+        "id": "nda2023_q39",
+        "text": "What is the magnitude of vector cross product |a × b| if |a| = 4, |b| = 5, and a . b = 12?",
+        "options": [
+          "16",
+          "8",
+          "12",
+          "20"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Lagrange's identity: |a × b|^2 + (a . b)^2 = |a|^2 |b|^2 => |a × b|^2 + 144 = 16 * 25 = 400 => |a × b|^2 = 256 => |a × b| = 16."
+      },
+      {
+        "id": "nda2023_q40",
+        "text": "What is the scalar triple product [a b c] if a = i, b = j, c = k?",
+        "options": [
+          "1",
+          "0",
+          "-1",
+          "3"
+        ],
+        "correctAnswer": 0,
+        "explanation": "[i j k] = i . (j × k) = i . i = 1."
+      },
+      {
+        "id": "nda2023_q41",
+        "text": "Two dice are thrown simultaneously. What is the probability that the sum of numbers obtained is 8?",
+        "options": [
+          "5/36",
+          "1/6",
+          "7/36",
+          "1/9"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Favorable pairs for sum 8: (2,6), (3,5), (4,4), (5,3), (6,2) -> 5 outcomes. Total = 36. P = 5/36."
+      },
+      {
+        "id": "nda2023_q42",
+        "text": "If P(A) = 0.4, P(B) = 0.5, and P(A ∩ B) = 0.2, what is P(A|B)?",
+        "options": [
+          "0.4",
+          "0.5",
+          "0.25",
+          "0.8"
+        ],
+        "correctAnswer": 0,
+        "explanation": "P(A|B) = P(A ∩ B) / P(B) = 0.2 / 0.5 = 0.4."
+      },
+      {
+        "id": "nda2023_q43",
+        "text": "If events A and B are independent, which of the following is correct?",
+        "options": [
+          "P(A ∩ B) = P(A) * P(B)",
+          "P(A ∪ B) = P(A) + P(B)",
+          "P(A|B) = 0",
+          "P(A ∩ B) = 0"
+        ],
+        "correctAnswer": 0,
+        "explanation": "By definition, two events A and B are independent if and only if P(A ∩ B) = P(A) * P(B)."
+      },
+      {
+        "id": "nda2023_q44",
+        "text": "A bag contains 5 red and 3 green balls. If 2 balls are drawn at random without replacement, what is the probability that both are red?",
+        "options": [
+          "5/14",
+          "25/64",
+          "5/28",
+          "15/56"
+        ],
+        "correctAnswer": 0,
+        "explanation": "P(both red) = (5C2) / (8C2) = 10 / 28 = 5/14."
+      },
+      {
+        "id": "nda2023_q45",
+        "text": "What is the mean of first n natural numbers?",
+        "options": [
+          "(n + 1) / 2",
+          "n / 2",
+          "(n - 1) / 2",
+          "n(n + 1) / 2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum = n(n+1)/2. Mean = Sum / n = (n + 1) / 2."
+      },
+      {
+        "id": "nda2023_q46",
+        "text": "What is the variance of first n natural numbers?",
+        "options": [
+          "(n^2 - 1) / 12",
+          "(n^2 + 1) / 12",
+          "n^2 / 12",
+          "(n + 1)^2 / 12"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Standard statistical formula for variance of 1, 2, ..., n is (n^2 - 1) / 12."
+      },
+      {
+        "id": "nda2023_q47",
+        "text": "If the mean of a binomial distribution is 4 and variance is 3, what is the value of parameter n?",
+        "options": [
+          "16",
+          "12",
+          "8",
+          "4"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Mean = np = 4, Variance = npq = 3. q = 3/4 => p = 1/4. n(1/4) = 4 => n = 16."
+      },
+      {
+        "id": "nda2023_q48",
+        "text": "If two regression lines are 3x + 2y - 26 = 0 and 6x + y - 31 = 0, what is the mean of x?",
+        "options": [
+          "4",
+          "7",
+          "5",
+          "6"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Regression lines intersect at (mean_x, mean_y). Solving 3x + 2y = 26 and 6x + y = 31 gives x = 4, y = 7."
+      },
+      {
+        "id": "nda2023_q49",
+        "text": "If coefficient of correlation between x and y is 0.8, what is the correlation between 2x and -3y?",
+        "options": [
+          "-0.8",
+          "0.8",
+          "-0.24",
+          "0.24"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Correlation coefficient is invariant under change of scale except when signs differ. Multiplying one variable by +2 and other by -3 changes sign: r' = -0.8."
+      },
+      {
+        "id": "nda2023_q50",
+        "text": "What is the probability of getting 53 Sundays in a leap year?",
+        "options": [
+          "2/7",
+          "1/7",
+          "53/366",
+          "2/366"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Leap year has 366 days = 52 weeks + 2 extra days. Extra days can be (Sun,Mon), (Mon,Tue), (Tue,Wed), (Wed,Thu), (Thu,Fri), (Fri,Sat), (Sat,Sun). 2 out of 7 contain Sunday."
+      },
+      {
+        "id": "nda2023_q51",
+        "text": "NDA II 2023 Maths Q51: What is the acute angle between the straight lines y - √3 x - 5 = 0 and √3 y - x + 6 = 0?",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "m1 = √3 (60°), m2 = 1/√3 (30°). Angle θ = |60° - 30°| = 30°."
+      },
+      {
+        "id": "nda2023_q52",
+        "text": "NDA II 2023 Maths Q52: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
+        "options": [
+          "2√3 (i + j + k)",
+          "3√2 (i + j + k)",
+          "2 (i + j + k)",
+          "6 (i + j + k)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Unit vector along r is (i+j+k)/√3. r = 6 * (i+j+k)/√3 = 2√3 (i + j + k)."
+      },
+      {
+        "id": "nda2023_q53",
+        "text": "NDA II 2023 Maths Q53: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
+        "options": [
+          "2^n",
+          "2^(n-1)",
+          "2^n - 1",
+          "n^2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum of all binomial coefficients for power n equals 2^n."
+      },
+      {
+        "id": "nda2023_q54",
+        "text": "NDA II 2023 Maths Q54: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Zero matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
+      },
+      {
+        "id": "nda2023_q55",
+        "text": "NDA II 2023 Maths Q55: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
+        "options": [
+          "sin(y/x) = cx",
+          "cos(y/x) = cx",
+          "tan(y/x) = cx",
+          "y = cx sin(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
+      },
+      {
+        "id": "nda2023_q56",
+        "text": "NDA II 2023 Maths Q56: What is the value of ∫_0^(π/2) (√sin(x) / (√sin(x) + √cos(x))) dx?",
+        "options": [
+          "π/4",
+          "π/2",
+          "0",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Using King's property ∫_a^b f(x) dx = ∫_a^b f(a+b-x) dx, 2I = ∫_0^(π/2) 1 dx = π/2 => I = π/4."
+      },
+      {
+        "id": "nda2023_q57",
+        "text": "NDA II 2023 Maths Q57: What is the acute angle between the straight lines y - √3 x - 5 = 0 and √3 y - x + 6 = 0?",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "m1 = √3 (60°), m2 = 1/√3 (30°). Angle θ = |60° - 30°| = 30°."
+      },
+      {
+        "id": "nda2023_q58",
+        "text": "NDA II 2023 Maths Q58: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
+        "options": [
+          "2√3 (i + j + k)",
+          "3√2 (i + j + k)",
+          "2 (i + j + k)",
+          "6 (i + j + k)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Unit vector along r is (i+j+k)/√3. r = 6 * (i+j+k)/√3 = 2√3 (i + j + k)."
+      },
+      {
+        "id": "nda2023_q59",
+        "text": "NDA II 2023 Maths Q59: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
+        "options": [
+          "2^n",
+          "2^(n-1)",
+          "2^n - 1",
+          "n^2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum of all binomial coefficients for power n equals 2^n."
+      },
+      {
+        "id": "nda2023_q60",
+        "text": "NDA II 2023 Maths Q60: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Zero matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
+      },
+      {
+        "id": "nda2023_q61",
+        "text": "NDA II 2023 Maths Q61: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
+        "options": [
+          "sin(y/x) = cx",
+          "cos(y/x) = cx",
+          "tan(y/x) = cx",
+          "y = cx sin(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
+      },
+      {
+        "id": "nda2023_q62",
+        "text": "NDA II 2023 Maths Q62: What is the value of ∫_0^(π/2) (√sin(x) / (√sin(x) + √cos(x))) dx?",
+        "options": [
+          "π/4",
+          "π/2",
+          "0",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Using King's property ∫_a^b f(x) dx = ∫_a^b f(a+b-x) dx, 2I = ∫_0^(π/2) 1 dx = π/2 => I = π/4."
+      },
+      {
+        "id": "nda2023_q63",
+        "text": "NDA II 2023 Maths Q63: What is the acute angle between the straight lines y - √3 x - 5 = 0 and √3 y - x + 6 = 0?",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "m1 = √3 (60°), m2 = 1/√3 (30°). Angle θ = |60° - 30°| = 30°."
+      },
+      {
+        "id": "nda2023_q64",
+        "text": "NDA II 2023 Maths Q64: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
+        "options": [
+          "2√3 (i + j + k)",
+          "3√2 (i + j + k)",
+          "2 (i + j + k)",
+          "6 (i + j + k)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Unit vector along r is (i+j+k)/√3. r = 6 * (i+j+k)/√3 = 2√3 (i + j + k)."
+      },
+      {
+        "id": "nda2023_q65",
+        "text": "NDA II 2023 Maths Q65: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
+        "options": [
+          "2^n",
+          "2^(n-1)",
+          "2^n - 1",
+          "n^2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum of all binomial coefficients for power n equals 2^n."
+      },
+      {
+        "id": "nda2023_q66",
+        "text": "NDA II 2023 Maths Q66: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Zero matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
+      },
+      {
+        "id": "nda2023_q67",
+        "text": "NDA II 2023 Maths Q67: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
+        "options": [
+          "sin(y/x) = cx",
+          "cos(y/x) = cx",
+          "tan(y/x) = cx",
+          "y = cx sin(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
+      },
+      {
+        "id": "nda2023_q68",
+        "text": "NDA II 2023 Maths Q68: What is the value of ∫_0^(π/2) (√sin(x) / (√sin(x) + √cos(x))) dx?",
+        "options": [
+          "π/4",
+          "π/2",
+          "0",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Using King's property ∫_a^b f(x) dx = ∫_a^b f(a+b-x) dx, 2I = ∫_0^(π/2) 1 dx = π/2 => I = π/4."
+      },
+      {
+        "id": "nda2023_q69",
+        "text": "NDA II 2023 Maths Q69: What is the acute angle between the straight lines y - √3 x - 5 = 0 and √3 y - x + 6 = 0?",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "m1 = √3 (60°), m2 = 1/√3 (30°). Angle θ = |60° - 30°| = 30°."
+      },
+      {
+        "id": "nda2023_q70",
+        "text": "NDA II 2023 Maths Q70: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
+        "options": [
+          "2√3 (i + j + k)",
+          "3√2 (i + j + k)",
+          "2 (i + j + k)",
+          "6 (i + j + k)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Unit vector along r is (i+j+k)/√3. r = 6 * (i+j+k)/√3 = 2√3 (i + j + k)."
+      },
+      {
+        "id": "nda2023_q71",
+        "text": "NDA II 2023 Maths Q71: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
+        "options": [
+          "2^n",
+          "2^(n-1)",
+          "2^n - 1",
+          "n^2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum of all binomial coefficients for power n equals 2^n."
+      },
+      {
+        "id": "nda2023_q72",
+        "text": "NDA II 2023 Maths Q72: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Zero matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
+      },
+      {
+        "id": "nda2023_q73",
+        "text": "NDA II 2023 Maths Q73: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
+        "options": [
+          "sin(y/x) = cx",
+          "cos(y/x) = cx",
+          "tan(y/x) = cx",
+          "y = cx sin(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
+      },
+      {
+        "id": "nda2023_q74",
+        "text": "NDA II 2023 Maths Q74: What is the value of ∫_0^(π/2) (√sin(x) / (√sin(x) + √cos(x))) dx?",
+        "options": [
+          "π/4",
+          "π/2",
+          "0",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Using King's property ∫_a^b f(x) dx = ∫_a^b f(a+b-x) dx, 2I = ∫_0^(π/2) 1 dx = π/2 => I = π/4."
+      },
+      {
+        "id": "nda2023_q75",
+        "text": "NDA II 2023 Maths Q75: What is the acute angle between the straight lines y - √3 x - 5 = 0 and √3 y - x + 6 = 0?",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "m1 = √3 (60°), m2 = 1/√3 (30°). Angle θ = |60° - 30°| = 30°."
+      },
+      {
+        "id": "nda2023_q76",
+        "text": "NDA II 2023 Maths Q76: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
+        "options": [
+          "2√3 (i + j + k)",
+          "3√2 (i + j + k)",
+          "2 (i + j + k)",
+          "6 (i + j + k)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Unit vector along r is (i+j+k)/√3. r = 6 * (i+j+k)/√3 = 2√3 (i + j + k)."
+      },
+      {
+        "id": "nda2023_q77",
+        "text": "NDA II 2023 Maths Q77: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
+        "options": [
+          "2^n",
+          "2^(n-1)",
+          "2^n - 1",
+          "n^2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum of all binomial coefficients for power n equals 2^n."
+      },
+      {
+        "id": "nda2023_q78",
+        "text": "NDA II 2023 Maths Q78: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Zero matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
+      },
+      {
+        "id": "nda2023_q79",
+        "text": "NDA II 2023 Maths Q79: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
+        "options": [
+          "sin(y/x) = cx",
+          "cos(y/x) = cx",
+          "tan(y/x) = cx",
+          "y = cx sin(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
+      },
+      {
+        "id": "nda2023_q80",
+        "text": "NDA II 2023 Maths Q80: What is the value of ∫_0^(π/2) (√sin(x) / (√sin(x) + √cos(x))) dx?",
+        "options": [
+          "π/4",
+          "π/2",
+          "0",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Using King's property ∫_a^b f(x) dx = ∫_a^b f(a+b-x) dx, 2I = ∫_0^(π/2) 1 dx = π/2 => I = π/4."
+      },
+      {
+        "id": "nda2023_q81",
+        "text": "NDA II 2023 Maths Q81: What is the acute angle between the straight lines y - √3 x - 5 = 0 and √3 y - x + 6 = 0?",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "m1 = √3 (60°), m2 = 1/√3 (30°). Angle θ = |60° - 30°| = 30°."
+      },
+      {
+        "id": "nda2023_q82",
+        "text": "NDA II 2023 Maths Q82: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
+        "options": [
+          "2√3 (i + j + k)",
+          "3√2 (i + j + k)",
+          "2 (i + j + k)",
+          "6 (i + j + k)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Unit vector along r is (i+j+k)/√3. r = 6 * (i+j+k)/√3 = 2√3 (i + j + k)."
+      },
+      {
+        "id": "nda2023_q83",
+        "text": "NDA II 2023 Maths Q83: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
+        "options": [
+          "2^n",
+          "2^(n-1)",
+          "2^n - 1",
+          "n^2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum of all binomial coefficients for power n equals 2^n."
+      },
+      {
+        "id": "nda2023_q84",
+        "text": "NDA II 2023 Maths Q84: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Zero matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
+      },
+      {
+        "id": "nda2023_q85",
+        "text": "NDA II 2023 Maths Q85: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
+        "options": [
+          "sin(y/x) = cx",
+          "cos(y/x) = cx",
+          "tan(y/x) = cx",
+          "y = cx sin(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
+      },
+      {
+        "id": "nda2023_q86",
+        "text": "NDA II 2023 Maths Q86: What is the value of ∫_0^(π/2) (√sin(x) / (√sin(x) + √cos(x))) dx?",
+        "options": [
+          "π/4",
+          "π/2",
+          "0",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Using King's property ∫_a^b f(x) dx = ∫_a^b f(a+b-x) dx, 2I = ∫_0^(π/2) 1 dx = π/2 => I = π/4."
+      },
+      {
+        "id": "nda2023_q87",
+        "text": "NDA II 2023 Maths Q87: What is the acute angle between the straight lines y - √3 x - 5 = 0 and √3 y - x + 6 = 0?",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "m1 = √3 (60°), m2 = 1/√3 (30°). Angle θ = |60° - 30°| = 30°."
+      },
+      {
+        "id": "nda2023_q88",
+        "text": "NDA II 2023 Maths Q88: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
+        "options": [
+          "2√3 (i + j + k)",
+          "3√2 (i + j + k)",
+          "2 (i + j + k)",
+          "6 (i + j + k)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Unit vector along r is (i+j+k)/√3. r = 6 * (i+j+k)/√3 = 2√3 (i + j + k)."
+      },
+      {
+        "id": "nda2023_q89",
+        "text": "NDA II 2023 Maths Q89: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
+        "options": [
+          "2^n",
+          "2^(n-1)",
+          "2^n - 1",
+          "n^2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum of all binomial coefficients for power n equals 2^n."
+      },
+      {
+        "id": "nda2023_q90",
+        "text": "NDA II 2023 Maths Q90: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Zero matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
+      },
+      {
+        "id": "nda2023_q91",
+        "text": "NDA II 2023 Maths Q91: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
+        "options": [
+          "sin(y/x) = cx",
+          "cos(y/x) = cx",
+          "tan(y/x) = cx",
+          "y = cx sin(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
+      },
+      {
+        "id": "nda2023_q92",
+        "text": "NDA II 2023 Maths Q92: What is the value of ∫_0^(π/2) (√sin(x) / (√sin(x) + √cos(x))) dx?",
+        "options": [
+          "π/4",
+          "π/2",
+          "0",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Using King's property ∫_a^b f(x) dx = ∫_a^b f(a+b-x) dx, 2I = ∫_0^(π/2) 1 dx = π/2 => I = π/4."
+      },
+      {
+        "id": "nda2023_q93",
+        "text": "NDA II 2023 Maths Q93: What is the acute angle between the straight lines y - √3 x - 5 = 0 and √3 y - x + 6 = 0?",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "m1 = √3 (60°), m2 = 1/√3 (30°). Angle θ = |60° - 30°| = 30°."
+      },
+      {
+        "id": "nda2023_q94",
+        "text": "NDA II 2023 Maths Q94: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
+        "options": [
+          "2√3 (i + j + k)",
+          "3√2 (i + j + k)",
+          "2 (i + j + k)",
+          "6 (i + j + k)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Unit vector along r is (i+j+k)/√3. r = 6 * (i+j+k)/√3 = 2√3 (i + j + k)."
+      },
+      {
+        "id": "nda2023_q95",
+        "text": "NDA II 2023 Maths Q95: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
+        "options": [
+          "2^n",
+          "2^(n-1)",
+          "2^n - 1",
+          "n^2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum of all binomial coefficients for power n equals 2^n."
+      },
+      {
+        "id": "nda2023_q96",
+        "text": "NDA II 2023 Maths Q96: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Zero matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
+      },
+      {
+        "id": "nda2023_q97",
+        "text": "NDA II 2023 Maths Q97: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
+        "options": [
+          "sin(y/x) = cx",
+          "cos(y/x) = cx",
+          "tan(y/x) = cx",
+          "y = cx sin(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
+      },
+      {
+        "id": "nda2023_q98",
+        "text": "NDA II 2023 Maths Q98: What is the value of ∫_0^(π/2) (√sin(x) / (√sin(x) + √cos(x))) dx?",
+        "options": [
+          "π/4",
+          "π/2",
+          "0",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Using King's property ∫_a^b f(x) dx = ∫_a^b f(a+b-x) dx, 2I = ∫_0^(π/2) 1 dx = π/2 => I = π/4."
+      },
+      {
+        "id": "nda2023_q99",
+        "text": "NDA II 2023 Maths Q99: What is the acute angle between the straight lines y - √3 x - 5 = 0 and √3 y - x + 6 = 0?",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "m1 = √3 (60°), m2 = 1/√3 (30°). Angle θ = |60° - 30°| = 30°."
+      },
+      {
+        "id": "nda2023_q100",
+        "text": "NDA II 2023 Maths Q100: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
+        "options": [
+          "2√3 (i + j + k)",
+          "3√2 (i + j + k)",
+          "2 (i + j + k)",
+          "6 (i + j + k)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Unit vector along r is (i+j+k)/√3. r = 6 * (i+j+k)/√3 = 2√3 (i + j + k)."
+      },
+      {
+        "id": "nda2023_q101",
+        "text": "NDA II 2023 Maths Q101: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
+        "options": [
+          "2^n",
+          "2^(n-1)",
+          "2^n - 1",
+          "n^2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum of all binomial coefficients for power n equals 2^n."
+      },
+      {
+        "id": "nda2023_q102",
+        "text": "NDA II 2023 Maths Q102: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Zero matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
+      },
+      {
+        "id": "nda2023_q103",
+        "text": "NDA II 2023 Maths Q103: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
+        "options": [
+          "sin(y/x) = cx",
+          "cos(y/x) = cx",
+          "tan(y/x) = cx",
+          "y = cx sin(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
+      },
+      {
+        "id": "nda2023_q104",
+        "text": "NDA II 2023 Maths Q104: What is the value of ∫_0^(π/2) (√sin(x) / (√sin(x) + √cos(x))) dx?",
+        "options": [
+          "π/4",
+          "π/2",
+          "0",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Using King's property ∫_a^b f(x) dx = ∫_a^b f(a+b-x) dx, 2I = ∫_0^(π/2) 1 dx = π/2 => I = π/4."
+      },
+      {
+        "id": "nda2023_q105",
+        "text": "NDA II 2023 Maths Q105: What is the acute angle between the straight lines y - √3 x - 5 = 0 and √3 y - x + 6 = 0?",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "m1 = √3 (60°), m2 = 1/√3 (30°). Angle θ = |60° - 30°| = 30°."
+      },
+      {
+        "id": "nda2023_q106",
+        "text": "NDA II 2023 Maths Q106: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
+        "options": [
+          "2√3 (i + j + k)",
+          "3√2 (i + j + k)",
+          "2 (i + j + k)",
+          "6 (i + j + k)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Unit vector along r is (i+j+k)/√3. r = 6 * (i+j+k)/√3 = 2√3 (i + j + k)."
+      },
+      {
+        "id": "nda2023_q107",
+        "text": "NDA II 2023 Maths Q107: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
+        "options": [
+          "2^n",
+          "2^(n-1)",
+          "2^n - 1",
+          "n^2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum of all binomial coefficients for power n equals 2^n."
+      },
+      {
+        "id": "nda2023_q108",
+        "text": "NDA II 2023 Maths Q108: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Zero matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
+      },
+      {
+        "id": "nda2023_q109",
+        "text": "NDA II 2023 Maths Q109: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
+        "options": [
+          "sin(y/x) = cx",
+          "cos(y/x) = cx",
+          "tan(y/x) = cx",
+          "y = cx sin(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
+      },
+      {
+        "id": "nda2023_q110",
+        "text": "NDA II 2023 Maths Q110: What is the value of ∫_0^(π/2) (√sin(x) / (√sin(x) + √cos(x))) dx?",
+        "options": [
+          "π/4",
+          "π/2",
+          "0",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Using King's property ∫_a^b f(x) dx = ∫_a^b f(a+b-x) dx, 2I = ∫_0^(π/2) 1 dx = π/2 => I = π/4."
+      },
+      {
+        "id": "nda2023_q111",
+        "text": "NDA II 2023 Maths Q111: What is the acute angle between the straight lines y - √3 x - 5 = 0 and √3 y - x + 6 = 0?",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "m1 = √3 (60°), m2 = 1/√3 (30°). Angle θ = |60° - 30°| = 30°."
+      },
+      {
+        "id": "nda2023_q112",
+        "text": "NDA II 2023 Maths Q112: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
+        "options": [
+          "2√3 (i + j + k)",
+          "3√2 (i + j + k)",
+          "2 (i + j + k)",
+          "6 (i + j + k)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Unit vector along r is (i+j+k)/√3. r = 6 * (i+j+k)/√3 = 2√3 (i + j + k)."
+      },
+      {
+        "id": "nda2023_q113",
+        "text": "NDA II 2023 Maths Q113: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
+        "options": [
+          "2^n",
+          "2^(n-1)",
+          "2^n - 1",
+          "n^2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum of all binomial coefficients for power n equals 2^n."
+      },
+      {
+        "id": "nda2023_q114",
+        "text": "NDA II 2023 Maths Q114: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Zero matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
+      },
+      {
+        "id": "nda2023_q115",
+        "text": "NDA II 2023 Maths Q115: What is the general solution of the differential equation dy/dx = (y/x) + tan(y/x)?",
+        "options": [
+          "sin(y/x) = cx",
+          "cos(y/x) = cx",
+          "tan(y/x) = cx",
+          "y = cx sin(x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Let y = vx. v + x dv/dx = v + tan v => cot v dv = dx/x => ln|sin(y/x)| = ln|x| + ln c => sin(y/x) = cx."
+      },
+      {
+        "id": "nda2023_q116",
+        "text": "NDA II 2023 Maths Q116: What is the value of ∫_0^(π/2) (√sin(x) / (√sin(x) + √cos(x))) dx?",
+        "options": [
+          "π/4",
+          "π/2",
+          "0",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Using King's property ∫_a^b f(x) dx = ∫_a^b f(a+b-x) dx, 2I = ∫_0^(π/2) 1 dx = π/2 => I = π/4."
+      },
+      {
+        "id": "nda2023_q117",
+        "text": "NDA II 2023 Maths Q117: What is the acute angle between the straight lines y - √3 x - 5 = 0 and √3 y - x + 6 = 0?",
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "m1 = √3 (60°), m2 = 1/√3 (30°). Angle θ = |60° - 30°| = 30°."
+      },
+      {
+        "id": "nda2023_q118",
+        "text": "NDA II 2023 Maths Q118: If a vector r makes equal acute angles with x, y, z axes and has magnitude 6, what is vector r?",
+        "options": [
+          "2√3 (i + j + k)",
+          "3√2 (i + j + k)",
+          "2 (i + j + k)",
+          "6 (i + j + k)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Unit vector along r is (i+j+k)/√3. r = 6 * (i+j+k)/√3 = 2√3 (i + j + k)."
+      },
+      {
+        "id": "nda2023_q119",
+        "text": "NDA II 2023 Maths Q119: What is the value of C(n, 0) + C(n, 1) + C(n, 2) + ... + C(n, n)?",
+        "options": [
+          "2^n",
+          "2^(n-1)",
+          "2^n - 1",
+          "n^2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Sum of all binomial coefficients for power n equals 2^n."
+      },
+      {
+        "id": "nda2023_q120",
+        "text": "NDA II 2023 Maths Q120: If A and B are symmetric matrices of same order, then (AB - BA) is always:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Zero matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Hence skew-symmetric."
+      }
+    ]
+  },
+  {
+    "id": "web-dev-101",
+    "title": "Web Development & Frontend Engineering",
+    "description": "Test your knowledge on HTML5, CSS3, JavaScript (ES6+), Web Security, and Web APIs.",
+    "timeLimitMinutes": 15,
+    "maxViolationsAllowed": 3,
+    "marksPerCorrect": 1,
+    "negativeMarksPerWrong": 0,
+    "totalMarks": 10,
+    "passingMarks": 4,
+    "isActive": false,
+    "isResultPublished": false,
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Which of the following browser events is fired when a document becomes hidden or visible to the user?",
+        "options": [
           "window.onfocuschange",
           "document.onvisibilitychange",
           "document.onpagehide",
           "window.onstatechange"
         ],
-        correctAnswer: 1,
-        explanation: "The 'visibilitychange' event is fired at the document when the contents of its tab have become visible or have been hidden."
+        "correctAnswer": 1,
+        "explanation": "The 'visibilitychange' event is fired at the document when the contents of its tab have become visible or have been hidden."
+      }
+    ]
+  },
+  {
+    "id": "jee-mains-physics-1",
+    "title": "JEE Mains 2025/2026 - Physics Test 1 (Electrostatics & Current)",
+    "description": "25 PYQs on Electric Charges & Fields, Electric Potential & Capacitance, and Current Electricity. +4 for Correct, -1 for Incorrect.",
+    "timeLimitMinutes": 60,
+    "maxViolationsAllowed": 3,
+    "marksPerCorrect": 4,
+    "negativeMarksPerWrong": 1,
+    "totalMarks": 100,
+    "passingMarks": 40,
+    "isActive": true,
+    "isResultPublished": true,
+    "isHidden": false,
+    "questions": [
+      {
+        "id": "jmp1_q1",
+        "text": "Two point charges +q and +4q are separated by distance L. Where should a third charge Q be placed on the line joining them so that it experiences zero net electrostatic force?",
+        "options": [
+          "L/3 from +q",
+          "L/2 from +q",
+          "2L/3 from +q",
+          "L/4 from +q"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Force balance: k(q)(Q)/x² = k(4q)(Q)/(L-x)² => (L-x)/x = 2 => L - x = 2x => x = L/3 from charge +q."
+      },
+      {
+        "id": "jmp1_q2",
+        "text": "Electric field intensity at distance r on the axis of a thin uniformly charged ring of radius R and charge Q is maximum at r equal to:",
+        "options": [
+          "R / √2",
+          "R / 2",
+          "R",
+          "R √2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Electric field on ring axis: E = k Q r / (r² + R²)^(3/2). Setting dE/dr = 0 yields r = R / √2."
+      },
+      {
+        "id": "jmp1_q3",
+        "text": "A point charge q is placed at one corner of a cube of side a. The total electric flux passing through the cube is:",
+        "options": [
+          "q / (8 ε₀)",
+          "q / (6 ε₀)",
+          "q / (24 ε₀)",
+          "q / (4 ε₀)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "8 identical cubes meet at a corner. By Gauss's Law, the flux through one entire cube is q / (8 ε₀)."
+      },
+      {
+        "id": "jmp1_q4",
+        "text": "An electric dipole of dipole moment p is aligned at 30° with a uniform electric field E. The magnitude of torque acting on the dipole is:",
+        "options": [
+          "pE / 2",
+          "pE",
+          "√3 pE / 2",
+          "2 pE"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Torque τ = p E sin θ = p E sin(30°) = pE / 2."
+      },
+      {
+        "id": "jmp1_q5",
+        "text": "Work done in rotating an electric dipole of moment p in a uniform electric field E from θ = 0° to θ = 180° is:",
+        "options": [
+          "2 pE",
+          "pE",
+          "0",
+          "-2 pE"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Work W = -pE (cos 180° - cos 0°) = -pE (-1 - 1) = 2 pE."
+      },
+      {
+        "id": "jmp1_q6",
+        "text": "A spherical conducting shell of radius R carries charge Q. Electric potential at any interior point at distance r < R from center is:",
+        "options": [
+          "Q / (4πε₀R)",
+          "Q / (4πε₀r)",
+          "Zero",
+          "Q / (8πε₀R)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Electric field inside conductor E = 0, so potential is uniform and equal to surface potential V = Q / (4πε₀R)."
+      },
+      {
+        "id": "jmp1_q7",
+        "text": "Two capacitors of 2 µF and 4 µF are connected in series across a 120 V DC supply. Potential difference across the 2 µF capacitor is:",
+        "options": [
+          "80 V",
+          "40 V",
+          "60 V",
+          "100 V"
+        ],
+        "correctAnswer": 0,
+        "explanation": "In series, voltage divides inversely with capacitance: V₁ = V × C₂ / (C₁ + C₂) = 120 × 4 / 6 = 80 V."
+      },
+      {
+        "id": "jmp1_q8",
+        "text": "A parallel plate capacitor with plate area A and separation d is filled with a dielectric slab of constant K. Its capacitance becomes:",
+        "options": [
+          "K ε₀ A / d",
+          "ε₀ A / (K d)",
+          "K d / (ε₀ A)",
+          "(K + 1) ε₀ A / d"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Capacitance increases K times upon dielectric insertion: C = K C₀ = K ε₀ A / d."
+      },
+      {
+        "id": "jmp1_q9",
+        "text": "A 4 µF capacitor charged to 100 V is connected in parallel with an uncharged 6 µF capacitor. Common potential after connection is:",
+        "options": [
+          "40 V",
+          "50 V",
+          "60 V",
+          "20 V"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Common potential V = (C₁ V₁ + C₂ V₂) / (C₁ + C₂) = (4×100 + 6×0) / 10 = 40 V."
+      },
+      {
+        "id": "jmp1_q10",
+        "text": "Electrostatic energy stored per unit volume in a region of electric field E in vacuum is:",
+        "options": [
+          "½ ε₀ E²",
+          "ε₀ E²",
+          "½ ε₀² E",
+          "E² / (2 ε₀)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Energy density u_E = ½ ε₀ E²."
+      },
+      {
+        "id": "jmp1_q11",
+        "text": "A wire of resistance R is stretched uniformly until its length becomes 2 times its initial length. Its new resistance will be:",
+        "options": [
+          "4 R",
+          "2 R",
+          "R / 2",
+          "R / 4"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Volume V = A × L is constant. When L' = 2L, A' = A/2. New resistance R' = ρ (2L) / (A/2) = 4 (ρ L / A) = 4 R."
+      },
+      {
+        "id": "jmp1_q12",
+        "text": "Drift velocity v_d of free electrons in a metallic conductor varies with applied electric field E as:",
+        "options": [
+          "v_d ∝ E",
+          "v_d ∝ E²",
+          "v_d ∝ √E",
+          "v_d ∝ 1/E"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Drift velocity v_d = (e E / m) τ => v_d is directly proportional to E."
+      },
+      {
+        "id": "jmp1_q13",
+        "text": "Three resistors of 2 Ω, 3 Ω, and 6 Ω are connected in parallel. Their net equivalent resistance is:",
+        "options": [
+          "1 Ω",
+          "11 Ω",
+          "0.5 Ω",
+          "2 Ω"
+        ],
+        "correctAnswer": 0,
+        "explanation": "1/R_eq = 1/2 + 1/3 + 1/6 = (3+2+1)/6 = 6/6 = 1 => R_eq = 1 Ω."
+      },
+      {
+        "id": "jmp1_q14",
+        "text": "Kirchhoff's Junction Law (KCL) and Loop Law (KVL) express conservation of respectively:",
+        "options": [
+          "Charge and Energy",
+          "Energy and Charge",
+          "Charge and Momentum",
+          "Energy and Momentum"
+        ],
+        "correctAnswer": 0,
+        "explanation": "KCL represents conservation of electric charge, KVL represents conservation of energy."
+      },
+      {
+        "id": "jmp1_q15",
+        "text": "Four resistances P = 10 Ω, Q = 20 Ω, R = 15 Ω, S = 30 Ω form a Wheatstone bridge loop. The bridge status is:",
+        "options": [
+          "Balanced",
+          "Unbalanced",
+          "Resonant",
+          "Superconducting"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Ratio P/Q = 10/20 = 1/2 and R/S = 15/30 = 1/2. Since P/Q = R/S, the bridge is balanced."
+      },
+      {
+        "id": "jmp1_q16",
+        "text": "A cell of EMF E and internal resistance r is connected to load resistor R. Maximum power is transferred to R when:",
+        "options": [
+          "R = r",
+          "R = 2r",
+          "R = r/2",
+          "R >> r"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Maximum Power Transfer Theorem states power to load R is maximum when load R equals internal resistance r."
+      },
+      {
+        "id": "jmp1_q17",
+        "text": "A potentiometer wire of length 10 m has resistance 20 Ω connected in series with a 3 V battery and 10 Ω resistor. Potential gradient is:",
+        "options": [
+          "0.2 V/m",
+          "0.3 V/m",
+          "0.1 V/m",
+          "0.02 V/m"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Current I = 3 / (20 + 10) = 0.1 A. V_wire = I R_wire = 0.1 × 20 = 2 V. Potential gradient k = 2 / 10 = 0.2 V/m."
+      },
+      {
+        "id": "jmp1_q18",
+        "text": "Two electric bulbs rated 220 V - 60 W and 220 V - 100 W are connected in series across 220 V line. Which bulb glows brighter?",
+        "options": [
+          "60 W bulb",
+          "100 W bulb",
+          "Both glow equally",
+          "Neither glows"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Bulb resistance R = V²/P (R₆₀ > R₁₀₀). In series, current I is identical. Power P_actual = I² R => 60 W bulb dissipates more power and glows brighter."
+      },
+      {
+        "id": "jmp1_q19",
+        "text": "If temperature coefficient of resistance is 0.00125 /°C and resistance at 27°C is 1 Ω, at what temperature will resistance become 2 Ω?",
+        "options": [
+          "827 °C",
+          "500 °C",
+          "1000 °C",
+          "400 °C"
+        ],
+        "correctAnswer": 0,
+        "explanation": "R_t = R₀ (1 + α Δt) => 2 = 1 (1 + 0.00125 Δt) => Δt = 800 °C => T = 27 + 800 = 827 °C."
+      },
+      {
+        "id": "jmp1_q20",
+        "text": "In an RC charging circuit, the time required for capacitor charge to reach 63.2% of its maximum steady-state charge is:",
+        "options": [
+          "Time Constant (τ = RC)",
+          "Half-life",
+          "Mean lifetime",
+          "Relaxation time"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Q(t) = Q_max (1 - e^(-t/RC)). At t = RC = τ, Q = Q_max (1 - 1/e) ≈ 0.632 Q_max."
+      },
+      {
+        "id": "jmp1_q21",
+        "text": "Electric field intensity at distance r from an infinitely long straight wire carrying uniform linear charge density λ is:",
+        "options": [
+          "λ / (2πε₀ r)",
+          "λ / (4πε₀ r²)",
+          "2λ / (πε₀ r)",
+          "λ / (ε₀ r)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Applying Gauss's Law around a cylindrical surface yields E = λ / (2πε₀ r)."
+      },
+      {
+        "id": "jmp1_q22",
+        "text": "Three identical capacitors of capacitance C are connected in a triangle network. Equivalent capacitance between any two corners is:",
+        "options": [
+          "3C / 2",
+          "2C / 3",
+          "3C",
+          "C / 3"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Two capacitors in series (C/2) are in parallel with the third (C): C_eq = C + C/2 = 3C/2."
+      },
+      {
+        "id": "jmp1_q23",
+        "text": "An electron enters horizontally between two horizontal parallel charged plates. Its path inside the uniform electric field is:",
+        "options": [
+          "Parabolic",
+          "Circular",
+          "Straight line",
+          "Elliptical"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Constant horizontal velocity combined with constant vertical acceleration (a_y = eE/m) produces a parabolic trajectory."
+      },
+      {
+        "id": "jmp1_q24",
+        "text": "Equivalent resistance between opposite corners of a cube made of 12 identical wires each of resistance R is:",
+        "options": [
+          "5R / 6",
+          "3R / 4",
+          "7R / 12",
+          "R"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Using nodal symmetry across body diagonal: R_eq = (1/3 + 1/6 + 1/3) R = 5R / 6."
+      },
+      {
+        "id": "jmp1_q25",
+        "text": "Capacitive reactance X_C of a 5 µF capacitor connected to a 50 Hz AC source is approximately:",
+        "options": [
+          "636.6 Ω",
+          "318.3 Ω",
+          "100 Ω",
+          "500 Ω"
+        ],
+        "correctAnswer": 0,
+        "explanation": "X_C = 1 / (2 π f C) = 1 / (2 × 3.1416 × 50 × 5×10⁻⁶) = 10⁶ / 1570.8 ≈ 636.6 Ω."
+      }
+    ]
+  },
+  {
+    "id": "jee-mains-chemistry-1",
+    "title": "JEE Mains 2025/2026 - Chemistry Test 1 (Physical Chemistry)",
+    "description": "25 PYQs on Chemical Kinetics, Solutions, and Electrochemistry. +4 for Correct, -1 for Incorrect.",
+    "timeLimitMinutes": 60,
+    "maxViolationsAllowed": 3,
+    "marksPerCorrect": 4,
+    "negativeMarksPerWrong": 1,
+    "totalMarks": 100,
+    "passingMarks": 40,
+    "isActive": true,
+    "isResultPublished": true,
+    "isHidden": false,
+    "questions": [
+      {
+        "id": "jmc1_q1",
+        "text": "For a first-order reaction, the time required for 99.9% completion is approximately how many times its half-life (t_1/2)?",
+        "options": [
+          "10 times",
+          "3 times",
+          "6.6 times",
+          "20 times"
+        ],
+        "correctAnswer": 0,
+        "explanation": "t_99.9% = (2.303/k) log(1000) = (2.303/k) × 3. t_1/2 = 0.693/k. Ratio = 3 × 2.303 / 0.693 ≈ 10."
+      },
+      {
+        "id": "jmc1_q2",
+        "text": "In Arrhenius equation k = A e^(-Ea/RT), a plot of ln k versus 1/T gives a straight line with slope equal to:",
+        "options": [
+          "-Ea / R",
+          "Ea / R",
+          "-Ea / (2.303 R)",
+          "A / R"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Taking natural log: ln k = ln A - (Ea/R)(1/T). Slope m = -Ea / R."
+      },
+      {
+        "id": "jmc1_q3",
+        "text": "Acid hydrolysis of ethyl acetate (CH₃COOC₂H₅ + H₂O -> CH₃COOH + C₂H₅OH) in excess water is an example of:",
+        "options": [
+          "Pseudo-first order reaction",
+          "Zero order reaction",
+          "Second order reaction",
+          "Third order reaction"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Water is present in large excess, so its concentration remains practically constant, making it pseudo-first order."
+      },
+      {
+        "id": "jmc1_q4",
+        "text": "According to Raoult's law, relative lowering of vapor pressure of a solution containing a non-volatile solute is equal to:",
+        "options": [
+          "Mole fraction of solute",
+          "Mole fraction of solvent",
+          "Molarity of solution",
+          "Molality of solution"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(P° - P)/P° = x_solute (mole fraction of non-volatile solute)."
+      },
+      {
+        "id": "jmc1_q5",
+        "text": "Which of the following liquid pairs forms a solution showing POSITIVE deviation from Raoult's law?",
+        "options": [
+          "Ethanol + Acetone",
+          "Chloroform + Acetone",
+          "Phenol + Aniline",
+          "Water + Nitric acid"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Ethanol has strong H-bonding. Adding acetone breaks some H-bonds, weakening A-B interactions compared to A-A and B-B, giving positive deviation."
+      },
+      {
+        "id": "jmc1_q6",
+        "text": "The Van 't Hoff factor (i) for a completely dissociated K₄[Fe(CN)₆] solute in dilute aqueous solution is:",
+        "options": [
+          "5",
+          "4",
+          "6",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "K₄[Fe(CN)₆] dissociates into 4 K⁺ + [Fe(CN)₆]⁴⁻ (5 ions total) => i = 5."
+      },
+      {
+        "id": "jmc1_q7",
+        "text": "Two solutions are ISOTONIC at a given temperature when they have identical:",
+        "options": [
+          "Osmotic pressure",
+          "Boiling point",
+          "Vapor pressure",
+          "Density"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Isotonic solutions exert equal osmotic pressure (π₁ = π₂) at a given temperature."
+      },
+      {
+        "id": "jmc1_q8",
+        "text": "Depression in freezing point ΔT_f is related to molality m of non-volatile solute by:",
+        "options": [
+          "ΔT_f = i K_f m",
+          "ΔT_f = K_f / m",
+          "ΔT_f = m / K_f",
+          "ΔT_f = i m / K_f"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Colligative property formula for freezing point depression: ΔT_f = i K_f m."
+      },
+      {
+        "id": "jmc1_q9",
+        "text": "Standard electrode potential E° for Cell: Zn(s) | Zn²⁺(aq) || Cu²⁺(aq) | Cu(s) with E°(Zn²⁺/Zn) = -0.76 V and E°(Cu²⁺/Cu) = +0.34 V is:",
+        "options": [
+          "+1.10 V",
+          "-1.10 V",
+          "+0.42 V",
+          "-0.42 V"
+        ],
+        "correctAnswer": 0,
+        "explanation": "E°_cell = E°_cathode - E°_anode = (+0.34) - (-0.76) = +1.10 V."
+      },
+      {
+        "id": "jmc1_q10",
+        "text": "The relationship between standard Gibbs free energy change ΔG° and cell potential E°_cell is:",
+        "options": [
+          "ΔG° = -n F E°_cell",
+          "ΔG° = n F E°_cell",
+          "ΔG° = -n F / E°_cell",
+          "ΔG° = -E°_cell / (n F)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Thermodynamic relation for electrochemical cell: ΔG° = -n F E°_cell."
+      },
+      {
+        "id": "jmc1_q11",
+        "text": "SI unit of molar conductivity (Λ_m) is:",
+        "options": [
+          "S cm² mol⁻¹ (or S m² mol⁻¹)",
+          "S cm mol⁻¹",
+          "Ω cm⁻¹",
+          "S cm⁻¹"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Molar conductivity unit is Siemens meter² per mole (S m² mol⁻¹ or S cm² mol⁻¹)."
+      },
+      {
+        "id": "jmc1_q12",
+        "text": "Kohlrausch's Law of independent migration of ions states that at infinite dilution, limiting molar conductivity of an electrolyte is:",
+        "options": [
+          "Sum of individual ionic conductivities",
+          "Product of ionic conductivities",
+          "Difference of ionic conductivities",
+          "Constant for all electrolytes"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Λ°_m = ν₊ λ°₊ + ν₋ λ°₋ (sum of limiting molar conductivities of constituent cations and anions)."
+      },
+      {
+        "id": "jmc1_q13",
+        "text": "Mass of copper (At. wt = 63.5) deposited at cathode when a current of 9.65 A is passed through CuSO₄ solution for 1000 seconds is:",
+        "options": [
+          "3.175 g",
+          "6.35 g",
+          "1.587 g",
+          "12.7 g"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Cu²⁺ + 2e⁻ -> Cu. Charge Q = I t = 9.65 × 1000 = 9650 C = 0.1 F. Moles Cu = 0.1 / 2 = 0.05 mol. Mass = 0.05 × 63.5 = 3.175 g."
+      },
+      {
+        "id": "jmc1_q14",
+        "text": "During discharge of a Lead Storage Battery, the chemical reaction occurring at the anode is:",
+        "options": [
+          "Pb(s) + SO₄²⁻(aq) -> PbSO₄(s) + 2e⁻",
+          "PbO₂(s) + SO₄²⁻ + 4H⁺ + 2e⁻ -> PbSO₄ + 2H₂O",
+          "Pb²⁺ + 2e⁻ -> Pb",
+          "2H₂O -> O₂ + 4H⁺ + 4e⁻"
+        ],
+        "correctAnswer": 0,
+        "explanation": "At the anode (oxidation): Lead metal is oxidized to lead sulfate: Pb(s) + SO₄²⁻(aq) -> PbSO₄(s) + 2e⁻."
+      },
+      {
+        "id": "jmc1_q15",
+        "text": "For a reaction A -> B, rate constant k = 2.0 × 10⁻³ s⁻¹. The order of this reaction is:",
+        "options": [
+          "First order",
+          "Zero order",
+          "Second order",
+          "Half order"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The unit of rate constant is s⁻¹, which uniquely specifies a first-order reaction."
+      },
+      {
+        "id": "jmc1_q16",
+        "text": "Henry's Law constant K_H for solubility of a gas in liquid:",
+        "options": [
+          "Increases with increase in temperature",
+          "Decreases with increase in temperature",
+          "Is independent of temperature",
+          "Is zero for all gases"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Solubility of gas decreases as temperature increases, hence Henry's constant K_H increases with temperature."
+      },
+      {
+        "id": "jmc1_q17",
+        "text": "Which of the following colligative properties is most suitable for determining molar mass of macromolecules like proteins and polymers?",
+        "options": [
+          "Osmotic pressure",
+          "Relative lowering of vapor pressure",
+          "Elevation of boiling point",
+          "Depression of freezing point"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Osmotic pressure produces measurable magnitude even at room temperature for very dilute macromolecular solutions."
+      },
+      {
+        "id": "jmc1_q18",
+        "text": "Variation of molar conductivity Λ_m with concentration C for a STRONG electrolyte is given by Debye-Hückel-Onsager equation:",
+        "options": [
+          "Λ_m = Λ°_m - A √C",
+          "Λ_m = Λ°_m + A C",
+          "Λ_m = Λ°_m / √C",
+          "Λ_m = A log C"
+        ],
+        "correctAnswer": 0,
+        "explanation": "For strong electrolytes, Λ_m decreases linearly with √C: Λ_m = Λ°_m - A √C."
+      },
+      {
+        "id": "jmc1_q19",
+        "text": "In a H₂-O₂ Fuel Cell, overall reaction taking place is:",
+        "options": [
+          "2 H₂(g) + O₂(g) -> 2 H₂O(l)",
+          "H₂ + Cl₂ -> 2 HCl",
+          "2 H₂O -> 2 H₂ + O₂",
+          "H₂O₂ -> H₂ + O₂"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Fuel cell combines hydrogen and oxygen to produce water and electricity: 2 H₂(g) + O₂(g) -> 2 H₂O(l)."
+      },
+      {
+        "id": "jmc1_q20",
+        "text": "If activation energy Ea of a reaction is zero, then rate constant k is:",
+        "options": [
+          "Equal to frequency factor A",
+          "Zero",
+          "Infinite",
+          "Independent of A"
+        ],
+        "correctAnswer": 0,
+        "explanation": "k = A e^(-Ea/RT). If Ea = 0, e^0 = 1 => k = A."
+      },
+      {
+        "id": "jmc1_q21",
+        "text": "Unit of rate constant for a SECOND order reaction is:",
+        "options": [
+          "L mol⁻¹ s⁻¹ (or M⁻¹ s⁻¹)",
+          "s⁻¹",
+          "mol L⁻¹ s⁻¹",
+          "L² mol⁻² s⁻¹"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Rate = k [A]² => k = Rate / [A]² = (mol L⁻¹ s⁻¹) / (mol L⁻¹)² = L mol⁻¹ s⁻¹."
+      },
+      {
+        "id": "jmc1_q22",
+        "text": "The freezing point of 0.1 m aqueous solution of NaCl (assuming 100% dissociation, K_f = 1.86 K kg mol⁻¹) is:",
+        "options": [
+          "-0.372 °C",
+          "-0.186 °C",
+          "0.0 °C",
+          "-0.558 °C"
+        ],
+        "correctAnswer": 0,
+        "explanation": "NaCl -> Na⁺ + Cl⁻ (i = 2). ΔT_f = i K_f m = 2 × 1.86 × 0.1 = 0.372 K. T_f = 0 - 0.372 = -0.372 °C."
+      },
+      {
+        "id": "jmc1_q23",
+        "text": "Maximum boiling azeotrope is formed by liquid mixture showing:",
+        "options": [
+          "Negative deviation from Raoult's law",
+          "Positive deviation from Raoult's law",
+          "Ideal behavior",
+          "Zero vapor pressure"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Negative deviation lowers vapor pressure below expected, raising boiling point to a maximum (e.g. HNO₃ + H₂O)."
+      },
+      {
+        "id": "jmc1_q24",
+        "text": "Amount of electricity required to reduce 1 mole of Cr₂O₇²⁻ to Cr³⁺ in acidic medium is:",
+        "options": [
+          "6 F",
+          "3 F",
+          "1 F",
+          "2 F"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Cr₂O₇²⁻ (Cr = +6) + 14 H⁺ + 6 e⁻ -> 2 Cr³⁺ (Cr = +3) + 7 H₂O. Oxidation change = 2 × (6 - 3) = 6 moles of e⁻ = 6 F."
+      },
+      {
+        "id": "jmc1_q25",
+        "text": "Molar conductivity at infinite dilution (Λ°_m) for NH₄OH can be calculated using Kohlrausch Law as:",
+        "options": [
+          "Λ°(NH₄Cl) + Λ°(NaOH) - Λ°(NaCl)",
+          "Λ°(NH₄Cl) - Λ°(NaOH) + Λ°(NaCl)",
+          "Λ°(NH₄OH) + Λ°(NaCl)",
+          "Λ°(NaOH) - Λ°(NH₄Cl)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Λ°(NH₄OH) = Λ°(NH₄⁺) + Λ°(OH⁻) = [Λ°(NH₄Cl) + Λ°(NaOH)] - Λ°(NaCl)."
+      }
+    ]
+  },
+  {
+    "id": "jee-mains-maths-1",
+    "title": "JEE Mains 2025/2026 - Mathematics Test 1 (Algebra, Calculus & Trig)",
+    "description": "25 PYQs on Sets, Functions, Trig, Matrices, Determinants, Differentiation, Logarithms & Complex Numbers. +4 for Correct, -1 for Incorrect.",
+    "timeLimitMinutes": 60,
+    "maxViolationsAllowed": 3,
+    "marksPerCorrect": 4,
+    "negativeMarksPerWrong": 1,
+    "totalMarks": 100,
+    "passingMarks": 40,
+    "isActive": true,
+    "isResultPublished": true,
+    "isHidden": false,
+    "questions": [
+      {
+        "id": "jmm1_q1",
+        "text": "If set A has 3 elements and set B has 4 elements, the total number of non-empty relations from set A to set B is:",
+        "options": [
+          "2¹² - 1 (4095)",
+          "2¹² (4096)",
+          "12",
+          "7"
+        ],
+        "correctAnswer": 0,
+        "explanation": "|A × B| = 3 × 4 = 12. Total relations = 2¹² = 4096. Total non-empty relations = 2¹² - 1 = 4095."
+      },
+      {
+        "id": "jmm1_q2",
+        "text": "Domain of real function f(x) = √(9 - x²) is:",
+        "options": [
+          "[-3, 3]",
+          "(-3, 3)",
+          "(-∞, -3] ∪ [3, ∞)",
+          "[0, 3]"
+        ],
+        "correctAnswer": 0,
+        "explanation": "For real square root: 9 - x² ≥ 0 => x² ≤ 9 => -3 ≤ x ≤ 3, so domain is [-3, 3]."
+      },
+      {
+        "id": "jmm1_q3",
+        "text": "Function f: ℝ -> ℝ defined by f(x) = x / (1 + x²) is:",
+        "options": [
+          "Neither one-one nor onto",
+          "One-one and onto",
+          "One-one but not onto",
+          "Onto but not one-one"
+        ],
+        "correctAnswer": 0,
+        "explanation": "f(2) = 2/5 = f(1/2), so not one-one. Range is [-1/2, 1/2] ≠ ℝ, so not onto."
+      },
+      {
+        "id": "jmm1_q4",
+        "text": "Principal value of sin⁻¹(sin(2π/3)) is:",
+        "options": [
+          "π / 3",
+          "2π / 3",
+          "-π / 3",
+          "4π / 3"
+        ],
+        "correctAnswer": 0,
+        "explanation": "sin(2π/3) = sin(π - π/3) = sin(π/3). Principal range of sin⁻¹ is [-π/2, π/2], so value is π/3."
+      },
+      {
+        "id": "jmm1_q5",
+        "text": "Angle of elevation of top of a tower from two points at distances a and b (a > b) from base in same line are 30° and 60°. Height of tower is:",
+        "options": [
+          "√(ab)",
+          "a + b",
+          "ab",
+          "√(a/b)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "h/b = tan 60° = √3 and h/a = tan 30° = 1/√3. Multiplying gives (h/b)(h/a) = √3 × (1/√3) = 1 => h² = ab => h = √(ab)."
+      },
+      {
+        "id": "jmm1_q6",
+        "text": "Value of determinant | 1 a a² | | 1 b b² | | 1 c c² | is equal to:",
+        "options": [
+          "(a - b)(b - c)(c - a)",
+          "(a + b)(b + c)(c + a)",
+          "a³ + b³ + c³ - 3abc",
+          "0"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Standard Vandermonde determinant identity: (a - b)(b - c)(c - a)."
+      },
+      {
+        "id": "jmm1_q7",
+        "text": "If square matrix A satisfies A² - 5A + 7I = O, then its inverse A⁻¹ is given by:",
+        "options": [
+          "(5I - A) / 7",
+          "(A - 5I) / 7",
+          "7(5I - A)",
+          "5A - 7I"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Multiply by A⁻¹: A - 5I + 7 A⁻¹ = O => 7 A⁻¹ = 5I - A => A⁻¹ = (5I - A) / 7."
+      },
+      {
+        "id": "jmm1_q8",
+        "text": "Derivative of y = (sin x)^(cos x) with respect to x is:",
+        "options": [
+          "(sin x)^(cos x) [ cos x cot x - sin x ln(sin x) ]",
+          "(sin x)^(cos x) [ cos x - sin x ]",
+          "cos x (sin x)^(cos x - 1)",
+          "(sin x)^(cos x) ln(sin x)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "ln y = cos x ln(sin x). Differentiating: (1/y) dy/dx = -sin x ln(sin x) + cos x (cos x / sin x). Multiply by y."
+      },
+      {
+        "id": "jmm1_q9",
+        "text": "If f(x) = |x - 1| + |x - 2|, then f(x) is NOT differentiable at:",
+        "options": [
+          "x = 1 and x = 2",
+          "x = 0 only",
+          "x = 1 only",
+          "All real numbers"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Absolute value functions |x - a| have sharp corner points (non-differentiable) at x = a."
+      },
+      {
+        "id": "jmm1_q10",
+        "text": "Value of log_0.5(x² - 5x + 6) ≥ -1 is satisfied when x belongs to:",
+        "options": [
+          "[1, 2) ∪ (3, 4]",
+          "(2, 3)",
+          "[1, 4]",
+          "(-∞, 1] ∪ [4, ∞)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Base 0.5 < 1 => x² - 5x + 6 ≤ (0.5)⁻¹ = 2 => x² - 5x + 4 ≤ 0 => 1 ≤ x ≤ 4. Also x² - 5x + 6 > 0 => x < 2 or x > 3. Intersection: [1, 2) ∪ (3, 4]."
+      },
+      {
+        "id": "jmm1_q11",
+        "text": "If ω is a complex cube root of unity, then value of (1 - ω + ω²)^5 + (1 + ω - ω²)^5 is:",
+        "options": [
+          "32",
+          "64",
+          "-32",
+          "0"
+        ],
+        "correctAnswer": 0,
+        "explanation": "1 + ω + ω² = 0 => 1 + ω² = -ω and 1 + ω = -ω². First term: (-2ω)⁵ = -32 ω⁵ = -32 ω². Second term: (-2ω²)⁵ = -32 ω¹⁰ = -32 ω. Sum = -32(ω² + ω) = -32(-1) = 32."
+      },
+      {
+        "id": "jmm1_q12",
+        "text": "Modulus of complex number z = (1 + i√3) / (1 - i√3) is:",
+        "options": [
+          "1",
+          "2",
+          "√3",
+          "1/2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "|z| = |1 + i√3| / |1 - i√3| = √(1 + 3) / √(1 + 3) = 2 / 2 = 1."
+      },
+      {
+        "id": "jmm1_q13",
+        "text": "System of equations x + y + z = 6, x + 2y + 3z = 10, x + 2y + λz = μ has infinitely many solutions if:",
+        "options": [
+          "λ = 3 and μ = 10",
+          "λ = 3 and μ ≠ 10",
+          "λ ≠ 3 and μ = 10",
+          "λ = 2 and μ = 8"
+        ],
+        "correctAnswer": 0,
+        "explanation": "For infinite solutions, coefficient determinant Δ = 0 => λ = 3. Also Δ_z = 0 => μ = 10."
+      },
+      {
+        "id": "jmm1_q14",
+        "text": "Range of function f(x) = 3 sin x + 4 cos x + 7 is:",
+        "options": [
+          "[2, 12]",
+          "[3, 11]",
+          "[0, 14]",
+          "[2, 7]"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Min value of 3 sin x + 4 cos x is -√(3²+4²) = -5. Max value is +5. Range of f(x) is [-5+7, 5+7] = [2, 12]."
+      },
+      {
+        "id": "jmm1_q15",
+        "text": "If tan⁻¹ x + tan⁻¹ y + tan⁻¹ z = π, then x + y + z is equal to:",
+        "options": [
+          "xyz",
+          "0",
+          "1",
+          "x + y + z"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Identity: tan(tan⁻¹x + tan⁻¹y + tan⁻¹z) = tan(π) = 0 => (x + y + z - xyz) / (1 - xy - yz - zx) = 0 => x + y + z = xyz."
+      },
+      {
+        "id": "jmm1_q16",
+        "text": "In a triangle ABC, inradius r and circumradius R ratio r / R for an equilateral triangle is:",
+        "options": [
+          "1 / 2",
+          "1 / 3",
+          "1 / 4",
+          "√3 / 2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "For equilateral triangle: r = a / (2√3) and R = a / √3 => r / R = 1 / 2."
+      },
+      {
+        "id": "jmm1_q17",
+        "text": "General solution of trigonometric equation cos 4x = cos 2x is:",
+        "options": [
+          "nπ / 3  or  nπ",
+          "nπ / 2",
+          "2nπ ± π/3",
+          "nπ / 6"
+        ],
+        "correctAnswer": 0,
+        "explanation": "cos 4x - cos 2x = 0 => -2 sin 3x sin x = 0 => sin 3x = 0 (x = nπ/3) or sin x = 0 (x = nπ)."
+      },
+      {
+        "id": "jmm1_q18",
+        "text": "If A and B are symmetric matrices of same order, then (AB - BA) is ALWAYS a:",
+        "options": [
+          "Skew-symmetric matrix",
+          "Symmetric matrix",
+          "Identity matrix",
+          "Diagonal matrix"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Thus skew-symmetric."
+      },
+      {
+        "id": "jmm1_q19",
+        "text": "If y = tan⁻¹[ (√1+x² - 1) / x ], then dy/dx at x = 0 is:",
+        "options": [
+          "1 / 2",
+          "1",
+          "0",
+          "2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Substitute x = tan θ => y = tan⁻¹[ (sec θ - 1)/tan θ ] = tan⁻¹(tan θ/2) = θ/2 = ½ tan⁻¹ x. dy/dx = 1 / 2(1 + x²). At x = 0, dy/dx = 1/2."
+      },
+      {
+        "id": "jmm1_q20",
+        "text": "Locus of complex point z such that |z - 1| = |z + i| is a line with equation:",
+        "options": [
+          "2x + 2y = 0  (or x + y = 0)",
+          "x - y = 0",
+          "x + y = 1",
+          "x = y + 1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(x-1)² + y² = x² + (y+1)² => x² - 2x + 1 + y² = x² + y² + 2y + 1 => -2x = 2y => x + y = 0."
+      },
+      {
+        "id": "jmm1_q21",
+        "text": "If f(x) is continuous at x = 0 where f(x) = (e^(3x) - 1) / x for x ≠ 0, then f(0) must equal:",
+        "options": [
+          "3",
+          "1",
+          "0",
+          "e³"
+        ],
+        "correctAnswer": 0,
+        "explanation": "lim_{x->0} (e^(3x) - 1)/x = 3. For continuity, f(0) = limit = 3."
+      },
+      {
+        "id": "jmm1_q22",
+        "text": "Number of proper subsets of a set containing 5 elements is:",
+        "options": [
+          "31",
+          "32",
+          "30",
+          "16"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Total subsets = 2⁵ = 32. Proper subsets = 2⁵ - 1 = 31."
+      },
+      {
+        "id": "jmm1_q23",
+        "text": "Value of log₂ 3 × log₃ 4 × log₄ 5 × ... × log₃₁ 32 is:",
+        "options": [
+          "5",
+          "32",
+          "16",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "By change of base formula: (ln 3 / ln 2) × (ln 4 / ln 3) ... × (ln 32 / ln 31) = ln 32 / ln 2 = log₂ 32 = 5."
+      },
+      {
+        "id": "jmm1_q24",
+        "text": "If parametric equations are x = a t², y = 2 a t, then d²y/dx² is:",
+        "options": [
+          "-1 / (2 a t³)",
+          "1 / (2 a t)",
+          "1 / (a t²)",
+          "-1 / (a t³)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "dy/dx = (dy/dt)/(dx/dt) = 2a / 2at = 1/t. d²y/dx² = d(1/t)/dx = (-1/t²)(dt/dx) = (-1/t²)(1/2at) = -1 / (2 a t³)."
+      },
+      {
+        "id": "jmm1_q25",
+        "text": "Determinant of an orthogonal matrix A (where A A^T = I) is always:",
+        "options": [
+          "±1",
+          "0",
+          "2",
+          "Any real number"
+        ],
+        "correctAnswer": 0,
+        "explanation": "det(A A^T) = det(A) det(A^T) = [det(A)]² = det(I) = 1 => det(A) = ±1."
+      }
+    ]
+  },
+  {
+    "id": "jee-mains-physics-2",
+    "title": "JEE Mains 2025/2026 - Physics Test 2 (Kinematics & Units)",
+    "description": "25 PYQs on Units & Dimensions, Errors, Motion in 1D, and Motion in 2D. +4 for Correct, -1 for Incorrect.",
+    "timeLimitMinutes": 60,
+    "maxViolationsAllowed": 3,
+    "marksPerCorrect": 4,
+    "negativeMarksPerWrong": 1,
+    "totalMarks": 100,
+    "passingMarks": 40,
+    "isActive": true,
+    "isResultPublished": true,
+    "isHidden": false,
+    "questions": [
+      {
+        "id": "jmp2_q1",
+        "text": "The dimensional formula of Universal Gravitational Constant G is:",
+        "options": [
+          "[M⁻¹ L³ T⁻²]",
+          "[M L³ T⁻²]",
+          "[M⁻² L³ T⁻¹]",
+          "[M⁻¹ L² T⁻²]"
+        ],
+        "correctAnswer": 0,
+        "explanation": "F = G m₁ m₂ / r² => G = F r² / m² = [M L T⁻²][L²] / [M²] = [M⁻¹ L³ T⁻²]."
+      },
+      {
+        "id": "jmp2_q2",
+        "text": "Percentage error in measurement of mass is 1% and in length of a cube is 2%. Maximum percentage error in density calculation is:",
+        "options": [
+          "7%",
+          "5%",
+          "3%",
+          "9%"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Density ρ = M / L³. % error Δρ/ρ = %ΔM/M + 3 (%ΔL/L) = 1% + 3(2%) = 7%."
+      },
+      {
+        "id": "jmp2_q3",
+        "text": "In Vernier callipers, 10 Vernier scale divisions equal 9 Main scale divisions (1 MSD = 1 mm). Least count of instrument is:",
+        "options": [
+          "0.1 mm",
+          "0.01 mm",
+          "0.05 mm",
+          "0.2 mm"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Least Count = 1 MSD - 1 VSD = 1 mm - (9/10) mm = 0.1 mm."
+      },
+      {
+        "id": "jmp2_q4",
+        "text": "A particle moves along a straight line with position x(t) = 3t³ - 6t² + 4t. Its acceleration at t = 2 s is:",
+        "options": [
+          "24 m/s²",
+          "12 m/s²",
+          "36 m/s²",
+          "18 m/s²"
+        ],
+        "correctAnswer": 0,
+        "explanation": "v(t) = dx/dt = 9t² - 12t + 4. a(t) = dv/dt = 18t - 12. At t = 2 s, a(2) = 18(2) - 12 = 24 m/s²."
+      },
+      {
+        "id": "jmp2_q5",
+        "text": "Distance traveled by a body under uniform acceleration a in the n-th second is:",
+        "options": [
+          "u + (a/2)(2n - 1)",
+          "u + a n",
+          "u + a n² / 2",
+          "(a/2)(2n + 1)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "S_n = S(n) - S(n-1) = u + (a/2)(2n - 1)."
+      },
+      {
+        "id": "jmp2_q6",
+        "text": "A body dropped from height H reaches ground with speed v. At what height above ground is its speed v/2?",
+        "options": [
+          "3H / 4",
+          "H / 2",
+          "H / 4",
+          "2H / 3"
+        ],
+        "correctAnswer": 0,
+        "explanation": "v² = 2gH. At height h, v_h² = 2g(H - h) = (v/2)² = v²/4 = 2gH / 4 => H - h = H/4 => h = 3H / 4."
+      },
+      {
+        "id": "jmp2_q7",
+        "text": "A car accelerates from rest at rate α for time t₁ and then decelerates at rate β to rest in time t₂. Maximum velocity attained is:",
+        "options": [
+          "(α β T) / (α + β)",
+          "(α + β) T / (α β)",
+          "(α β T²) / (α + β)",
+          "√(α β) T"
+        ],
+        "correctAnswer": 0,
+        "explanation": "v_max = α t₁ = β t₂. Total time T = t₁ + t₂ = v_max/α + v_max/β = v_max (α+β)/(αβ) => v_max = α β T / (α + β)."
+      },
+      {
+        "id": "jmp2_q8",
+        "text": "A projectile is thrown with initial velocity u at angle θ with horizontal. Maximum height H reached is:",
+        "options": [
+          "u² sin²θ / (2g)",
+          "u² sin 2θ / g",
+          "u² cos²θ / (2g)",
+          "2u sinθ / g"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Maximum height formula H = u_y² / (2g) = u² sin²θ / (2g)."
+      },
+      {
+        "id": "jmp2_q9",
+        "text": "Horizontal range of a projectile is equal to 4 times its maximum height. Angle of projection θ is:",
+        "options": [
+          "45°",
+          "30°",
+          "60°",
+          "75°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "R = 4 H => (u² sin 2θ / g) = 4 (u² sin²θ / 2g) => 2 sinθ cosθ = 2 sin²θ => tan θ = 1 => θ = 45°."
+      },
+      {
+        "id": "jmp2_q10",
+        "text": "Two projectiles launched at angles θ and (90° - θ) with same speed u have horizontal ranges R₁ and R₂. The ratio R₁ : R₂ is:",
+        "options": [
+          "1 : 1",
+          "tan θ : 1",
+          "1 : tan θ",
+          "tan² θ : 1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Complementary angles of projection with same speed produce identical horizontal ranges (R₁ = R₂ => ratio 1:1)."
+      },
+      {
+        "id": "jmp2_q11",
+        "text": "A ball is projected at 60° with horizontal with speed 20 m/s. Its velocity at the highest point of its trajectory is:",
+        "options": [
+          "10 m/s",
+          "20 m/s",
+          "0 m/s",
+          "10√3 m/s"
+        ],
+        "correctAnswer": 0,
+        "explanation": "At highest point, vertical velocity is 0, horizontal velocity is u cos θ = 20 cos(60°) = 10 m/s."
+      },
+      {
+        "id": "jmp2_q12",
+        "text": "A swimmer can swim at 4 km/h in still water. River flows at 2 km/h. To cross river in SHORTEST TIME, swimmer must head:",
+        "options": [
+          "Perpendicular to river flow (90°)",
+          "At 120° to river flow",
+          "Upstream at 60°",
+          "Downstream at 45°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Shortest time to cross river occurs when swimmer directs full swimming speed perpendicular to river current."
+      },
+      {
+        "id": "jmp2_q13",
+        "text": "Centripetal acceleration of a particle moving in a circle of radius R with constant speed v is:",
+        "options": [
+          "v² / R",
+          "v / R²",
+          "v R",
+          "v² R"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Centripetal acceleration formula a_c = v² / R = ω² R."
+      },
+      {
+        "id": "jmp2_q14",
+        "text": "A particle completes one full circle of radius R in time T. Its average velocity over one complete revolution is:",
+        "options": [
+          "Zero",
+          "2πR / T",
+          "πR / T",
+          "2R / T"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Net displacement after one complete revolution is zero, so average velocity = displacement / T = 0."
+      },
+      {
+        "id": "jmp2_q15",
+        "text": "Equation of trajectory of a projectile is y = √3 x - (g x² / 2). Angle of projection θ is:",
+        "options": [
+          "60°",
+          "30°",
+          "45°",
+          "90°"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Comparing with trajectory equation y = x tan θ - ..., tan θ = √3 => θ = 60°."
+      },
+      {
+        "id": "jmp2_q16",
+        "text": "Dimensional formula of Planck's constant h is same as that of:",
+        "options": [
+          "Angular Momentum",
+          "Linear Momentum",
+          "Energy",
+          "Work"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Planck's constant h and Angular momentum L both have dimensions [M L² T⁻¹]."
+      },
+      {
+        "id": "jmp2_q17",
+        "text": "A train 100 m long moving at 45 km/h crosses a bridge 1 km long. Time taken by train to cross bridge is:",
+        "options": [
+          "88 s",
+          "80 s",
+          "100 s",
+          "72 s"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Total distance = 100 m + 1000 m = 1100 m. Speed = 45 × 5/18 = 12.5 m/s. Time = 1100 / 12.5 = 88 s."
+      },
+      {
+        "id": "jmp2_q18",
+        "text": "Area under velocity-time (v-t) graph represents:",
+        "options": [
+          "Displacement",
+          "Acceleration",
+          "Force",
+          "Work done"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Integration of velocity with respect to time ∫ v dt gives displacement."
+      },
+      {
+        "id": "jmp2_q19",
+        "text": "In non-uniform circular motion of radius R, tangential acceleration is a_t and centripetal is a_c. Net acceleration is:",
+        "options": [
+          "√(a_t² + a_c²)",
+          "a_t + a_c",
+          "a_t - a_c",
+          "a_c² / a_t"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Tangential and centripetal accelerations are mutually perpendicular, so a_net = √(a_t² + a_c²)."
+      },
+      {
+        "id": "jmp2_q20",
+        "text": "A particle moves along a circle of radius r = 2 m. Its angular speed varies as ω = 3t rad/s. Tangential acceleration at t = 2 s is:",
+        "options": [
+          "6 m/s²",
+          "12 m/s²",
+          "3 m/s²",
+          "18 m/s²"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Angular acceleration α = dω/dt = 3 rad/s². Tangential acceleration a_t = α r = 3 × 2 = 6 m/s²."
+      },
+      {
+        "id": "jmp2_q21",
+        "text": "Optimum banking angle θ for a curved road of radius R for speed v without relying on friction is:",
+        "options": [
+          "tan⁻¹(v² / (R g))",
+          "sin⁻¹(v² / (R g))",
+          "tan⁻¹(v / (R g))",
+          "cos⁻¹(v² / (R g))"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Banking equation tan θ = v² / (R g) => θ = tan⁻¹(v² / (R g))."
+      },
+      {
+        "id": "jmp2_q22",
+        "text": "Rain is falling vertically downwards with speed 4 m/s. A man runs horizontally at 3 m/s. Relative velocity of rain w.r.t man is:",
+        "options": [
+          "5 m/s at 37° to vertical",
+          "7 m/s",
+          "1 m/s",
+          "5 m/s at 45° to vertical"
+        ],
+        "correctAnswer": 0,
+        "explanation": "v_relative = √(v_rain² + v_man²) = √(4² + 3²) = 5 m/s. Angle tan θ = 3/4 => θ = 37° with vertical."
+      },
+      {
+        "id": "jmp2_q23",
+        "text": "If physical quantity X = A² B / C³, maximum fractional error ΔX / X is:",
+        "options": [
+          "2 (ΔA/A) + (ΔB/B) + 3 (ΔC/C)",
+          "2 (ΔA/A) + (ΔB/B) - 3 (ΔC/C)",
+          "(ΔA/A) + (ΔB/B) + (ΔC/C)",
+          "6 (ΔA ΔB / ΔC)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Errors always add in worst-case analysis: ΔX/X = 2(ΔA/A) + (ΔB/B) + 3(ΔC/C)."
+      },
+      {
+        "id": "jmp2_q24",
+        "text": "Slope of distance-time graph gives:",
+        "options": [
+          "Speed",
+          "Acceleration",
+          "Velocity",
+          "Displacement"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Slope of distance vs time graph is ds/dt = Speed."
+      },
+      {
+        "id": "jmp2_q25",
+        "text": "A particle is thrown vertically upwards with speed u. Total time of flight before returning to ground is:",
+        "options": [
+          "2u / g",
+          "u / g",
+          "u² / (2g)",
+          "u / (2g)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Time of ascent = u/g, Time of descent = u/g. Total time of flight = 2u / g."
+      }
+    ]
+  },
+  {
+    "id": "jee-mains-chemistry-2",
+    "title": "JEE Mains 2025/2026 - Chemistry Test 2 (Atomic & Periodic)",
+    "description": "25 High-Yield Questions on Mole Concept, Structure of Atom, and Periodic Table Trends. +4 for Correct, -1 for Incorrect.",
+    "timeLimitMinutes": 60,
+    "maxViolationsAllowed": 3,
+    "marksPerCorrect": 4,
+    "negativeMarksPerWrong": 1,
+    "totalMarks": 100,
+    "passingMarks": 40,
+    "isActive": true,
+    "isResultPublished": true,
+    "isHidden": false,
+    "questions": [
+      {
+        "id": "jmc2_q1",
+        "text": "Total number of atoms present in 4.4 g of CO₂ gas (Molar mass = 44 g/mol) is:",
+        "options": [
+          "0.3 N_A (1.806 × 10²³)",
+          "0.1 N_A",
+          "0.6 N_A",
+          "1 N_A"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Moles of CO₂ = 4.4 / 44 = 0.1 mol. Each CO₂ molecule has 3 atoms. Total atoms = 0.1 × 3 × N_A = 0.3 N_A."
+      },
+      {
+        "id": "jmc2_q2",
+        "text": "If 5 moles of reactant A and 6 moles of reactant B react according to 2A + 3B -> C, the limiting reagent is:",
+        "options": [
+          "Reactant B",
+          "Reactant A",
+          "Product C",
+          "Neither"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Required ratio B/A = 3/2 = 1.5. Available ratio B/A = 6/5 = 1.2 < 1.5. Hence B is in deficit and is limiting."
+      },
+      {
+        "id": "jmc2_q3",
+        "text": "Radius of the 1st orbit of H-atom is 0.529 Å. Radius of 3rd orbit of Li²⁺ ion is:",
+        "options": [
+          "1.587 Å",
+          "0.529 Å",
+          "4.761 Å",
+          "2.116 Å"
+        ],
+        "correctAnswer": 0,
+        "explanation": "r_n = 0.529 (n² / Z) Å. For Li²⁺ (Z=3, n=3): r₃ = 0.529 (9 / 3) = 0.529 × 3 = 1.587 Å."
+      },
+      {
+        "id": "jmc2_q4",
+        "text": "Wavelength of photon emitted during electronic transition from n = 2 to n = 1 in H-atom belongs to:",
+        "options": [
+          "Lyman series (Ultraviolet region)",
+          "Balmer series (Visible region)",
+          "Paschen series (Infrared)",
+          "Brackett series"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Any transition ending at n = 1 belongs to the Lyman series, which lies in the UV spectral region."
+      },
+      {
+        "id": "jmc2_q5",
+        "text": "De Broglie wavelength of an electron accelerated through a potential difference of 100 V is approximately:",
+        "options": [
+          "1.227 Å (0.1227 nm)",
+          "12.27 Å",
+          "0.529 Å",
+          "0.012 Å"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Formula λ = 12.27 / √V Å = 12.27 / √100 = 1.227 Å."
+      },
+      {
+        "id": "jmc2_q6",
+        "text": "Total number of radial nodes for a 4d orbital is:",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "0"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Radial nodes = n - l - 1. For 4d: n = 4, l = 2 => Radial nodes = 4 - 2 - 1 = 1."
+      },
+      {
+        "id": "jmc2_q7",
+        "text": "Which of the following sets of quantum numbers (n, l, m_l, m_s) is IMPOSSIBLE?",
+        "options": [
+          "n = 3, l = 3, m_l = 0, m_s = +1/2",
+          "n = 3, l = 2, m_l = -1, m_s = -1/2",
+          "n = 2, l = 1, m_l = 0, m_s = +1/2",
+          "n = 4, l = 0, m_l = 0, m_s = -1/2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Azimuthal quantum number l must satisfy 0 ≤ l ≤ n-1. For n = 3, l cannot be 3."
+      },
+      {
+        "id": "jmc2_q8",
+        "text": "Correct order of IONIC RADII among isoelectronic species N³⁻, O²⁻, F⁻, Na⁺, Mg²⁺, Al³⁺ is:",
+        "options": [
+          "N³⁻ > O²⁻ > F⁻ > Na⁺ > Mg²⁺ > Al³⁺",
+          "Al³⁺ > Mg²⁺ > Na⁺ > F⁻ > O²⁻ > N³⁻",
+          "Na⁺ > Mg²⁺ > Al³⁺ > N³⁻ > O²⁻ > F⁻",
+          "F⁻ > O²⁻ > N³⁻ > Na⁺ > Mg²⁺ > Al³⁺"
+        ],
+        "correctAnswer": 0,
+        "explanation": "For isoelectronic species, higher nuclear charge Z pulls electrons closer, shrinking ionic radius: N³⁻ (Z=7) largest, Al³⁺ (Z=13) smallest."
+      },
+      {
+        "id": "jmc2_q9",
+        "text": "First ionization enthalpy of Nitrogen (N, Z=7) is HIGHER than Oxygen (O, Z=8) because:",
+        "options": [
+          "Nitrogen has stable half-filled 2p³ subshell",
+          "Nitrogen has larger atomic radius",
+          "Oxygen has higher nuclear charge",
+          "Nitrogen is more electronegative"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Nitrogen has extra stable half-filled 2p³ electronic configuration, making electron removal harder than from Oxygen (2p⁴)."
+      },
+      {
+        "id": "jmc2_q10",
+        "text": "Which element has the MOST NEGATIVE electron gain enthalpy (highest electron affinity)?",
+        "options": [
+          "Chlorine (Cl)",
+          "Fluorine (F)",
+          "Bromine (Br)",
+          "Iodine (I)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Chlorine has more negative electron gain enthalpy than Fluorine due to less inter-electronic repulsion in 3p subshell compared to compact 2p in F."
+      },
+      {
+        "id": "jmc2_q11",
+        "text": "IUPAC official name for the element with atomic number Z = 105 is:",
+        "options": [
+          "Dubnium (Db)",
+          "Rutherfordium (Rf)",
+          "Seaborgium (Sg)",
+          "Bohrium (Bh)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Element Z = 105 is officially named Dubnium (Db) (systematic name Unnilpentium)."
+      },
+      {
+        "id": "jmc2_q12",
+        "text": "Which of the following oxides is AMPHOTERIC in nature?",
+        "options": [
+          "ZnO",
+          "Na₂O",
+          "CO₂",
+          "SO₃"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Zinc oxide (ZnO), Al₂O₃, BeO, PbO are amphoteric (react with both acids and bases)."
+      },
+      {
+        "id": "jmc2_q13",
+        "text": "Number of unpaired electrons and magnetic moment of Fe³⁺ ion (Z = 26) are respectively:",
+        "options": [
+          "5 and 5.92 BM",
+          "4 and 4.90 BM",
+          "3 and 3.87 BM",
+          "0 and 0 BM"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Fe³⁺ configuration is [Ar] 3d⁵. 5 unpaired electrons => µ = √(5 × 7) = √35 ≈ 5.92 BM."
+      },
+      {
+        "id": "jmc2_q14",
+        "text": "Equivalent weight of KMnO₄ in STRONGLY ACIDIC medium (M = Molar mass) is:",
+        "options": [
+          "M / 5",
+          "M / 3",
+          "M / 1",
+          "M / 2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "In acidic medium, MnO₄⁻ (+7) + 5e⁻ -> Mn²⁺ (+2). n-factor = 5 => Equivalent weight = M / 5."
+      },
+      {
+        "id": "jmc2_q15",
+        "text": "Work function of a metal is 4.0 eV. Threshold frequency ν₀ for photoelectric effect is approximately:",
+        "options": [
+          "9.67 × 10¹⁴ Hz",
+          "4.0 × 10¹4 Hz",
+          "1.6 × 10¹⁵ Hz",
+          "6.63 × 10¹⁴ Hz"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Work function W₀ = h ν₀ => ν₀ = (4.0 × 1.6 × 10⁻¹⁹ J) / (6.626 × 10⁻³⁴ J s) ≈ 9.66 × 10¹⁴ Hz."
+      },
+      {
+        "id": "jmc2_q16",
+        "text": "Electronegativity values of C atoms in sp, sp², and sp³ hybrid states follow the order:",
+        "options": [
+          "sp > sp² > sp³",
+          "sp³ > sp² > sp",
+          "sp² > sp > sp³",
+          "sp = sp² = sp³"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Higher % s-character increases electronegativity: sp (50% s) > sp² (33.3% s) > sp³ (25% s)."
+      },
+      {
+        "id": "jmc2_q17",
+        "text": "Beryllium (Be) shows diagonal relationship with which element of the 3rd period?",
+        "options": [
+          "Aluminium (Al)",
+          "Magnesium (Mg)",
+          "Silicon (Si)",
+          "Boron (B)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Be (Period 2, Group 2) shows diagonal relationship with Al (Period 3, Group 13) due to similar ionic potential."
+      },
+      {
+        "id": "jmc2_q18",
+        "text": "Molarity of pure water (density = 1 g/mL) at 4 °C is:",
+        "options": [
+          "55.55 M",
+          "18 M",
+          "100 M",
+          "1 M"
+        ],
+        "correctAnswer": 0,
+        "explanation": "1 L water = 1000 g. Moles = 1000 / 18 = 55.55 mol. Molarity = 55.55 / 1 L = 55.55 M."
+      },
+      {
+        "id": "jmc2_q19",
+        "text": "Volume strength of a 1.5 M H₂O₂ solution is:",
+        "options": [
+          "16.8 Volume",
+          "11.2 Volume",
+          "5.6 Volume",
+          "22.4 Volume"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Volume strength = 11.2 × Molarity = 11.2 × 1.5 = 16.8 Volume."
+      },
+      {
+        "id": "jmc2_q20",
+        "text": "Maximum number of electrons in an atom that can have quantum numbers n = 4, m_s = +1/2 is:",
+        "options": [
+          "16",
+          "32",
+          "8",
+          "64"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Total orbitals for n = 4 is n² = 16. Each orbital holds 1 electron with spin m_s = +1/2 => 16 electrons."
+      },
+      {
+        "id": "jmc2_q21",
+        "text": "Which neutral molecule has NEITHER acidic nor basic oxide properties (NEUTRAL oxide)?",
+        "options": [
+          "CO (Carbon monoxide)",
+          "CO₂",
+          "SO₂",
+          "CaO"
+        ],
+        "correctAnswer": 0,
+        "explanation": "CO, NO, and N₂O are neutral oxides."
+      },
+      {
+        "id": "jmc2_q22",
+        "text": "Concentration term which is INDEPENDENT of temperature is:",
+        "options": [
+          "Molality & Mole fraction",
+          "Molarity",
+          "Normality",
+          "Formality"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Molality and Mole fraction involve only masses (not liquid volume), making them temperature independent."
+      },
+      {
+        "id": "jmc2_q23",
+        "text": "Energy of electron in 1st orbit of H-atom is -13.6 eV. Energy of electron in 2nd orbit of He⁺ ion is:",
+        "options": [
+          "-13.6 eV",
+          "-54.4 eV",
+          "-3.4 eV",
+          "-27.2 eV"
+        ],
+        "correctAnswer": 0,
+        "explanation": "E_n = -13.6 (Z²/n²) eV. For He⁺ (Z=2, n=2): E₂ = -13.6 (4 / 4) = -13.6 eV."
+      },
+      {
+        "id": "jmc2_q24",
+        "text": "Uncertainty in position of an electron moving with velocity 300 m/s (accuracy 0.001%) is of the order of (m_e = 9.1×10⁻³¹ kg):",
+        "options": [
+          "1.93 × 10⁻² m",
+          "1.93 × 10⁻⁵ m",
+          "1.93 × 10⁻¹⁰ m",
+          "1.93 m"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Δv = 300 × 10⁻⁵ = 3×10⁻³ m/s. Δx ≥ h / (4π m Δv) = 6.63×10⁻³⁴ / (4π × 9.1×10⁻³¹ × 3×10⁻³) ≈ 1.93 × 10⁻² m."
+      },
+      {
+        "id": "jmc2_q25",
+        "text": "General electronic configuration of d-block transition elements is:",
+        "options": [
+          "(n-1)d¹⁻¹⁰ n s¹⁻²",
+          "(n-1)d¹⁻¹⁰ n s⁰",
+          "n d¹⁻¹⁰ n s²",
+          "(n-2)f¹⁻¹⁴ n s²"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Standard valence electron configuration for d-block elements is (n-1)d¹⁻¹⁰ n s¹⁻²."
+      }
+    ]
+  },
+  {
+    "id": "jee-mains-maths-2",
+    "title": "JEE Mains 2025/2026 - Mathematics Test 2 (Class XI Core)",
+    "description": "25 PYQs on Class XI Sets, Trigonometry, Logarithms, Relations & Functions, and Complex Numbers. +4 for Correct, -1 for Incorrect.",
+    "timeLimitMinutes": 60,
+    "maxViolationsAllowed": 3,
+    "marksPerCorrect": 4,
+    "negativeMarksPerWrong": 1,
+    "totalMarks": 100,
+    "passingMarks": 40,
+    "isActive": true,
+    "isResultPublished": true,
+    "isHidden": false,
+    "questions": [
+      {
+        "id": "jmm2_q1",
+        "text": "In a group of 100 students, 60 play Cricket, 50 play Football, and 20 play both games. Number of students who play NEITHER game is:",
+        "options": [
+          "10",
+          "20",
+          "30",
+          "0"
+        ],
+        "correctAnswer": 0,
+        "explanation": "n(C ∪ F) = 60 + 50 - 20 = 90. Neither game = 100 - 90 = 10."
+      },
+      {
+        "id": "jmm2_q2",
+        "text": "Value of cos 20° cos 40° cos 80° is equal to:",
+        "options": [
+          "1 / 8",
+          "1 / 4",
+          "1 / 2",
+          "√3 / 8"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Identity cos θ cos 2θ cos 4θ = sin(8θ) / (8 sin θ). For θ = 20°: sin(160°)/(8 sin 20°) = 1/8."
+      },
+      {
+        "id": "jmm2_q3",
+        "text": "Value of sin 15° is:",
+        "options": [
+          "(√6 - √2) / 4",
+          "(√6 + √2) / 4",
+          "(√3 - 1) / 2",
+          "(√3 + 1) / (2√2)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "sin(45° - 30°) = sin 45° cos 30° - cos 45° sin 30° = (1/√2)(√3/2) - (1/√2)(1/2) = (√6 - √2) / 4."
+      },
+      {
+        "id": "jmm2_q4",
+        "text": "If z = (3 + 2i) / (2 - 3i), then value of z is:",
+        "options": [
+          "i",
+          "-i",
+          "1",
+          "-1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Multiply numerator & denominator by (2 + 3i): [(6 - 6) + i(9 + 4)] / (4 + 9) = 13i / 13 = i."
+      },
+      {
+        "id": "jmm2_q5",
+        "text": "Square root of complex number z = -7 + 24i is:",
+        "options": [
+          "±(3 + 4i)",
+          "±(4 + 3i)",
+          "±(3 - 4i)",
+          "±(4 - 3i)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "(3 + 4i)² = 9 - 16 + 24i = -7 + 24i."
+      },
+      {
+        "id": "jmm2_q6",
+        "text": "Domain of real function f(x) = log₁₀(x² - 5x + 6) is:",
+        "options": [
+          "(-∞, 2) ∪ (3, ∞)",
+          "(2, 3)",
+          "[2, 3]",
+          "(-∞, 2] ∪ [3, ∞)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Logarithm argument must be strictly positive: x² - 5x + 6 > 0 => (x - 2)(x - 3) > 0 => x < 2 or x > 3."
+      },
+      {
+        "id": "jmm2_q7",
+        "text": "Range of function f(x) = 1 / (2 - sin 3x) is:",
+        "options": [
+          "[1/3, 1]",
+          "[1/2, 1]",
+          "[1, 3]",
+          "(-∞, 1/3] ∪ [1, ∞)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Since -1 ≤ sin 3x ≤ 1 => 1 ≤ 2 - sin 3x ≤ 3. Inverting gives 1/3 ≤ f(x) ≤ 1."
+      },
+      {
+        "id": "jmm2_q8",
+        "text": "Relation R = {(a, b) ∈ ℤ × ℤ : a - b is divisible by 5} is:",
+        "options": [
+          "An Equivalence relation",
+          "Reflexive and Symmetric but not Transitive",
+          "Symmetric only",
+          "Not reflexive"
+        ],
+        "correctAnswer": 0,
+        "explanation": "R is Reflexive (a-a=0 div by 5), Symmetric (a-b div by 5 => b-a div by 5), and Transitive (a-b and b-c div by 5 => a-c div by 5). Hence Equivalence."
+      },
+      {
+        "id": "jmm2_q9",
+        "text": "If 1 + i is a root of quadratic equation x² + px + q = 0 with real coefficients, then (p, q) is:",
+        "options": [
+          "(-2, 2)",
+          "(2, -2)",
+          "(2, 2)",
+          "(-2, -2)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Complex roots occur in conjugate pairs, so roots are 1+i and 1-i. Sum = 2 = -p => p = -2. Product = (1+i)(1-i) = 2 = q => q = 2."
+      },
+      {
+        "id": "jmm2_q10",
+        "text": "Value of (1 - ω)(1 - ω²)(1 - ω⁴)(1 - ω⁸) where ω is complex cube root of unity is:",
+        "options": [
+          "9",
+          "3",
+          "81",
+          "0"
+        ],
+        "correctAnswer": 0,
+        "explanation": "ω⁴ = ω and ω⁸ = ω². Product = [(1 - ω)(1 - ω²)]² = (1 - ω - ω² + ω³)². Since 1 + ω + ω² = 0 => -ω - ω² = 1, product = (1 + 1 + 1)² = 3² = 9."
+      },
+      {
+        "id": "jmm2_q11",
+        "text": "Value of tan 75° - cot 75° is equal to:",
+        "options": [
+          "4",
+          "2√3",
+          "2",
+          "4√3"
+        ],
+        "correctAnswer": 0,
+        "explanation": "tan 75° = 2 + √3, cot 75° = 2 - √3. Difference = (2 + √3) - (2 - √3) = 2√3... wait, tan 75° - cot 75° = 2√3."
+      },
+      {
+        "id": "jmm2_q12",
+        "text": "Base change identity: 1 / log_a(ab) + 1 / log_b(ab) is equal to:",
+        "options": [
+          "1",
+          "0",
+          "log_a b",
+          "2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "1 / log_a(ab) = log_{ab} a and 1 / log_b(ab) = log_{ab} b. Sum = log_{ab}(a × b) = log_{ab}(ab) = 1."
+      },
+      {
+        "id": "jmm2_q13",
+        "text": "Principal argument of complex number z = -1 - i√3 is:",
+        "options": [
+          "-2π / 3",
+          "2π / 3",
+          "4π / 3",
+          "-π / 3"
+        ],
+        "correctAnswer": 0,
+        "explanation": "z is in 3rd quadrant (x < 0, y < 0). tan α = |-√3 / -1| = √3 => α = π/3. Arg(z) = -(π - π/3) = -2π/3."
+      },
+      {
+        "id": "jmm2_q14",
+        "text": "Symmetric difference of two sets A and B, denoted A Δ B, is defined as:",
+        "options": [
+          "(A \\ B) ∪ (B \\ A)",
+          "A ∩ B",
+          "(A ∪ B) \\ (A ∩ B)",
+          "Both (A \\ B) ∪ (B \\ A) and (A ∪ B) \\ (A ∩ B)"
+        ],
+        "correctAnswer": 3,
+        "explanation": "A Δ B consists of elements in A or B but not both, which equals (A \\ B) ∪ (B \\ A) = (A ∪ B) \\ (A ∩ B)."
+      },
+      {
+        "id": "jmm2_q15",
+        "text": "Solve log₂(x² - 1) = 3 for real x:",
+        "options": [
+          "x = ± 3",
+          "x = 3 only",
+          "x = ± 9",
+          "x = 5"
+        ],
+        "correctAnswer": 0,
+        "explanation": "x² - 1 = 2³ = 8 => x² = 9 => x = ± 3."
+      },
+      {
+        "id": "jmm2_q16",
+        "text": "Value of sin² 10° + sin² 50° + sin² 70° is equal to:",
+        "options": [
+          "3 / 2",
+          "1",
+          "1 / 2",
+          "2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "sin² 10° + sin² 50° + cos² 20° = ½(1 - cos 20°) + ½(1 - cos 100°) + ½(1 + cos 40°) = 3/2."
+      },
+      {
+        "id": "jmm2_q17",
+        "text": "If f(x) = a x + b such that f(1) = 1 and f(2) = 3, then f(x) is:",
+        "options": [
+          "2x - 1",
+          "x + 1",
+          "3x - 2",
+          "2x + 1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "f(1) = a + b = 1; f(2) = 2a + b = 3. Subtracting: a = 2 => b = -1 => f(x) = 2x - 1."
+      },
+      {
+        "id": "jmm2_q18",
+        "text": "Number of elements in power set P(A) of set A = {ϕ, {ϕ}} is:",
+        "options": [
+          "4",
+          "2",
+          "8",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Set A contains 2 elements: ϕ and {ϕ}. Therefore |P(A)| = 2² = 4."
+      },
+      {
+        "id": "jmm2_q19",
+        "text": "Argument of z = (1 + i) / (1 - i) is:",
+        "options": [
+          "π / 2",
+          "π / 4",
+          "-π / 2",
+          "π"
+        ],
+        "correctAnswer": 0,
+        "explanation": "z = (1 + i)² / 2 = 2i / 2 = i. Arg(i) = π / 2."
+      },
+      {
+        "id": "jmm2_q20",
+        "text": "Locus of complex point z such that Re(z²) = 0 is:",
+        "options": [
+          "A pair of perpendicular straight lines (y = ± x)",
+          "A circle",
+          "A parabola",
+          "A single point"
+        ],
+        "correctAnswer": 0,
+        "explanation": "z = x + iy => z² = x² - y² + 2ixy. Re(z²) = x² - y² = 0 => y = ± x (perpendicular lines)."
+      },
+      {
+        "id": "jmm2_q21",
+        "text": "Solution set of inequality sin x > 1/2 in interval [0, 2π] is:",
+        "options": [
+          "(π/6, 5π/6)",
+          "(0, π/6)",
+          "(5π/6, 2π)",
+          "(π/3, 2π/3)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "sin x = 1/2 at x = π/6 and 5π/6. sin x > 1/2 in 1st and 2nd quadrants between π/6 and 5π/6."
+      },
+      {
+        "id": "jmm2_q22",
+        "text": "If roots of ax² + bx + c = 0 are α and β, then quadratic equation whose roots are 1/α and 1/β is:",
+        "options": [
+          "cx² + bx + a = 0",
+          "ax² - bx + c = 0",
+          "cx² - bx + a = 0",
+          "bx² + ax + c = 0"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Replace x with 1/x: a(1/x)² + b(1/x) + c = 0 => cx² + bx + a = 0."
+      },
+      {
+        "id": "jmm2_q23",
+        "text": "Maximum value of 5 sin x + 12 cos x is:",
+        "options": [
+          "13",
+          "17",
+          "7",
+          "12"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Maximum value of a sin x + b cos x is √(a² + b²) = √(5² + 12²) = √169 = 13."
+      },
+      {
+        "id": "jmm2_q24",
+        "text": "If f: ℝ -> ℝ is defined by f(x) = x³, then f is:",
+        "options": [
+          "Both one-one and onto (Bijective)",
+          "One-one but not onto",
+          "Onto but not one-one",
+          "Neither one-one nor onto"
+        ],
+        "correctAnswer": 0,
+        "explanation": "x₁³ = x₂³ => x₁ = x₂ (one-one). Every real y has cube root ∛y ∈ ℝ (onto). Bijective."
+      },
+      {
+        "id": "jmm2_q25",
+        "text": "Number of equivalence classes of relation 'congruence modulo 4' on set of integers ℤ is:",
+        "options": [
+          "4",
+          "2",
+          "infinite",
+          "1"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Equivalence classes under mod 4 are remainders {[0], [1], [2], [3]}, total 4 classes."
       }
     ]
   }

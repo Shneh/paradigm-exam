@@ -1481,6 +1481,1902 @@
           "explanation": "The 'visibilitychange' event is fired at the document when the contents of its tab have become visible or have been hidden."
         }
       ]
+    },
+    {
+      "id": "jee-mains-physics-1",
+      "title": "JEE Mains 2025/2026 - Physics Test 1 (Electrostatics & Current)",
+      "description": "25 PYQs on Electric Charges & Fields, Electric Potential & Capacitance, and Current Electricity. +4 for Correct, -1 for Incorrect.",
+      "timeLimitMinutes": 60,
+      "maxViolationsAllowed": 3,
+      "marksPerCorrect": 4,
+      "negativeMarksPerWrong": 1,
+      "totalMarks": 100,
+      "passingMarks": 40,
+      "isActive": true,
+      "isResultPublished": true,
+      "isHidden": false,
+      "questions": [
+        {
+          "id": "jmp1_q1",
+          "text": "Two point charges +q and +4q are separated by distance L. Where should a third charge Q be placed on the line joining them so that it experiences zero net electrostatic force?",
+          "options": [
+            "L/3 from +q",
+            "L/2 from +q",
+            "2L/3 from +q",
+            "L/4 from +q"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Force balance: k(q)(Q)/x² = k(4q)(Q)/(L-x)² => (L-x)/x = 2 => L - x = 2x => x = L/3 from charge +q."
+        },
+        {
+          "id": "jmp1_q2",
+          "text": "Electric field intensity at distance r on the axis of a thin uniformly charged ring of radius R and charge Q is maximum at r equal to:",
+          "options": [
+            "R / √2",
+            "R / 2",
+            "R",
+            "R √2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Electric field on ring axis: E = k Q r / (r² + R²)^(3/2). Setting dE/dr = 0 yields r = R / √2."
+        },
+        {
+          "id": "jmp1_q3",
+          "text": "A point charge q is placed at one corner of a cube of side a. The total electric flux passing through the cube is:",
+          "options": [
+            "q / (8 ε₀)",
+            "q / (6 ε₀)",
+            "q / (24 ε₀)",
+            "q / (4 ε₀)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "8 identical cubes meet at a corner. By Gauss's Law, the flux through one entire cube is q / (8 ε₀)."
+        },
+        {
+          "id": "jmp1_q4",
+          "text": "An electric dipole of dipole moment p is aligned at 30° with a uniform electric field E. The magnitude of torque acting on the dipole is:",
+          "options": [
+            "pE / 2",
+            "pE",
+            "√3 pE / 2",
+            "2 pE"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Torque τ = p E sin θ = p E sin(30°) = pE / 2."
+        },
+        {
+          "id": "jmp1_q5",
+          "text": "Work done in rotating an electric dipole of moment p in a uniform electric field E from θ = 0° to θ = 180° is:",
+          "options": [
+            "2 pE",
+            "pE",
+            "0",
+            "-2 pE"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Work W = -pE (cos 180° - cos 0°) = -pE (-1 - 1) = 2 pE."
+        },
+        {
+          "id": "jmp1_q6",
+          "text": "A spherical conducting shell of radius R carries charge Q. Electric potential at any interior point at distance r < R from center is:",
+          "options": [
+            "Q / (4πε₀R)",
+            "Q / (4πε₀r)",
+            "Zero",
+            "Q / (8πε₀R)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Electric field inside conductor E = 0, so potential is uniform and equal to surface potential V = Q / (4πε₀R)."
+        },
+        {
+          "id": "jmp1_q7",
+          "text": "Two capacitors of 2 µF and 4 µF are connected in series across a 120 V DC supply. Potential difference across the 2 µF capacitor is:",
+          "options": [
+            "80 V",
+            "40 V",
+            "60 V",
+            "100 V"
+          ],
+          "correctAnswer": 0,
+          "explanation": "In series, voltage divides inversely with capacitance: V₁ = V × C₂ / (C₁ + C₂) = 120 × 4 / 6 = 80 V."
+        },
+        {
+          "id": "jmp1_q8",
+          "text": "A parallel plate capacitor with plate area A and separation d is filled with a dielectric slab of constant K. Its capacitance becomes:",
+          "options": [
+            "K ε₀ A / d",
+            "ε₀ A / (K d)",
+            "K d / (ε₀ A)",
+            "(K + 1) ε₀ A / d"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Capacitance increases K times upon dielectric insertion: C = K C₀ = K ε₀ A / d."
+        },
+        {
+          "id": "jmp1_q9",
+          "text": "A 4 µF capacitor charged to 100 V is connected in parallel with an uncharged 6 µF capacitor. Common potential after connection is:",
+          "options": [
+            "40 V",
+            "50 V",
+            "60 V",
+            "20 V"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Common potential V = (C₁ V₁ + C₂ V₂) / (C₁ + C₂) = (4×100 + 6×0) / 10 = 40 V."
+        },
+        {
+          "id": "jmp1_q10",
+          "text": "Electrostatic energy stored per unit volume in a region of electric field E in vacuum is:",
+          "options": [
+            "½ ε₀ E²",
+            "ε₀ E²",
+            "½ ε₀² E",
+            "E² / (2 ε₀)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Energy density u_E = ½ ε₀ E²."
+        },
+        {
+          "id": "jmp1_q11",
+          "text": "A wire of resistance R is stretched uniformly until its length becomes 2 times its initial length. Its new resistance will be:",
+          "options": [
+            "4 R",
+            "2 R",
+            "R / 2",
+            "R / 4"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Volume V = A × L is constant. When L' = 2L, A' = A/2. New resistance R' = ρ (2L) / (A/2) = 4 (ρ L / A) = 4 R."
+        },
+        {
+          "id": "jmp1_q12",
+          "text": "Drift velocity v_d of free electrons in a metallic conductor varies with applied electric field E as:",
+          "options": [
+            "v_d ∝ E",
+            "v_d ∝ E²",
+            "v_d ∝ √E",
+            "v_d ∝ 1/E"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Drift velocity v_d = (e E / m) τ => v_d is directly proportional to E."
+        },
+        {
+          "id": "jmp1_q13",
+          "text": "Three resistors of 2 Ω, 3 Ω, and 6 Ω are connected in parallel. Their net equivalent resistance is:",
+          "options": [
+            "1 Ω",
+            "11 Ω",
+            "0.5 Ω",
+            "2 Ω"
+          ],
+          "correctAnswer": 0,
+          "explanation": "1/R_eq = 1/2 + 1/3 + 1/6 = (3+2+1)/6 = 6/6 = 1 => R_eq = 1 Ω."
+        },
+        {
+          "id": "jmp1_q14",
+          "text": "Kirchhoff's Junction Law (KCL) and Loop Law (KVL) express conservation of respectively:",
+          "options": [
+            "Charge and Energy",
+            "Energy and Charge",
+            "Charge and Momentum",
+            "Energy and Momentum"
+          ],
+          "correctAnswer": 0,
+          "explanation": "KCL represents conservation of electric charge, KVL represents conservation of energy."
+        },
+        {
+          "id": "jmp1_q15",
+          "text": "Four resistances P = 10 Ω, Q = 20 Ω, R = 15 Ω, S = 30 Ω form a Wheatstone bridge loop. The bridge status is:",
+          "options": [
+            "Balanced",
+            "Unbalanced",
+            "Resonant",
+            "Superconducting"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Ratio P/Q = 10/20 = 1/2 and R/S = 15/30 = 1/2. Since P/Q = R/S, the bridge is balanced."
+        },
+        {
+          "id": "jmp1_q16",
+          "text": "A cell of EMF E and internal resistance r is connected to load resistor R. Maximum power is transferred to R when:",
+          "options": [
+            "R = r",
+            "R = 2r",
+            "R = r/2",
+            "R >> r"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Maximum Power Transfer Theorem states power to load R is maximum when load R equals internal resistance r."
+        },
+        {
+          "id": "jmp1_q17",
+          "text": "A potentiometer wire of length 10 m has resistance 20 Ω connected in series with a 3 V battery and 10 Ω resistor. Potential gradient is:",
+          "options": [
+            "0.2 V/m",
+            "0.3 V/m",
+            "0.1 V/m",
+            "0.02 V/m"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Current I = 3 / (20 + 10) = 0.1 A. V_wire = I R_wire = 0.1 × 20 = 2 V. Potential gradient k = 2 / 10 = 0.2 V/m."
+        },
+        {
+          "id": "jmp1_q18",
+          "text": "Two electric bulbs rated 220 V - 60 W and 220 V - 100 W are connected in series across 220 V line. Which bulb glows brighter?",
+          "options": [
+            "60 W bulb",
+            "100 W bulb",
+            "Both glow equally",
+            "Neither glows"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Bulb resistance R = V²/P (R₆₀ > R₁₀₀). In series, current I is identical. Power P_actual = I² R => 60 W bulb dissipates more power and glows brighter."
+        },
+        {
+          "id": "jmp1_q19",
+          "text": "If temperature coefficient of resistance is 0.00125 /°C and resistance at 27°C is 1 Ω, at what temperature will resistance become 2 Ω?",
+          "options": [
+            "827 °C",
+            "500 °C",
+            "1000 °C",
+            "400 °C"
+          ],
+          "correctAnswer": 0,
+          "explanation": "R_t = R₀ (1 + α Δt) => 2 = 1 (1 + 0.00125 Δt) => Δt = 800 °C => T = 27 + 800 = 827 °C."
+        },
+        {
+          "id": "jmp1_q20",
+          "text": "In an RC charging circuit, the time required for capacitor charge to reach 63.2% of its maximum steady-state charge is:",
+          "options": [
+            "Time Constant (τ = RC)",
+            "Half-life",
+            "Mean lifetime",
+            "Relaxation time"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Q(t) = Q_max (1 - e^(-t/RC)). At t = RC = τ, Q = Q_max (1 - 1/e) ≈ 0.632 Q_max."
+        },
+        {
+          "id": "jmp1_q21",
+          "text": "Electric field intensity at distance r from an infinitely long straight wire carrying uniform linear charge density λ is:",
+          "options": [
+            "λ / (2πε₀ r)",
+            "λ / (4πε₀ r²)",
+            "2λ / (πε₀ r)",
+            "λ / (ε₀ r)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Applying Gauss's Law around a cylindrical surface yields E = λ / (2πε₀ r)."
+        },
+        {
+          "id": "jmp1_q22",
+          "text": "Three identical capacitors of capacitance C are connected in a triangle network. Equivalent capacitance between any two corners is:",
+          "options": [
+            "3C / 2",
+            "2C / 3",
+            "3C",
+            "C / 3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Two capacitors in series (C/2) are in parallel with the third (C): C_eq = C + C/2 = 3C/2."
+        },
+        {
+          "id": "jmp1_q23",
+          "text": "An electron enters horizontally between two horizontal parallel charged plates. Its path inside the uniform electric field is:",
+          "options": [
+            "Parabolic",
+            "Circular",
+            "Straight line",
+            "Elliptical"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Constant horizontal velocity combined with constant vertical acceleration (a_y = eE/m) produces a parabolic trajectory."
+        },
+        {
+          "id": "jmp1_q24",
+          "text": "Equivalent resistance between opposite corners of a cube made of 12 identical wires each of resistance R is:",
+          "options": [
+            "5R / 6",
+            "3R / 4",
+            "7R / 12",
+            "R"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Using nodal symmetry across body diagonal: R_eq = (1/3 + 1/6 + 1/3) R = 5R / 6."
+        },
+        {
+          "id": "jmp1_q25",
+          "text": "Capacitive reactance X_C of a 5 µF capacitor connected to a 50 Hz AC source is approximately:",
+          "options": [
+            "636.6 Ω",
+            "318.3 Ω",
+            "100 Ω",
+            "500 Ω"
+          ],
+          "correctAnswer": 0,
+          "explanation": "X_C = 1 / (2 π f C) = 1 / (2 × 3.1416 × 50 × 5×10⁻⁶) = 10⁶ / 1570.8 ≈ 636.6 Ω."
+        }
+      ]
+    },
+    {
+      "id": "jee-mains-chemistry-1",
+      "title": "JEE Mains 2025/2026 - Chemistry Test 1 (Physical Chemistry)",
+      "description": "25 PYQs on Chemical Kinetics, Solutions, and Electrochemistry. +4 for Correct, -1 for Incorrect.",
+      "timeLimitMinutes": 60,
+      "maxViolationsAllowed": 3,
+      "marksPerCorrect": 4,
+      "negativeMarksPerWrong": 1,
+      "totalMarks": 100,
+      "passingMarks": 40,
+      "isActive": true,
+      "isResultPublished": true,
+      "isHidden": false,
+      "questions": [
+        {
+          "id": "jmc1_q1",
+          "text": "For a first-order reaction, the time required for 99.9% completion is approximately how many times its half-life (t_1/2)?",
+          "options": [
+            "10 times",
+            "3 times",
+            "6.6 times",
+            "20 times"
+          ],
+          "correctAnswer": 0,
+          "explanation": "t_99.9% = (2.303/k) log(1000) = (2.303/k) × 3. t_1/2 = 0.693/k. Ratio = 3 × 2.303 / 0.693 ≈ 10."
+        },
+        {
+          "id": "jmc1_q2",
+          "text": "In Arrhenius equation k = A e^(-Ea/RT), a plot of ln k versus 1/T gives a straight line with slope equal to:",
+          "options": [
+            "-Ea / R",
+            "Ea / R",
+            "-Ea / (2.303 R)",
+            "A / R"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Taking natural log: ln k = ln A - (Ea/R)(1/T). Slope m = -Ea / R."
+        },
+        {
+          "id": "jmc1_q3",
+          "text": "Acid hydrolysis of ethyl acetate (CH₃COOC₂H₅ + H₂O -> CH₃COOH + C₂H₅OH) in excess water is an example of:",
+          "options": [
+            "Pseudo-first order reaction",
+            "Zero order reaction",
+            "Second order reaction",
+            "Third order reaction"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Water is present in large excess, so its concentration remains practically constant, making it pseudo-first order."
+        },
+        {
+          "id": "jmc1_q4",
+          "text": "According to Raoult's law, relative lowering of vapor pressure of a solution containing a non-volatile solute is equal to:",
+          "options": [
+            "Mole fraction of solute",
+            "Mole fraction of solvent",
+            "Molarity of solution",
+            "Molality of solution"
+          ],
+          "correctAnswer": 0,
+          "explanation": "(P° - P)/P° = x_solute (mole fraction of non-volatile solute)."
+        },
+        {
+          "id": "jmc1_q5",
+          "text": "Which of the following liquid pairs forms a solution showing POSITIVE deviation from Raoult's law?",
+          "options": [
+            "Ethanol + Acetone",
+            "Chloroform + Acetone",
+            "Phenol + Aniline",
+            "Water + Nitric acid"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Ethanol has strong H-bonding. Adding acetone breaks some H-bonds, weakening A-B interactions compared to A-A and B-B, giving positive deviation."
+        },
+        {
+          "id": "jmc1_q6",
+          "text": "The Van 't Hoff factor (i) for a completely dissociated K₄[Fe(CN)₆] solute in dilute aqueous solution is:",
+          "options": [
+            "5",
+            "4",
+            "6",
+            "1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "K₄[Fe(CN)₆] dissociates into 4 K⁺ + [Fe(CN)₆]⁴⁻ (5 ions total) => i = 5."
+        },
+        {
+          "id": "jmc1_q7",
+          "text": "Two solutions are ISOTONIC at a given temperature when they have identical:",
+          "options": [
+            "Osmotic pressure",
+            "Boiling point",
+            "Vapor pressure",
+            "Density"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Isotonic solutions exert equal osmotic pressure (π₁ = π₂) at a given temperature."
+        },
+        {
+          "id": "jmc1_q8",
+          "text": "Depression in freezing point ΔT_f is related to molality m of non-volatile solute by:",
+          "options": [
+            "ΔT_f = i K_f m",
+            "ΔT_f = K_f / m",
+            "ΔT_f = m / K_f",
+            "ΔT_f = i m / K_f"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Colligative property formula for freezing point depression: ΔT_f = i K_f m."
+        },
+        {
+          "id": "jmc1_q9",
+          "text": "Standard electrode potential E° for Cell: Zn(s) | Zn²⁺(aq) || Cu²⁺(aq) | Cu(s) with E°(Zn²⁺/Zn) = -0.76 V and E°(Cu²⁺/Cu) = +0.34 V is:",
+          "options": [
+            "+1.10 V",
+            "-1.10 V",
+            "+0.42 V",
+            "-0.42 V"
+          ],
+          "correctAnswer": 0,
+          "explanation": "E°_cell = E°_cathode - E°_anode = (+0.34) - (-0.76) = +1.10 V."
+        },
+        {
+          "id": "jmc1_q10",
+          "text": "The relationship between standard Gibbs free energy change ΔG° and cell potential E°_cell is:",
+          "options": [
+            "ΔG° = -n F E°_cell",
+            "ΔG° = n F E°_cell",
+            "ΔG° = -n F / E°_cell",
+            "ΔG° = -E°_cell / (n F)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Thermodynamic relation for electrochemical cell: ΔG° = -n F E°_cell."
+        },
+        {
+          "id": "jmc1_q11",
+          "text": "SI unit of molar conductivity (Λ_m) is:",
+          "options": [
+            "S cm² mol⁻¹ (or S m² mol⁻¹)",
+            "S cm mol⁻¹",
+            "Ω cm⁻¹",
+            "S cm⁻¹"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Molar conductivity unit is Siemens meter² per mole (S m² mol⁻¹ or S cm² mol⁻¹)."
+        },
+        {
+          "id": "jmc1_q12",
+          "text": "Kohlrausch's Law of independent migration of ions states that at infinite dilution, limiting molar conductivity of an electrolyte is:",
+          "options": [
+            "Sum of individual ionic conductivities",
+            "Product of ionic conductivities",
+            "Difference of ionic conductivities",
+            "Constant for all electrolytes"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Λ°_m = ν₊ λ°₊ + ν₋ λ°₋ (sum of limiting molar conductivities of constituent cations and anions)."
+        },
+        {
+          "id": "jmc1_q13",
+          "text": "Mass of copper (At. wt = 63.5) deposited at cathode when a current of 9.65 A is passed through CuSO₄ solution for 1000 seconds is:",
+          "options": [
+            "3.175 g",
+            "6.35 g",
+            "1.587 g",
+            "12.7 g"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Cu²⁺ + 2e⁻ -> Cu. Charge Q = I t = 9.65 × 1000 = 9650 C = 0.1 F. Moles Cu = 0.1 / 2 = 0.05 mol. Mass = 0.05 × 63.5 = 3.175 g."
+        },
+        {
+          "id": "jmc1_q14",
+          "text": "During discharge of a Lead Storage Battery, the chemical reaction occurring at the anode is:",
+          "options": [
+            "Pb(s) + SO₄²⁻(aq) -> PbSO₄(s) + 2e⁻",
+            "PbO₂(s) + SO₄²⁻ + 4H⁺ + 2e⁻ -> PbSO₄ + 2H₂O",
+            "Pb²⁺ + 2e⁻ -> Pb",
+            "2H₂O -> O₂ + 4H⁺ + 4e⁻"
+          ],
+          "correctAnswer": 0,
+          "explanation": "At the anode (oxidation): Lead metal is oxidized to lead sulfate: Pb(s) + SO₄²⁻(aq) -> PbSO₄(s) + 2e⁻."
+        },
+        {
+          "id": "jmc1_q15",
+          "text": "For a reaction A -> B, rate constant k = 2.0 × 10⁻³ s⁻¹. The order of this reaction is:",
+          "options": [
+            "First order",
+            "Zero order",
+            "Second order",
+            "Half order"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The unit of rate constant is s⁻¹, which uniquely specifies a first-order reaction."
+        },
+        {
+          "id": "jmc1_q16",
+          "text": "Henry's Law constant K_H for solubility of a gas in liquid:",
+          "options": [
+            "Increases with increase in temperature",
+            "Decreases with increase in temperature",
+            "Is independent of temperature",
+            "Is zero for all gases"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Solubility of gas decreases as temperature increases, hence Henry's constant K_H increases with temperature."
+        },
+        {
+          "id": "jmc1_q17",
+          "text": "Which of the following colligative properties is most suitable for determining molar mass of macromolecules like proteins and polymers?",
+          "options": [
+            "Osmotic pressure",
+            "Relative lowering of vapor pressure",
+            "Elevation of boiling point",
+            "Depression of freezing point"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Osmotic pressure produces measurable magnitude even at room temperature for very dilute macromolecular solutions."
+        },
+        {
+          "id": "jmc1_q18",
+          "text": "Variation of molar conductivity Λ_m with concentration C for a STRONG electrolyte is given by Debye-Hückel-Onsager equation:",
+          "options": [
+            "Λ_m = Λ°_m - A √C",
+            "Λ_m = Λ°_m + A C",
+            "Λ_m = Λ°_m / √C",
+            "Λ_m = A log C"
+          ],
+          "correctAnswer": 0,
+          "explanation": "For strong electrolytes, Λ_m decreases linearly with √C: Λ_m = Λ°_m - A √C."
+        },
+        {
+          "id": "jmc1_q19",
+          "text": "In a H₂-O₂ Fuel Cell, overall reaction taking place is:",
+          "options": [
+            "2 H₂(g) + O₂(g) -> 2 H₂O(l)",
+            "H₂ + Cl₂ -> 2 HCl",
+            "2 H₂O -> 2 H₂ + O₂",
+            "H₂O₂ -> H₂ + O₂"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Fuel cell combines hydrogen and oxygen to produce water and electricity: 2 H₂(g) + O₂(g) -> 2 H₂O(l)."
+        },
+        {
+          "id": "jmc1_q20",
+          "text": "If activation energy Ea of a reaction is zero, then rate constant k is:",
+          "options": [
+            "Equal to frequency factor A",
+            "Zero",
+            "Infinite",
+            "Independent of A"
+          ],
+          "correctAnswer": 0,
+          "explanation": "k = A e^(-Ea/RT). If Ea = 0, e^0 = 1 => k = A."
+        },
+        {
+          "id": "jmc1_q21",
+          "text": "Unit of rate constant for a SECOND order reaction is:",
+          "options": [
+            "L mol⁻¹ s⁻¹ (or M⁻¹ s⁻¹)",
+            "s⁻¹",
+            "mol L⁻¹ s⁻¹",
+            "L² mol⁻² s⁻¹"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Rate = k [A]² => k = Rate / [A]² = (mol L⁻¹ s⁻¹) / (mol L⁻¹)² = L mol⁻¹ s⁻¹."
+        },
+        {
+          "id": "jmc1_q22",
+          "text": "The freezing point of 0.1 m aqueous solution of NaCl (assuming 100% dissociation, K_f = 1.86 K kg mol⁻¹) is:",
+          "options": [
+            "-0.372 °C",
+            "-0.186 °C",
+            "0.0 °C",
+            "-0.558 °C"
+          ],
+          "correctAnswer": 0,
+          "explanation": "NaCl -> Na⁺ + Cl⁻ (i = 2). ΔT_f = i K_f m = 2 × 1.86 × 0.1 = 0.372 K. T_f = 0 - 0.372 = -0.372 °C."
+        },
+        {
+          "id": "jmc1_q23",
+          "text": "Maximum boiling azeotrope is formed by liquid mixture showing:",
+          "options": [
+            "Negative deviation from Raoult's law",
+            "Positive deviation from Raoult's law",
+            "Ideal behavior",
+            "Zero vapor pressure"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Negative deviation lowers vapor pressure below expected, raising boiling point to a maximum (e.g. HNO₃ + H₂O)."
+        },
+        {
+          "id": "jmc1_q24",
+          "text": "Amount of electricity required to reduce 1 mole of Cr₂O₇²⁻ to Cr³⁺ in acidic medium is:",
+          "options": [
+            "6 F",
+            "3 F",
+            "1 F",
+            "2 F"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Cr₂O₇²⁻ (Cr = +6) + 14 H⁺ + 6 e⁻ -> 2 Cr³⁺ (Cr = +3) + 7 H₂O. Oxidation change = 2 × (6 - 3) = 6 moles of e⁻ = 6 F."
+        },
+        {
+          "id": "jmc1_q25",
+          "text": "Molar conductivity at infinite dilution (Λ°_m) for NH₄OH can be calculated using Kohlrausch Law as:",
+          "options": [
+            "Λ°(NH₄Cl) + Λ°(NaOH) - Λ°(NaCl)",
+            "Λ°(NH₄Cl) - Λ°(NaOH) + Λ°(NaCl)",
+            "Λ°(NH₄OH) + Λ°(NaCl)",
+            "Λ°(NaOH) - Λ°(NH₄Cl)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Λ°(NH₄OH) = Λ°(NH₄⁺) + Λ°(OH⁻) = [Λ°(NH₄Cl) + Λ°(NaOH)] - Λ°(NaCl)."
+        }
+      ]
+    },
+    {
+      "id": "jee-mains-maths-1",
+      "title": "JEE Mains 2025/2026 - Mathematics Test 1 (Algebra, Calculus & Trig)",
+      "description": "25 PYQs on Sets, Functions, Trig, Matrices, Determinants, Differentiation, Logarithms & Complex Numbers. +4 for Correct, -1 for Incorrect.",
+      "timeLimitMinutes": 60,
+      "maxViolationsAllowed": 3,
+      "marksPerCorrect": 4,
+      "negativeMarksPerWrong": 1,
+      "totalMarks": 100,
+      "passingMarks": 40,
+      "isActive": true,
+      "isResultPublished": true,
+      "isHidden": false,
+      "questions": [
+        {
+          "id": "jmm1_q1",
+          "text": "If set A has 3 elements and set B has 4 elements, the total number of non-empty relations from set A to set B is:",
+          "options": [
+            "2¹² - 1 (4095)",
+            "2¹² (4096)",
+            "12",
+            "7"
+          ],
+          "correctAnswer": 0,
+          "explanation": "|A × B| = 3 × 4 = 12. Total relations = 2¹² = 4096. Total non-empty relations = 2¹² - 1 = 4095."
+        },
+        {
+          "id": "jmm1_q2",
+          "text": "Domain of real function f(x) = √(9 - x²) is:",
+          "options": [
+            "[-3, 3]",
+            "(-3, 3)",
+            "(-∞, -3] ∪ [3, ∞)",
+            "[0, 3]"
+          ],
+          "correctAnswer": 0,
+          "explanation": "For real square root: 9 - x² ≥ 0 => x² ≤ 9 => -3 ≤ x ≤ 3, so domain is [-3, 3]."
+        },
+        {
+          "id": "jmm1_q3",
+          "text": "Function f: ℝ -> ℝ defined by f(x) = x / (1 + x²) is:",
+          "options": [
+            "Neither one-one nor onto",
+            "One-one and onto",
+            "One-one but not onto",
+            "Onto but not one-one"
+          ],
+          "correctAnswer": 0,
+          "explanation": "f(2) = 2/5 = f(1/2), so not one-one. Range is [-1/2, 1/2] ≠ ℝ, so not onto."
+        },
+        {
+          "id": "jmm1_q4",
+          "text": "Principal value of sin⁻¹(sin(2π/3)) is:",
+          "options": [
+            "π / 3",
+            "2π / 3",
+            "-π / 3",
+            "4π / 3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "sin(2π/3) = sin(π - π/3) = sin(π/3). Principal range of sin⁻¹ is [-π/2, π/2], so value is π/3."
+        },
+        {
+          "id": "jmm1_q5",
+          "text": "Angle of elevation of top of a tower from two points at distances a and b (a > b) from base in same line are 30° and 60°. Height of tower is:",
+          "options": [
+            "√(ab)",
+            "a + b",
+            "ab",
+            "√(a/b)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "h/b = tan 60° = √3 and h/a = tan 30° = 1/√3. Multiplying gives (h/b)(h/a) = √3 × (1/√3) = 1 => h² = ab => h = √(ab)."
+        },
+        {
+          "id": "jmm1_q6",
+          "text": "Value of determinant | 1 a a² | | 1 b b² | | 1 c c² | is equal to:",
+          "options": [
+            "(a - b)(b - c)(c - a)",
+            "(a + b)(b + c)(c + a)",
+            "a³ + b³ + c³ - 3abc",
+            "0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Standard Vandermonde determinant identity: (a - b)(b - c)(c - a)."
+        },
+        {
+          "id": "jmm1_q7",
+          "text": "If square matrix A satisfies A² - 5A + 7I = O, then its inverse A⁻¹ is given by:",
+          "options": [
+            "(5I - A) / 7",
+            "(A - 5I) / 7",
+            "7(5I - A)",
+            "5A - 7I"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Multiply by A⁻¹: A - 5I + 7 A⁻¹ = O => 7 A⁻¹ = 5I - A => A⁻¹ = (5I - A) / 7."
+        },
+        {
+          "id": "jmm1_q8",
+          "text": "Derivative of y = (sin x)^(cos x) with respect to x is:",
+          "options": [
+            "(sin x)^(cos x) [ cos x cot x - sin x ln(sin x) ]",
+            "(sin x)^(cos x) [ cos x - sin x ]",
+            "cos x (sin x)^(cos x - 1)",
+            "(sin x)^(cos x) ln(sin x)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "ln y = cos x ln(sin x). Differentiating: (1/y) dy/dx = -sin x ln(sin x) + cos x (cos x / sin x). Multiply by y."
+        },
+        {
+          "id": "jmm1_q9",
+          "text": "If f(x) = |x - 1| + |x - 2|, then f(x) is NOT differentiable at:",
+          "options": [
+            "x = 1 and x = 2",
+            "x = 0 only",
+            "x = 1 only",
+            "All real numbers"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Absolute value functions |x - a| have sharp corner points (non-differentiable) at x = a."
+        },
+        {
+          "id": "jmm1_q10",
+          "text": "Value of log_0.5(x² - 5x + 6) ≥ -1 is satisfied when x belongs to:",
+          "options": [
+            "[1, 2) ∪ (3, 4]",
+            "(2, 3)",
+            "[1, 4]",
+            "(-∞, 1] ∪ [4, ∞)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Base 0.5 < 1 => x² - 5x + 6 ≤ (0.5)⁻¹ = 2 => x² - 5x + 4 ≤ 0 => 1 ≤ x ≤ 4. Also x² - 5x + 6 > 0 => x < 2 or x > 3. Intersection: [1, 2) ∪ (3, 4]."
+        },
+        {
+          "id": "jmm1_q11",
+          "text": "If ω is a complex cube root of unity, then value of (1 - ω + ω²)^5 + (1 + ω - ω²)^5 is:",
+          "options": [
+            "32",
+            "64",
+            "-32",
+            "0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "1 + ω + ω² = 0 => 1 + ω² = -ω and 1 + ω = -ω². First term: (-2ω)⁵ = -32 ω⁵ = -32 ω². Second term: (-2ω²)⁵ = -32 ω¹⁰ = -32 ω. Sum = -32(ω² + ω) = -32(-1) = 32."
+        },
+        {
+          "id": "jmm1_q12",
+          "text": "Modulus of complex number z = (1 + i√3) / (1 - i√3) is:",
+          "options": [
+            "1",
+            "2",
+            "√3",
+            "1/2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "|z| = |1 + i√3| / |1 - i√3| = √(1 + 3) / √(1 + 3) = 2 / 2 = 1."
+        },
+        {
+          "id": "jmm1_q13",
+          "text": "System of equations x + y + z = 6, x + 2y + 3z = 10, x + 2y + λz = μ has infinitely many solutions if:",
+          "options": [
+            "λ = 3 and μ = 10",
+            "λ = 3 and μ ≠ 10",
+            "λ ≠ 3 and μ = 10",
+            "λ = 2 and μ = 8"
+          ],
+          "correctAnswer": 0,
+          "explanation": "For infinite solutions, coefficient determinant Δ = 0 => λ = 3. Also Δ_z = 0 => μ = 10."
+        },
+        {
+          "id": "jmm1_q14",
+          "text": "Range of function f(x) = 3 sin x + 4 cos x + 7 is:",
+          "options": [
+            "[2, 12]",
+            "[3, 11]",
+            "[0, 14]",
+            "[2, 7]"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Min value of 3 sin x + 4 cos x is -√(3²+4²) = -5. Max value is +5. Range of f(x) is [-5+7, 5+7] = [2, 12]."
+        },
+        {
+          "id": "jmm1_q15",
+          "text": "If tan⁻¹ x + tan⁻¹ y + tan⁻¹ z = π, then x + y + z is equal to:",
+          "options": [
+            "xyz",
+            "0",
+            "1",
+            "x + y + z"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Identity: tan(tan⁻¹x + tan⁻¹y + tan⁻¹z) = tan(π) = 0 => (x + y + z - xyz) / (1 - xy - yz - zx) = 0 => x + y + z = xyz."
+        },
+        {
+          "id": "jmm1_q16",
+          "text": "In a triangle ABC, inradius r and circumradius R ratio r / R for an equilateral triangle is:",
+          "options": [
+            "1 / 2",
+            "1 / 3",
+            "1 / 4",
+            "√3 / 2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "For equilateral triangle: r = a / (2√3) and R = a / √3 => r / R = 1 / 2."
+        },
+        {
+          "id": "jmm1_q17",
+          "text": "General solution of trigonometric equation cos 4x = cos 2x is:",
+          "options": [
+            "nπ / 3  or  nπ",
+            "nπ / 2",
+            "2nπ ± π/3",
+            "nπ / 6"
+          ],
+          "correctAnswer": 0,
+          "explanation": "cos 4x - cos 2x = 0 => -2 sin 3x sin x = 0 => sin 3x = 0 (x = nπ/3) or sin x = 0 (x = nπ)."
+        },
+        {
+          "id": "jmm1_q18",
+          "text": "If A and B are symmetric matrices of same order, then (AB - BA) is ALWAYS a:",
+          "options": [
+            "Skew-symmetric matrix",
+            "Symmetric matrix",
+            "Identity matrix",
+            "Diagonal matrix"
+          ],
+          "correctAnswer": 0,
+          "explanation": "(AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T = BA - AB = -(AB - BA). Thus skew-symmetric."
+        },
+        {
+          "id": "jmm1_q19",
+          "text": "If y = tan⁻¹[ (√1+x² - 1) / x ], then dy/dx at x = 0 is:",
+          "options": [
+            "1 / 2",
+            "1",
+            "0",
+            "2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Substitute x = tan θ => y = tan⁻¹[ (sec θ - 1)/tan θ ] = tan⁻¹(tan θ/2) = θ/2 = ½ tan⁻¹ x. dy/dx = 1 / 2(1 + x²). At x = 0, dy/dx = 1/2."
+        },
+        {
+          "id": "jmm1_q20",
+          "text": "Locus of complex point z such that |z - 1| = |z + i| is a line with equation:",
+          "options": [
+            "2x + 2y = 0  (or x + y = 0)",
+            "x - y = 0",
+            "x + y = 1",
+            "x = y + 1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "(x-1)² + y² = x² + (y+1)² => x² - 2x + 1 + y² = x² + y² + 2y + 1 => -2x = 2y => x + y = 0."
+        },
+        {
+          "id": "jmm1_q21",
+          "text": "If f(x) is continuous at x = 0 where f(x) = (e^(3x) - 1) / x for x ≠ 0, then f(0) must equal:",
+          "options": [
+            "3",
+            "1",
+            "0",
+            "e³"
+          ],
+          "correctAnswer": 0,
+          "explanation": "lim_{x->0} (e^(3x) - 1)/x = 3. For continuity, f(0) = limit = 3."
+        },
+        {
+          "id": "jmm1_q22",
+          "text": "Number of proper subsets of a set containing 5 elements is:",
+          "options": [
+            "31",
+            "32",
+            "30",
+            "16"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Total subsets = 2⁵ = 32. Proper subsets = 2⁵ - 1 = 31."
+        },
+        {
+          "id": "jmm1_q23",
+          "text": "Value of log₂ 3 × log₃ 4 × log₄ 5 × ... × log₃₁ 32 is:",
+          "options": [
+            "5",
+            "32",
+            "16",
+            "1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "By change of base formula: (ln 3 / ln 2) × (ln 4 / ln 3) ... × (ln 32 / ln 31) = ln 32 / ln 2 = log₂ 32 = 5."
+        },
+        {
+          "id": "jmm1_q24",
+          "text": "If parametric equations are x = a t², y = 2 a t, then d²y/dx² is:",
+          "options": [
+            "-1 / (2 a t³)",
+            "1 / (2 a t)",
+            "1 / (a t²)",
+            "-1 / (a t³)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "dy/dx = (dy/dt)/(dx/dt) = 2a / 2at = 1/t. d²y/dx² = d(1/t)/dx = (-1/t²)(dt/dx) = (-1/t²)(1/2at) = -1 / (2 a t³)."
+        },
+        {
+          "id": "jmm1_q25",
+          "text": "Determinant of an orthogonal matrix A (where A A^T = I) is always:",
+          "options": [
+            "±1",
+            "0",
+            "2",
+            "Any real number"
+          ],
+          "correctAnswer": 0,
+          "explanation": "det(A A^T) = det(A) det(A^T) = [det(A)]² = det(I) = 1 => det(A) = ±1."
+        }
+      ]
+    },
+    {
+      "id": "jee-mains-physics-2",
+      "title": "JEE Mains 2025/2026 - Physics Test 2 (Kinematics & Units)",
+      "description": "25 PYQs on Units & Dimensions, Errors, Motion in 1D, and Motion in 2D. +4 for Correct, -1 for Incorrect.",
+      "timeLimitMinutes": 60,
+      "maxViolationsAllowed": 3,
+      "marksPerCorrect": 4,
+      "negativeMarksPerWrong": 1,
+      "totalMarks": 100,
+      "passingMarks": 40,
+      "isActive": true,
+      "isResultPublished": true,
+      "isHidden": false,
+      "questions": [
+        {
+          "id": "jmp2_q1",
+          "text": "The dimensional formula of Universal Gravitational Constant G is:",
+          "options": [
+            "[M⁻¹ L³ T⁻²]",
+            "[M L³ T⁻²]",
+            "[M⁻² L³ T⁻¹]",
+            "[M⁻¹ L² T⁻²]"
+          ],
+          "correctAnswer": 0,
+          "explanation": "F = G m₁ m₂ / r² => G = F r² / m² = [M L T⁻²][L²] / [M²] = [M⁻¹ L³ T⁻²]."
+        },
+        {
+          "id": "jmp2_q2",
+          "text": "Percentage error in measurement of mass is 1% and in length of a cube is 2%. Maximum percentage error in density calculation is:",
+          "options": [
+            "7%",
+            "5%",
+            "3%",
+            "9%"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Density ρ = M / L³. % error Δρ/ρ = %ΔM/M + 3 (%ΔL/L) = 1% + 3(2%) = 7%."
+        },
+        {
+          "id": "jmp2_q3",
+          "text": "In Vernier callipers, 10 Vernier scale divisions equal 9 Main scale divisions (1 MSD = 1 mm). Least count of instrument is:",
+          "options": [
+            "0.1 mm",
+            "0.01 mm",
+            "0.05 mm",
+            "0.2 mm"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Least Count = 1 MSD - 1 VSD = 1 mm - (9/10) mm = 0.1 mm."
+        },
+        {
+          "id": "jmp2_q4",
+          "text": "A particle moves along a straight line with position x(t) = 3t³ - 6t² + 4t. Its acceleration at t = 2 s is:",
+          "options": [
+            "24 m/s²",
+            "12 m/s²",
+            "36 m/s²",
+            "18 m/s²"
+          ],
+          "correctAnswer": 0,
+          "explanation": "v(t) = dx/dt = 9t² - 12t + 4. a(t) = dv/dt = 18t - 12. At t = 2 s, a(2) = 18(2) - 12 = 24 m/s²."
+        },
+        {
+          "id": "jmp2_q5",
+          "text": "Distance traveled by a body under uniform acceleration a in the n-th second is:",
+          "options": [
+            "u + (a/2)(2n - 1)",
+            "u + a n",
+            "u + a n² / 2",
+            "(a/2)(2n + 1)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "S_n = S(n) - S(n-1) = u + (a/2)(2n - 1)."
+        },
+        {
+          "id": "jmp2_q6",
+          "text": "A body dropped from height H reaches ground with speed v. At what height above ground is its speed v/2?",
+          "options": [
+            "3H / 4",
+            "H / 2",
+            "H / 4",
+            "2H / 3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "v² = 2gH. At height h, v_h² = 2g(H - h) = (v/2)² = v²/4 = 2gH / 4 => H - h = H/4 => h = 3H / 4."
+        },
+        {
+          "id": "jmp2_q7",
+          "text": "A car accelerates from rest at rate α for time t₁ and then decelerates at rate β to rest in time t₂. Maximum velocity attained is:",
+          "options": [
+            "(α β T) / (α + β)",
+            "(α + β) T / (α β)",
+            "(α β T²) / (α + β)",
+            "√(α β) T"
+          ],
+          "correctAnswer": 0,
+          "explanation": "v_max = α t₁ = β t₂. Total time T = t₁ + t₂ = v_max/α + v_max/β = v_max (α+β)/(αβ) => v_max = α β T / (α + β)."
+        },
+        {
+          "id": "jmp2_q8",
+          "text": "A projectile is thrown with initial velocity u at angle θ with horizontal. Maximum height H reached is:",
+          "options": [
+            "u² sin²θ / (2g)",
+            "u² sin 2θ / g",
+            "u² cos²θ / (2g)",
+            "2u sinθ / g"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Maximum height formula H = u_y² / (2g) = u² sin²θ / (2g)."
+        },
+        {
+          "id": "jmp2_q9",
+          "text": "Horizontal range of a projectile is equal to 4 times its maximum height. Angle of projection θ is:",
+          "options": [
+            "45°",
+            "30°",
+            "60°",
+            "75°"
+          ],
+          "correctAnswer": 0,
+          "explanation": "R = 4 H => (u² sin 2θ / g) = 4 (u² sin²θ / 2g) => 2 sinθ cosθ = 2 sin²θ => tan θ = 1 => θ = 45°."
+        },
+        {
+          "id": "jmp2_q10",
+          "text": "Two projectiles launched at angles θ and (90° - θ) with same speed u have horizontal ranges R₁ and R₂. The ratio R₁ : R₂ is:",
+          "options": [
+            "1 : 1",
+            "tan θ : 1",
+            "1 : tan θ",
+            "tan² θ : 1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Complementary angles of projection with same speed produce identical horizontal ranges (R₁ = R₂ => ratio 1:1)."
+        },
+        {
+          "id": "jmp2_q11",
+          "text": "A ball is projected at 60° with horizontal with speed 20 m/s. Its velocity at the highest point of its trajectory is:",
+          "options": [
+            "10 m/s",
+            "20 m/s",
+            "0 m/s",
+            "10√3 m/s"
+          ],
+          "correctAnswer": 0,
+          "explanation": "At highest point, vertical velocity is 0, horizontal velocity is u cos θ = 20 cos(60°) = 10 m/s."
+        },
+        {
+          "id": "jmp2_q12",
+          "text": "A swimmer can swim at 4 km/h in still water. River flows at 2 km/h. To cross river in SHORTEST TIME, swimmer must head:",
+          "options": [
+            "Perpendicular to river flow (90°)",
+            "At 120° to river flow",
+            "Upstream at 60°",
+            "Downstream at 45°"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Shortest time to cross river occurs when swimmer directs full swimming speed perpendicular to river current."
+        },
+        {
+          "id": "jmp2_q13",
+          "text": "Centripetal acceleration of a particle moving in a circle of radius R with constant speed v is:",
+          "options": [
+            "v² / R",
+            "v / R²",
+            "v R",
+            "v² R"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Centripetal acceleration formula a_c = v² / R = ω² R."
+        },
+        {
+          "id": "jmp2_q14",
+          "text": "A particle completes one full circle of radius R in time T. Its average velocity over one complete revolution is:",
+          "options": [
+            "Zero",
+            "2πR / T",
+            "πR / T",
+            "2R / T"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Net displacement after one complete revolution is zero, so average velocity = displacement / T = 0."
+        },
+        {
+          "id": "jmp2_q15",
+          "text": "Equation of trajectory of a projectile is y = √3 x - (g x² / 2). Angle of projection θ is:",
+          "options": [
+            "60°",
+            "30°",
+            "45°",
+            "90°"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Comparing with trajectory equation y = x tan θ - ..., tan θ = √3 => θ = 60°."
+        },
+        {
+          "id": "jmp2_q16",
+          "text": "Dimensional formula of Planck's constant h is same as that of:",
+          "options": [
+            "Angular Momentum",
+            "Linear Momentum",
+            "Energy",
+            "Work"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Planck's constant h and Angular momentum L both have dimensions [M L² T⁻¹]."
+        },
+        {
+          "id": "jmp2_q17",
+          "text": "A train 100 m long moving at 45 km/h crosses a bridge 1 km long. Time taken by train to cross bridge is:",
+          "options": [
+            "88 s",
+            "80 s",
+            "100 s",
+            "72 s"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Total distance = 100 m + 1000 m = 1100 m. Speed = 45 × 5/18 = 12.5 m/s. Time = 1100 / 12.5 = 88 s."
+        },
+        {
+          "id": "jmp2_q18",
+          "text": "Area under velocity-time (v-t) graph represents:",
+          "options": [
+            "Displacement",
+            "Acceleration",
+            "Force",
+            "Work done"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Integration of velocity with respect to time ∫ v dt gives displacement."
+        },
+        {
+          "id": "jmp2_q19",
+          "text": "In non-uniform circular motion of radius R, tangential acceleration is a_t and centripetal is a_c. Net acceleration is:",
+          "options": [
+            "√(a_t² + a_c²)",
+            "a_t + a_c",
+            "a_t - a_c",
+            "a_c² / a_t"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Tangential and centripetal accelerations are mutually perpendicular, so a_net = √(a_t² + a_c²)."
+        },
+        {
+          "id": "jmp2_q20",
+          "text": "A particle moves along a circle of radius r = 2 m. Its angular speed varies as ω = 3t rad/s. Tangential acceleration at t = 2 s is:",
+          "options": [
+            "6 m/s²",
+            "12 m/s²",
+            "3 m/s²",
+            "18 m/s²"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Angular acceleration α = dω/dt = 3 rad/s². Tangential acceleration a_t = α r = 3 × 2 = 6 m/s²."
+        },
+        {
+          "id": "jmp2_q21",
+          "text": "Optimum banking angle θ for a curved road of radius R for speed v without relying on friction is:",
+          "options": [
+            "tan⁻¹(v² / (R g))",
+            "sin⁻¹(v² / (R g))",
+            "tan⁻¹(v / (R g))",
+            "cos⁻¹(v² / (R g))"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Banking equation tan θ = v² / (R g) => θ = tan⁻¹(v² / (R g))."
+        },
+        {
+          "id": "jmp2_q22",
+          "text": "Rain is falling vertically downwards with speed 4 m/s. A man runs horizontally at 3 m/s. Relative velocity of rain w.r.t man is:",
+          "options": [
+            "5 m/s at 37° to vertical",
+            "7 m/s",
+            "1 m/s",
+            "5 m/s at 45° to vertical"
+          ],
+          "correctAnswer": 0,
+          "explanation": "v_relative = √(v_rain² + v_man²) = √(4² + 3²) = 5 m/s. Angle tan θ = 3/4 => θ = 37° with vertical."
+        },
+        {
+          "id": "jmp2_q23",
+          "text": "If physical quantity X = A² B / C³, maximum fractional error ΔX / X is:",
+          "options": [
+            "2 (ΔA/A) + (ΔB/B) + 3 (ΔC/C)",
+            "2 (ΔA/A) + (ΔB/B) - 3 (ΔC/C)",
+            "(ΔA/A) + (ΔB/B) + (ΔC/C)",
+            "6 (ΔA ΔB / ΔC)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Errors always add in worst-case analysis: ΔX/X = 2(ΔA/A) + (ΔB/B) + 3(ΔC/C)."
+        },
+        {
+          "id": "jmp2_q24",
+          "text": "Slope of distance-time graph gives:",
+          "options": [
+            "Speed",
+            "Acceleration",
+            "Velocity",
+            "Displacement"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Slope of distance vs time graph is ds/dt = Speed."
+        },
+        {
+          "id": "jmp2_q25",
+          "text": "A particle is thrown vertically upwards with speed u. Total time of flight before returning to ground is:",
+          "options": [
+            "2u / g",
+            "u / g",
+            "u² / (2g)",
+            "u / (2g)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Time of ascent = u/g, Time of descent = u/g. Total time of flight = 2u / g."
+        }
+      ]
+    },
+    {
+      "id": "jee-mains-chemistry-2",
+      "title": "JEE Mains 2025/2026 - Chemistry Test 2 (Atomic & Periodic)",
+      "description": "25 High-Yield Questions on Mole Concept, Structure of Atom, and Periodic Table Trends. +4 for Correct, -1 for Incorrect.",
+      "timeLimitMinutes": 60,
+      "maxViolationsAllowed": 3,
+      "marksPerCorrect": 4,
+      "negativeMarksPerWrong": 1,
+      "totalMarks": 100,
+      "passingMarks": 40,
+      "isActive": true,
+      "isResultPublished": true,
+      "isHidden": false,
+      "questions": [
+        {
+          "id": "jmc2_q1",
+          "text": "Total number of atoms present in 4.4 g of CO₂ gas (Molar mass = 44 g/mol) is:",
+          "options": [
+            "0.3 N_A (1.806 × 10²³)",
+            "0.1 N_A",
+            "0.6 N_A",
+            "1 N_A"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Moles of CO₂ = 4.4 / 44 = 0.1 mol. Each CO₂ molecule has 3 atoms. Total atoms = 0.1 × 3 × N_A = 0.3 N_A."
+        },
+        {
+          "id": "jmc2_q2",
+          "text": "If 5 moles of reactant A and 6 moles of reactant B react according to 2A + 3B -> C, the limiting reagent is:",
+          "options": [
+            "Reactant B",
+            "Reactant A",
+            "Product C",
+            "Neither"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Required ratio B/A = 3/2 = 1.5. Available ratio B/A = 6/5 = 1.2 < 1.5. Hence B is in deficit and is limiting."
+        },
+        {
+          "id": "jmc2_q3",
+          "text": "Radius of the 1st orbit of H-atom is 0.529 Å. Radius of 3rd orbit of Li²⁺ ion is:",
+          "options": [
+            "1.587 Å",
+            "0.529 Å",
+            "4.761 Å",
+            "2.116 Å"
+          ],
+          "correctAnswer": 0,
+          "explanation": "r_n = 0.529 (n² / Z) Å. For Li²⁺ (Z=3, n=3): r₃ = 0.529 (9 / 3) = 0.529 × 3 = 1.587 Å."
+        },
+        {
+          "id": "jmc2_q4",
+          "text": "Wavelength of photon emitted during electronic transition from n = 2 to n = 1 in H-atom belongs to:",
+          "options": [
+            "Lyman series (Ultraviolet region)",
+            "Balmer series (Visible region)",
+            "Paschen series (Infrared)",
+            "Brackett series"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Any transition ending at n = 1 belongs to the Lyman series, which lies in the UV spectral region."
+        },
+        {
+          "id": "jmc2_q5",
+          "text": "De Broglie wavelength of an electron accelerated through a potential difference of 100 V is approximately:",
+          "options": [
+            "1.227 Å (0.1227 nm)",
+            "12.27 Å",
+            "0.529 Å",
+            "0.012 Å"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Formula λ = 12.27 / √V Å = 12.27 / √100 = 1.227 Å."
+        },
+        {
+          "id": "jmc2_q6",
+          "text": "Total number of radial nodes for a 4d orbital is:",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Radial nodes = n - l - 1. For 4d: n = 4, l = 2 => Radial nodes = 4 - 2 - 1 = 1."
+        },
+        {
+          "id": "jmc2_q7",
+          "text": "Which of the following sets of quantum numbers (n, l, m_l, m_s) is IMPOSSIBLE?",
+          "options": [
+            "n = 3, l = 3, m_l = 0, m_s = +1/2",
+            "n = 3, l = 2, m_l = -1, m_s = -1/2",
+            "n = 2, l = 1, m_l = 0, m_s = +1/2",
+            "n = 4, l = 0, m_l = 0, m_s = -1/2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Azimuthal quantum number l must satisfy 0 ≤ l ≤ n-1. For n = 3, l cannot be 3."
+        },
+        {
+          "id": "jmc2_q8",
+          "text": "Correct order of IONIC RADII among isoelectronic species N³⁻, O²⁻, F⁻, Na⁺, Mg²⁺, Al³⁺ is:",
+          "options": [
+            "N³⁻ > O²⁻ > F⁻ > Na⁺ > Mg²⁺ > Al³⁺",
+            "Al³⁺ > Mg²⁺ > Na⁺ > F⁻ > O²⁻ > N³⁻",
+            "Na⁺ > Mg²⁺ > Al³⁺ > N³⁻ > O²⁻ > F⁻",
+            "F⁻ > O²⁻ > N³⁻ > Na⁺ > Mg²⁺ > Al³⁺"
+          ],
+          "correctAnswer": 0,
+          "explanation": "For isoelectronic species, higher nuclear charge Z pulls electrons closer, shrinking ionic radius: N³⁻ (Z=7) largest, Al³⁺ (Z=13) smallest."
+        },
+        {
+          "id": "jmc2_q9",
+          "text": "First ionization enthalpy of Nitrogen (N, Z=7) is HIGHER than Oxygen (O, Z=8) because:",
+          "options": [
+            "Nitrogen has stable half-filled 2p³ subshell",
+            "Nitrogen has larger atomic radius",
+            "Oxygen has higher nuclear charge",
+            "Nitrogen is more electronegative"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Nitrogen has extra stable half-filled 2p³ electronic configuration, making electron removal harder than from Oxygen (2p⁴)."
+        },
+        {
+          "id": "jmc2_q10",
+          "text": "Which element has the MOST NEGATIVE electron gain enthalpy (highest electron affinity)?",
+          "options": [
+            "Chlorine (Cl)",
+            "Fluorine (F)",
+            "Bromine (Br)",
+            "Iodine (I)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Chlorine has more negative electron gain enthalpy than Fluorine due to less inter-electronic repulsion in 3p subshell compared to compact 2p in F."
+        },
+        {
+          "id": "jmc2_q11",
+          "text": "IUPAC official name for the element with atomic number Z = 105 is:",
+          "options": [
+            "Dubnium (Db)",
+            "Rutherfordium (Rf)",
+            "Seaborgium (Sg)",
+            "Bohrium (Bh)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Element Z = 105 is officially named Dubnium (Db) (systematic name Unnilpentium)."
+        },
+        {
+          "id": "jmc2_q12",
+          "text": "Which of the following oxides is AMPHOTERIC in nature?",
+          "options": [
+            "ZnO",
+            "Na₂O",
+            "CO₂",
+            "SO₃"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Zinc oxide (ZnO), Al₂O₃, BeO, PbO are amphoteric (react with both acids and bases)."
+        },
+        {
+          "id": "jmc2_q13",
+          "text": "Number of unpaired electrons and magnetic moment of Fe³⁺ ion (Z = 26) are respectively:",
+          "options": [
+            "5 and 5.92 BM",
+            "4 and 4.90 BM",
+            "3 and 3.87 BM",
+            "0 and 0 BM"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Fe³⁺ configuration is [Ar] 3d⁵. 5 unpaired electrons => µ = √(5 × 7) = √35 ≈ 5.92 BM."
+        },
+        {
+          "id": "jmc2_q14",
+          "text": "Equivalent weight of KMnO₄ in STRONGLY ACIDIC medium (M = Molar mass) is:",
+          "options": [
+            "M / 5",
+            "M / 3",
+            "M / 1",
+            "M / 2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "In acidic medium, MnO₄⁻ (+7) + 5e⁻ -> Mn²⁺ (+2). n-factor = 5 => Equivalent weight = M / 5."
+        },
+        {
+          "id": "jmc2_q15",
+          "text": "Work function of a metal is 4.0 eV. Threshold frequency ν₀ for photoelectric effect is approximately:",
+          "options": [
+            "9.67 × 10¹⁴ Hz",
+            "4.0 × 10¹4 Hz",
+            "1.6 × 10¹⁵ Hz",
+            "6.63 × 10¹⁴ Hz"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Work function W₀ = h ν₀ => ν₀ = (4.0 × 1.6 × 10⁻¹⁹ J) / (6.626 × 10⁻³⁴ J s) ≈ 9.66 × 10¹⁴ Hz."
+        },
+        {
+          "id": "jmc2_q16",
+          "text": "Electronegativity values of C atoms in sp, sp², and sp³ hybrid states follow the order:",
+          "options": [
+            "sp > sp² > sp³",
+            "sp³ > sp² > sp",
+            "sp² > sp > sp³",
+            "sp = sp² = sp³"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Higher % s-character increases electronegativity: sp (50% s) > sp² (33.3% s) > sp³ (25% s)."
+        },
+        {
+          "id": "jmc2_q17",
+          "text": "Beryllium (Be) shows diagonal relationship with which element of the 3rd period?",
+          "options": [
+            "Aluminium (Al)",
+            "Magnesium (Mg)",
+            "Silicon (Si)",
+            "Boron (B)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Be (Period 2, Group 2) shows diagonal relationship with Al (Period 3, Group 13) due to similar ionic potential."
+        },
+        {
+          "id": "jmc2_q18",
+          "text": "Molarity of pure water (density = 1 g/mL) at 4 °C is:",
+          "options": [
+            "55.55 M",
+            "18 M",
+            "100 M",
+            "1 M"
+          ],
+          "correctAnswer": 0,
+          "explanation": "1 L water = 1000 g. Moles = 1000 / 18 = 55.55 mol. Molarity = 55.55 / 1 L = 55.55 M."
+        },
+        {
+          "id": "jmc2_q19",
+          "text": "Volume strength of a 1.5 M H₂O₂ solution is:",
+          "options": [
+            "16.8 Volume",
+            "11.2 Volume",
+            "5.6 Volume",
+            "22.4 Volume"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Volume strength = 11.2 × Molarity = 11.2 × 1.5 = 16.8 Volume."
+        },
+        {
+          "id": "jmc2_q20",
+          "text": "Maximum number of electrons in an atom that can have quantum numbers n = 4, m_s = +1/2 is:",
+          "options": [
+            "16",
+            "32",
+            "8",
+            "64"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Total orbitals for n = 4 is n² = 16. Each orbital holds 1 electron with spin m_s = +1/2 => 16 electrons."
+        },
+        {
+          "id": "jmc2_q21",
+          "text": "Which neutral molecule has NEITHER acidic nor basic oxide properties (NEUTRAL oxide)?",
+          "options": [
+            "CO (Carbon monoxide)",
+            "CO₂",
+            "SO₂",
+            "CaO"
+          ],
+          "correctAnswer": 0,
+          "explanation": "CO, NO, and N₂O are neutral oxides."
+        },
+        {
+          "id": "jmc2_q22",
+          "text": "Concentration term which is INDEPENDENT of temperature is:",
+          "options": [
+            "Molality & Mole fraction",
+            "Molarity",
+            "Normality",
+            "Formality"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Molality and Mole fraction involve only masses (not liquid volume), making them temperature independent."
+        },
+        {
+          "id": "jmc2_q23",
+          "text": "Energy of electron in 1st orbit of H-atom is -13.6 eV. Energy of electron in 2nd orbit of He⁺ ion is:",
+          "options": [
+            "-13.6 eV",
+            "-54.4 eV",
+            "-3.4 eV",
+            "-27.2 eV"
+          ],
+          "correctAnswer": 0,
+          "explanation": "E_n = -13.6 (Z²/n²) eV. For He⁺ (Z=2, n=2): E₂ = -13.6 (4 / 4) = -13.6 eV."
+        },
+        {
+          "id": "jmc2_q24",
+          "text": "Uncertainty in position of an electron moving with velocity 300 m/s (accuracy 0.001%) is of the order of (m_e = 9.1×10⁻³¹ kg):",
+          "options": [
+            "1.93 × 10⁻² m",
+            "1.93 × 10⁻⁵ m",
+            "1.93 × 10⁻¹⁰ m",
+            "1.93 m"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Δv = 300 × 10⁻⁵ = 3×10⁻³ m/s. Δx ≥ h / (4π m Δv) = 6.63×10⁻³⁴ / (4π × 9.1×10⁻³¹ × 3×10⁻³) ≈ 1.93 × 10⁻² m."
+        },
+        {
+          "id": "jmc2_q25",
+          "text": "General electronic configuration of d-block transition elements is:",
+          "options": [
+            "(n-1)d¹⁻¹⁰ n s¹⁻²",
+            "(n-1)d¹⁻¹⁰ n s⁰",
+            "n d¹⁻¹⁰ n s²",
+            "(n-2)f¹⁻¹⁴ n s²"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Standard valence electron configuration for d-block elements is (n-1)d¹⁻¹⁰ n s¹⁻²."
+        }
+      ]
+    },
+    {
+      "id": "jee-mains-maths-2",
+      "title": "JEE Mains 2025/2026 - Mathematics Test 2 (Class XI Core)",
+      "description": "25 PYQs on Class XI Sets, Trigonometry, Logarithms, Relations & Functions, and Complex Numbers. +4 for Correct, -1 for Incorrect.",
+      "timeLimitMinutes": 60,
+      "maxViolationsAllowed": 3,
+      "marksPerCorrect": 4,
+      "negativeMarksPerWrong": 1,
+      "totalMarks": 100,
+      "passingMarks": 40,
+      "isActive": true,
+      "isResultPublished": true,
+      "isHidden": false,
+      "questions": [
+        {
+          "id": "jmm2_q1",
+          "text": "In a group of 100 students, 60 play Cricket, 50 play Football, and 20 play both games. Number of students who play NEITHER game is:",
+          "options": [
+            "10",
+            "20",
+            "30",
+            "0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "n(C ∪ F) = 60 + 50 - 20 = 90. Neither game = 100 - 90 = 10."
+        },
+        {
+          "id": "jmm2_q2",
+          "text": "Value of cos 20° cos 40° cos 80° is equal to:",
+          "options": [
+            "1 / 8",
+            "1 / 4",
+            "1 / 2",
+            "√3 / 8"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Identity cos θ cos 2θ cos 4θ = sin(8θ) / (8 sin θ). For θ = 20°: sin(160°)/(8 sin 20°) = 1/8."
+        },
+        {
+          "id": "jmm2_q3",
+          "text": "Value of sin 15° is:",
+          "options": [
+            "(√6 - √2) / 4",
+            "(√6 + √2) / 4",
+            "(√3 - 1) / 2",
+            "(√3 + 1) / (2√2)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "sin(45° - 30°) = sin 45° cos 30° - cos 45° sin 30° = (1/√2)(√3/2) - (1/√2)(1/2) = (√6 - √2) / 4."
+        },
+        {
+          "id": "jmm2_q4",
+          "text": "If z = (3 + 2i) / (2 - 3i), then value of z is:",
+          "options": [
+            "i",
+            "-i",
+            "1",
+            "-1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Multiply numerator & denominator by (2 + 3i): [(6 - 6) + i(9 + 4)] / (4 + 9) = 13i / 13 = i."
+        },
+        {
+          "id": "jmm2_q5",
+          "text": "Square root of complex number z = -7 + 24i is:",
+          "options": [
+            "±(3 + 4i)",
+            "±(4 + 3i)",
+            "±(3 - 4i)",
+            "±(4 - 3i)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "(3 + 4i)² = 9 - 16 + 24i = -7 + 24i."
+        },
+        {
+          "id": "jmm2_q6",
+          "text": "Domain of real function f(x) = log₁₀(x² - 5x + 6) is:",
+          "options": [
+            "(-∞, 2) ∪ (3, ∞)",
+            "(2, 3)",
+            "[2, 3]",
+            "(-∞, 2] ∪ [3, ∞)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Logarithm argument must be strictly positive: x² - 5x + 6 > 0 => (x - 2)(x - 3) > 0 => x < 2 or x > 3."
+        },
+        {
+          "id": "jmm2_q7",
+          "text": "Range of function f(x) = 1 / (2 - sin 3x) is:",
+          "options": [
+            "[1/3, 1]",
+            "[1/2, 1]",
+            "[1, 3]",
+            "(-∞, 1/3] ∪ [1, ∞)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Since -1 ≤ sin 3x ≤ 1 => 1 ≤ 2 - sin 3x ≤ 3. Inverting gives 1/3 ≤ f(x) ≤ 1."
+        },
+        {
+          "id": "jmm2_q8",
+          "text": "Relation R = {(a, b) ∈ ℤ × ℤ : a - b is divisible by 5} is:",
+          "options": [
+            "An Equivalence relation",
+            "Reflexive and Symmetric but not Transitive",
+            "Symmetric only",
+            "Not reflexive"
+          ],
+          "correctAnswer": 0,
+          "explanation": "R is Reflexive (a-a=0 div by 5), Symmetric (a-b div by 5 => b-a div by 5), and Transitive (a-b and b-c div by 5 => a-c div by 5). Hence Equivalence."
+        },
+        {
+          "id": "jmm2_q9",
+          "text": "If 1 + i is a root of quadratic equation x² + px + q = 0 with real coefficients, then (p, q) is:",
+          "options": [
+            "(-2, 2)",
+            "(2, -2)",
+            "(2, 2)",
+            "(-2, -2)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Complex roots occur in conjugate pairs, so roots are 1+i and 1-i. Sum = 2 = -p => p = -2. Product = (1+i)(1-i) = 2 = q => q = 2."
+        },
+        {
+          "id": "jmm2_q10",
+          "text": "Value of (1 - ω)(1 - ω²)(1 - ω⁴)(1 - ω⁸) where ω is complex cube root of unity is:",
+          "options": [
+            "9",
+            "3",
+            "81",
+            "0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "ω⁴ = ω and ω⁸ = ω². Product = [(1 - ω)(1 - ω²)]² = (1 - ω - ω² + ω³)². Since 1 + ω + ω² = 0 => -ω - ω² = 1, product = (1 + 1 + 1)² = 3² = 9."
+        },
+        {
+          "id": "jmm2_q11",
+          "text": "Value of tan 75° - cot 75° is equal to:",
+          "options": [
+            "4",
+            "2√3",
+            "2",
+            "4√3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "tan 75° = 2 + √3, cot 75° = 2 - √3. Difference = (2 + √3) - (2 - √3) = 2√3... wait, tan 75° - cot 75° = 2√3."
+        },
+        {
+          "id": "jmm2_q12",
+          "text": "Base change identity: 1 / log_a(ab) + 1 / log_b(ab) is equal to:",
+          "options": [
+            "1",
+            "0",
+            "log_a b",
+            "2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "1 / log_a(ab) = log_{ab} a and 1 / log_b(ab) = log_{ab} b. Sum = log_{ab}(a × b) = log_{ab}(ab) = 1."
+        },
+        {
+          "id": "jmm2_q13",
+          "text": "Principal argument of complex number z = -1 - i√3 is:",
+          "options": [
+            "-2π / 3",
+            "2π / 3",
+            "4π / 3",
+            "-π / 3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "z is in 3rd quadrant (x < 0, y < 0). tan α = |-√3 / -1| = √3 => α = π/3. Arg(z) = -(π - π/3) = -2π/3."
+        },
+        {
+          "id": "jmm2_q14",
+          "text": "Symmetric difference of two sets A and B, denoted A Δ B, is defined as:",
+          "options": [
+            "(A \\ B) ∪ (B \\ A)",
+            "A ∩ B",
+            "(A ∪ B) \\ (A ∩ B)",
+            "Both (A \\ B) ∪ (B \\ A) and (A ∪ B) \\ (A ∩ B)"
+          ],
+          "correctAnswer": 3,
+          "explanation": "A Δ B consists of elements in A or B but not both, which equals (A \\ B) ∪ (B \\ A) = (A ∪ B) \\ (A ∩ B)."
+        },
+        {
+          "id": "jmm2_q15",
+          "text": "Solve log₂(x² - 1) = 3 for real x:",
+          "options": [
+            "x = ± 3",
+            "x = 3 only",
+            "x = ± 9",
+            "x = 5"
+          ],
+          "correctAnswer": 0,
+          "explanation": "x² - 1 = 2³ = 8 => x² = 9 => x = ± 3."
+        },
+        {
+          "id": "jmm2_q16",
+          "text": "Value of sin² 10° + sin² 50° + sin² 70° is equal to:",
+          "options": [
+            "3 / 2",
+            "1",
+            "1 / 2",
+            "2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "sin² 10° + sin² 50° + cos² 20° = ½(1 - cos 20°) + ½(1 - cos 100°) + ½(1 + cos 40°) = 3/2."
+        },
+        {
+          "id": "jmm2_q17",
+          "text": "If f(x) = a x + b such that f(1) = 1 and f(2) = 3, then f(x) is:",
+          "options": [
+            "2x - 1",
+            "x + 1",
+            "3x - 2",
+            "2x + 1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "f(1) = a + b = 1; f(2) = 2a + b = 3. Subtracting: a = 2 => b = -1 => f(x) = 2x - 1."
+        },
+        {
+          "id": "jmm2_q18",
+          "text": "Number of elements in power set P(A) of set A = {ϕ, {ϕ}} is:",
+          "options": [
+            "4",
+            "2",
+            "8",
+            "1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Set A contains 2 elements: ϕ and {ϕ}. Therefore |P(A)| = 2² = 4."
+        },
+        {
+          "id": "jmm2_q19",
+          "text": "Argument of z = (1 + i) / (1 - i) is:",
+          "options": [
+            "π / 2",
+            "π / 4",
+            "-π / 2",
+            "π"
+          ],
+          "correctAnswer": 0,
+          "explanation": "z = (1 + i)² / 2 = 2i / 2 = i. Arg(i) = π / 2."
+        },
+        {
+          "id": "jmm2_q20",
+          "text": "Locus of complex point z such that Re(z²) = 0 is:",
+          "options": [
+            "A pair of perpendicular straight lines (y = ± x)",
+            "A circle",
+            "A parabola",
+            "A single point"
+          ],
+          "correctAnswer": 0,
+          "explanation": "z = x + iy => z² = x² - y² + 2ixy. Re(z²) = x² - y² = 0 => y = ± x (perpendicular lines)."
+        },
+        {
+          "id": "jmm2_q21",
+          "text": "Solution set of inequality sin x > 1/2 in interval [0, 2π] is:",
+          "options": [
+            "(π/6, 5π/6)",
+            "(0, π/6)",
+            "(5π/6, 2π)",
+            "(π/3, 2π/3)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "sin x = 1/2 at x = π/6 and 5π/6. sin x > 1/2 in 1st and 2nd quadrants between π/6 and 5π/6."
+        },
+        {
+          "id": "jmm2_q22",
+          "text": "If roots of ax² + bx + c = 0 are α and β, then quadratic equation whose roots are 1/α and 1/β is:",
+          "options": [
+            "cx² + bx + a = 0",
+            "ax² - bx + c = 0",
+            "cx² - bx + a = 0",
+            "bx² + ax + c = 0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Replace x with 1/x: a(1/x)² + b(1/x) + c = 0 => cx² + bx + a = 0."
+        },
+        {
+          "id": "jmm2_q23",
+          "text": "Maximum value of 5 sin x + 12 cos x is:",
+          "options": [
+            "13",
+            "17",
+            "7",
+            "12"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Maximum value of a sin x + b cos x is √(a² + b²) = √(5² + 12²) = √169 = 13."
+        },
+        {
+          "id": "jmm2_q24",
+          "text": "If f: ℝ -> ℝ is defined by f(x) = x³, then f is:",
+          "options": [
+            "Both one-one and onto (Bijective)",
+            "One-one but not onto",
+            "Onto but not one-one",
+            "Neither one-one nor onto"
+          ],
+          "correctAnswer": 0,
+          "explanation": "x₁³ = x₂³ => x₁ = x₂ (one-one). Every real y has cube root ∛y ∈ ℝ (onto). Bijective."
+        },
+        {
+          "id": "jmm2_q25",
+          "text": "Number of equivalence classes of relation 'congruence modulo 4' on set of integers ℤ is:",
+          "options": [
+            "4",
+            "2",
+            "infinite",
+            "1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Equivalence classes under mod 4 are remainders {[0], [1], [2], [3]}, total 4 classes."
+        }
+      ]
     }
   ],
   "students": [
