@@ -3397,6 +3397,104 @@
       "name": "Priya Singh",
       "password": "stu103@password",
       "class": "Science 12th"
+    },
+    {
+      "id": "S104",
+      "name": "Ayush Rawat",
+      "class": "X",
+      "phone": "9675703897",
+      "password": "ayushsanu"
+    },
+    {
+      "id": "S106",
+      "name": "Anshi Rana",
+      "class": "X",
+      "phone": "9719815881",
+      "password": "Anshi"
+    },
+    {
+      "id": "S110",
+      "name": "Harshita Negi",
+      "class": "XII",
+      "phone": "9410357308",
+      "password": "harshita29"
+    },
+    {
+      "id": "S111",
+      "name": "Sagar Rawat",
+      "class": "X",
+      "phone": "6396217516",
+      "password": "sagarrawat"
+    },
+    {
+      "id": "S113",
+      "name": "Yuktika Negi",
+      "class": "X",
+      "phone": "8800423967",
+      "password": "paradigm@123"
+    },
+    {
+      "id": "S114",
+      "name": "Aisha Kaintura",
+      "class": "X",
+      "phone": "7817030337",
+      "password": "paradigm@123"
+    },
+    {
+      "id": "S115",
+      "name": "Soumil Bartwal",
+      "class": "NDA",
+      "phone": "8076466227",
+      "password": "soumil@123"
+    },
+    {
+      "id": "S116",
+      "name": "Naman Bhandari",
+      "class": "NDA",
+      "phone": "9634237408",
+      "password": "iamdevil"
+    },
+    {
+      "id": "S118",
+      "name": "Muskan Gussain",
+      "class": "XI",
+      "phone": "8279893159",
+      "password": "muskan gusain 2312"
+    },
+    {
+      "id": "S119",
+      "name": "Priyanshu Bisht",
+      "class": "NDA",
+      "phone": "9760059009",
+      "password": "14711471"
+    },
+    {
+      "id": "S120",
+      "name": "Harshit Maithani",
+      "class": "X",
+      "phone": "8979717523",
+      "password": "makali"
+    },
+    {
+      "id": "S121",
+      "name": "Lavanya Pegwal",
+      "class": "X",
+      "phone": "8958060015",
+      "password": "lavanya27"
+    },
+    {
+      "id": "S122",
+      "name": "Abhinav Rana",
+      "class": "X",
+      "phone": "8958102151",
+      "password": "akkibhai"
+    },
+    {
+      "id": "S123",
+      "name": "Rishav Padiyar",
+      "class": "X",
+      "phone": "8954027905",
+      "password": "rishu28062010"
     }
   ],
   "admin": {
