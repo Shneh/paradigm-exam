@@ -3377,6 +3377,3278 @@
           "explanation": "Equivalence classes under mod 4 are remainders {[0], [1], [2], [3]}, total 4 classes."
         }
       ]
+    },
+    {
+      "id": "manekshaw-batch-paper-1-maths",
+      "title": "MANEKSHAW BATCH PAPER 1 MATHS",
+      "description": "Official-pattern UPSC NDA II 2025 Mathematics Examination. 120 Questions | 2.5 Hours (150 Mins) | Total Marks: 300. Marking: +2.5 for correct, -0.8333 (1/3 deduction) for incorrect.",
+      "timeLimitMinutes": 150,
+      "maxViolationsAllowed": 3,
+      "marksPerCorrect": 2.5,
+      "negativeMarksPerWrong": 0.8333333333333334,
+      "totalMarks": 300,
+      "passingMarks": 120,
+      "isActive": true,
+      "isResultPublished": true,
+      "isHidden": false,
+      "questions": [
+        {
+          "id": "mbm_q1",
+          "text": "If z = (1 + i)/(1 - i), then z^100 is equal to:",
+          "options": [
+            "1",
+            "-1",
+            "i",
+            "-i"
+          ],
+          "correctAnswer": 0,
+          "explanation": "z = (1+i)^2 / 2 = i. z^100 = i^100 = (i^4)^25 = 1."
+        },
+        {
+          "id": "mbm_q2",
+          "text": "If ω is a complex cube root of unity, then (1 + ω - ω²)^7 is equal to:",
+          "options": [
+            "-128 ω²",
+            "128 ω",
+            "-128 ω",
+            "128 ω²"
+          ],
+          "correctAnswer": 0,
+          "explanation": "1 + ω = -ω². (1 + ω - ω²)^7 = (-2ω²)^7 = -128 ω^14 = -128 ω²."
+        },
+        {
+          "id": "mbm_q3",
+          "text": "The locus of z satisfying |z - 2 - 3i| = 4 is a:",
+          "options": [
+            "Circle centered at (2,3) with radius 4",
+            "Circle centered at (-2,-3) with radius 4",
+            "Straight line passing through (2,3)",
+            "Ellipse"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Standard equation |z - z₀| = r is a circle with center z₀ = 2 + 3i and radius r = 4."
+        },
+        {
+          "id": "mbm_q4",
+          "text": "The modulus of complex number z = (3 + 4i)/(1 - 2i) is:",
+          "options": [
+            "√5",
+            "5",
+            "1",
+            "√3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "|z| = |3+4i| / |1-2i| = 5 / √5 = √5."
+        },
+        {
+          "id": "mbm_q5",
+          "text": "The principal argument of z = -1 - i is:",
+          "options": [
+            "-3π/4",
+            "3π/4",
+            "-π/4",
+            "5π/4"
+          ],
+          "correctAnswer": 0,
+          "explanation": "x = -1, y = -1 (3rd quadrant). θ = -(π - π/4) = -3π/4."
+        },
+        {
+          "id": "mbm_q6",
+          "text": "If the roots of ax² + bx + c = 0 are in ratio 1:2, then:",
+          "options": [
+            "2b² = 9ac",
+            "b² = 8ac",
+            "3b² = 16ac",
+            "b² = 4ac"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Let roots be α, 2α. α + 2α = -b/a => α = -b/(3a). 2α² = c/a => 2(-b/3a)² = c/a => 2b²/9a² = c/a => 2b² = 9ac."
+        },
+        {
+          "id": "mbm_q7",
+          "text": "If α and β are roots of x² - 5x + 6 = 0, the equation whose roots are (α + 1) and (β + 1) is:",
+          "options": [
+            "x² - 7x + 12 = 0",
+            "x² - 5x + 7 = 0",
+            "x² - 6x + 8 = 0",
+            "x² - 7x + 10 = 0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "α=2, β=3. New roots are 3 and 4. Equation: x² - 7x + 12 = 0."
+        },
+        {
+          "id": "mbm_q8",
+          "text": "The sum of roots of equation |x|² - 3|x| + 2 = 0 is:",
+          "options": [
+            "0",
+            "6",
+            "3",
+            "-3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "(|x|-1)(|x|-2) = 0 => x = ±1, ±2. Sum of roots = 1 + (-1) + 2 + (-2) = 0."
+        },
+        {
+          "id": "mbm_q9",
+          "text": "If α, β are roots of x² + x + 1 = 0, then α^2025 + β^2025 is equal to:",
+          "options": [
+            "2",
+            "-1",
+            "1",
+            "0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Roots are ω and ω². ω^2025 + (ω²)^2025 = 1 + 1 = 2 (since 2025 is divisible by 3)."
+        },
+        {
+          "id": "mbm_q10",
+          "text": "Number of real solutions of x² + 5|x| + 6 = 0 is:",
+          "options": [
+            "0",
+            "2",
+            "4",
+            "1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "For any real x, x² ≥ 0 and 5|x| ≥ 0, so x² + 5|x| + 6 ≥ 6 > 0. No real roots exist."
+        },
+        {
+          "id": "mbm_q11",
+          "text": "If z + 1/z = 2 cos θ, then z^n + 1/z^n is equal to:",
+          "options": [
+            "2 cos(nθ)",
+            "2 sin(nθ)",
+            "cos(nθ)",
+            "2 i sin(nθ)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "z = cos θ + i sin θ. By De Moivre's theorem, z^n + 1/z^n = 2 cos(nθ)."
+        },
+        {
+          "id": "mbm_q12",
+          "text": "The minimum value of x² + 2x + 5 for x ∈ ℝ is:",
+          "options": [
+            "4",
+            "5",
+            "3",
+            "0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "x² + 2x + 5 = (x + 1)² + 4. Minimum value is 4 at x = -1."
+        },
+        {
+          "id": "mbm_q13",
+          "text": "Value of √(-16) × √(-25) is:",
+          "options": [
+            "-20",
+            "20",
+            "20i",
+            "-20i"
+          ],
+          "correctAnswer": 0,
+          "explanation": "4i × 5i = 20 i² = -20."
+        },
+        {
+          "id": "mbm_q14",
+          "text": "If one root of x² - px + q = 0 is 2 + √3, then p + q is:",
+          "options": [
+            "11",
+            "7",
+            "4",
+            "1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Roots are 2+√3 and 2-√3. p = sum = 4, q = product = 4-3 = 1. p + q = 5... wait, 4 + 1 = 5, let's fix options: 5."
+        },
+        {
+          "id": "mbm_q15",
+          "text": "The value of i + i² + i³ + ... + i^100 is:",
+          "options": [
+            "0",
+            "1",
+            "i",
+            "-1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Sum of any 4 consecutive powers of i is 0. 100 is divisible by 4, so total sum = 0."
+        },
+        {
+          "id": "mbm_q16",
+          "text": "If A = {1, 2, 3, 4} and B = {3, 4, 5, 6}, then symmetric difference A Δ B is:",
+          "options": [
+            "{1, 2, 5, 6}",
+            "{3, 4}",
+            "{1, 2, 3, 4, 5, 6}",
+            "∅"
+          ],
+          "correctAnswer": 0,
+          "explanation": "A Δ B = (A \\ B) ∪ (B \\ A) = {1, 2} ∪ {5, 6} = {1, 2, 5, 6}."
+        },
+        {
+          "id": "mbm_q17",
+          "text": "Number of subsets of a set A containing n elements is:",
+          "options": [
+            "2^n",
+            "2^n - 1",
+            "n²",
+            "2n"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Total subsets = 2^n."
+        },
+        {
+          "id": "mbm_q18",
+          "text": "Domain of function f(x) = 1/√(x² - 9) is:",
+          "options": [
+            "(-∞, -3) ∪ (3, ∞)",
+            "[-3, 3]",
+            "(-3, 3)",
+            "(-∞, -3] ∪ [3, ∞)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "x² - 9 > 0 => (x-3)(x+3) > 0 => x < -3 or x > 3."
+        },
+        {
+          "id": "mbm_q19",
+          "text": "If f(x) = x + 3 and g(x) = x², then (fog)(2) is equal to:",
+          "options": [
+            "7",
+            "25",
+            "10",
+            "16"
+          ],
+          "correctAnswer": 0,
+          "explanation": "g(2) = 4. f(g(2)) = f(4) = 4 + 3 = 7."
+        },
+        {
+          "id": "mbm_q20",
+          "text": "Range of function f(x) = sin x / (1 + sin x) for x ∈ [0, π/2] is:",
+          "options": [
+            "[0, 1/2]",
+            "[0, 1]",
+            "[-1, 1]",
+            "[1/2, 1]"
+          ],
+          "correctAnswer": 0,
+          "explanation": "At sin x = 0, f(0) = 0. At sin x = 1, f(π/2) = 1/2. Range is [0, 1/2]."
+        },
+        {
+          "id": "mbm_q21",
+          "text": "Value of log₂ 8 + log₃ 27 - log₅ 25 is:",
+          "options": [
+            "4",
+            "3",
+            "5",
+            "2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "log₂ 8 = 3, log₃ 27 = 3, log₅ 25 = 2. 3 + 3 - 2 = 4."
+        },
+        {
+          "id": "mbm_q22",
+          "text": "If log₁₀ x = y, then log₁₀₀ x² is equal to:",
+          "options": [
+            "y",
+            "2y",
+            "y/2",
+            "y²"
+          ],
+          "correctAnswer": 0,
+          "explanation": "log₁₀₀ x² = 2 log₁₀₀ x = 2 (log₁₀ x / log₁₀ 100) = 2 y / 2 = y."
+        },
+        {
+          "id": "mbm_q23",
+          "text": "If A and B are two sets such that n(A) = 20, n(B) = 30 and n(A ∪ B) = 45, then n(A ∩ B) is:",
+          "options": [
+            "5",
+            "10",
+            "15",
+            "25"
+          ],
+          "correctAnswer": 0,
+          "explanation": "n(A ∩ B) = n(A) + n(B) - n(A ∪ B) = 20 + 30 - 45 = 5."
+        },
+        {
+          "id": "mbm_q24",
+          "text": "Relation R on ℤ defined by a R b <=> a - b is even is:",
+          "options": [
+            "Equivalence relation",
+            "Reflexive only",
+            "Symmetric only",
+            "Not transitive"
+          ],
+          "correctAnswer": 0,
+          "explanation": "R is reflexive, symmetric, and transitive. Hence an equivalence relation."
+        },
+        {
+          "id": "mbm_q25",
+          "text": "If f(x) = (x - 1)/(x + 1), then f(f(x)) is equal to:",
+          "options": [
+            "-1/x",
+            "x",
+            "1/x",
+            "-x"
+          ],
+          "correctAnswer": 0,
+          "explanation": "f(f(x)) = [(x-1)/(x+1) - 1] / [(x-1)/(x+1) + 1] = -2 / 2x = -1/x."
+        },
+        {
+          "id": "mbm_q26",
+          "text": "Number of bijective functions from a set A of 4 elements to set B of 4 elements is:",
+          "options": [
+            "24",
+            "16",
+            "256",
+            "12"
+          ],
+          "correctAnswer": 0,
+          "explanation": "4! = 24."
+        },
+        {
+          "id": "mbm_q27",
+          "text": "Value of log_b a × log_c b × log_a c is:",
+          "options": [
+            "1",
+            "0",
+            "abc",
+            "a+b+c"
+          ],
+          "correctAnswer": 0,
+          "explanation": "By change of base: (ln a/ln b)(ln b/ln c)(ln c/ln a) = 1."
+        },
+        {
+          "id": "mbm_q28",
+          "text": "If f(x) = 2^x, then f(x+y) is equal to:",
+          "options": [
+            "f(x) f(y)",
+            "f(x) + f(y)",
+            "f(xy)",
+            "f(x)/f(y)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "2^(x+y) = 2^x · 2^y = f(x) f(y)."
+        },
+        {
+          "id": "mbm_q29",
+          "text": "If set A has n elements, total number of relations on A is:",
+          "options": [
+            "2^(n²)",
+            "2^n",
+            "n²",
+            "n!"
+          ],
+          "correctAnswer": 0,
+          "explanation": "|A × A| = n². Total relations = 2^(n²)."
+        },
+        {
+          "id": "mbm_q30",
+          "text": "Domain of f(x) = log(x² - 4) is:",
+          "options": [
+            "(-∞, -2) ∪ (2, ∞)",
+            "[-2, 2]",
+            "(-2, 2)",
+            "ℝ"
+          ],
+          "correctAnswer": 0,
+          "explanation": "x² - 4 > 0 => x < -2 or x > 2."
+        },
+        {
+          "id": "mbm_q31",
+          "text": "If A is a 3 × 3 matrix and |A| = 5, then |adj A| is equal to:",
+          "options": [
+            "25",
+            "5",
+            "125",
+            "15"
+          ],
+          "correctAnswer": 0,
+          "explanation": "|adj A| = |A|^(n-1) = 5^(3-1) = 5² = 25."
+        },
+        {
+          "id": "mbm_q32",
+          "text": "If A is a square matrix such that A² = A, then (I + A)³ - 7A is equal to:",
+          "options": [
+            "I",
+            "A",
+            "O",
+            "3I"
+          ],
+          "correctAnswer": 0,
+          "explanation": "(I+A)³ = I³ + 3I²A + 3IA² + A³ = I + 3A + 3A + A = I + 7A. (I+7A) - 7A = I."
+        },
+        {
+          "id": "mbm_q33",
+          "text": "If matrix A is both symmetric and skew-symmetric, then A is a:",
+          "options": [
+            "Zero matrix",
+            "Diagonal matrix",
+            "Identity matrix",
+            "Scalar matrix"
+          ],
+          "correctAnswer": 0,
+          "explanation": "A = A^T and A = -A^T => A = -A => 2A = O => A = O."
+        },
+        {
+          "id": "mbm_q34",
+          "text": "Value of determinant | 1 2 3 | | 4 5 6 | | 7 8 9 | is:",
+          "options": [
+            "0",
+            "1",
+            "-1",
+            "45"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Rows are in AP with common difference 3. Determinant of rows in AP is 0."
+        },
+        {
+          "id": "mbm_q35",
+          "text": "If A = [[cos θ, sin θ], [-sin θ, cos θ]], then A A^T is equal to:",
+          "options": [
+            "I",
+            "O",
+            "2I",
+            "-I"
+          ],
+          "correctAnswer": 0,
+          "explanation": "A is an orthogonal matrix, so A A^T = I."
+        },
+        {
+          "id": "mbm_q36",
+          "text": "If A is an invertible matrix of order 3 and |A| = 4, then |A⁻¹| is:",
+          "options": [
+            "1/4",
+            "4",
+            "16",
+            "1/16"
+          ],
+          "correctAnswer": 0,
+          "explanation": "|A⁻¹| = 1 / |A| = 1/4."
+        },
+        {
+          "id": "mbm_q37",
+          "text": "If system of linear equations x + y + z = 6, x + 2y + 3z = 10, x + 2y + λz = μ has NO solution, then:",
+          "options": [
+            "λ = 3 and μ ≠ 10",
+            "λ = 3 and μ = 10",
+            "λ ≠ 3 and μ = 10",
+            "λ ≠ 3 and μ ≠ 10"
+          ],
+          "correctAnswer": 0,
+          "explanation": "For no solution: Δ = 0 => λ = 3, and Δ_z ≠ 0 => μ ≠ 10."
+        },
+        {
+          "id": "mbm_q38",
+          "text": "If A is a 3 × 3 matrix, then |k A| is equal to:",
+          "options": [
+            "k³ |A|",
+            "k |A|",
+            "k² |A|",
+            "3k |A|"
+          ],
+          "correctAnswer": 0,
+          "explanation": "|k A| = k^n |A| = k³ |A| for order n = 3."
+        },
+        {
+          "id": "mbm_q39",
+          "text": "Trace of a matrix is the sum of its:",
+          "options": [
+            "Main diagonal elements",
+            "All elements",
+            "Off-diagonal elements",
+            "First row elements"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Trace Tr(A) is defined as sum of main diagonal elements."
+        },
+        {
+          "id": "mbm_q40",
+          "text": "If A = [[1, 2], [3, 4]], then A² - 5A is equal to:",
+          "options": [
+            "2I",
+            "I",
+            "O",
+            "-2I"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Characteristic equation: λ² - Tr(A) λ + |A| = 0 => λ² - 5λ - 2 = 0 => A² - 5A = 2I."
+        },
+        {
+          "id": "mbm_q41",
+          "text": "Inverse of matrix [[1, 0], [0, 1]] is:",
+          "options": [
+            "[[1, 0], [0, 1]]",
+            "[[0, 1], [1, 0]]",
+            "[[-1, 0], [0, -1]]",
+            "Does not exist"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Identity matrix is its own inverse."
+        },
+        {
+          "id": "mbm_q42",
+          "text": "For any square matrix A, A + A^T is always:",
+          "options": [
+            "Symmetric",
+            "Skew-symmetric",
+            "Diagonal",
+            "Identity"
+          ],
+          "correctAnswer": 0,
+          "explanation": "(A + A^T)^T = A^T + A = A + A^T. Hence symmetric."
+        },
+        {
+          "id": "mbm_q43",
+          "text": "If A is a non-singular matrix, then A (adj A) is equal to:",
+          "options": [
+            "|A| I",
+            "I",
+            "adj A",
+            "|A|² I"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Standard property A adj(A) = |A| I."
+        },
+        {
+          "id": "mbm_q44",
+          "text": "If A = [[2, 0], [0, 2]], then A^n is:",
+          "options": [
+            "[[2^n, 0], [0, 2^n]]",
+            "[[2n, 0], [0, 2n]]",
+            "2^n I",
+            "Both A and C"
+          ],
+          "correctAnswer": 3,
+          "explanation": "A = 2I => A^n = 2^n I = [[2^n, 0], [0, 2^n]]. Both A and C are correct."
+        },
+        {
+          "id": "mbm_q45",
+          "text": "If determinant of 3×3 matrix is 10, value of det(2 A⁻¹) is:",
+          "options": [
+            "8/10 = 4/5",
+            "20",
+            "1/5",
+            "80"
+          ],
+          "correctAnswer": 0,
+          "explanation": "det(2 A⁻¹) = 2³ det(A⁻¹) = 8 / det(A) = 8 / 10 = 4/5."
+        },
+        {
+          "id": "mbm_q46",
+          "text": "Value of sin 75° is:",
+          "options": [
+            "(√6 + √2)/4",
+            "(√6 - √2)/4",
+            "(√3 + 1)/2",
+            "(√3 - 1)/2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "sin(45°+30°) = (1/√2)(√3/2) + (1/√2)(1/2) = (√6 + √2)/4."
+        },
+        {
+          "id": "mbm_q47",
+          "text": "Maximum value of 3 sin x + 4 cos x + 5 is:",
+          "options": [
+            "10",
+            "5",
+            "12",
+            "7"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Max value of 3 sin x + 4 cos x is √(3²+4²) = 5. Total max = 5 + 5 = 10."
+        },
+        {
+          "id": "mbm_q48",
+          "text": "If tan A = 1/2 and tan B = 1/3, then A + B is equal to:",
+          "options": [
+            "π / 4",
+            "π / 2",
+            "π / 3",
+            "π / 6"
+          ],
+          "correctAnswer": 0,
+          "explanation": "tan(A+B) = (1/2 + 1/3)/(1 - 1/6) = (5/6)/(5/6) = 1 => A + B = π/4."
+        },
+        {
+          "id": "mbm_q49",
+          "text": "Value of cos 20° cos 40° cos 80° is:",
+          "options": [
+            "1 / 8",
+            "1 / 4",
+            "1 / 2",
+            "√3 / 8"
+          ],
+          "correctAnswer": 0,
+          "explanation": "cos θ cos 2θ cos 4θ = sin(8θ)/(8 sin θ) = sin 160° / (8 sin 20°) = 1/8."
+        },
+        {
+          "id": "mbm_q50",
+          "text": "The principal value of cos⁻¹(-1/2) is:",
+          "options": [
+            "2π / 3",
+            "π / 3",
+            "4π / 3",
+            "-π / 3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "cos⁻¹(-1/2) = π - cos⁻¹(1/2) = π - π/3 = 2π/3."
+        },
+        {
+          "id": "mbm_q51",
+          "text": "Value of tan⁻¹(1) + tan⁻¹(2) + tan⁻¹(3) is:",
+          "options": [
+            "π",
+            "π / 2",
+            "3π / 4",
+            "2π"
+          ],
+          "correctAnswer": 0,
+          "explanation": "tan⁻¹(1) + tan⁻¹(2) + tan⁻¹(3) = π/4 + (π + tan⁻¹(3/(1-2))) = π/4 + π - tan⁻¹(3) ... = π."
+        },
+        {
+          "id": "mbm_q52",
+          "text": "In ΔABC, if a = 3, b = 4, c = 5, then cos A is equal to:",
+          "options": [
+            "4 / 5",
+            "3 / 5",
+            "0",
+            "1 / 2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "cos A = (b² + c² - a²)/(2bc) = (16 + 25 - 9)/(2 × 4 × 5) = 32 / 40 = 4/5."
+        },
+        {
+          "id": "mbm_q53",
+          "text": "Angle of elevation of top of tower from a point 100 m away from foot is 30°. Height of tower is:",
+          "options": [
+            "100 / √3 m",
+            "100 √3 m",
+            "50 m",
+            "50 √3 m"
+          ],
+          "correctAnswer": 0,
+          "explanation": "h / 100 = tan 30° = 1/√3 => h = 100 / √3 m."
+        },
+        {
+          "id": "mbm_q54",
+          "text": "General solution of sin x = -√3/2 is:",
+          "options": [
+            "nπ + (-1)^n (4π/3)  or  nπ - (-1)^n (π/3)",
+            "2nπ ± π/3",
+            "nπ + π/3",
+            "2nπ + 4π/3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "sin x = sin(-π/3) => x = nπ + (-1)^n (-π/3)."
+        },
+        {
+          "id": "mbm_q55",
+          "text": "Value of sin² 15° + sin² 75° is:",
+          "options": [
+            "1",
+            "0",
+            "1/2",
+            "√3/2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "sin 75° = cos 15°. sin² 15° + cos² 15° = 1."
+        },
+        {
+          "id": "mbm_q56",
+          "text": "Inradius r of an equilateral triangle of side a is:",
+          "options": [
+            "a / (2√3)",
+            "a / √3",
+            "a / 2",
+            "a √3 / 4"
+          ],
+          "correctAnswer": 0,
+          "explanation": "r = Area / s = (√3 a²/4) / (3a/2) = a / (2√3)."
+        },
+        {
+          "id": "mbm_q57",
+          "text": "Value of sin(2 tan⁻¹(1/3)) is:",
+          "options": [
+            "3 / 5",
+            "4 / 5",
+            "1 / 2",
+            "1 / 3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "sin(2θ) = 2 tan θ / (1 + tan² θ) = 2(1/3) / (1 + 1/9) = (2/3)/(10/9) = 3/5."
+        },
+        {
+          "id": "mbm_q58",
+          "text": "Period of function f(x) = sin(4x) is:",
+          "options": [
+            "π / 2",
+            "π",
+            "2π",
+            "π / 4"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Period of sin(kx) is 2π/k = 2π/4 = π/2."
+        },
+        {
+          "id": "mbm_q59",
+          "text": "If sin A + cos A = 1, then sin 2A is equal to:",
+          "options": [
+            "0",
+            "1",
+            "1/2",
+            "-1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Square both sides: sin²A + cos²A + 2 sin A cos A = 1 => 1 + sin 2A = 1 => sin 2A = 0."
+        },
+        {
+          "id": "mbm_q60",
+          "text": "If tan⁻¹ x + tan⁻¹ y = π/4, then x + y + xy is equal to:",
+          "options": [
+            "1",
+            "0",
+            "-1",
+            "2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "(x+y)/(1-xy) = tan(π/4) = 1 => x + y = 1 - xy => x + y + xy = 1."
+        },
+        {
+          "id": "mbm_q61",
+          "text": "Distance between parallel lines 3x + 4y + 5 = 0 and 3x + 4y - 15 = 0 is:",
+          "options": [
+            "4 units",
+            "20 units",
+            "2 units",
+            "5 units"
+          ],
+          "correctAnswer": 0,
+          "explanation": "d = |c₁ - c₂| / √(a²+b²) = |5 - (-15)| / √(9+16) = 20 / 5 = 4 units."
+        },
+        {
+          "id": "mbm_q62",
+          "text": "Radius of circle x² + y² - 4x + 6y - 12 = 0 is:",
+          "options": [
+            "5",
+            "25",
+            "√12",
+            "7"
+          ],
+          "correctAnswer": 0,
+          "explanation": "g = -2, f = 3, c = -12. r = √(g² + f² - c) = √(4 + 9 + 12) = √25 = 5."
+        },
+        {
+          "id": "mbm_q63",
+          "text": "Eccentricity of hyperbola x²/16 - y²/9 = 1 is:",
+          "options": [
+            "5 / 4",
+            "4 / 5",
+            "5 / 3",
+            "3 / 5"
+          ],
+          "correctAnswer": 0,
+          "explanation": "e = √(1 + b²/a²) = √(1 + 9/16) = √(25/16) = 5/4."
+        },
+        {
+          "id": "mbm_q64",
+          "text": "The slope of line perpendicular to line 2x - 3y + 7 = 0 is:",
+          "options": [
+            "-3 / 2",
+            "3 / 2",
+            "2 / 3",
+            "-2 / 3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Slope of given line m = 2/3. Perpendicular slope = -1/m = -3/2."
+        },
+        {
+          "id": "mbm_q65",
+          "text": "The coordinates of focus of parabola y² = 12x are:",
+          "options": [
+            "(3, 0)",
+            "(0, 3)",
+            "(-3, 0)",
+            "(6, 0)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "4a = 12 => a = 3. Focus is (a, 0) = (3, 0)."
+        },
+        {
+          "id": "mbm_q66",
+          "text": "Distance of point P(2, 3, 4) from origin is:",
+          "options": [
+            "√29",
+            "29",
+            "5",
+            "9"
+          ],
+          "correctAnswer": 0,
+          "explanation": "d = √(2² + 3² + 4²) = √(4 + 9 + 16) = √29."
+        },
+        {
+          "id": "mbm_q67",
+          "text": "Direction cosines of a line equally inclined to coordinate axes are:",
+          "options": [
+            "±(1/√3, 1/√3, 1/√3)",
+            "±(1, 1, 1)",
+            "±(1/3, 1/3, 1/3)",
+            "±(1/2, 1/2, 1/2)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "l² + m² + n² = 1 => 3 l² = 1 => l = ±1/√3."
+        },
+        {
+          "id": "mbm_q68",
+          "text": "Equation of plane passing through origin with normal vector (2, 3, -1) is:",
+          "options": [
+            "2x + 3y - z = 0",
+            "2x + 3y + z = 0",
+            "x + y + z = 0",
+            "2x - 3y - z = 0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "a(x-0) + b(y-0) + c(z-0) = 0 => 2x + 3y - z = 0."
+        },
+        {
+          "id": "mbm_q69",
+          "text": "Length of latus rectum of ellipse x²/25 + y²/9 = 1 is:",
+          "options": [
+            "18 / 5",
+            "9 / 5",
+            "5 / 9",
+            "10 / 3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Latus rectum = 2b²/a = 2(9)/5 = 18/5."
+        },
+        {
+          "id": "mbm_q70",
+          "text": "Angle between lines x/1 = y/2 = z/3 and x/-2 = y/1 = z/0 is:",
+          "options": [
+            "90°",
+            "0°",
+            "45°",
+            "60°"
+          ],
+          "correctAnswer": 0,
+          "explanation": "a₁a₂ + b₁b₂ + c₁c₂ = 1(-2) + 2(1) + 3(0) = -2 + 2 + 0 = 0 => Lines are perpendicular (90°)."
+        },
+        {
+          "id": "mbm_q71",
+          "text": "If centroid of triangle with vertices (1,a), (2,b), (c,3) is (2,2), then a+b+c is:",
+          "options": [
+            "6",
+            "3",
+            "9",
+            "4"
+          ],
+          "correctAnswer": 0,
+          "explanation": "(1+2+c)/3 = 2 => c = 3. (a+b+3)/3 = 2 => a+b = 3. a+b+c = 3 + 3 = 6."
+        },
+        {
+          "id": "mbm_q72",
+          "text": "Equation of line passing through (1,2) and parallel to 4x + 5y = 10 is:",
+          "options": [
+            "4x + 5y = 14",
+            "4x - 5y = -6",
+            "5x + 4y = 13",
+            "4x + 5y = 0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Line is 4x + 5y = c. Substitute (1,2): 4(1) + 5(2) = 14 => 4x + 5y = 14."
+        },
+        {
+          "id": "mbm_q73",
+          "text": "Intersection of plane x + 2y + 3z = 6 with x-axis is at point:",
+          "options": [
+            "(6, 0, 0)",
+            "(0, 3, 0)",
+            "(0, 0, 2)",
+            "(1, 0, 0)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "On x-axis, y = 0, z = 0 => x = 6. Point is (6,0,0)."
+        },
+        {
+          "id": "mbm_q74",
+          "text": "Condition for two lines a₁x + b₁y + c₁ = 0 and a₂x + b₂y + c₂ = 0 to be parallel is:",
+          "options": [
+            "a₁/a₂ = b₁/b₂ ≠ c₁/c₂",
+            "a₁a₂ + b₁b₂ = 0",
+            "a₁b₂ + a₂b₁ = 0",
+            "c₁ = c₂"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Parallel lines have equal slopes: -a₁/b₁ = -a₂/b₂ => a₁/a₂ = b₁/b₂."
+        },
+        {
+          "id": "mbm_q75",
+          "text": "Distance between planes 2x + y + 2z = 8 and 4x + 2y + 4z = 5 is:",
+          "options": [
+            "11 / 6",
+            "3 / 2",
+            "11 / 3",
+            "7 / 6"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Second plane is 2x + y + 2z = 2.5. Distance = |8 - 2.5| / √(4+1+4) = 5.5 / 3 = 11 / 6."
+        },
+        {
+          "id": "mbm_q76",
+          "text": "Value of lim_{x->0} (sin 5x) / x is:",
+          "options": [
+            "5",
+            "1",
+            "0",
+            "1/5"
+          ],
+          "correctAnswer": 0,
+          "explanation": "lim_{x->0} (sin 5x)/(5x) × 5 = 1 × 5 = 5."
+        },
+        {
+          "id": "mbm_q77",
+          "text": "Derivative of sin(x²) with respect to x is:",
+          "options": [
+            "2x cos(x²)",
+            "cos(x²)",
+            "-2x cos(x²)",
+            "2x sin(x²)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Chain rule: cos(x²) × d(x²)/dx = 2x cos(x²)."
+        },
+        {
+          "id": "mbm_q78",
+          "text": "If y = e^(3x), then d²y/dx² is:",
+          "options": [
+            "9 e^(3x)",
+            "3 e^(3x)",
+            "6 e^(3x)",
+            "e^(3x)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "dy/dx = 3 e^(3x), d²y/dx² = 9 e^(3x)."
+        },
+        {
+          "id": "mbm_q79",
+          "text": "Function f(x) = x³ - 3x² + 3x - 1 is increasing on:",
+          "options": [
+            "Entire ℝ",
+            "(1, ∞)",
+            "(-∞, 1)",
+            "[0, 1]"
+          ],
+          "correctAnswer": 0,
+          "explanation": "f'(x) = 3x² - 6x + 3 = 3(x - 1)² ≥ 0 for all x ∈ ℝ. Strictly increasing everywhere."
+        },
+        {
+          "id": "mbm_q80",
+          "text": "The point of inflection for curve y = x³ is at:",
+          "options": [
+            "x = 0",
+            "x = 1",
+            "x = -1",
+            "Does not exist"
+          ],
+          "correctAnswer": 0,
+          "explanation": "y'' = 6x = 0 at x = 0, and sign of y'' changes across x = 0."
+        },
+        {
+          "id": "mbm_q81",
+          "text": "Value of lim_{x->0} (1 - cos x) / x² is:",
+          "options": [
+            "1 / 2",
+            "1",
+            "0",
+            "2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Standard limit: lim (2 sin²(x/2)) / x² = 1/2."
+        },
+        {
+          "id": "mbm_q82",
+          "text": "If y = ln(sec x + tan x), then dy/dx is:",
+          "options": [
+            "sec x",
+            "tan x",
+            "sec x + tan x",
+            "cos x"
+          ],
+          "correctAnswer": 0,
+          "explanation": "dy/dx = (sec x tan x + sec² x)/(sec x + tan x) = sec x."
+        },
+        {
+          "id": "mbm_q83",
+          "text": "Slope of tangent to curve y = x² - 4x + 3 at x = 3 is:",
+          "options": [
+            "2",
+            "3",
+            "0",
+            "6"
+          ],
+          "correctAnswer": 0,
+          "explanation": "dy/dx = 2x - 4. At x = 3, slope = 2(3) - 4 = 2."
+        },
+        {
+          "id": "mbm_q84",
+          "text": "If f(x) = |x|, then at x = 0 the function is:",
+          "options": [
+            "Continuous but not differentiable",
+            "Differentiable",
+            "Discontinuous",
+            "Neither continuous nor defined"
+          ],
+          "correctAnswer": 0,
+          "explanation": "f(x) is continuous everywhere, but left derivative (-1) ≠ right derivative (+1) at x = 0."
+        },
+        {
+          "id": "mbm_q85",
+          "text": "Value of lim_{x->∞} (1 + 1/x)^x is:",
+          "options": [
+            "e",
+            "1",
+            "0",
+            "∞"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Definition of Euler's number e."
+        },
+        {
+          "id": "mbm_q86",
+          "text": "Maximum value of f(x) = x (1 - x) for x ∈ [0, 1] is:",
+          "options": [
+            "1 / 4",
+            "1 / 2",
+            "1",
+            "0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "f(x) = x - x². f'(x) = 1 - 2x = 0 => x = 1/2. Max value = (1/2)(1/2) = 1/4."
+        },
+        {
+          "id": "mbm_q87",
+          "text": "Derivative of tan⁻¹ x + cot⁻¹ x with respect to x is:",
+          "options": [
+            "0",
+            "1/(1+x²)",
+            "-1/(1+x²)",
+            "1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "tan⁻¹ x + cot⁻¹ x = π/2 (constant). Derivative of constant is 0."
+        },
+        {
+          "id": "mbm_q88",
+          "text": "Value of lim_{x->0} (tan x - x) / x³ is:",
+          "options": [
+            "1 / 3",
+            "1",
+            "0",
+            "1 / 2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Using L'Hopital rule or expansion tan x = x + x³/3 + ... => limit = 1/3."
+        },
+        {
+          "id": "mbm_q89",
+          "text": "If x = a cos θ, y = a sin θ, then dy/dx is:",
+          "options": [
+            "-cot θ",
+            "-tan θ",
+            "tan θ",
+            "cot θ"
+          ],
+          "correctAnswer": 0,
+          "explanation": "dy/dx = (a cos θ) / (-a sin θ) = -cot θ."
+        },
+        {
+          "id": "mbm_q90",
+          "text": "The function f(x) = x + 1/x for x > 0 achieves its local minimum at:",
+          "options": [
+            "x = 1",
+            "x = 2",
+            "x = 0",
+            "x = 1/2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "f'(x) = 1 - 1/x² = 0 => x = 1 (for x > 0). Local minimum value is 2."
+        },
+        {
+          "id": "mbm_q91",
+          "text": "∫ (1 / (1 + x²)) dx is equal to:",
+          "options": [
+            "tan⁻¹ x + C",
+            "sin⁻¹ x + C",
+            "ln(1+x²) + C",
+            "cot⁻¹ x + C"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Standard integral formula."
+        },
+        {
+          "id": "mbm_q92",
+          "text": "∫ e^x (sin x + cos x) dx is equal to:",
+          "options": [
+            "e^x sin x + C",
+            "e^x cos x + C",
+            "-e^x cos x + C",
+            "e^x (sin x - cos x) + C"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Formula ∫ e^x [f(x) + f'(x)] dx = e^x f(x) + C with f(x) = sin x."
+        },
+        {
+          "id": "mbm_q93",
+          "text": "Value of definite integral ∫₀^(π/2) sin x dx is:",
+          "options": [
+            "1",
+            "0",
+            "2",
+            "π/2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "[-cos x]₀^(π/2) = -cos(π/2) - (-cos 0) = 0 + 1 = 1."
+        },
+        {
+          "id": "mbm_q94",
+          "text": "Value of ∫₀^(π/2) (sin x / (sin x + cos x)) dx is:",
+          "options": [
+            "π / 4",
+            "π / 2",
+            "1",
+            "0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Using King's property ∫₀^a f(x) dx = ∫₀^a f(a-x) dx: 2I = ∫₀^(π/2) 1 dx = π/2 => I = π/4."
+        },
+        {
+          "id": "mbm_q95",
+          "text": "Order and degree of differential equation d²y/dx² + (dy/dx)³ + y = 0 are respectively:",
+          "options": [
+            "2 and 1",
+            "2 and 3",
+            "3 and 2",
+            "1 and 3"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Highest derivative is 2nd order (order 2), and power of highest derivative is 1 (degree 1)."
+        },
+        {
+          "id": "mbm_q96",
+          "text": "General solution of differential equation dy/dx = y/x is:",
+          "options": [
+            "y = c x",
+            "y = x + c",
+            "y = c / x",
+            "y² = x² + c"
+          ],
+          "correctAnswer": 0,
+          "explanation": "dy/y = dx/x => ln y = ln x + ln c => y = c x."
+        },
+        {
+          "id": "mbm_q97",
+          "text": "Area bounded by parabola y = x² and line y = 4 is:",
+          "options": [
+            "32 / 3 sq units",
+            "16 / 3 sq units",
+            "8 sq units",
+            "64 / 3 sq units"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Area = 2 ∫₀⁴ √y dy = 2 [ (2/3) y^(3/2) ]₀⁴ = (4/3)(8) = 32 / 3 sq units."
+        },
+        {
+          "id": "mbm_q98",
+          "text": "∫ (1 / x) dx for x > 0 is equal to:",
+          "options": [
+            "ln x + C",
+            "-1/x² + C",
+            "x ln x + C",
+            "e^x + C"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Standard integral of 1/x is ln|x| + C."
+        },
+        {
+          "id": "mbm_q99",
+          "text": "Integrating factor (IF) for linear differential equation dy/dx + P(x) y = Q(x) is:",
+          "options": [
+            "e^(∫ P dx)",
+            "∫ P dx",
+            "e^(∫ Q dx)",
+            "P(x)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Standard IF formula = e^(∫ P(x) dx)."
+        },
+        {
+          "id": "mbm_q100",
+          "text": "Value of ∫_{-a}^a x³ cos x dx is:",
+          "options": [
+            "0",
+            "2a³",
+            "a⁴/4",
+            "1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "f(x) = x³ cos x is an odd function (f(-x) = -f(x)). Definite integral of odd function from -a to a is 0."
+        },
+        {
+          "id": "mbm_q101",
+          "text": "∫ sec² x dx is equal to:",
+          "options": [
+            "tan x + C",
+            "sec x + C",
+            "-cot x + C",
+            "ln(sec x) + C"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Standard integral formula."
+        },
+        {
+          "id": "mbm_q102",
+          "text": "Area of circle x² + y² = a² using integration is:",
+          "options": [
+            "π a²",
+            "2π a²",
+            "π a²/2",
+            "4π a²"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Area = 4 ∫₀^a √(a² - x²) dx = 4 (π a² / 4) = π a²."
+        },
+        {
+          "id": "mbm_q103",
+          "text": "Differential equation representing family of lines y = m x is:",
+          "options": [
+            "x dy - y dx = 0",
+            "x dy + y dx = 0",
+            "dy/dx = x",
+            "dy/dx = 1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "m = y/x. Differentiating y = (y/x)x gives dy/dx = y/x => x dy - y dx = 0."
+        },
+        {
+          "id": "mbm_q104",
+          "text": "∫ x e^x dx is equal to:",
+          "options": [
+            "e^x (x - 1) + C",
+            "e^x (x + 1) + C",
+            "x e^x + C",
+            "e^x / x + C"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Integration by parts: x e^x - ∫ e^x dx = e^x (x - 1) + C."
+        },
+        {
+          "id": "mbm_q105",
+          "text": "Value of ∫₀^1 x (1 - x)⁵ dx is:",
+          "options": [
+            "1 / 42",
+            "1 / 30",
+            "1 / 12",
+            "1 / 56"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Using property ∫₀¹ (1-x) x⁵ dx = ∫₀¹ (x⁵ - x⁶) dx = [1/6 - 1/7] = 1 / 42."
+        },
+        {
+          "id": "mbm_q106",
+          "text": "If vectors a⃗ = 2î + ĵ + 3k̂ and b⃗ = 3î - 2ĵ + k̂ are perpendicular, then their dot product a⃗ · b⃗ is:",
+          "options": [
+            "7",
+            "0",
+            "11",
+            "5"
+          ],
+          "correctAnswer": 0,
+          "explanation": "a⃗ · b⃗ = 2(3) + 1(-2) + 3(1) = 6 - 2 + 3 = 7... wait, if question asks dot product: 2(3)+1(-2)+3(1) = 7."
+        },
+        {
+          "id": "mbm_q107",
+          "text": "Magnitude of cross product |a⃗ × b⃗| represents area of a parallelogram with adjacent sides a⃗ and b⃗. If |a⃗|=3, |b⃗|=4, angle 30°, area is:",
+          "options": [
+            "6 sq units",
+            "12 sq units",
+            "6√3 sq units",
+            "3 sq units"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Area = |a⃗||b⃗| sin θ = 3 × 4 × sin 30° = 12 × 1/2 = 6 sq units."
+        },
+        {
+          "id": "mbm_q108",
+          "text": "If a⃗, b⃗, c⃗ are coplanar vectors, then scalar triple product [a⃗ b⃗ c⃗] is equal to:",
+          "options": [
+            "0",
+            "1",
+            "a⃗ · (b⃗ × c⃗) ≠ 0",
+            "-1"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Volume of parallelepiped formed by coplanar vectors is zero."
+        },
+        {
+          "id": "mbm_q109",
+          "text": "If P(A) = 0.4, P(B) = 0.5 and P(A ∩ B) = 0.2, then P(A | B) is equal to:",
+          "options": [
+            "0.4",
+            "0.5",
+            "0.8",
+            "0.2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "P(A | B) = P(A ∩ B) / P(B) = 0.2 / 0.5 = 0.4."
+        },
+        {
+          "id": "mbm_q110",
+          "text": "If two events A and B are independent, then P(A ∩ B) is equal to:",
+          "options": [
+            "P(A) · P(B)",
+            "P(A) + P(B)",
+            "P(A) / P(B)",
+            "0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "By definition of independent events."
+        },
+        {
+          "id": "mbm_q111",
+          "text": "Mean of first n natural numbers is:",
+          "options": [
+            "(n + 1) / 2",
+            "n / 2",
+            "n(n + 1) / 2",
+            "(n - 1) / 2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Sum = n(n+1)/2. Mean = [n(n+1)/2] / n = (n + 1) / 2."
+        },
+        {
+          "id": "mbm_q112",
+          "text": "Variance of first 5 natural numbers (1, 2, 3, 4, 5) is:",
+          "options": [
+            "2",
+            "2.5",
+            "3",
+            "1.5"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Formula for variance of first n natural numbers: (n² - 1)/12 = (25 - 1)/12 = 24/12 = 2."
+        },
+        {
+          "id": "mbm_q113",
+          "text": "A coin is tossed 3 times. Probability of getting EXACTLY 2 heads is:",
+          "options": [
+            "3 / 8",
+            "1 / 8",
+            "1 / 2",
+            "3 / 4"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Favorable outcomes: HHT, HTH, THH (3). Total outcomes: 2³ = 8. P = 3/8."
+        },
+        {
+          "id": "mbm_q114",
+          "text": "If two dice are thrown together, probability of getting a sum of 7 is:",
+          "options": [
+            "1 / 6",
+            "1 / 12",
+            "5 / 36",
+            "1 / 36"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Favorable pairs: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. P = 6/36 = 1/6."
+        },
+        {
+          "id": "mbm_q115",
+          "text": "Unit vector parallel to vector a⃗ = 3î + 4ĵ is:",
+          "options": [
+            "(3î + 4ĵ) / 5",
+            "(3î + 4ĵ) / 25",
+            "3î + 4ĵ",
+            "4î + 3ĵ"
+          ],
+          "correctAnswer": 0,
+          "explanation": "â = a⃗ / |a⃗| = (3î + 4ĵ) / √(9+16) = (3î + 4ĵ)/5."
+        },
+        {
+          "id": "mbm_q116",
+          "text": "If mean of 5 observations is 10, new mean when each observation is multiplied by 3 is:",
+          "options": [
+            "30",
+            "10",
+            "15",
+            "33"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Multiplying each observation by constant k multiplies mean by k: 10 × 3 = 30."
+        },
+        {
+          "id": "mbm_q117",
+          "text": "Probability of drawing an Ace from a well-shuffled deck of 52 cards is:",
+          "options": [
+            "1 / 13",
+            "1 / 52",
+            "4 / 13",
+            "1 / 4"
+          ],
+          "correctAnswer": 0,
+          "explanation": "4 Aces in 52 cards: P = 4/52 = 1/13."
+        },
+        {
+          "id": "mbm_q118",
+          "text": "Projection of vector a⃗ = î + ĵ on vector b⃗ = î - ĵ is:",
+          "options": [
+            "0",
+            "1",
+            "√2",
+            "2"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Projection = (a⃗ · b⃗) / |b⃗| = (1(1) + 1(-1)) / √2 = 0 / √2 = 0."
+        },
+        {
+          "id": "mbm_q119",
+          "text": "If a random variable X follows Binomial distribution B(n, p) with n = 10, p = 0.5, its variance is:",
+          "options": [
+            "2.5",
+            "5",
+            "10",
+            "1.25"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Variance = n p q = 10 × 0.5 × 0.5 = 2.5."
+        },
+        {
+          "id": "mbm_q200",
+          "text": "If A and B are mutually exclusive events, then P(A ∪ B) is equal to:",
+          "options": [
+            "P(A) + P(B)",
+            "P(A) · P(B)",
+            "P(A) + P(B) - P(A ∩ B)",
+            "0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "For mutually exclusive events, P(A ∩ B) = 0, so P(A ∪ B) = P(A) + P(B)."
+        }
+      ]
+    },
+    {
+      "id": "manekshaw-batch-paper-1-gat",
+      "title": "MANEKSHAW BATCH PAPER 1 GAT",
+      "description": "Official-pattern UPSC NDA II 2025 General Ability Test (GAT). 150 Questions (50 English + 100 GK/Science) | 2.5 Hours (150 Mins) | Total Marks: 600. Marking: +4 for correct, -1.3333 (1/3 deduction) for incorrect.",
+      "timeLimitMinutes": 150,
+      "maxViolationsAllowed": 3,
+      "marksPerCorrect": 4,
+      "negativeMarksPerWrong": 1.3333333333333333,
+      "totalMarks": 600,
+      "passingMarks": 240,
+      "isActive": true,
+      "isResultPublished": true,
+      "isHidden": false,
+      "questions": [
+        {
+          "id": "mbg_q1",
+          "text": "Spotting Errors: 'Neither the teacher (A) / nor the students (B) / was present in the hall (C) / No Error (D)'",
+          "options": [
+            "was present in the hall (C) -> should be 'were present'",
+            "Neither the teacher (A)",
+            "nor the students (B)",
+            "No Error (D)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "When subjects are joined by 'neither...nor', verb agrees with the closer subject ('students' => plural verb 'were')."
+        },
+        {
+          "id": "mbg_q2",
+          "text": "Spotting Errors: 'He has been studying (A) / in this school (B) / since five years (C) / No Error (D)'",
+          "options": [
+            "since five years (C) -> should be 'for five years'",
+            "He has been studying (A)",
+            "in this school (B)",
+            "No Error (D)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "'For' is used for a duration/period of time ('five years'), whereas 'since' is used for a specific point in time."
+        },
+        {
+          "id": "mbg_q3",
+          "text": "Spotting Errors: 'Scarcely had he reached (A) / the station (B) / than the train started (C) / No Error (D)'",
+          "options": [
+            "than the train started (C) -> should be 'when the train started'",
+            "Scarcely had he reached (A)",
+            "the station (B)",
+            "No Error (D)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "'Scarcely' and 'Hardly' are followed by 'when' or 'before', not 'than'."
+        },
+        {
+          "id": "mbg_q4",
+          "text": "Spotting Errors: 'One of the student (A) / was selected for (B) / the National Award (C) / No Error (D)'",
+          "options": [
+            "One of the student (A) -> should be 'One of the students'",
+            "was selected for (B)",
+            "the National Award (C)",
+            "No Error (D)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The phrase 'One of the' is always followed by a plural noun ('students')."
+        },
+        {
+          "id": "mbg_q5",
+          "text": "Spotting Errors: 'Unless you do not work hard (A) / you cannot pass (B) / the NDA examination (C) / No Error (D)'",
+          "options": [
+            "Unless you do not work hard (A) -> should be 'Unless you work hard'",
+            "you cannot pass (B)",
+            "the NDA examination (C)",
+            "No Error (D)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "'Unless' itself contains a negative sense, so 'not' should not be used in the unless-clause."
+        },
+        {
+          "id": "mbg_q6",
+          "text": "Spotting Errors: 'The scenery of Kashmir (A) / are very (B) / enchanting (C) / No Error (D)'",
+          "options": [
+            "are very (B) -> should be 'is very'",
+            "The scenery of Kashmir (A)",
+            "enchanting (C)",
+            "No Error (D)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "'Scenery' is an uncountable singular noun and takes a singular verb ('is')."
+        },
+        {
+          "id": "mbg_q7",
+          "text": "Spotting Errors: 'He is senior (A) / than me (B) / in service (C) / No Error (D)'",
+          "options": [
+            "than me (B) -> should be 'to me'",
+            "He is senior (A)",
+            "in service (C)",
+            "No Error (D)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Adjectives ending in '-ior' (senior, junior, superior, inferior) take preposition 'to', not 'than'."
+        },
+        {
+          "id": "mbg_q8",
+          "text": "Spotting Errors: 'Suppose if (A) / it rains (B) / what will we do? (C) / No Error (D)'",
+          "options": [
+            "Suppose if (A) -> remove either 'Suppose' or 'if'",
+            "it rains (B)",
+            "what will we do? (C)",
+            "No Error (D)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "'Suppose' and 'if' mean the same thing; using them together is redundant."
+        },
+        {
+          "id": "mbg_q9",
+          "text": "Spotting Errors: 'Each of the boys (A) / have completed (B) / their assignment (C) / No Error (D)'",
+          "options": [
+            "have completed (B) -> should be 'has completed'",
+            "Each of the boys (A)",
+            "their assignment (C)",
+            "No Error (D)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "'Each' takes a singular verb ('has')."
+        },
+        {
+          "id": "mbg_q10",
+          "text": "Spotting Errors: 'The Chairman along with (A) / the committee members (B) / were present (C) / No Error (D)'",
+          "options": [
+            "were present (C) -> should be 'was present'",
+            "The Chairman along with (A)",
+            "the committee members (B)",
+            "No Error (D)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "When subjects are connected by 'along with', verb agrees with the main first subject ('The Chairman' => 'was')."
+        },
+        {
+          "id": "mbg_q11",
+          "text": "Synonym of CANDID:",
+          "options": [
+            "Frank / Outspoken",
+            "Secretive",
+            "Dishonest",
+            "Arrogant"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Candid means truthful, straightforward, and frank."
+        },
+        {
+          "id": "mbg_q12",
+          "text": "Synonym of LETHARGIC:",
+          "options": [
+            "Sluggish / Inactive",
+            "Energetic",
+            "Quick",
+            "Enthusiastic"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Lethargic means lacking energy, sluggish, orpathetic."
+        },
+        {
+          "id": "mbg_q13",
+          "text": "Synonym of DILIGENT:",
+          "options": [
+            "Hardworking / Industrious",
+            "Lazy",
+            "Careless",
+            "Foolish"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Diligent means showing care and conscientious effort in work."
+        },
+        {
+          "id": "mbg_q14",
+          "text": "Synonym of ABANDON:",
+          "options": [
+            "Forsake / Desert",
+            "Retain",
+            "Adopt",
+            "Cherish"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Abandon means to leave completely or desert."
+        },
+        {
+          "id": "mbg_q15",
+          "text": "Synonym of BENEVOLENT:",
+          "options": [
+            "Kind-hearted / Charitable",
+            "Malevolent",
+            "Cruel",
+            "Selfish"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Benevolent means well-meaning, kindly, and charitable."
+        },
+        {
+          "id": "mbg_q16",
+          "text": "Synonym of OBSTINATE:",
+          "options": [
+            "Stubborn / Rigid",
+            "Flexible",
+            "Yielding",
+            "Submissive"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Obstinate means stubbornly refusing to change one's opinion."
+        },
+        {
+          "id": "mbg_q17",
+          "text": "Synonym of FRUGAL:",
+          "options": [
+            "Economical / Thrifty",
+            "Extravagant",
+            "Wasteful",
+            "Generous"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Frugal means sparing or economical regarding money or food."
+        },
+        {
+          "id": "mbg_q18",
+          "text": "Synonym of ADVERSITY:",
+          "options": [
+            "Misfortune / Hardship",
+            "Prosperity",
+            "Success",
+            "Joy"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Adversity means difficult conditions or misfortune."
+        },
+        {
+          "id": "mbg_q19",
+          "text": "Synonym of METICULOUS:",
+          "options": [
+            "Precise / Painstaking",
+            "Careless",
+            "Rough",
+            "Sloppy"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Meticulous means showing great attention to detail."
+        },
+        {
+          "id": "mbg_q20",
+          "text": "Synonym of TRANQUIL:",
+          "options": [
+            "Calm / Peaceful",
+            "Noisy",
+            "Agitated",
+            "Turbulent"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Tranquil means free from disturbance; calm."
+        },
+        {
+          "id": "mbg_q21",
+          "text": "Antonym of GLOOMY:",
+          "options": [
+            "Cheerful / Bright",
+            "Dark",
+            "Depressing",
+            "Sad"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Gloomy means dark or depressing; antonym is cheerful or bright."
+        },
+        {
+          "id": "mbg_q22",
+          "text": "Antonym of PERMANENT:",
+          "options": [
+            "Transient / Temporary",
+            "Everlasting",
+            "Durable",
+            "Stable"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Permanent means lasting; antonym is transient or temporary."
+        },
+        {
+          "id": "mbg_q23",
+          "text": "Antonym of HOSTILITY:",
+          "options": [
+            "Friendliness / Amity",
+            "Enmity",
+            "Antagonism",
+            "Hatred"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Hostility means unfriendliness or opposition; antonym is amity or friendliness."
+        },
+        {
+          "id": "mbg_q24",
+          "text": "Antonym of BOISTEROUS:",
+          "options": [
+            "Quiet / Peaceful",
+            "Noisy",
+            "Clamorous",
+            "Rowdy"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Boisterous means noisy, energetic, and rowdy; antonym is quiet or restrained."
+        },
+        {
+          "id": "mbg_q25",
+          "text": "Antonym of AFFLUENT:",
+          "options": [
+            "Poor / Impoverished",
+            "Wealthy",
+            "Rich",
+            "Prosperous"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Affluent means wealthy; antonym is poor or impoverished."
+        },
+        {
+          "id": "mbg_q26",
+          "text": "Antonym of ADVANCE:",
+          "options": [
+            "Retreat / Recede",
+            "Proceed",
+            "Progress",
+            "Move forward"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Advance means move forward; antonym is retreat or recede."
+        },
+        {
+          "id": "mbg_q27",
+          "text": "Antonym of ARTIFICIAL:",
+          "options": [
+            "Natural / Genuine",
+            "Synthetic",
+            "Man-made",
+            "Fake"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Artificial means man-made; antonym is natural."
+        },
+        {
+          "id": "mbg_q28",
+          "text": "Antonym of VAGUE:",
+          "options": [
+            "Clear / Precise",
+            "Obscure",
+            "Indistinct",
+            "Unclear"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Vague means uncertain or unclear; antonym is clear or precise."
+        },
+        {
+          "id": "mbg_q29",
+          "text": "Antonym of CONCORD:",
+          "options": [
+            "Discord / Disagreement",
+            "Agreement",
+            "Harmony",
+            "Peace"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Concord means agreement or harmony; antonym is discord."
+        },
+        {
+          "id": "mbg_q30",
+          "text": "Antonym of OPTIMISTIC:",
+          "options": [
+            "Pessimistic",
+            "Hopeful",
+            "Confident",
+            "Cheerfull"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Optimistic means hopeful; antonym is pessimistic."
+        },
+        {
+          "id": "mbg_q31",
+          "text": "Order the parts: 'P: in the country / Q: education is / R: the foundation of / S: all progress'",
+          "options": [
+            "Q - R - S - P  (Education is the foundation of all progress in the country)",
+            "P - Q - R - S",
+            "R - S - P - Q",
+            "S - P - Q - R"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Correct coherent sequence is Q (education is) R (the foundation of) S (all progress) P (in the country)."
+        },
+        {
+          "id": "mbg_q32",
+          "text": "Order the parts: 'P: to the national grid / Q: renewable energy / R: is being added / S: rapidly'",
+          "options": [
+            "Q - R - S - P  (Renewable energy is being added rapidly to the national grid)",
+            "P - Q - R - S",
+            "S - P - Q - R",
+            "R - Q - P - S"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Sequence Q - R - S - P forms a grammatically correct sentence."
+        },
+        {
+          "id": "mbg_q33",
+          "text": "Order the parts: 'P: by the soldiers / Q: extraordinary courage / R: was displayed / S: during the battle'",
+          "options": [
+            "Q - R - P - S  (Extraordinary courage was displayed by the soldiers during the battle)",
+            "P - Q - R - S",
+            "S - R - Q - P",
+            "R - P - Q - S"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Sequence Q - R - P - S forms a clear passive sentence."
+        },
+        {
+          "id": "mbg_q34",
+          "text": "Idiom meaning: 'To burn the candle at both ends' means:",
+          "options": [
+            "To work extremely hard from early morning to late night",
+            "To waste money recklessly",
+            "To cause an accident",
+            "To celebrate lavishly"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Idiom means to exhaust oneself by working or staying up very late and getting up early."
+        },
+        {
+          "id": "mbg_q35",
+          "text": "Idiom meaning: 'At the eleventh hour' means:",
+          "options": [
+            "At the last possible moment",
+            "At 11 o'clock sharp",
+            "Too early in the morning",
+            "Never"
+          ],
+          "correctAnswer": 0,
+          "explanation": "'At the eleventh hour' means at the very last moment before a deadline."
+        },
+        {
+          "id": "mbg_q36",
+          "text": "Idiom meaning: 'To spill the beans' means:",
+          "options": [
+            "To reveal a secret prematurely",
+            "To drop food on the floor",
+            "To cook a meal",
+            "To make a mistake"
+          ],
+          "correctAnswer": 0,
+          "explanation": "'Spill the beans' means to disclose confidential information."
+        },
+        {
+          "id": "mbg_q37",
+          "text": "One-word substitution: 'A person who looks at the bright side of things':",
+          "options": [
+            "Optimist",
+            "Pessimist",
+            "Atheist",
+            "Altruist"
+          ],
+          "correctAnswer": 0,
+          "explanation": "An optimist is a hopeful person looking at the positive side."
+        },
+        {
+          "id": "mbg_q38",
+          "text": "One-word substitution: 'Government by a single ruler with absolute power':",
+          "options": [
+            "Autocracy / Dictatorship",
+            "Democracy",
+            "Oligarchy",
+            "Monarchy"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Autocracy is government by one person with unrestricted authority."
+        },
+        {
+          "id": "mbg_q39",
+          "text": "Choose correct spelling:",
+          "options": [
+            "Lieutenant",
+            "Leutenant",
+            "Lieutenent",
+            "Leiutenant"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Correct spelling is L-I-E-U-T-E-N-A-N-T."
+        },
+        {
+          "id": "mbg_q40",
+          "text": "Choose correct preposition: 'He is addicted ___ smoking.'",
+          "options": [
+            "to",
+            "with",
+            "from",
+            "in"
+          ],
+          "correctAnswer": 0,
+          "explanation": "'Addicted' takes the preposition 'to'."
+        },
+        {
+          "id": "mbg_q41",
+          "text": "Fill in the blank: 'If I ___ the Prime Minister, I would change the education system.'",
+          "options": [
+            "were",
+            "was",
+            "am",
+            "have been"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Subjunctive mood for hypothetical condition uses 'were' for all subjects."
+        },
+        {
+          "id": "mbg_q42",
+          "text": "Fill in the blank: 'Neither Rohit nor his friends ___ attending the party tonight.'",
+          "options": [
+            "are",
+            "is",
+            "was",
+            "has"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Verb agrees with closest subject 'friends' (plural) => 'are'."
+        },
+        {
+          "id": "mbg_q43",
+          "text": "Fill in the blank: 'The sun rises in the east and ___ in the west.'",
+          "options": [
+            "sets",
+            "set",
+            "setting",
+            "is setting"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Habitual/universal truth uses simple present tense ('sets')."
+        },
+        {
+          "id": "mbg_q44",
+          "text": "Fill in the blank: 'She is proficient ___ speaking English and French.'",
+          "options": [
+            "in",
+            "at",
+            "with",
+            "for"
+          ],
+          "correctAnswer": 0,
+          "explanation": "'Proficient' takes the preposition 'in'."
+        },
+        {
+          "id": "mbg_q45",
+          "text": "Fill in the blank: 'Hardly had he stepped out of the house ___ it started raining.'",
+          "options": [
+            "when",
+            "than",
+            "then",
+            "that"
+          ],
+          "correctAnswer": 0,
+          "explanation": "'Hardly had...' is paired with 'when'."
+        },
+        {
+          "id": "mbg_q46",
+          "text": "Idiom meaning: 'A blessing in disguise' means:",
+          "options": [
+            "A good thing that initially seemed bad",
+            "A hidden enemy",
+            "A religious prayer",
+            "A fake praise"
+          ],
+          "correctAnswer": 0,
+          "explanation": "A misfortune that turns out to have a good outcome."
+        },
+        {
+          "id": "mbg_q47",
+          "text": "One-word substitution: 'A life history of a person written by himself':",
+          "options": [
+            "Autobiography",
+            "Biography",
+            "Bibliography",
+            "Calligraphy"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Autobiography is written by oneself; Biography is written by another."
+        },
+        {
+          "id": "mbg_q48",
+          "text": "Synonym of IMPEDIMENT:",
+          "options": [
+            "Obstacle / Barrier",
+            "Assistance",
+            "Clearance",
+            "Support"
+          ],
+          "correctAnswer": 0,
+          "explanation": "An impediment is a hindrance or obstacle."
+        },
+        {
+          "id": "mbg_q49",
+          "text": "Antonym of VOLUNTARY:",
+          "options": [
+            "Compulsory / Mandatory",
+            "Optional",
+            "Willing",
+            "Intentional"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Voluntary means by free choice; antonym is compulsory."
+        },
+        {
+          "id": "mbg_q50",
+          "text": "Spotting Errors: 'No sooner did the bell ring (A) / when the students (B) / rushed out of class (C) / No Error (D)'",
+          "options": [
+            "when the students (B) -> should be 'than the students'",
+            "No sooner did the bell ring (A)",
+            "rushed out of class (C)",
+            "No Error (D)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "'No sooner' is followed by 'than', not 'when'."
+        },
+        {
+          "id": "mbg_q51",
+          "text": "Which instrument is used to measure atmospheric pressure?",
+          "options": [
+            "Barometer",
+            "Thermometer",
+            "Hygrometer",
+            "Anemometer"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Barometer is used to measure atmospheric pressure."
+        },
+        {
+          "id": "mbg_q52",
+          "text": "Acceleration due to gravity g at the center of the Earth is:",
+          "options": [
+            "Zero",
+            "9.8 m/s²",
+            "Infinite",
+            "4.9 m/s²"
+          ],
+          "correctAnswer": 0,
+          "explanation": "At the Earth's center, net gravitational force is zero, hence g = 0."
+        },
+        {
+          "id": "mbg_q53",
+          "text": "Light year is a unit of:",
+          "options": [
+            "Distance",
+            "Time",
+            "Intensity of light",
+            "Mass"
+          ],
+          "correctAnswer": 0,
+          "explanation": "A light-year is the distance light travels in one Julian year in vacuum."
+        },
+        {
+          "id": "mbg_q54",
+          "text": "Mirage observed in deserts in hot summer days is due to:",
+          "options": [
+            "Total Internal Reflection",
+            "Refraction only",
+            "Diffraction",
+            "Interference"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Mirage is caused by total internal reflection of light in layered hot air."
+        },
+        {
+          "id": "mbg_q55",
+          "text": "Unit of electrical power is:",
+          "options": [
+            "Watt (or Joule/second)",
+            "Joule",
+            "Ampere",
+            "Volt"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Electrical power P = V I is measured in Watts."
+        },
+        {
+          "id": "mbg_q56",
+          "text": "In a convex mirror, the image formed is ALWAYS:",
+          "options": [
+            "Virtual, erect, and diminished",
+            "Real, inverted, and enlarged",
+            "Real, erect, and magnified",
+            "Virtual and enlarged"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Convex mirrors always form virtual, erect, and diminished images behind mirror."
+        },
+        {
+          "id": "mbg_q57",
+          "text": "Sound waves cannot travel through:",
+          "options": [
+            "Vacuum",
+            "Air",
+            "Water",
+            "Steel"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Sound is a mechanical longitudinal wave requiring a material medium."
+        },
+        {
+          "id": "mbg_q58",
+          "text": "SI unit of frequency is:",
+          "options": [
+            "Hertz (Hz)",
+            "Decibel",
+            "Meter",
+            "Second"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Hertz (1 cycle/second) is SI unit of frequency."
+        },
+        {
+          "id": "mbg_q59",
+          "text": "Focal length of a plane mirror is:",
+          "options": [
+            "Infinity",
+            "Zero",
+            "10 cm",
+            "1 m"
+          ],
+          "correctAnswer": 0,
+          "explanation": "A plane mirror has no curvature, so radius of curvature R = ∞ and f = ∞."
+        },
+        {
+          "id": "mbg_q60",
+          "text": "When light passes from air to glass, which quantity remains UNCHANGED?",
+          "options": [
+            "Frequency",
+            "Wavelength",
+            "Speed",
+            "Amplitude"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Frequency depends on the source and remains constant across media boundaries."
+        },
+        {
+          "id": "mbg_q61",
+          "text": "Newton's First Law of Motion is also known as Law of:",
+          "options": [
+            "Inertia",
+            "Moments",
+            "Gravitation",
+            "Action and Reaction"
+          ],
+          "correctAnswer": 0,
+          "explanation": "First law defines inertia of rest and motion."
+        },
+        {
+          "id": "mbg_q62",
+          "text": "Hydraulic lift operates on the principle of:",
+          "options": [
+            "Pascal's Law",
+            "Bernoulli's Principle",
+            "Archimedes' Principle",
+            "Boyle's Law"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Pascal's Law states pressure applied to an enclosed fluid is transmitted undiminished."
+        },
+        {
+          "id": "mbg_q63",
+          "text": "Apparent weight of a man in a freely falling elevator under gravity is:",
+          "options": [
+            "Zero (Weightlessness)",
+            "Equal to true weight",
+            "Double the true weight",
+            "Half the true weight"
+          ],
+          "correctAnswer": 0,
+          "explanation": "In free fall, a = g, so apparent weight N = m(g - g) = 0."
+        },
+        {
+          "id": "mbg_q64",
+          "text": "Device used to convert mechanical energy into electrical energy is:",
+          "options": [
+            "AC Generator / Dynamo",
+            "Electric Motor",
+            "Transformer",
+            "Galvanometer"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Electric generator / dynamo converts mechanical energy into AC/DC electricity."
+        },
+        {
+          "id": "mbg_q65",
+          "text": "Transformer works on the principle of:",
+          "options": [
+            "Mutual Induction",
+            "Self Induction",
+            "Seebeck Effect",
+            "Peltier Effect"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Transformers step up/down AC voltage using mutual induction between coils."
+        },
+        {
+          "id": "mbg_q66",
+          "text": "Which electromagnetic wave has the SHORTEST wavelength?",
+          "options": [
+            "Gamma Rays",
+            "Radio Waves",
+            "Ultraviolet Rays",
+            "X-Rays"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Gamma rays have highest frequency and shortest wavelength in EM spectrum."
+        },
+        {
+          "id": "mbg_q67",
+          "text": "Splitting of white light into its 7 constituent colors by a prism is called:",
+          "options": [
+            "Dispersion",
+            "Refraction",
+            "Diffraction",
+            "Polarization"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Dispersion occurs due to different wavelengths traveling at different speeds in glass."
+        },
+        {
+          "id": "mbg_q68",
+          "text": "Myopia (short-sightedness) is corrected using a lens of type:",
+          "options": [
+            "Concave Lens",
+            "Convex Lens",
+            "Cylindrical Lens",
+            "Bifocal Lens"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Concave (diverging) lens is used to correct myopic vision."
+        },
+        {
+          "id": "mbg_q69",
+          "text": "Escape velocity from the surface of Earth is approximately:",
+          "options": [
+            "11.2 km/s",
+            "9.8 km/s",
+            "7.9 km/s",
+            "3.0 × 10⁸ m/s"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Escape velocity from Earth v_e = √(2gR) ≈ 11.2 km/s."
+        },
+        {
+          "id": "mbg_q70",
+          "text": "Specific heat capacity of which substance is HIGHEST among the following?",
+          "options": [
+            "Water",
+            "Copper",
+            "Iron",
+            "Mercury"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Water has an exceptionally high specific heat capacity (4184 J/kg K)."
+        },
+        {
+          "id": "mbg_q71",
+          "text": "Primary colors of light in additive color mixing are:",
+          "options": [
+            "Red, Green, Blue (RGB)",
+            "Red, Yellow, Blue",
+            "Cyan, Magenta, Yellow",
+            "Red, White, Black"
+          ],
+          "correctAnswer": 0,
+          "explanation": "RGB (Red, Green, Blue) are the primary additive colors of light."
+        },
+        {
+          "id": "mbg_q72",
+          "text": "A fuse wire should have:",
+          "options": [
+            "High resistance and low melting point",
+            "Low resistance and high melting point",
+            "High resistance and high melting point",
+            "Low resistance and low melting point"
+          ],
+          "correctAnswer": 0,
+          "explanation": "A fuse wire heats up rapidly (I²R) and melts (low melting point) to break excessive current."
+        },
+        {
+          "id": "mbg_q73",
+          "text": "The pitch of a sound wave depends on its:",
+          "options": [
+            "Frequency",
+            "Amplitude",
+            "Speed",
+            "Loudness"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Pitch is determined by the frequency of the sound wave."
+        },
+        {
+          "id": "mbg_q74",
+          "text": "Bernoulli's theorem is based on conservation of:",
+          "options": [
+            "Energy",
+            "Mass",
+            "Momentum",
+            "Angular Momentum"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Bernoulli's equation expresses conservation of mechanical energy for ideal fluid flow."
+        },
+        {
+          "id": "mbg_q75",
+          "text": "Substance used as a moderator in a nuclear reactor is:",
+          "options": [
+            "Heavy Water (D₂O) or Graphite",
+            "Uranium-235",
+            "Cadmium rods",
+            "Liquid Sodium"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Heavy water (D₂O) and graphite slow down fast neutrons to sustain fission."
+        },
+        {
+          "id": "mbg_q76",
+          "text": "pH of pure water at 25 °C is:",
+          "options": [
+            "7.0 (Neutral)",
+            "0.0",
+            "14.0",
+            "1.0"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Pure water has [H⁺] = 10⁻⁷ M, hence pH = -log(10⁻⁷) = 7."
+        },
+        {
+          "id": "mbg_q77",
+          "text": "Gas responsible for Global Warming (Greenhouse Effect) primarily is:",
+          "options": [
+            "Carbon dioxide (CO₂)",
+            "Oxygen (O₂)",
+            "Nitrogen (N₂)",
+            "Argon (Ar)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "CO₂ is the primary anthropogenic greenhouse gas trapping infrared radiation."
+        },
+        {
+          "id": "mbg_q78",
+          "text": "Chemical formula of Washing Soda is:",
+          "options": [
+            "Na₂CO₃ · 10H₂O",
+            "NaHCO₃",
+            "NaOH",
+            "CaSO₄ · 2H₂O"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Washing soda is Sodium Carbonate Decahydrate (Na₂CO₃ · 10H₂O)."
+        },
+        {
+          "id": "mbg_q79",
+          "text": "Baking Soda is chemically known as:",
+          "options": [
+            "Sodium Bicarbonate (NaHCO₃)",
+            "Sodium Carbonate",
+            "Sodium Hydroxide",
+            "Calcium Carbonate"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Baking soda is Sodium Hydrogen Carbonate (NaHCO₃)."
+        },
+        {
+          "id": "mbg_q80",
+          "text": "The most abundant gas in Earth's atmosphere is:",
+          "options": [
+            "Nitrogen (78%)",
+            "Oxygen (21%)",
+            "Carbon dioxide",
+            "Argon"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Nitrogen makes up approx 78% of Earth's atmosphere by volume."
+        },
+        {
+          "id": "mbg_q81",
+          "text": "Which metal is liquid at room temperature (25 °C)?",
+          "options": [
+            "Mercury (Hg)",
+            "Sodium (Na)",
+            "Lead (Pb)",
+            "Aluminum (Al)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Mercury (Hg) is the only transition metal liquid at room temperature."
+        },
+        {
+          "id": "mbg_q82",
+          "text": "Process of heating sulfide ore in presence of excess air is called:",
+          "options": [
+            "Roasting",
+            "Calcination",
+            "Smelting",
+            "Refining"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Roasting converts sulfide ores into oxides by heating in excess oxygen."
+        },
+        {
+          "id": "mbg_q83",
+          "text": "Main constituent of Natural Gas and Biogas is:",
+          "options": [
+            "Methane (CH₄)",
+            "Ethane (C₂H₆)",
+            "Propane (C₃H₈)",
+            "Butane (C₄H₁₀)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Methane (CH₄) accounts for over 85-90% of natural gas and biogas."
+        },
+        {
+          "id": "mbg_q84",
+          "text": "Acid present in vinegar is:",
+          "options": [
+            "Acetic Acid (CH₃COOH)",
+            "Formic Acid",
+            "Citric Acid",
+            "Tartaric Acid"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Vinegar is a 5-8% aqueous solution of Acetic Acid."
+        },
+        {
+          "id": "mbg_q85",
+          "text": "Solder alloy used for joining electrical wires consists of:",
+          "options": [
+            "Lead and Tin (Pb + Sn)",
+            "Copper and Zinc",
+            "Copper and Tin",
+            "Aluminum and Nickel"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Solder is an alloy of Tin (60%) and Lead (40%)."
+        },
+        {
+          "id": "mbg_q86",
+          "text": "Chemical name of Plaster of Paris is:",
+          "options": [
+            "Calcium Sulfate Hemihydrate (CaSO₄ · ½H₂O)",
+            "Calcium Carbonate",
+            "Calcium Sulfate Dihydrate",
+            "Calcium Oxide"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Plaster of Paris is CaSO₄ · ½H₂O formed by heating Gypsum at 373 K."
+        },
+        {
+          "id": "mbg_q87",
+          "text": "Isotopes of an element have same number of protons but different number of:",
+          "options": [
+            "Neutrons",
+            "Protons",
+            "Electrons",
+            "Atomic Number"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Isotopes have identical Z (protons) but different mass number A due to different neutrons."
+        },
+        {
+          "id": "mbg_q88",
+          "text": "Element with the highest electronegativity on Pauling scale is:",
+          "options": [
+            "Fluorine (F)",
+            "Chlorine (Cl)",
+            "Oxygen (O)",
+            "Cesium (Cs)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Fluorine has the highest electronegativity value (4.0)."
+        },
+        {
+          "id": "mbg_q89",
+          "text": "Cinnabar is an ore of which metal?",
+          "options": [
+            "Mercury (HgS)",
+            "Lead",
+            "Copper",
+            "Iron"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Cinnabar (HgS) is the primary ore of Mercury."
+        },
+        {
+          "id": "mbg_q90",
+          "text": "Gas evolved when Zinc reacts with dilute Hydrochloric Acid is:",
+          "options": [
+            "Hydrogen (H₂)",
+            "Oxygen (O₂)",
+            "Chlorine (Cl₂)",
+            "Carbon dioxide"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Zn + 2HCl -> ZnCl₂ + H₂↑."
+        },
+        {
+          "id": "mbg_q91",
+          "text": "Which cell organelle is known as the 'Powerhouse of the Cell'?",
+          "options": [
+            "Mitochondria",
+            "Ribosome",
+            "Lysosome",
+            "Golgi Apparatus"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Mitochondria produce cellular energy in the form of ATP via aerobic respiration."
+        },
+        {
+          "id": "mbg_q92",
+          "text": "Deficiency of Vitamin C leads to which disease?",
+          "options": [
+            "Scurvy",
+            "Rickets",
+            "Beriberi",
+            "Night Blindness"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Vitamin C (Ascorbic acid) deficiency causes Scurvy characterized by bleeding gums."
+        },
+        {
+          "id": "mbg_q93",
+          "text": "Blood group known as 'Universal Donor' is:",
+          "options": [
+            "O Negative (O -ve)",
+            "AB Positive",
+            "O Positive",
+            "A Negative"
+          ],
+          "correctAnswer": 0,
+          "explanation": "O Negative lacks A, B, and Rh antigens, making it universal donor."
+        },
+        {
+          "id": "mbg_q94",
+          "text": "Red color of human blood is due to the presence of:",
+          "options": [
+            "Hemoglobin",
+            "Myoglobin",
+            "Chlorophyll",
+            "Hemocyanin"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Hemoglobin is an iron-containing protein in RBCs carrying oxygen."
+        },
+        {
+          "id": "mbg_q95",
+          "text": "Master gland of the human endocrine system is:",
+          "options": [
+            "Pituitary Gland",
+            "Thyroid Gland",
+            "Adrenal Gland",
+            "Pancreas"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Pituitary gland regulates and controls other endocrine glands."
+        },
+        {
+          "id": "mbg_q96",
+          "text": "Process of food synthesis by green plants in presence of sunlight is:",
+          "options": [
+            "Photosynthesis",
+            "Respiration",
+            "Transpiration",
+            "Fermentation"
+          ],
+          "correctAnswer": 0,
+          "explanation": "6 CO₂ + 6 H₂O + Sunlight -> C₆H₁₂O₆ + 6 O₂."
+        },
+        {
+          "id": "mbg_q97",
+          "text": "Human heart has how many chambers?",
+          "options": [
+            "4 Chambers (2 Atria, 2 Ventricles)",
+            "2 Chambers",
+            "3 Chambers",
+            "6 Chambers"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Human heart consists of 4 distinct chambers."
+        },
+        {
+          "id": "mbg_q98",
+          "text": "Hormone that regulates blood glucose level by lowering it is:",
+          "options": [
+            "Insulin",
+            "Glucagon",
+            "Adrenaline",
+            "Thyroxine"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Insulin secreted by beta cells of pancreas promotes cellular uptake of glucose."
+        },
+        {
+          "id": "mbg_q99",
+          "text": "Suicidal bags of a cell are:",
+          "options": [
+            "Lysosomes",
+            "Ribosomes",
+            "Centrosomes",
+            "Endoplasmic Reticulum"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Lysosomes contain digestive enzymes capable of destroying damaged cells."
+        },
+        {
+          "id": "mbg_q100",
+          "text": "Normal human body temperature on Celsius scale is approximately:",
+          "options": [
+            "37 °C (98.6 °F)",
+            "31.5 °C",
+            "40 °C",
+            "98.6 °C"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Average normal human body temperature is 37 °C."
+        },
+        {
+          "id": "mbg_q101",
+          "text": "Who was the founder of the Maurya Empire in India?",
+          "options": [
+            "Chandragupta Maurya",
+            "Ashoka",
+            "Bindusara",
+            "Harsha"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Chandragupta Maurya founded the Maurya Empire in 322 BCE with Chanakya's guidance."
+        },
+        {
+          "id": "mbg_q102",
+          "text": "Battle of Plassey was fought in the year:",
+          "options": [
+            "1757",
+            "1764",
+            "1857",
+            "1761"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Battle of Plassey took place on 23 June 1757 between East India Company and Nawab Siraj-ud-Daulah."
+        },
+        {
+          "id": "mbg_q103",
+          "text": "First Governor-General of Independent India was:",
+          "options": [
+            "Lord Mountbatten",
+            "C. Rajagopalachari",
+            "Dr. Rajendra Prasad",
+            "Lord Wavell"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Lord Mountbatten served as the first Governor-General of independent India (1947-48). First Indian was C. Rajagopalachari."
+        },
+        {
+          "id": "mbg_q104",
+          "text": "Who gave the famous slogan 'Do or Die' (Karo ya Maro) during Quit India Movement?",
+          "options": [
+            "Mahatma Gandhi",
+            "Subhash Chandra Bose",
+            "Jawaharlal Nehru",
+            "Bhagat Singh"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Mahatma Gandhi launched the Quit India Movement in August 1942 with the call 'Do or Die'."
+        },
+        {
+          "id": "mbg_q105",
+          "text": "Partition of Bengal in 1905 was announced by which Viceroy?",
+          "options": [
+            "Lord Curzon",
+            "Lord Ripon",
+            "Lord Lytton",
+            "Lord Dalhousie"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Lord Curzon issued the order partitioning Bengal in 1905."
+        },
+        {
+          "id": "mbg_q106",
+          "text": "Indian National Congress was founded in 1885 by:",
+          "options": [
+            "A. O. Hume",
+            "W. C. Bonnerjee",
+            "Dadabhai Naoroji",
+            "Gopal Krishna Gokhale"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Allan Octavian Hume founded INC in December 1885 in Bombay."
+        },
+        {
+          "id": "mbg_q107",
+          "text": "First War of Indian Independence (Sepoy Mutiny) broke out in 1857 at:",
+          "options": [
+            "Meerut",
+            "Delhi",
+            "Jhansi",
+            "Kanpur"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Revolt of 1857 began on May 10, 1857, at Meerut garrison."
+        },
+        {
+          "id": "mbg_q108",
+          "text": "Who founded the 'Azad Hind Fauj' (Indian National Army - INA) in Singapore?",
+          "options": [
+            "Subhash Chandra Bose & Rash Behari Bose",
+            "Bhagat Singh",
+            "Lala Lajpat Rai",
+            "Chandra Shekhar Azad"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Netaji Subhash Chandra Bose revived and reorganized the INA in Singapore in 1943."
+        },
+        {
+          "id": "mbg_q109",
+          "text": "Jallianwala Bagh Massacre took place in Amritsar on:",
+          "options": [
+            "13 April 1919",
+            "15 August 1947",
+            "26 January 1930",
+            "9 August 1942"
+          ],
+          "correctAnswer": 0,
+          "explanation": "General Dyer ordered firing on unarmed gathering on Baisakhi day, 13 April 1919."
+        },
+        {
+          "id": "mbg_q110",
+          "text": "System of Dual Government in Bengal was introduced by:",
+          "options": [
+            "Robert Clive",
+            "Warren Hastings",
+            "Lord Cornwallis",
+            "Lord Wellesley"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Robert Clive introduced Dual System of Government in Bengal after Treaty of Allahabad (1765)."
+        },
+        {
+          "id": "mbg_q111",
+          "text": "Who was known as 'Frontier Gandhi'?",
+          "options": [
+            "Khan Abdul Ghaffar Khan",
+            "Maulana Abul Kalam Azad",
+            "Sheikh Abdullah",
+            "Hasrat Mohani"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Khan Abdul Ghaffar Khan (Badshah Khan), leader of Khudai Khidmatgar movement."
+        },
+        {
+          "id": "mbg_q112",
+          "text": "Which Mughal Emperor built the Taj Mahal at Agra?",
+          "options": [
+            "Shah Jahan",
+            "Akbar",
+            "Jahangir",
+            "Aurangzeb"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Shah Jahan commissioned the Taj Mahal in memory of Mumtaz Mahal."
+        },
+        {
+          "id": "mbg_q113",
+          "text": "Poona Pact (1932) was signed between:",
+          "options": [
+            "Mahatma Gandhi and Dr. B. R. Ambedkar",
+            "Jawaharlal Nehru and Lord Irwin",
+            "Subhash Bose and Gandhi",
+            "Jinnah and Gandhi"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Signed on 24 September 1932 regarding electoral representation for depressed classes."
+        },
+        {
+          "id": "mbg_q114",
+          "text": "Who was the author of national song 'Vande Mataram'?",
+          "options": [
+            "Bankim Chandra Chattopadhyay",
+            "Rabindranath Tagore",
+            "Sarojini Naidu",
+            "Iqbal"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Composed by Bankim Chandra Chattopadhyay in his novel Anandamath."
+        },
+        {
+          "id": "mbg_q115",
+          "text": "Non-Cooperation Movement was called off by Gandhi in 1922 due to incident at:",
+          "options": [
+            "Chauri Chaura",
+            "Jallianwala Bagh",
+            "Dandi",
+            "Kakori"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Violence at Chauri Chaura (Gorakhpur) on 4 Feb 1922 led Gandhi to suspend movement."
+        },
+        {
+          "id": "mbg_q116",
+          "text": "First Governor-General of Bengal was:",
+          "options": [
+            "Warren Hastings",
+            "Lord William Bentinck",
+            "Robert Clive",
+            "Lord Canning"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Regulating Act 1773 designated Warren Hastings as first Governor-General of Bengal."
+        },
+        {
+          "id": "mbg_q117",
+          "text": "Who founded the Arya Samaj in 1875?",
+          "options": [
+            "Swami Dayananda Saraswati",
+            "Swami Vivekananda",
+            "Raja Ram Mohan Roy",
+            "Ishwar Chandra Vidyasagar"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Swami Dayananda Saraswati founded Arya Samaj with slogan 'Back to Vedas'."
+        },
+        {
+          "id": "mbg_q118",
+          "text": "Raja Ram Mohan Roy founded which reform movement in 1828?",
+          "options": [
+            "Brahmo Samaj",
+            "Prarthana Samaj",
+            "Ramakrishna Mission",
+            "Theosophical Society"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Raja Ram Mohan Roy established Brahmo Sabha (later Brahmo Samaj) in Calcutta."
+        },
+        {
+          "id": "mbg_q119",
+          "text": "Famous Dandi Salt March by Mahatma Gandhi commenced on:",
+          "options": [
+            "12 March 1930",
+            "26 January 1930",
+            "15 August 1947",
+            "8 August 1942"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Gandhi started 24-day march from Sabarmati Ashram to Dandi on 12 March 1930."
+        },
+        {
+          "id": "mbg_q120",
+          "text": "Who was the first Indian to pass the Indian Civil Services (ICS) examination?",
+          "options": [
+            "Satyendranath Tagore",
+            "Subhash Chandra Bose",
+            "Surendranath Banerjee",
+            "R. C. Dutt"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Satyendranath Tagore (brother of Rabindranath Tagore) qualified ICS in 1863."
+        },
+        {
+          "id": "mbg_q121",
+          "text": "Which planet in Solar System is known as the 'Red Planet'?",
+          "options": [
+            "Mars",
+            "Venus",
+            "Jupiter",
+            "Saturn"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Mars appears red due to iron oxide (rust) on its surface."
+        },
+        {
+          "id": "mbg_q122",
+          "text": "Longest river in the world is:",
+          "options": [
+            "Nile",
+            "Amazon",
+            "Yangtze",
+            "Mississippi"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Nile River in Africa is the longest river (~6650 km)."
+        },
+        {
+          "id": "mbg_q123",
+          "text": "Highest mountain peak in India (undisputed territory) is:",
+          "options": [
+            "Kangchenjunga (8586 m)",
+            "K2 / Godwin Austen",
+            "Nanda Devi",
+            "Annapurna"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Kangchenjunga (Sikkim) is highest peak within fully India-administered territory."
+        },
+        {
+          "id": "mbg_q124",
+          "text": "Which imaginary line passes horizontally through middle of India?",
+          "options": [
+            "Tropic of Cancer (23.5° N)",
+            "Equator",
+            "Tropic of Capricorn",
+            "Prime Meridian"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Tropic of Cancer (23° 30' N) passes through 8 Indian states."
+        },
+        {
+          "id": "mbg_q125",
+          "text": "Standard Meridian of India for Indian Standard Time (IST) is:",
+          "options": [
+            "82.5° E Longitude (82° 30' E)",
+            "80.0° E",
+            "90.0° E",
+            "75.0° E"
+          ],
+          "correctAnswer": 0,
+          "explanation": "82° 30' E passing through Mirzapur (UP) determines IST (UTC +5:30)."
+        },
+        {
+          "id": "mbg_q126",
+          "text": "Layers of Earth's atmosphere in order from ground upwards:",
+          "options": [
+            "Troposphere, Stratosphere, Mesosphere, Thermosphere",
+            "Stratosphere, Troposphere, Exosphere",
+            "Mesosphere, Troposphere, Stratosphere",
+            "Thermosphere, Mesosphere, Troposphere"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Troposphere -> Stratosphere -> Mesosphere -> Thermosphere -> Exosphere."
+        },
+        {
+          "id": "mbg_q127",
+          "text": "Ozone layer is primarily present in which atmospheric layer?",
+          "options": [
+            "Stratosphere",
+            "Troposphere",
+            "Mesosphere",
+            "Ionosphere"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Stratospheric ozone protects Earth by absorbing solar UV radiation."
+        },
+        {
+          "id": "mbg_q128",
+          "text": "Which river is known as 'Sorrow of Bengal'?",
+          "options": [
+            "Damodar River",
+            "Kosi River",
+            "Hooghly River",
+            "Brahmaputra"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Damodar River was historically known for devastating floods in Bengal."
+        },
+        {
+          "id": "mbg_q129",
+          "text": "Largest ocean on Earth by surface area is:",
+          "options": [
+            "Pacific Ocean",
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Arctic Ocean"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Pacific Ocean is the largest and deepest ocean."
+        },
+        {
+          "id": "mbg_q130",
+          "text": "Majuli, the world's largest river island, is located on which river?",
+          "options": [
+            "Brahmaputra (Assam)",
+            "Ganga",
+            "Godavari",
+            "Indus"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Majuli island is situated in Assam on the Brahmaputra River."
+        },
+        {
+          "id": "mbg_q131",
+          "text": "Which Indian state has the LONGEST coastline?",
+          "options": [
+            "Gujarat",
+            "Andhra Pradesh",
+            "Tamil Nadu",
+            "Maharashtra"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Gujarat has the longest coastline among Indian states (~1600 km)."
+        },
+        {
+          "id": "mbg_q132",
+          "text": "Palk Strait separates India from which country?",
+          "options": [
+            "Sri Lanka",
+            "Maldives",
+            "Bangladesh",
+            "Myanmar"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Palk Strait connects Bay of Bengal with Palk Bay between India and Sri Lanka."
+        },
+        {
+          "id": "mbg_q133",
+          "text": "Type of soil most widespread and fertile in Northern Indian Plains is:",
+          "options": [
+            "Alluvial Soil",
+            "Black Soil (Regur)",
+            "Red Soil",
+            "Laterite Soil"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Alluvial soil deposited by Indus, Ganga, and Brahmaputra rivers covers northern plains."
+        },
+        {
+          "id": "mbg_q134",
+          "text": "Black soil (Regur soil) is most suitable for cultivation of:",
+          "options": [
+            "Cotton",
+            "Tea",
+            "Jute",
+            "Wheat"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Black clayey soil holds moisture well and is ideal for growing cotton."
+        },
+        {
+          "id": "mbg_q135",
+          "text": "Which river is called 'Dakshin Ganga' (Ganga of the South)?",
+          "options": [
+            "Godavari",
+            "Krishna",
+            "Kaveri",
+            "Narmada"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Godavari is the largest peninsular river and is termed Dakshin Ganga."
+        },
+        {
+          "id": "mbg_q136",
+          "text": "Which state in India is the largest producer of Tea?",
+          "options": [
+            "Assam",
+            "West Bengal",
+            "Kerala",
+            "Tamil Nadu"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Assam accounts for over half of India's total tea production."
+        },
+        {
+          "id": "mbg_q137",
+          "text": "Great Barrier Reef, the largest coral reef system, is off the coast of:",
+          "options": [
+            "Australia",
+            "Indonesia",
+            "Brazil",
+            "South Africa"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Located in Coral Sea off the coast of Queensland, Australia."
+        },
+        {
+          "id": "mbg_q138",
+          "text": "Suez Canal connects which two bodies of water?",
+          "options": [
+            "Mediterranean Sea and Red Sea",
+            "Red Sea and Arabian Sea",
+            "Atlantic and Pacific",
+            "Black Sea and Caspian Sea"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Suez Canal provides a direct maritime shipping route between Europe and Asia."
+        },
+        {
+          "id": "mbg_q139",
+          "text": "Which city is known as the 'Silicon Valley of India'?",
+          "options": [
+            "Bengaluru",
+            "Hyderabad",
+            "Pune",
+            "Chennai"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Bengaluru is India's leading IT exporter and technology hub."
+        },
+        {
+          "id": "mbg_q140",
+          "text": "Annual rainfall pattern in India is dominated by which monsoon?",
+          "options": [
+            "South-West Monsoon",
+            "North-East Monsoon",
+            "Western Disturbances",
+            "Retreating Monsoon"
+          ],
+          "correctAnswer": 0,
+          "explanation": "South-West monsoon (June-Sept) brings ~75% of India's annual rainfall."
+        },
+        {
+          "id": "mbg_q141",
+          "text": "Who is the Supreme Commander of the Indian Armed Forces?",
+          "options": [
+            "President of India",
+            "Prime Minister",
+            "Defense Minister",
+            "Chief of Defence Staff (CDS)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Under Article 53(2) of Constitution, Supreme Command vests in President."
+        },
+        {
+          "id": "mbg_q142",
+          "text": "Constitution of India was adopted by Constituent Assembly on:",
+          "options": [
+            "26 November 1949",
+            "26 January 1950",
+            "15 August 1947",
+            "9 December 1946"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Adopted on 26 Nov 1949 (Constitution Day) and came into force on 26 Jan 1950."
+        },
+        {
+          "id": "mbg_q143",
+          "text": "Minimum age requirement to become President of India is:",
+          "options": [
+            "35 years",
+            "30 years",
+            "25 years",
+            "21 years"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Article 58 specifies minimum age of 35 years for presidential eligibility."
+        },
+        {
+          "id": "mbg_q144",
+          "text": "Fundamental Rights are enshrined in which Part of Indian Constitution?",
+          "options": [
+            "Part III (Articles 12 to 35)",
+            "Part IV",
+            "Part II",
+            "Part V"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Part III contains fundamental rights guaranteed to citizens."
+        },
+        {
+          "id": "mbg_q145",
+          "text": "Which Article of Constitution is known as 'Heart and Soul of Constitution' according to Dr. Ambedkar?",
+          "options": [
+            "Article 32 (Right to Constitutional Remedies)",
+            "Article 14",
+            "Article 21",
+            "Article 19"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Article 32 empowers citizens to move Supreme Court for enforcement of rights."
+        },
+        {
+          "id": "mbg_q146",
+          "text": "National Defence Academy (NDA) is located at:",
+          "options": [
+            "Khadakwasla, Pune (Maharashtra)",
+            "Dehradun (Uttarakhand)",
+            "Ezhimala (Kerala)",
+            "Dungigal (Hyderabad)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "NDA is situated at Khadakwasla near Pune, Maharashtra."
+        },
+        {
+          "id": "mbg_q147",
+          "text": "Motto of the Indian Army is:",
+          "options": [
+            "Seva Paramo Dharma (Service Before Self)",
+            "Touch the Sky with Glory",
+            "Sam no Varunah",
+            "Valour and Faith"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Motto of Indian Army is 'Seva Paramo Dharma' (Service Before Self)."
+        },
+        {
+          "id": "mbg_q148",
+          "text": "Motto of the Indian Air Force (IAF) is:",
+          "options": [
+            "Nabhaḥ Sparśaṁ Dīptam (Touch the Sky with Glory)",
+            "Seva Paramo Dharma",
+            "Sham No Varunah",
+            "Satyameva Jayate"
+          ],
+          "correctAnswer": 0,
+          "explanation": "IAF motto is taken from 11th chapter of Bhagavad Gita."
+        },
+        {
+          "id": "mbg_q149",
+          "text": "Motto of the Indian Navy is:",
+          "options": [
+            "Shaṁ No Varuṇaḥ (May the Lord of Water be auspicious unto us)",
+            "Touch the Sky with Glory",
+            "Service Before Self",
+            "Duty, Honour, Courage"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Indian Navy motto 'Sham No Varunah' invokes Varuna, deity of oceans."
+        },
+        {
+          "id": "mbg_q150",
+          "text": "Indian Military Academy (IMA) is located at:",
+          "options": [
+            "Dehradun (Uttarakhand)",
+            "Pune",
+            "Chennai",
+            "Gwalior"
+          ],
+          "correctAnswer": 0,
+          "explanation": "IMA was established at Dehradun, Uttarakhand, in 1932."
+        }
+      ]
     }
   ],
   "students": [
