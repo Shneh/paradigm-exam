@@ -962,7 +962,17 @@ class App {
       statusBanner.innerHTML = `<h2>⛔ TEST DISQUALIFIED</h2><p>Auto-submitted due to multiple proctoring violations.</p>`;
     } else if (!isPublished) {
       statusBanner.className = "results-banner banner-failed";
-      statusBanner.innerHTML = `<h2>✅ EXAMINATION SUBMITTED SUCCESSFULLY</h2><p>Your responses have been recorded. <strong>Results will be shown once your teacher publishes them.</strong></p>`;
+      statusBanner.innerHTML = `
+        <h2>🎉 THANK YOU FOR TAKING THE TEST!</h2>
+        <p style="font-size:1.05rem; font-weight:600; margin-top:0.4rem; color:var(--text-main);">
+          Your responses have been recorded. <strong>Your result will be published soon.</strong>
+        </p>
+        <div class="motivational-quote-box" style="margin-top:1.2rem; padding:1.2rem; background:rgba(99,102,241,0.15); border-left:4px solid var(--primary); border-radius:8px; text-align:center;">
+          <p style="font-size:1.1rem; font-weight:700; color:var(--text-main); letter-spacing:0.5px; margin:0;">
+            "RESULT IS ACCUMULATION OF SMALL STEPS YOU MADE. BELIEVE IN YOUR HARDWORK"
+          </p>
+        </div>
+      `;
     } else if (isPassed) {
       statusBanner.className = "results-banner banner-passed";
       statusBanner.innerHTML = `
@@ -996,17 +1006,19 @@ class App {
       document.getElementById("res-time-taken").textContent = `${timeSpentMinutes} min`;
 
       document.getElementById("res-violations-summary").innerHTML = `
-        <div class="proctor-feature-notice" style="margin:0;">
-          <h4>🔒 Results Pending Teacher Publication</h4>
-          <p style="font-size:0.88rem; color:var(--text-muted);">
-            The teacher has not published the marks for <strong>${this.escapeHtml(this.currentQuiz.title)}</strong> yet. 
-            Once published, you can return to the student portal and check your complete scorecard.
+        <div class="motivational-quote-box" style="margin:0; padding:1.5rem; text-align:center; background:rgba(99,102,241,0.12); border:1px solid var(--primary); border-radius:var(--radius-md);">
+          <h3 style="color:var(--primary); margin-bottom:0.5rem;">🌟 Believe In Your Hard Work!</h3>
+          <p style="font-size:1.08rem; font-weight:700; color:var(--text-main); line-height:1.5; margin:0;">
+            "RESULT IS ACCUMULATION OF SMALL STEPS YOU MADE. BELIEVE IN YOUR HARDWORK"
+          </p>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0.8rem;">
+            Your responses and score have been calculated and saved in the database. Results will be published soon by your teacher.
           </p>
         </div>
       `;
       document.getElementById("res-breakdown-container").innerHTML = `
-        <div class="log-clean" style="text-align:center; padding:2rem;">
-          🔒 Question breakdown and correct answer keys are hidden until results are published by the teacher.
+        <div class="log-clean" style="text-align:center; padding:2rem; font-weight:600;">
+          🔒 Question breakdown and answer key will be released once your teacher publishes the results.
         </div>
       `;
       return;

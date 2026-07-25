@@ -1619,4 +1619,15 @@ textarea.form-control {
   padding-bottom: 0.5rem;
 }
 
+/* Motivational Quote Box */
+.motivational-quote-box {
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .motivational-quote-box {
+  background: #e0e7ff !important;
+  border-color: #6366f1 !important;
+}
+
+
 
