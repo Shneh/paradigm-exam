@@ -19,6 +19,47 @@ class App {
     this.initViews();
     this.initTheme();
     this.bindEvents();
+    
+    // Auto-restore cached user session (Student or Admin)
+    setTimeout(() => this.restoreCachedSession(), 50);
+  }
+
+  restoreCachedSession() {
+    try {
+      const activeRole = localStorage.getItem("cached_user_role");
+      if (activeRole === "student") {
+        const savedStudent = localStorage.getItem("cached_student_session");
+        if (savedStudent) {
+          const student = JSON.parse(savedStudent);
+          if (student && student.id) {
+            this.loggedInStudent = student;
+            this.candidateName = student.name || student.id;
+            this.candidateId = student.id;
+
+            const nameElem = document.getElementById("menu-student-name");
+            const idElem = document.getElementById("menu-student-id");
+            if (nameElem) nameElem.textContent = `Welcome, ${student.name || student.id}`;
+            if (idElem) idElem.textContent = `Roll ID: ${student.id} (${student.class || 'Student'})`;
+
+            this.showView("studentMenu");
+            console.log("⚡ Auto-logged in student from cached session:", student.id);
+            return;
+          }
+        }
+      } else if (activeRole === "admin") {
+        const savedAdmin = localStorage.getItem("cached_admin_session");
+        if (savedAdmin && window.adminManager) {
+          window.adminManager.isLoggedIn = true;
+          this.showView("admin");
+          window.adminManager.switchAdminTab("admin-tab-papers");
+          window.adminManager.renderAllAdminTabs();
+          console.log("⚡ Auto-logged in admin from cached session");
+          return;
+        }
+      }
+    } catch (e) {
+      console.warn("Could not restore cached session:", e.message);
+    }
   }
 
   initTheme() {
@@ -89,6 +130,12 @@ class App {
     if (btnLogout) {
       btnLogout.addEventListener("click", () => {
         this.loggedInStudent = null;
+        this.candidateName = "";
+        this.candidateId = "";
+        localStorage.removeItem("cached_student_session");
+        if (localStorage.getItem("cached_user_role") === "student") {
+          localStorage.removeItem("cached_user_role");
+        }
         this.showView("login");
       });
     }
@@ -196,6 +243,12 @@ class App {
     this.loggedInStudent = student;
     this.candidateName = student.name;
     this.candidateId = student.id;
+
+    // Cache student session for auto-login
+    try {
+      localStorage.setItem("cached_student_session", JSON.stringify(student));
+      localStorage.setItem("cached_user_role", "student");
+    } catch (e) {}
 
     // Update Dashboard Welcome Title
     document.getElementById("menu-student-name").textContent = `Welcome, ${student.name}`;

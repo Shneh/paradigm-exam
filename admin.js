@@ -5,7 +5,7 @@
 
 class AdminManager {
   constructor() {
-    this.isLoggedIn = false;
+    this.isLoggedIn = !!localStorage.getItem("cached_admin_session");
     this.questionsList = [];
     this.bindEvents();
   }
@@ -143,6 +143,10 @@ class AdminManager {
 
       if (isSuccess) {
         this.isLoggedIn = true;
+        try {
+          localStorage.setItem("cached_admin_session", JSON.stringify({ id: id, timestamp: Date.now() }));
+          localStorage.setItem("cached_user_role", "admin");
+        } catch (e) {}
         this.hideLoginModal();
         if (idInput) idInput.value = "";
         if (passInput) passInput.value = "";
@@ -170,6 +174,10 @@ class AdminManager {
 
   logoutAdmin() {
     this.isLoggedIn = false;
+    localStorage.removeItem("cached_admin_session");
+    if (localStorage.getItem("cached_user_role") === "admin") {
+      localStorage.removeItem("cached_user_role");
+    }
     if (window.app) {
       if (window.app.loggedInStudent) {
         window.app.showView("studentMenu");
