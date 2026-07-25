@@ -215,9 +215,23 @@ class App {
       quizzes = window.quizManager.getAllQuizzes();
     }
 
+    const visibleQuizzes = quizzes.filter(q => !q.isHidden);
+
     container.innerHTML = "";
 
-    for (const quiz of quizzes) {
+    if (visibleQuizzes.length === 0) {
+      container.innerHTML = `
+        <div class="proctor-feature-notice" style="grid-column: 1 / -1; margin:0;">
+          <h4>⭕ No Test Papers Available</h4>
+          <p style="font-size:0.88rem; color:var(--text-muted);">
+            There are currently no test papers published on your student dashboard. Please contact your instructor.
+          </p>
+        </div>
+      `;
+      return;
+    }
+
+    for (const quiz of visibleQuizzes) {
       const card = document.createElement("div");
       const isActive = !!quiz.isActive;
       
@@ -390,12 +404,25 @@ class App {
           return;
         }
 
-        // Restore stored answers so the breakdown renders correctly
+        // Restore stored answers & questions snapshot so the breakdown renders exact saved test paper
+        if (sub && sub.questionsSnapshot && sub.questionsSnapshot.length > 0) {
+          this.currentQuiz = {
+            ...(this.currentQuiz || {}),
+            id: quizId,
+            title: sub.quizTitle || (this.currentQuiz ? this.currentQuiz.title : "Test Paper"),
+            questions: sub.questionsSnapshot,
+            marksPerCorrect: (sub.summaryResult && sub.summaryResult.marksPerCorrect) !== undefined ? sub.summaryResult.marksPerCorrect : (this.currentQuiz ? this.currentQuiz.marksPerCorrect : 1),
+            negativeMarksPerWrong: (sub.summaryResult && sub.summaryResult.negativeMarksPerWrong) !== undefined ? sub.summaryResult.negativeMarksPerWrong : (this.currentQuiz ? this.currentQuiz.negativeMarksPerWrong : 0),
+            totalMarks: sub.totalMarks || (this.currentQuiz ? this.currentQuiz.totalMarks : 100),
+            isResultPublished: this.currentQuiz ? !!this.currentQuiz.isResultPublished : true
+          };
+        }
+
         this.userAnswers = (sub && sub.userAnswers) ? sub.userAnswers : {};
         this.examStartTime = sub ? new Date(sub.startTime || sub.timestamp) : new Date();
         this.examEndTime = sub ? new Date(sub.endTime || sub.timestamp) : new Date();
 
-        this.renderResultsScreen(false);
+        this.renderResultsScreen(sub ? !!sub.isDisqualified : false);
         this.showView("results");
       });
     });
@@ -696,26 +723,60 @@ class App {
 
     window.proctorEngine.stop();
 
-    // Calculate Scores
+    // Calculate Scores & Build Full Response Breakdown
     const totalQuestions = this.currentQuiz.questions.length;
     const marksPerCorrect = this.currentQuiz.marksPerCorrect !== undefined ? this.currentQuiz.marksPerCorrect : 1;
     const negativeMarks = this.currentQuiz.negativeMarksPerWrong !== undefined ? this.currentQuiz.negativeMarksPerWrong : 0;
     const maxTotalMarks = this.currentQuiz.totalMarks || (totalQuestions * marksPerCorrect);
+    const passMarks = this.currentQuiz.passingMarks !== undefined ? this.currentQuiz.passingMarks : Math.round(maxTotalMarks * 0.4);
 
     let correctCount = 0;
     let incorrectCount = 0;
+    let unattemptedCount = 0;
 
-    this.currentQuiz.questions.forEach((q) => {
+    const questionsSnapshot = [];
+    const detailedResults = [];
+
+    this.currentQuiz.questions.forEach((q, idx) => {
       const userAns = this.userAnswers[q.id];
       const isAttempted = userAns !== undefined;
       const isCorrect = isAttempted && userAns === q.correctAnswer;
       if (isCorrect) correctCount++;
       else if (isAttempted) incorrectCount++;
+      else unattemptedCount++;
+
+      const marksAwarded = isCorrect ? marksPerCorrect : isAttempted ? -negativeMarks : 0;
+
+      questionsSnapshot.push({
+        id: q.id,
+        text: q.text,
+        options: q.options || [],
+        correctAnswer: q.correctAnswer,
+        explanation: q.explanation || ""
+      });
+
+      detailedResults.push({
+        questionId: q.id,
+        questionNumber: idx + 1,
+        questionText: q.text,
+        options: q.options || [],
+        userAnswerIndex: isAttempted ? userAns : null,
+        userAnswerText: isAttempted ? (q.options ? q.options[userAns] : String(userAns)) : "Not Attempted",
+        correctAnswerIndex: q.correctAnswer,
+        correctAnswerText: q.options ? q.options[q.correctAnswer] : String(q.correctAnswer),
+        isAttempted,
+        isCorrect,
+        status: isCorrect ? 'correct' : isAttempted ? 'incorrect' : 'unattempted',
+        marksAwarded: parseFloat(marksAwarded.toFixed(2)),
+        explanation: q.explanation || ""
+      });
     });
 
     const rawScore = (correctCount * marksPerCorrect) - (incorrectCount * negativeMarks);
     const netScore = parseFloat(Math.max(0, rawScore).toFixed(2));
     const scorePercentage = Math.round((netScore / maxTotalMarks) * 100);
+    const timeSpentMinutes = Math.max(1, Math.round((this.examEndTime - (this.examStartTime || new Date())) / 60000));
+    const isPassed = netScore >= passMarks;
 
     const submissionPayload = {
       id: "SUB-" + Date.now(),
@@ -729,6 +790,23 @@ class App {
       userAnswers: this.userAnswers,
       startTime: this.examStartTime ? this.examStartTime.toISOString() : null,
       endTime: this.examEndTime ? this.examEndTime.toISOString() : null,
+      timeSpentMinutes,
+      summaryResult: {
+        totalQuestions,
+        correctCount,
+        incorrectCount,
+        unattemptedCount,
+        rawScore,
+        netScore,
+        maxTotalMarks,
+        scorePercentage,
+        passMarks,
+        isPassed,
+        marksPerCorrect,
+        negativeMarksPerWrong: negativeMarks
+      },
+      questionsSnapshot,
+      detailedResults,
       violationsCount: (window.proctorEngine && window.proctorEngine.violationCount) ? window.proctorEngine.violationCount : 0,
       violationsLog: (window.proctorEngine && window.proctorEngine.violationsLog) ? window.proctorEngine.violationsLog : [],
       isDisqualified,

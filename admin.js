@@ -215,9 +215,10 @@ class AdminManager {
     quizzes.forEach(quiz => {
       const isActive = !!quiz.isActive;
       const isPublished = !!quiz.isResultPublished;
+      const isHidden = !!quiz.isHidden;
       const qCount = quiz.questions ? quiz.questions.length : 0;
       const card = document.createElement("div");
-      card.className = `admin-paper-card ${isActive ? "is-active" : "is-inactive"}`;
+      card.className = `admin-paper-card ${isActive ? "is-active" : "is-inactive"} ${isHidden ? "is-hidden-paper" : ""}`;
 
       card.innerHTML = `
         <div class="admin-paper-info">
@@ -234,11 +235,17 @@ class AdminManager {
           <span class="quiz-status-pill ${isPublished ? "pill-active" : "pill-inactive"}">
             ${isPublished ? "📢 RESULTS PUBLISHED" : "🔒 RESULTS HIDDEN"}
           </span>
+          <span class="quiz-status-pill ${isHidden ? "pill-hidden" : "pill-active"}">
+            ${isHidden ? "🙈 HIDDEN FROM DASHBOARD" : "👁️ VISIBLE ON DASHBOARD"}
+          </span>
           <button type="button" class="btn ${isActive ? "btn-secondary" : "btn-primary"} btn-sm btn-toggle-active">
             ${isActive ? "🔒 Deactivate" : "⚡ Activate"}
           </button>
           <button type="button" class="btn ${isPublished ? "btn-secondary" : "btn-primary"} btn-sm btn-toggle-publish">
             ${isPublished ? "🔒 Unpublish Results" : "📢 Publish Results"}
+          </button>
+          <button type="button" class="btn ${isHidden ? "btn-primary" : "btn-secondary"} btn-sm btn-toggle-hide">
+            ${isHidden ? "👁️ Show on Student Dashboard" : "🙈 Hide from Student Dashboard"}
           </button>
           <button type="button" class="btn btn-danger btn-sm btn-delete-paper">
             🗑️ Delete
@@ -274,6 +281,24 @@ class AdminManager {
         );
         await this.renderPapersControlList();
         if (window.app) window.app.renderStudentPublishedResults();
+      });
+
+      // Toggle hide from student dashboard status
+      card.querySelector(".btn-toggle-hide").addEventListener("click", async () => {
+        let newHidden = false;
+        try {
+          const res = await window.api.toggleHide(quiz.id);
+          newHidden = res.isHidden;
+          quiz.isHidden = newHidden;
+        } catch (e) {
+          newHidden = window.quizManager.toggleQuizHidden(quiz.id);
+        }
+        alert(newHidden 
+          ? `🙈 PAPER HIDDEN: '${quiz.title}' is now hidden from the Student Dashboard.`
+          : `👁️ PAPER VISIBLE: '${quiz.title}' is now visible on the Student Dashboard.`
+        );
+        await this.renderPapersControlList();
+        if (window.app) window.app.renderAvailableTests();
       });
 
       // Delete test paper
@@ -567,6 +592,7 @@ class AdminManager {
               <th>Percentage</th>
               <th>Security Violations</th>
               <th>Status</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -583,12 +609,156 @@ class AdminManager {
                     ? '<span class="status-fail">⛔ Disqualified</span>' 
                     : '<span class="status-pass">✓ Submitted</span>'}
                 </td>
+                <td>
+                  <button type="button" class="btn btn-secondary btn-sm btn-view-submission" data-subid="${sub.id}">
+                    👁️ View Full Response & Result
+                  </button>
+                </td>
               </tr>
             `).join('')}
           </tbody>
         </table>
       </div>
     `;
+
+    // Attach click listeners for View Full Response button
+    container.querySelectorAll(".btn-view-submission").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const subId = btn.dataset.subid;
+        const sub = submissions.find(s => s.id === subId);
+        if (sub) {
+          this.viewSubmissionDetails(sub);
+        }
+      });
+    });
+
+    // Wire close modal button if not wired yet
+    const btnClose = document.getElementById("btn-close-sub-modal");
+    const modal = document.getElementById("modal-submission-detail");
+    if (btnClose && modal) {
+      btnClose.onclick = () => modal.classList.add("hidden");
+      modal.onclick = (e) => {
+        if (e.target === modal) modal.classList.add("hidden");
+      };
+    }
+  }
+
+  viewSubmissionDetails(sub) {
+    const modal = document.getElementById("modal-submission-detail");
+    const body = document.getElementById("sub-modal-body");
+    const titleElem = document.getElementById("sub-modal-title");
+    if (!modal || !body) return;
+
+    if (titleElem) {
+      titleElem.textContent = `📋 Submission Inspector: ${sub.candidateName} (${sub.candidateId})`;
+    }
+
+    // Determine details array
+    let details = sub.detailedResults || [];
+    
+    // If legacy submission without detailedResults, attempt reconstruction from questionsSnapshot or userAnswers
+    if ((!details || details.length === 0) && sub.questionsSnapshot && sub.questionsSnapshot.length > 0) {
+      const uAnswers = sub.userAnswers || {};
+      details = sub.questionsSnapshot.map((q, idx) => {
+        const userAns = uAnswers[q.id];
+        const isAttempted = userAns !== undefined;
+        const isCorrect = isAttempted && userAns === q.correctAnswer;
+        return {
+          questionNumber: idx + 1,
+          questionText: q.text,
+          options: q.options || [],
+          userAnswerIndex: isAttempted ? userAns : null,
+          userAnswerText: isAttempted ? (q.options ? q.options[userAns] : String(userAns)) : "Not Attempted",
+          correctAnswerIndex: q.correctAnswer,
+          correctAnswerText: q.options ? q.options[q.correctAnswer] : String(q.correctAnswer),
+          isAttempted,
+          isCorrect,
+          status: isCorrect ? 'correct' : isAttempted ? 'incorrect' : 'unattempted',
+          explanation: q.explanation || ""
+        };
+      });
+    }
+
+    const summary = sub.summaryResult || {};
+    const correctCount = summary.correctCount !== undefined ? summary.correctCount : (details.filter(d => d.isCorrect).length);
+    const incorrectCount = summary.incorrectCount !== undefined ? summary.incorrectCount : (details.filter(d => d.isAttempted && !d.isCorrect).length);
+    const unattemptedCount = summary.unattemptedCount !== undefined ? summary.unattemptedCount : (details.filter(d => !d.isAttempted).length);
+    const totalQ = details.length || (correctCount + incorrectCount + unattemptedCount);
+
+    body.innerHTML = `
+      <div class="sub-detail-header-card">
+        <div class="sub-detail-grid">
+          <div>
+            <label>Candidate Name:</label> <strong>${this.escapeHtml(sub.candidateName)}</strong>
+          </div>
+          <div>
+            <label>Candidate ID:</label> <strong>${this.escapeHtml(sub.candidateId)}</strong>
+          </div>
+          <div>
+            <label>Test Paper:</label> <strong>${this.escapeHtml(sub.quizTitle)}</strong>
+          </div>
+          <div>
+            <label>Submission Time:</label> <strong>${sub.timestamp}</strong>
+          </div>
+          <div>
+            <label>Score Achieved:</label> <strong class="${sub.scorePercentage >= 50 ? 'text-green' : 'text-red'}">${sub.score} / ${sub.totalMarks} (${sub.scorePercentage}%)</strong>
+          </div>
+          <div>
+            <label>Proctor Status:</label> 
+            ${sub.isDisqualified 
+              ? '<span class="status-fail">⛔ Disqualified</span>' 
+              : sub.violationsCount > 0 
+                ? `<span class="status-fail" style="color:var(--warning);">⚠️ ${sub.violationsCount} Violation(s)</span>`
+                : '<span class="status-pass">✓ Clean Exam</span>'}
+          </div>
+        </div>
+
+        <div class="sub-stat-chips" style="margin-top:1rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <div class="chip chip-green">✓ Correct: ${correctCount}</div>
+          <div class="chip chip-red">✗ Incorrect: ${incorrectCount}</div>
+          <div class="chip chip-gray">⭕ Unattempted: ${unattemptedCount}</div>
+          <div class="chip chip-blue">⏱️ Total Questions: ${totalQ}</div>
+        </div>
+      </div>
+
+      ${sub.violationsLog && sub.violationsLog.length > 0 ? `
+        <div class="sub-violations-box">
+          <h4>🚨 Proctoring Security Audit Log (${sub.violationsLog.length} Events)</h4>
+          <ul class="violations-list">
+            ${sub.violationsLog.map(v => `
+              <li>
+                <span class="violation-time">[${v.timestamp || 'N/A'}]</span>
+                <span class="violation-msg">${this.escapeHtml(v.type || v.reason || 'Security Warning')} (Warning #${v.count || 1})</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      ` : ''}
+
+      <div class="sub-questions-breakdown">
+        <h3>📝 Complete Question & Response Breakdown</h3>
+        ${details.length > 0 ? details.map((d, idx) => `
+          <div class="result-question-card ${d.isCorrect ? 'correct' : d.isAttempted ? 'incorrect' : 'unattempted'}">
+            <div class="result-card-header">
+              <span class="result-q-num">Q${d.questionNumber || (idx + 1)}</span>
+              <span class="result-status-badge ${d.isCorrect ? 'status-pass' : d.isAttempted ? 'status-fail' : 'status-none'}">
+                ${d.isCorrect ? `✓ Correct${d.marksAwarded ? ` (+${d.marksAwarded})` : ''}` : d.isAttempted ? `✗ Incorrect${d.marksAwarded !== undefined ? ` (${d.marksAwarded})` : ''}` : '⭕ Unattempted (0)'}
+              </span>
+            </div>
+            <p class="result-q-text">${this.escapeHtml(d.questionText)}</p>
+            <div class="result-answers">
+              <p><strong>Candidate Response:</strong> <span class="${d.isCorrect ? 'text-green' : d.isAttempted ? 'text-red' : 'text-yellow'}">${this.escapeHtml(d.userAnswerText || 'Not Attempted')}</span></p>
+              ${!d.isCorrect ? `<p><strong>Correct Answer:</strong> <span class="text-green">${this.escapeHtml(d.correctAnswerText)}</span></p>` : ''}
+            </div>
+            ${d.explanation ? `<div class="result-explanation"><strong>Explanation:</strong> ${this.escapeHtml(d.explanation)}</div>` : ''}
+          </div>
+        `).join('') : `
+          <p style="color:var(--text-muted);">No itemized question details captured for this submission.</p>
+        `}
+      </div>
+    `;
+
+    modal.classList.remove("hidden");
   }
 
   exportCurrentQuizzesJson() {

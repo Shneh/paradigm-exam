@@ -1144,9 +1144,19 @@ textarea.form-control {
   border: 1px solid var(--border-color);
 }
 
+.pill-hidden {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--warning);
+  border: 1px solid var(--warning);
+}
+
 .quiz-card-inactive {
   opacity: 0.75;
   border-style: dashed;
+}
+
+.is-hidden-paper {
+  border-left: 4px solid var(--warning) !important;
 }
 
 /* Admin Modal Overlay */
@@ -1527,4 +1537,86 @@ textarea.form-control {
   font-size: 0.92rem;
   color: var(--primary);
 }
+
+/* Submission Detail Inspector Modal */
+.submission-detail-card {
+  max-width: 900px;
+  width: 92%;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.modal-card-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.submission-modal-body {
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  flex-grow: 1;
+}
+
+.sub-detail-header-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+[data-theme="light"] .sub-detail-header-card {
+  background: #f8fafc;
+}
+
+.sub-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.sub-detail-grid label {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  display: block;
+}
+
+.chip {
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.chip-green { background: var(--success-glow); color: var(--success); border: 1px solid var(--success); }
+.chip-red { background: var(--danger-glow); color: var(--danger); border: 1px solid var(--danger); }
+.chip-gray { background: rgba(148, 163, 184, 0.15); color: var(--text-muted); border: 1px solid rgba(148, 163, 184, 0.3); }
+.chip-blue { background: rgba(99, 102, 241, 0.15); color: var(--primary); border: 1px solid var(--primary); }
+
+.sub-violations-box {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--danger);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.sub-violations-box h4 {
+  color: var(--danger);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.sub-questions-breakdown h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
 

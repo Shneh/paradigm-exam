@@ -183,6 +183,27 @@ class ApiClient {
     return { success: true, isResultPublished: newStatus };
   }
 
+  async toggleHide(id) {
+    let newStatus = false;
+    if (this.db) {
+      try {
+        const docRef = this.db.collection('quizzes').doc(id);
+        const doc = await docRef.get();
+        if (doc.exists) {
+          newStatus = !doc.data().isHidden;
+          await docRef.update({ isHidden: newStatus });
+          return { success: true, isHidden: newStatus };
+        }
+      } catch (e) {
+        console.warn("Firestore toggleHide fallback:", e.message);
+      }
+    }
+    if (window.quizManager) {
+      newStatus = window.quizManager.toggleQuizHidden(id);
+    }
+    return { success: true, isHidden: newStatus };
+  }
+
   async deleteQuiz(id) {
     if (this.db) {
       try {
@@ -303,7 +324,9 @@ class ApiClient {
         if (typeof v === 'boolean') return { booleanValue: v };
         if (typeof v === 'number') return Number.isInteger(v) ? { integerValue: String(v) } : { doubleValue: v };
         if (typeof v === 'string') return { stringValue: v };
-        if (Array.isArray(v)) return { arrayValue: { values: v.map(toValue) } };
+        if (Array.isArray(v)) {
+          return v.length > 0 ? { arrayValue: { values: v.map(toValue) } } : { arrayValue: {} };
+        }
         if (typeof v === 'object') {
           const fields = {};
           for (const [k, val] of Object.entries(v)) fields[k] = toValue(val);

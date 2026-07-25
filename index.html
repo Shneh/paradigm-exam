@@ -524,6 +524,24 @@
     </div>
   </div>
 
+  <!-- SUBMISSION DETAIL INSPECTOR MODAL OVERLAY -->
+  <div id="modal-submission-detail" class="modal-overlay hidden">
+    <div class="modal-card submission-detail-card glass-card">
+      <div class="modal-card-header">
+        <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+          <div>
+            <h2 id="sub-modal-title">📋 Student Exam Submission Inspector</h2>
+            <p id="sub-modal-subtitle" style="font-size:0.88rem; color:var(--text-muted); margin-top:0.2rem;">Full candidate response and result breakdown stored in Firebase Cloud</p>
+          </div>
+          <button type="button" id="btn-close-sub-modal" class="btn btn-secondary btn-sm" style="padding:0.4rem 0.8rem; font-size:1.1rem; cursor:pointer;">✕ Close</button>
+        </div>
+      </div>
+      <div id="sub-modal-body" class="submission-modal-body">
+        <!-- Dynamically rendered content -->
+      </div>
+    </div>
+  </div>
+
 
   <footer class="app-footer">
     <p>Paradigm Exam • Secure Web Examination System • Protected by Anti-Copy & Focus Verification</p>

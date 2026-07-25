@@ -1492,6 +1492,7 @@ class QuizManager {
     this.submissions = this.loadSubmissions();
     this.applyActiveStates();
     this.applyPublishedStates();
+    this.applyHiddenStates();
   }
 
   // Admin authentication check
@@ -1538,6 +1539,17 @@ class QuizManager {
     } catch (e) {}
   }
 
+  applyHiddenStates() {
+    try {
+      const states = JSON.parse(localStorage.getItem("quiz_hidden_states") || "{}");
+      this.quizzes.forEach(q => {
+        if (states.hasOwnProperty(q.id)) {
+          q.isHidden = states[q.id];
+        }
+      });
+    } catch (e) {}
+  }
+
   toggleQuizActive(quizId) {
     const quiz = this.getQuizById(quizId);
     if (quiz) {
@@ -1558,6 +1570,16 @@ class QuizManager {
     return false;
   }
 
+  toggleQuizHidden(quizId) {
+    const quiz = this.getQuizById(quizId);
+    if (quiz) {
+      quiz.isHidden = !quiz.isHidden;
+      this.saveHiddenStates();
+      return quiz.isHidden;
+    }
+    return false;
+  }
+
   saveActiveStates() {
     const states = {};
     this.quizzes.forEach(q => {
@@ -1572,6 +1594,14 @@ class QuizManager {
       states[q.id] = !!q.isResultPublished;
     });
     localStorage.setItem("quiz_result_published_states", JSON.stringify(states));
+  }
+
+  saveHiddenStates() {
+    const states = {};
+    this.quizzes.forEach(q => {
+      states[q.id] = !!q.isHidden;
+    });
+    localStorage.setItem("quiz_hidden_states", JSON.stringify(states));
   }
 
   deleteQuiz(quizId) {
