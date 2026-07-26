@@ -24,6 +24,14 @@ class ProctorEngine {
     this.lastBlurTime = 0;
   }
 
+  getFullscreenElement() {
+    return document.fullscreenElement ||
+           document.webkitFullscreenElement ||
+           document.webkitCurrentFullScreenElement ||
+           document.mozFullScreenElement ||
+           document.msFullscreenElement || null;
+  }
+
   /**
    * Start proctoring engine for an active test session
    * @param {Object} options { maxViolations, onViolation, onMaxViolationsReached }
@@ -36,8 +44,11 @@ class ProctorEngine {
     this.violationsLog = [];
     this.isActive = true;
 
-    // Attach security event listeners
+    // Attach security event listeners (including WebKit / Mozilla vendor prefixes)
     document.addEventListener("fullscreenchange", this.handleFullscreenChange);
+    document.addEventListener("webkitfullscreenchange", this.handleFullscreenChange);
+    document.addEventListener("mozfullscreenchange", this.handleFullscreenChange);
+    document.addEventListener("MSFullscreenChange", this.handleFullscreenChange);
     document.addEventListener("visibilitychange", this.handleVisibilityChange);
     window.addEventListener("blur", this.handleWindowBlur);
     document.addEventListener("contextmenu", this.handleContextMenu);
@@ -60,8 +71,11 @@ class ProctorEngine {
   stop() {
     this.isActive = false;
 
-    // Remove security event listeners FIRST
+    // Remove security event listeners FIRST (including WebKit / Mozilla vendor prefixes)
     document.removeEventListener("fullscreenchange", this.handleFullscreenChange);
+    document.removeEventListener("webkitfullscreenchange", this.handleFullscreenChange);
+    document.removeEventListener("mozfullscreenchange", this.handleFullscreenChange);
+    document.removeEventListener("MSFullscreenChange", this.handleFullscreenChange);
     document.removeEventListener("visibilitychange", this.handleVisibilityChange);
     window.removeEventListener("blur", this.handleWindowBlur);
     document.removeEventListener("contextmenu", this.handleContextMenu);
@@ -73,19 +87,16 @@ class ProctorEngine {
 
     document.body.classList.remove("proctor-strict-mode");
 
-    // Always hide the fullscreen overlay — it may be visible if student
-    // had previously exited fullscreen, and exitFullscreen() below fires
-    // another fullscreenchange event asynchronously
+    // Always hide the fullscreen overlay immediately
     this.hideFullscreenLockOverlay();
 
-    // Exit fullscreen gracefully; hide overlay again after it resolves
-    // to cover the async fullscreenchange event race condition
+    // Exit fullscreen gracefully
     const exitPromise = this.exitFullscreen();
     if (exitPromise && typeof exitPromise.then === "function") {
       exitPromise.then(() => this.hideFullscreenLockOverlay()).catch(() => {});
     }
-    // Belt-and-suspenders: hide overlay 300ms later in case of async delay
-    setTimeout(() => this.hideFullscreenLockOverlay(), 300);
+    setTimeout(() => this.hideFullscreenLockOverlay(), 150);
+    setTimeout(() => this.hideFullscreenLockOverlay(), 500);
   }
 
   /**
@@ -94,11 +105,13 @@ class ProctorEngine {
   async requestFullscreen() {
     try {
       const docEl = document.documentElement;
-      if (!document.fullscreenElement) {
+      if (!this.getFullscreenElement()) {
         if (docEl.requestFullscreen) {
           await docEl.requestFullscreen();
         } else if (docEl.webkitRequestFullscreen) {
-          await docEl.webkitRequestFullscreen();
+          docEl.webkitRequestFullscreen();
+        } else if (docEl.webkitRequestFullScreen) {
+          docEl.webkitRequestFullScreen();
         } else if (docEl.msRequestFullscreen) {
           await docEl.msRequestFullscreen();
         }
@@ -114,11 +127,15 @@ class ProctorEngine {
    */
   exitFullscreen() {
     try {
-      if (document.fullscreenElement) {
+      if (this.getFullscreenElement()) {
         if (document.exitFullscreen) {
           return document.exitFullscreen().catch(() => {});
         } else if (document.webkitExitFullscreen) {
           document.webkitExitFullscreen();
+        } else if (document.webkitCancelFullScreen) {
+          document.webkitCancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
         }
       }
     } catch (e) {}
@@ -131,7 +148,7 @@ class ProctorEngine {
   handleFullscreenChange() {
     if (!this.isActive) return;
 
-    if (!document.fullscreenElement) {
+    if (!this.getFullscreenElement()) {
       // User exited fullscreen during test
       this.recordViolation(
         "FULLSCREEN_EXIT",

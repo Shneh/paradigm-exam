@@ -322,7 +322,10 @@ class ApiClient {
       const toValue = (v) => {
         if (v === null || v === undefined) return { nullValue: null };
         if (typeof v === 'boolean') return { booleanValue: v };
-        if (typeof v === 'number') return Number.isInteger(v) ? { integerValue: String(v) } : { doubleValue: v };
+        if (typeof v === 'number') {
+          if (isNaN(v) || !isFinite(v)) return { nullValue: null };
+          return Number.isInteger(v) ? { integerValue: String(v) } : { doubleValue: v };
+        }
         if (typeof v === 'string') return { stringValue: v };
         if (Array.isArray(v)) {
           return v.length > 0 ? { arrayValue: { values: v.map(toValue) } } : { arrayValue: {} };

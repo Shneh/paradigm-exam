@@ -838,8 +838,13 @@ class App {
 
     const rawScore = (correctCount * marksPerCorrect) - (incorrectCount * negativeMarks);
     const netScore = parseFloat(Math.max(0, rawScore).toFixed(2));
-    const scorePercentage = Math.round((netScore / maxTotalMarks) * 100);
-    const timeSpentMinutes = Math.max(1, Math.round((this.examEndTime - (this.examStartTime || new Date())) / 60000));
+    const scorePercentage = (maxTotalMarks > 0) ? Math.round((netScore / maxTotalMarks) * 100) : 0;
+    
+    const startMs = (this.examStartTime && typeof this.examStartTime.getTime === 'function' && !isNaN(this.examStartTime.getTime())) ? this.examStartTime.getTime() : Date.now();
+    const endMs = (this.examEndTime && typeof this.examEndTime.getTime === 'function' && !isNaN(this.examEndTime.getTime())) ? this.examEndTime.getTime() : Date.now();
+    const durationMs = Math.max(0, endMs - startMs);
+    const timeSpentMinutes = Math.max(1, Math.round(durationMs / 60000));
+    
     const isPassed = netScore >= passMarks;
 
     const submissionPayload = {
@@ -852,8 +857,8 @@ class App {
       totalMarks: maxTotalMarks,
       scorePercentage,
       userAnswers: this.userAnswers,
-      startTime: this.examStartTime ? this.examStartTime.toISOString() : null,
-      endTime: this.examEndTime ? this.examEndTime.toISOString() : null,
+      startTime: this.examStartTime ? this.examStartTime.toISOString() : new Date().toISOString(),
+      endTime: this.examEndTime ? this.examEndTime.toISOString() : new Date().toISOString(),
       timeSpentMinutes,
       summaryResult: {
         totalQuestions,
@@ -882,7 +887,11 @@ class App {
     window.quizManager.recordStudentAttempt(this.candidateId, this.currentQuiz.id);
 
     // 2. Render Results screen and transition UI immediately
-    this.renderResultsScreen(isDisqualified);
+    try {
+      this.renderResultsScreen(isDisqualified);
+    } catch (renderErr) {
+      console.warn("Notice during renderResultsScreen:", renderErr.message);
+    }
     this.showView("results");
 
     // 3. Sync to Firebase Cloud in background
