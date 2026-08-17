@@ -30,14 +30,16 @@ class ApiClient {
   async initSeed() {
     if (!this.db || this.seeded) return;
     try {
-      // Auto-seed initial quizzes if Firestore collection is empty
-      const quizzesSnap = await this.db.collection('quizzes').limit(1).get();
-      if (quizzesSnap.empty && window.quizManager) {
+      if (window.quizManager) {
         const defaultQuizzes = window.quizManager.getAllQuizzes();
         for (const q of defaultQuizzes) {
-          await this.db.collection('quizzes').doc(q.id).set(q, { merge: true });
+          const docRef = this.db.collection('quizzes').doc(q.id);
+          const docSnap = await docRef.get();
+          if (!docSnap.exists) {
+            await docRef.set(q, { merge: true });
+            console.log(`🔥 Firebase: Quiz ${q.id} auto-seeded into Firestore`);
+          }
         }
-        console.log("🔥 Firebase: Default quizzes seeded into Firestore");
       }
 
       // Auto-seed initial students if Firestore collection is empty
