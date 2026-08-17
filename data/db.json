@@ -6649,6 +6649,622 @@
           "explanation": "IMA was established at Dehradun, Uttarakhand, in 1932."
         }
       ]
+    },
+    {
+      "id": "manekshaw-batch-paper-new-gat",
+      "title": "MANEKSHAW BATCH PAPER NEW GAT",
+      "description": "Official UPSC NDA II 2023 GAT & Recent Current Affairs Question Paper for Manekshaw Batch. 50 Questions | 60 Mins | Total Marks: 200. Marking: +4 for correct answer, -1.2 (30% deduction) for incorrect answer.",
+      "timeLimitMinutes": 60,
+      "maxViolationsAllowed": 3,
+      "marksPerCorrect": 4,
+      "negativeMarksPerWrong": 1.2,
+      "totalMarks": 200,
+      "passingMarks": 80,
+      "isActive": true,
+      "isResultPublished": true,
+      "isHidden": false,
+      "questions": [
+        {
+          "id": "mbnew_q1",
+          "text": "NDA II 2023 GAT (Spotting Errors): 'Neither the director (A) / nor the actors (B) / was ready for the sudden change in schedule (C) / No Error (D)'",
+          "options": [
+            "was ready for the sudden change in schedule (C) -> should be 'were ready'",
+            "Neither the director (A)",
+            "nor the actors (B)",
+            "No Error (D)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "When two subjects are connected by 'neither...nor', the verb agrees with the subject nearest to it. 'actors' is plural, so the verb must be 'were'."
+        },
+        {
+          "id": "mbnew_q2",
+          "text": "NDA II 2023 GAT (Synonyms): What is the nearest synonym of the underlined word in: 'His MENDACIOUS statement during the trial surprised everyone.'?",
+          "options": [
+            "Truthful",
+            "Deceitful",
+            "Frank",
+            "Generous"
+          ],
+          "correctAnswer": 1,
+          "explanation": "'Mendacious' means untruthful or lying; deceitful."
+        },
+        {
+          "id": "mbnew_q3",
+          "text": "NDA II 2023 GAT (Antonyms): What is the most appropriate antonym for the underlined word in: 'She showed an OBSTINATE refusal to compromise.'?",
+          "options": [
+            "Stubborn",
+            "Flexible",
+            "Rigid",
+            "Persistent"
+          ],
+          "correctAnswer": 1,
+          "explanation": "'Obstinate' means stubbornly refusing to change one's opinion; its antonym is flexible or compliant."
+        },
+        {
+          "id": "mbnew_q4",
+          "text": "NDA II 2023 GAT: Fill in the blank: 'The officer was acquitted ______ all the charges brought against him.'",
+          "options": [
+            "from",
+            "of",
+            "with",
+            "by"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The verb 'acquitted' takes the fixed preposition 'of' (acquitted of a charge)."
+        },
+        {
+          "id": "mbnew_q5",
+          "text": "NDA II 2023 GAT: What is the meaning of the idiom 'To burn the candle at both ends'?",
+          "options": [
+            "To waste money on unnecessary luxuries",
+            "To work very hard from early morning until late at night",
+            "To be extremely careless with fire",
+            "To act foolishly in a dangerous situation"
+          ],
+          "correctAnswer": 1,
+          "explanation": "'To burn the candle at both ends' means to exhaust oneself by working late and waking up early."
+        },
+        {
+          "id": "mbnew_q6",
+          "text": "NDA II 2023 GAT: Which phenomenon is responsible for the twinkling of stars in the night sky?",
+          "options": [
+            "Atmospheric Refraction",
+            "Total Internal Reflection",
+            "Dispersion of Light",
+            "Diffraction of Light"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Twinkling of stars is caused by atmospheric refraction of starlight due to fluctuating temperature and density of air layers."
+        },
+        {
+          "id": "mbnew_q7",
+          "text": "NDA II 2023 GAT: If three resistors of 6 Ω each are connected in parallel, what is their equivalent resistance?",
+          "options": [
+            "18 Ω",
+            "2 Ω",
+            "3 Ω",
+            "0.5 Ω"
+          ],
+          "correctAnswer": 1,
+          "explanation": "1/R_eq = 1/6 + 1/6 + 1/6 = 3/6 = 1/2 => R_eq = 2 Ω."
+        },
+        {
+          "id": "mbnew_q8",
+          "text": "NDA II 2023 GAT: Which law of thermodynamics introduces the concept of temperature?",
+          "options": [
+            "Zeroth Law of Thermodynamics",
+            "First Law of Thermodynamics",
+            "Second Law of Thermodynamics",
+            "Third Law of Thermodynamics"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The Zeroth Law of Thermodynamics defines thermal equilibrium and establishes the concept of temperature."
+        },
+        {
+          "id": "mbnew_q9",
+          "text": "NDA II 2023 GAT: Acceleration due to gravity 'g' at a height 'h' above the Earth's surface (where h << R) is given by:",
+          "options": [
+            "g' = g (1 - 2h/R)",
+            "g' = g (1 + 2h/R)",
+            "g' = g (1 - h/R)",
+            "g' = g (1 + h/R)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "For height h << R, g' = g(1 + h/R)^(-2) ≈ g(1 - 2h/R)."
+        },
+        {
+          "id": "mbnew_q10",
+          "text": "NDA II 2023 GAT: Ultrasonic sound waves have frequencies:",
+          "options": [
+            "Below 20 Hz",
+            "Between 20 Hz and 20,000 Hz",
+            "Above 20,000 Hz (20 kHz)",
+            "Above 1 MHz only"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Ultrasonic waves are acoustic waves with frequencies higher than 20,000 Hz."
+        },
+        {
+          "id": "mbnew_q11",
+          "text": "NDA II 2023 GAT: Which acid is present in ant sting that causes burning pain?",
+          "options": [
+            "Acetic acid",
+            "Methanoic acid (Formic acid)",
+            "Oxalic acid",
+            "Lactic acid"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Ant stings inject methanoic acid (formic acid, HCOOH), causing pain and irritation."
+        },
+        {
+          "id": "mbnew_q12",
+          "text": "NDA II 2023 GAT: Which alloy is composed mainly of Copper and Zinc?",
+          "options": [
+            "Bronze",
+            "Brass",
+            "German Silver",
+            "Solder"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Brass is an alloy of Copper (Cu) and Zinc (Zn)."
+        },
+        {
+          "id": "mbnew_q13",
+          "text": "NDA II 2023 GAT: Galvanization is the process of applying a protective coating of which metal onto steel or iron?",
+          "options": [
+            "Tin",
+            "Zinc",
+            "Chromium",
+            "Nickel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Galvanization applies a zinc coating to steel or iron to prevent rusting."
+        },
+        {
+          "id": "mbnew_q14",
+          "text": "NDA II 2023 GAT: Which gas is commonly known as 'Laughing Gas'?",
+          "options": [
+            "Nitric oxide (NO)",
+            "Nitrous oxide (N2O)",
+            "Nitrogen dioxide (NO2)",
+            "Dinitrogen tetroxide (N2O4)"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Nitrous oxide (N2O) is known as laughing gas."
+        },
+        {
+          "id": "mbnew_q15",
+          "text": "NDA II 2023 GAT: Which cell organelle is known as the 'Suicide Bag' of the cell?",
+          "options": [
+            "Ribosome",
+            "Lysosome",
+            "Golgi Apparatus",
+            "Mitochondria"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Lysosomes contain digestive enzymes that break down waste and cellular debris."
+        },
+        {
+          "id": "mbnew_q16",
+          "text": "NDA II 2023 GAT: Scurvy is caused by the deficiency of which vitamin?",
+          "options": [
+            "Vitamin A",
+            "Vitamin B1",
+            "Vitamin C",
+            "Vitamin D"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Scurvy results from a deficiency of Vitamin C (ascorbic acid)."
+        },
+        {
+          "id": "mbnew_q17",
+          "text": "NDA II 2023 GAT: Which hormone regulates blood glucose levels by promoting glucose uptake into body cells?",
+          "options": [
+            "Glucagon",
+            "Insulin",
+            "Thyroxine",
+            "Adrenaline"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Insulin is secreted by pancreas beta cells to lower blood glucose."
+        },
+        {
+          "id": "mbnew_q18",
+          "text": "NDA II 2023 GAT: Who among the following founded the 'Atmiya Sabha' in 1815 in Calcutta?",
+          "options": [
+            "Swami Dayananda Saraswati",
+            "Raja Ram Mohan Roy",
+            "Ishwar Chandra Vidyasagar",
+            "Keshab Chandra Sen"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Raja Ram Mohan Roy established Atmiya Sabha in 1815 to promote monotheism."
+        },
+        {
+          "id": "mbnew_q19",
+          "text": "NDA II 2023 GAT: The historic Non-Cooperation Movement was formally launched by Mahatma Gandhi in which year?",
+          "options": [
+            "1917",
+            "1920",
+            "1930",
+            "1942"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Non-Cooperation Movement was launched on 1 August 1920."
+        },
+        {
+          "id": "mbnew_q20",
+          "text": "NDA II 2023 GAT: Which Indus Valley site is famous for possessing a unique dockyard?",
+          "options": [
+            "Kalibangan",
+            "Lothal",
+            "Mohenjo-daro",
+            "Banawali"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Lothal in Gujarat features an ancient tidal dockyard."
+        },
+        {
+          "id": "mbnew_q21",
+          "text": "NDA II 2023 GAT: Which strait separates India from Sri Lanka?",
+          "options": [
+            "Malacca Strait",
+            "Palk Strait",
+            "Sunda Strait",
+            "Ten Degree Channel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Palk Strait lies between Tamil Nadu (India) and the Jaffna District of Sri Lanka."
+        },
+        {
+          "id": "mbnew_q22",
+          "text": "NDA II 2023 GAT: Which peninsular river is known as 'Dakshin Ganga'?",
+          "options": [
+            "Krishna",
+            "Godavari",
+            "Kaveri",
+            "Narmada"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Godavari is the largest river system of Peninsular India and is called Dakshin Ganga."
+        },
+        {
+          "id": "mbnew_q23",
+          "text": "NDA II 2023 GAT: Which Article of the Indian Constitution guarantees the Right to Constitutional Remedies?",
+          "options": [
+            "Article 14",
+            "Article 19",
+            "Article 32",
+            "Article 370"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Article 32 empowers individuals to move the Supreme Court for enforcement of Fundamental Rights."
+        },
+        {
+          "id": "mbnew_q24",
+          "text": "NDA II 2023 GAT: The words 'Socialist', 'Secular', and 'Integrity' were inserted into the Preamble by which Constitutional Amendment?",
+          "options": [
+            "42nd Constitutional Amendment Act, 1976",
+            "44th Constitutional Amendment Act, 1978",
+            "86th Constitutional Amendment Act, 2002",
+            "73rd Constitutional Amendment Act, 1992"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The 42nd Amendment Act of 1976 added these three terms to the Preamble."
+        },
+        {
+          "id": "mbnew_q25",
+          "text": "NDA II 2023 GAT: Who is the Supreme Commander of the Indian Armed Forces under the Constitution of India?",
+          "options": [
+            "Prime Minister of India",
+            "Defence Minister of India",
+            "President of India",
+            "Chief of Defence Staff (CDS)"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Under Article 53(2), the Supreme Command of the Armed Forces of the Union is vested in the President."
+        },
+        {
+          "id": "mbnew_q26",
+          "text": "Current Affairs: India commissioned its second nuclear-powered ballistic missile submarine (SSBN) in August 2024 at Visakhapatnam. What is its name?",
+          "options": [
+            "INS Arihant",
+            "INS Arighat",
+            "INS Aridhaman",
+            "INS Vikrant"
+          ],
+          "correctAnswer": 1,
+          "explanation": "INS Arighat (S3) is India's 2nd SSBN commissioned into the Indian Navy in August 2024."
+        },
+        {
+          "id": "mbnew_q27",
+          "text": "Current Affairs: ISRO successfully inserted India's solar observatory spacecraft into Halo Orbit around Lagrange Point 1 (L1) in January 2024. What is the name of this mission?",
+          "options": [
+            "Chandrayaan-3",
+            "Aditya-L1",
+            "XPoSat",
+            "AstroSat-2"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Aditya-L1 reached L1 orbit on Jan 6, 2024 to observe solar corona and solar winds."
+        },
+        {
+          "id": "mbnew_q28",
+          "text": "Current Affairs: What was the name of the largest multinational air exercise hosted by the Indian Air Force (IAF) in August 2024 involving over 30 foreign air forces?",
+          "options": [
+            "Exercise Tarang Shakti 2024",
+            "Exercise Gagan Shakti",
+            "Exercise Pitch Black",
+            "Exercise Garuda"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Exercise Tarang Shakti 2024 was IAF's largest multilateral air exercise held in Tamil Nadu and Rajasthan."
+        },
+        {
+          "id": "mbnew_q29",
+          "text": "Current Affairs: Who took charge as the 26th Chief of the Naval Staff (CNS) of the Indian Navy in April 2024?",
+          "options": [
+            "Admiral Dinesh Kumar Tripathi",
+            "Admiral Karambir Singh",
+            "General Upendra Dwivedi",
+            "Air Chief Marshal Amar Preet Singh"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Admiral Dinesh K. Tripathi assumed command as 26th CNS on April 30, 2024."
+        },
+        {
+          "id": "mbnew_q30",
+          "text": "Current Affairs: Who assumed charge as the 30th Chief of the Army Staff (COAS) of the Indian Army in June 2024?",
+          "options": [
+            "General Manoj Pande",
+            "General Upendra Dwivedi",
+            "General Anil Chauhan",
+            "Lieutenant General Suchindra Kumar"
+          ],
+          "correctAnswer": 1,
+          "explanation": "General Upendra Dwivedi assumed charge as 30th COAS on June 30, 2024."
+        },
+        {
+          "id": "mbnew_q31",
+          "text": "Current Affairs: The landing site of Chandrayaan-3's Vikram lander near the lunar South Pole was officially named as:",
+          "options": [
+            "Tiranga Point",
+            "Shiv Shakti Point",
+            "Jawahar Point",
+            "Vikram Point"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The Chandrayaan-3 landing point on the Moon was designated as 'Shiv Shakti Point'."
+        },
+        {
+          "id": "mbnew_q32",
+          "text": "Current Affairs: India celebrates its annual 'National Space Day' on which date to commemorate the lunar landing of Chandrayaan-3?",
+          "options": [
+            "15th August",
+            "23rd August",
+            "2nd September",
+            "15th October"
+          ],
+          "correctAnswer": 1,
+          "explanation": "August 23 is declared as National Space Day in India."
+        },
+        {
+          "id": "mbnew_q33",
+          "text": "Current Affairs: Air Chief Marshal Amar Preet Singh took over as the 28th Chief of the Air Staff (CAS) of India in which month?",
+          "options": [
+            "July 2024",
+            "September 2024",
+            "December 2024",
+            "January 2025"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Air Chief Marshal Amar Preet Singh took charge as 28th CAS on September 30, 2024."
+        },
+        {
+          "id": "mbnew_q34",
+          "text": "Current Affairs: Who became the first Indian athlete post-independence to win two medals at a single edition of the Olympic Games (Paris 2024)?",
+          "options": [
+            "Manu Bhaker",
+            "Sarabjot Singh",
+            "Swapnil Kusale",
+            "Neeraj Chopra"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Manu Bhaker won two bronze medals in shooting at Paris Olympics 2024."
+        },
+        {
+          "id": "mbnew_q35",
+          "text": "Current Affairs: The Tata-Airbus C-295 aircraft manufacturing facility for the Indian Air Force was inaugurated in October 2024 at which city?",
+          "options": [
+            "Ahmedabad",
+            "Vadodara",
+            "Surat",
+            "Gandhinagar"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The C-295 aircraft Final Assembly Line was inaugurated in Vadodara, Gujarat."
+        },
+        {
+          "id": "mbnew_q36",
+          "text": "Current Affairs: 'Exercise Dharma Guardian' is an annual joint military exercise between India and which country?",
+          "options": [
+            "Japan",
+            "France",
+            "USA",
+            "Australia"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Exercise Dharma Guardian is conducted between the armies of India and Japan."
+        },
+        {
+          "id": "mbnew_q37",
+          "text": "Current Affairs: The 16th BRICS Summit in October 2024 was hosted under the presidency of which country in Kazan?",
+          "options": [
+            "Brazil",
+            "Russia",
+            "India",
+            "South Africa"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Russia hosted the 16th BRICS Summit in Kazan in October 2024."
+        },
+        {
+          "id": "mbnew_q38",
+          "text": "Current Affairs: Joint military exercise 'DUSTLIK 2024' was held between the Indian Army and the army of which Central Asian nation?",
+          "options": [
+            "Uzbekistan",
+            "Kazakhstan",
+            "Kyrgyzstan",
+            "Tajikistan"
+          ],
+          "correctAnswer": 0,
+          "explanation": "DUSTLIK is the joint military exercise between India and Uzbekistan."
+        },
+        {
+          "id": "mbnew_q39",
+          "text": "Current Affairs: What is the main objective of ISRO's XPoSat mission launched on January 1, 2024?",
+          "options": [
+            "Study polarization of cosmic X-rays",
+            "Study solar magnetic storms",
+            "Search for water ice on Mars",
+            "Observe Earth's ocean currents"
+          ],
+          "correctAnswer": 0,
+          "explanation": "XPoSat (X-ray Polarimeter Satellite) measures polarization of astronomical X-ray sources."
+        },
+        {
+          "id": "mbnew_q40",
+          "text": "Current Affairs: INS Jatayu, a strategic naval detachment commissioned to boost maritime security in the Arabian Sea, is located on which island?",
+          "options": [
+            "Minicoy Island (Lakshadweep)",
+            "Andaman & Nicobar Islands",
+            "Daman Island",
+            "Pamban Island"
+          ],
+          "correctAnswer": 0,
+          "explanation": "INS Jatayu was commissioned at Minicoy Island in Lakshadweep in March 2024."
+        },
+        {
+          "id": "mbnew_q41",
+          "text": "Current Affairs: Who among the following was conferred the Bharat Ratna in 2024 for pioneering India's Green Revolution?",
+          "options": [
+            "Dr. M. S. Swaminathan",
+            "Karpoori Thakur",
+            "Chaudhary Charan Singh",
+            "All of the above"
+          ],
+          "correctAnswer": 3,
+          "explanation": "Bharat Ratna 2024 awardees included Dr. M.S. Swaminathan, Karpoori Thakur, Chaudhary Charan Singh, P.V. Narasimha Rao, and L.K. Advani."
+        },
+        {
+          "id": "mbnew_q42",
+          "text": "Current Affairs: Under which mission name did DRDO test the MIRV-capable Agni-5 intercontinental missile in March 2024?",
+          "options": [
+            "Mission Divyastra",
+            "Mission Astra",
+            "Mission Shakti",
+            "Mission Sudarshan"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The flight test of MIRV-equipped Agni-5 was named 'Mission Divyastra'."
+        },
+        {
+          "id": "mbnew_q43",
+          "text": "Current Affairs: Which team did India defeat in the final to win the ICC Men's T20 World Cup 2024 in Barbados?",
+          "options": [
+            "Australia",
+            "South Africa",
+            "England",
+            "New Zealand"
+          ],
+          "correctAnswer": 1,
+          "explanation": "India defeated South Africa by 7 runs in the final to lift the T20 World Cup 2024."
+        },
+        {
+          "id": "mbnew_q44",
+          "text": "Current Affairs: Name the pan-India biennial coastal defense exercise conducted by the Indian Navy and Coast Guard in November 2024:",
+          "options": [
+            "Sea Vigil-24",
+            "TROPEX-24",
+            "Sagar Kavach",
+            "Prasthan"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Sea Vigil-24 tested coastal security mechanisms along India's 7,516 km coastline."
+        },
+        {
+          "id": "mbnew_q45",
+          "text": "Current Affairs: Which Indian astronaut-designate was selected for Axiom-4 (Ax-4) mission to fly to the International Space Station (ISS)?",
+          "options": [
+            "Group Captain Shubhanshu Shukla",
+            "Group Captain Prashanth Nair",
+            "Group Captain Ajit Krishnan",
+            "Wing Commander Angad Pratap"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Group Captain Shubhanshu Shukla was chosen as prime pilot for Ax-4 mission to ISS."
+        },
+        {
+          "id": "mbnew_q46",
+          "text": "Current Affairs: Where was the 2024 Quad Leaders' Summit hosted by US President Joe Biden in September 2024?",
+          "options": [
+            "Wilmington, Delaware",
+            "Washington, D.C.",
+            "Tokyo, Japan",
+            "Sydney, Australia"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The Quad Summit 2024 took place in Wilmington, Delaware."
+        },
+        {
+          "id": "mbnew_q47",
+          "text": "Current Affairs: Which four nations participate in the annual multinational naval exercise 'MALABAR'?",
+          "options": [
+            "India, USA, Japan, Australia",
+            "India, Russia, China, Brazil",
+            "India, UK, France, Germany",
+            "India, Singapore, Thailand, Malaysia"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Exercise MALABAR brings together naval forces of India, US, Japan, and Australia."
+        },
+        {
+          "id": "mbnew_q48",
+          "text": "Current Affairs: Who currently serves as India's Chief of Defence Staff (CDS)?",
+          "options": [
+            "General Bipin Rawat",
+            "General Anil Chauhan",
+            "General Manoj Pande",
+            "Admiral R. Hari Kumar"
+          ],
+          "correctAnswer": 1,
+          "explanation": "General Anil Chauhan is the Chief of Defence Staff (CDS) of India."
+        },
+        {
+          "id": "mbnew_q49",
+          "text": "Current Affairs: India created history at the 45th Chess Olympiad 2024 in Budapest by winning Gold medals in:",
+          "options": [
+            "Both Open and Women's sections",
+            "Open section only",
+            "Women's section only",
+            "Blitz section only"
+          ],
+          "correctAnswer": 0,
+          "explanation": "India won double team Gold medals in both Open and Women's events at the 45th Chess Olympiad."
+        },
+        {
+          "id": "mbnew_q50",
+          "text": "Current Affairs: The three new criminal justice laws (BNS, BNSS, BSA) officially came into force across India on:",
+          "options": [
+            "1st January 2024",
+            "1st July 2024",
+            "15th August 2024",
+            "26th January 2025"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The Bharatiya Nyaya Sanhita, BNSS, and BSA came into force on July 1, 2024."
+        }
+      ]
     }
   ],
   "students": [
