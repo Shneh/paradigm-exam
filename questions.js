@@ -6654,7 +6654,7 @@ const DEFAULT_QUIZZES = [
   {
     "id": "manekshaw-batch-paper-new-gat",
     "title": "MANEKSHAW BATCH PAPER NEW GAT",
-    "description": "Official Authentic UPSC NDA II 2023 General Ability Test (GAT) Complete Question Paper. 150 Questions (50 English + 100 GK/Science) | 2.5 Hours (150 Mins) | Total Marks: 600. Marking Scheme: +4 for correct answer, -1.2 (30% deduction) for incorrect answer.",
+    "description": "Official Authentic UPSC NDA II 2023 General Ability Test (GAT) Question Paper for Manekshaw Batch. 150 Questions (50 English + 100 GK/Science) | 2.5 Hours (150 Mins) | Total Marks: 600. Marking Scheme: +4 for correct answer, -1.2 (30% deduction) for incorrect answer.",
     "timeLimitMinutes": 150,
     "maxViolationsAllowed": 3,
     "marksPerCorrect": 4,
@@ -6667,123 +6667,123 @@ const DEFAULT_QUIZZES = [
     "questions": [
       {
         "id": "mbnew_q1",
-        "text": "NDA II 2023 GAT Q1 (Spotting Errors): 'Neither the director (A) / nor the actors (B) / was ready for the sudden change in schedule (C) / No Error (D)'",
+        "text": "NDA II 2023 GAT Q1 (Spotting Errors): Neither the director (A) / nor the actors (B) / was ready for the sudden change in schedule (C) / No Error (D)",
         "options": [
-          "was ready for the sudden change in schedule (C) -> should be 'were ready'",
           "Neither the director (A)",
           "nor the actors (B)",
+          "was ready for the sudden change in schedule (C)",
           "No Error (D)"
         ],
-        "correctAnswer": 0,
-        "explanation": "When two subjects are connected by 'neither...nor', the verb agrees with the subject nearest to it. 'actors' is plural, so the verb must be 'were'."
+        "correctAnswer": 2,
+        "explanation": "When two subjects are connected by 'neither...nor', the verb agrees with the closer subject ('actors' is plural -> 'were ready'). Error is in part (C)."
       },
       {
         "id": "mbnew_q2",
-        "text": "NDA II 2023 GAT Q2 (Spotting Errors): 'Scarcely had the teacher entered the classroom (A) / than the students stood up (B) / to greet him politely (C) / No Error (D)'",
+        "text": "NDA II 2023 GAT Q2 (Spotting Errors): Scarcely had the teacher entered the classroom (A) / than the students stood up (B) / to greet him politely (C) / No Error (D)",
         "options": [
-          "than the students stood up (B) -> should be 'when the students stood up'",
           "Scarcely had the teacher entered the classroom (A)",
+          "than the students stood up (B)",
           "to greet him politely (C)",
           "No Error (D)"
         ],
-        "correctAnswer": 0,
-        "explanation": "'Scarcely' and 'Hardly' are correlated with 'when' or 'before', not 'than'."
+        "correctAnswer": 1,
+        "explanation": "'Scarcely' and 'Hardly' are followed by 'when' or 'before', not 'than'. Error is in part (B)."
       },
       {
         "id": "mbnew_q3",
-        "text": "NDA II 2023 GAT Q3 (Spotting Errors): 'One of the candidate (A) / who applied for the post (B) / was selected by the panel (C) / No Error (D)'",
+        "text": "NDA II 2023 GAT Q3 (Spotting Errors): One of the candidate (A) / who applied for the post (B) / was selected by the panel (C) / No Error (D)",
         "options": [
-          "One of the candidate (A) -> should be 'One of the candidates'",
+          "One of the candidate (A)",
           "who applied for the post (B)",
           "was selected by the panel (C)",
           "No Error (D)"
         ],
         "correctAnswer": 0,
-        "explanation": "The phrase 'One of the' is always followed by a plural noun ('candidates')."
+        "explanation": "The phrase 'One of the' is followed by a plural noun ('candidates'). Error is in part (A)."
       },
       {
         "id": "mbnew_q4",
-        "text": "NDA II 2023 GAT Q4 (Spotting Errors): 'Unless you do not hurry up (A) / you will miss the train (B) / for New Delhi (C) / No Error (D)'",
+        "text": "NDA II 2023 GAT Q4 (Spotting Errors): Unless you do not hurry up (A) / you will miss the train (B) / for New Delhi (C) / No Error (D)",
         "options": [
-          "Unless you do not hurry up (A) -> should be 'Unless you hurry up'",
+          "Unless you do not hurry up (A)",
           "you will miss the train (B)",
           "for New Delhi (C)",
           "No Error (D)"
         ],
         "correctAnswer": 0,
-        "explanation": "'Unless' itself has a negative meaning, so 'not' should not be used in the unless-clause."
+        "explanation": "'Unless' itself has a negative meaning; 'not' should not be used in the unless-clause. Error is in part (A)."
       },
       {
         "id": "mbnew_q5",
-        "text": "NDA II 2023 GAT Q5 (Spotting Errors): 'The scenery of Kashmir (A) / are so beautiful (B) / that it mesmerizes every tourist (C) / No Error (D)'",
+        "text": "NDA II 2023 GAT Q5 (Spotting Errors): The scenery of Kashmir (A) / are so beautiful (B) / that it mesmerizes every tourist (C) / No Error (D)",
         "options": [
-          "are so beautiful (B) -> should be 'is so beautiful'",
           "The scenery of Kashmir (A)",
+          "are so beautiful (B)",
           "that it mesmerizes every tourist (C)",
           "No Error (D)"
         ],
-        "correctAnswer": 0,
-        "explanation": "'Scenery' is an uncountable singular noun and takes a singular verb ('is')."
+        "correctAnswer": 1,
+        "explanation": "'Scenery' is an uncountable singular noun requiring a singular verb ('is'). Error is in part (B)."
       },
       {
         "id": "mbnew_q6",
-        "text": "NDA II 2023 GAT Q6 (Spotting Errors): 'He has been working (A) / in this office (B) / since the last five years (C) / No Error (D)'",
+        "text": "NDA II 2023 GAT Q6 (Spotting Errors): He has been working (A) / in this office (B) / since the last five years (C) / No Error (D)",
         "options": [
-          "since the last five years (C) -> should be 'for the last five years'",
           "He has been working (A)",
           "in this office (B)",
+          "since the last five years (C)",
           "No Error (D)"
         ],
-        "correctAnswer": 0,
-        "explanation": "'For' is used for a duration/period of time ('five years'), whereas 'since' is used for a specific point in time."
+        "correctAnswer": 2,
+        "explanation": "'For' is used for a duration of time ('for the last five years'), not 'since'. Error is in part (C)."
       },
       {
         "id": "mbnew_q7",
-        "text": "NDA II 2023 GAT Q7 (Spotting Errors): 'If I was the Prime Minister (A) / of the country (B) / I would eradicate poverty (C) / No Error (D)'",
+        "text": "NDA II 2023 GAT Q7 (Spotting Errors): If I was the Prime Minister (A) / of the country (B) / I would eradicate poverty (C) / No Error (D)",
         "options": [
-          "If I was the Prime Minister (A) -> should be 'If I were the Prime Minister'",
+          "If I was the Prime Minister (A)",
           "of the country (B)",
           "I would eradicate poverty (C)",
           "No Error (D)"
         ],
         "correctAnswer": 0,
-        "explanation": "Hypothetical / imaginary conditional clauses use 'were' regardless of the subject."
+        "explanation": "Unreal/hypothetical conditional sentences use 'were' ('If I were...'). Error is in part (A)."
       },
       {
         "id": "mbnew_q8",
-        "text": "NDA II 2023 GAT Q8 (Spotting Errors): 'The news of the accident (A) / were broadcasted on all channels (B) / yesterday evening (C) / No Error (D)'",
+        "text": "NDA II 2023 GAT Q8 (Spotting Errors): The news of the accident (A) / were broadcasted on all channels (B) / yesterday evening (C) / No Error (D)",
         "options": [
-          "were broadcasted on all channels (B) -> should be 'was broadcast on all channels'",
           "The news of the accident (A)",
+          "were broadcasted on all channels (B)",
           "yesterday evening (C)",
           "No Error (D)"
         ],
-        "correctAnswer": 0,
-        "explanation": "'News' is singular and takes 'was'. The past tense of broadcast is 'broadcast', not 'broadcasted'."
+        "correctAnswer": 1,
+        "explanation": "'News' is singular ('was broadcast'). The past form is 'broadcast'. Error is in part (B)."
       },
       {
         "id": "mbnew_q9",
-        "text": "NDA II 2023 GAT Q9 (Spotting Errors): 'Although he was tired (A) / but he completed the assignment (B) / before midnight (C) / No Error (D)'",
+        "text": "NDA II 2023 GAT Q9 (Spotting Errors): Although he was tired (A) / but he completed the assignment (B) / before midnight (C) / No Error (D)",
         "options": [
-          "but he completed the assignment (B) -> remove 'but' or replace with 'yet'",
           "Although he was tired (A)",
+          "but he completed the assignment (B)",
           "before midnight (C)",
           "No Error (D)"
         ],
-        "correctAnswer": 0,
-        "explanation": "'Although' or 'Though' is followed by 'yet' or a comma, not 'but'."
+        "correctAnswer": 1,
+        "explanation": "'Although' is followed by 'yet' or a comma, not 'but'. Error is in part (B)."
       },
       {
         "id": "mbnew_q10",
-        "text": "NDA II 2023 GAT Q10 (Spotting Errors): 'She prefers coffee (A) / than tea (B) / in the morning (C) / No Error (D)'",
+        "text": "NDA II 2023 GAT Q10 (Spotting Errors): She prefers coffee (A) / than tea (B) / in the morning (C) / No Error (D)",
         "options": [
-          "than tea (B) -> should be 'to tea'",
           "She prefers coffee (A)",
+          "than tea (B)",
           "in the morning (C)",
           "No Error (D)"
         ],
-        "correctAnswer": 0,
-        "explanation": "The verb 'prefer' takes the preposition 'to' instead of 'than'."
+        "correctAnswer": 1,
+        "explanation": "'Prefer' takes the preposition 'to' instead of 'than'. Error is in part (B)."
       },
       {
         "id": "mbnew_q11",
@@ -6799,22 +6799,22 @@ const DEFAULT_QUIZZES = [
       },
       {
         "id": "mbnew_q12",
-        "text": "NDA II 2023 GAT Q12 (Synonyms): What is the nearest synonym of: 'The general was OBDURATE in his decision not to retreat.'?",
+        "text": "NDA II 2023 GAT Q12 (Synonyms): What is the nearest synonym of the underlined word in: 'The general was OBDURATE in his decision not to retreat.'?",
         "options": [
           "Flexible",
-          "Stubborn / Unyielding",
           "Timid",
+          "Stubborn",
           "Merciful"
         ],
-        "correctAnswer": 1,
-        "explanation": "'Obdurate' means stubbornly refusing to change one's opinion or course of action."
+        "correctAnswer": 2,
+        "explanation": "'Obdurate' means stubbornly refusing to change one's opinion."
       },
       {
         "id": "mbnew_q13",
-        "text": "NDA II 2023 GAT Q13 (Synonyms): What is the nearest synonym of: 'Fame in youth is often TRANSIENT.'?",
+        "text": "NDA II 2023 GAT Q13 (Synonyms): What is the nearest synonym of the underlined word in: 'Fame in youth is often TRANSIENT.'?",
         "options": [
           "Permanent",
-          "Temporary / Short-lived",
+          "Temporary",
           "Eternal",
           "Substantial"
         ],
@@ -6823,7 +6823,7 @@ const DEFAULT_QUIZZES = [
       },
       {
         "id": "mbnew_q14",
-        "text": "NDA II 2023 GAT Q14 (Synonyms): What is the nearest synonym of: 'The government took steps to AMELIORATE the living conditions of the poor.'?",
+        "text": "NDA II 2023 GAT Q14 (Synonyms): What is the nearest synonym of the underlined word in: 'The government took steps to AMELIORATE the living conditions of the poor.'?",
         "options": [
           "Worsen",
           "Improve",
@@ -6831,62 +6831,62 @@ const DEFAULT_QUIZZES = [
           "Delay"
         ],
         "correctAnswer": 1,
-        "explanation": "'Ameliorate' means to make something bad or unsatisfactory better; to improve."
+        "explanation": "'Ameliorate' means to make something bad or unsatisfactory better."
       },
       {
         "id": "mbnew_q15",
-        "text": "NDA II 2023 GAT Q15 (Synonyms): What is the nearest synonym of: 'Smoking has a PERNICIOUS effect on human health.'?",
+        "text": "NDA II 2023 GAT Q15 (Synonyms): What is the nearest synonym of the underlined word in: 'Smoking has a PERNICIOUS effect on human health.'?",
         "options": [
-          "Harmful / Destructive",
+          "Harmful",
           "Beneficial",
           "Insignificant",
           "Healing"
         ],
         "correctAnswer": 0,
-        "explanation": "'Pernicious' means having a harmful effect, especially in a gradual or subtle way."
+        "explanation": "'Pernicious' means having a subtle or gradual harmful effect."
       },
       {
         "id": "mbnew_q16",
-        "text": "NDA II 2023 GAT Q16 (Synonyms): What is the nearest synonym of: 'The king was known for his BENEVOLENT nature towards his subjects.'?",
+        "text": "NDA II 2023 GAT Q16 (Synonyms): What is the nearest synonym of the underlined word in: 'The king was known for his BENEVOLENT nature towards his subjects.'?",
         "options": [
-          "Kind / Charitable",
+          "Kind",
           "Cruel",
           "Greedy",
           "Indifferent"
         ],
         "correctAnswer": 0,
-        "explanation": "'Benevolent' means well-meaning, kindly, and charitable."
+        "explanation": "'Benevolent' means well-meaning and kindly."
       },
       {
         "id": "mbnew_q17",
-        "text": "NDA II 2023 GAT Q17 (Synonyms): What is the nearest synonym of: 'He is very FASTIDIOUS about his personal appearance.'?",
+        "text": "NDA II 2023 GAT Q17 (Synonyms): What is the nearest synonym of the underlined word in: 'He is very FASTIDIOUS about his personal appearance.'?",
         "options": [
-          "Meticulous / Meticulously detailed",
           "Careless",
           "Sloppy",
+          "Meticulous",
           "Lazy"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "'Fastidious' means very attentive to and concerned about accuracy and detail."
       },
       {
         "id": "mbnew_q18",
-        "text": "NDA II 2023 GAT Q18 (Synonyms): What is the nearest synonym of: 'She remained RETICENT about her personal life during the interview.'?",
+        "text": "NDA II 2023 GAT Q18 (Synonyms): What is the nearest synonym of the underlined word in: 'She remained RETICENT about her personal life during the interview.'?",
         "options": [
           "Talkative",
-          "Reserved / Silent",
+          "Reserved",
           "Outspoken",
           "Arrogant"
         ],
         "correctAnswer": 1,
-        "explanation": "'Reticent' means not revealing one's thoughts or feelings readily; reserved."
+        "explanation": "'Reticent' means not revealing one's thoughts or feelings readily."
       },
       {
         "id": "mbnew_q19",
-        "text": "NDA II 2023 GAT Q19 (Synonyms): What is the nearest synonym of: 'He made a LUCRATIVE business deal with the international firm.'?",
+        "text": "NDA II 2023 GAT Q19 (Synonyms): What is the nearest synonym of the underlined word in: 'He made a LUCRATIVE business deal with the international firm.'?",
         "options": [
           "Unprofitable",
-          "Profitable / Remunerative",
+          "Profitable",
           "Risky",
           "Loss-making"
         ],
@@ -6895,10 +6895,10 @@ const DEFAULT_QUIZZES = [
       },
       {
         "id": "mbnew_q20",
-        "text": "NDA II 2023 GAT Q20 (Synonyms): What is the nearest synonym of: 'His CANDID confession cleared all doubts.'?",
+        "text": "NDA II 2023 GAT Q20 (Synonyms): What is the nearest synonym of the underlined word in: 'His CANDID confession cleared all doubts.'?",
         "options": [
           "Deceptive",
-          "Frank / Honest",
+          "Frank",
           "Vague",
           "Secretive"
         ],
@@ -6907,7 +6907,7 @@ const DEFAULT_QUIZZES = [
       },
       {
         "id": "mbnew_q21",
-        "text": "NDA II 2023 GAT Q21 (Antonyms): What is the most appropriate antonym for: 'She showed an OBSTINATE refusal to compromise.'?",
+        "text": "NDA II 2023 GAT Q21 (Antonyms): What is the antonym of the underlined word in: 'She showed an OBSTINATE refusal to compromise.'?",
         "options": [
           "Stubborn",
           "Flexible",
@@ -6915,62 +6915,62 @@ const DEFAULT_QUIZZES = [
           "Persistent"
         ],
         "correctAnswer": 1,
-        "explanation": "'Obstinate' means stubborn; its opposite is flexible or compliant."
+        "explanation": "'Obstinate' means stubborn; its antonym is flexible."
       },
       {
         "id": "mbnew_q22",
-        "text": "NDA II 2023 GAT Q22 (Antonyms): What is the antonym of: 'He leads a FRUGAL lifestyle despite his immense wealth.'?",
+        "text": "NDA II 2023 GAT Q22 (Antonyms): What is the antonym of the underlined word in: 'He leads a FRUGAL lifestyle despite his immense wealth.'?",
         "options": [
-          "Extravagant / Wasteful",
+          "Extravagant",
           "Thrifty",
           "Economical",
           "Sparing"
         ],
         "correctAnswer": 0,
-        "explanation": "'Frugal' means economical/sparing with money; its opposite is extravagant."
+        "explanation": "'Frugal' means economical; its antonym is extravagant."
       },
       {
         "id": "mbnew_q23",
-        "text": "NDA II 2023 GAT Q23 (Antonyms): What is the antonym of: 'The witness chose to EXAGGERATE the events that transpired.'?",
+        "text": "NDA II 2023 GAT Q23 (Antonyms): What is the antonym of the underlined word in: 'The witness chose to EXAGGERATE the events that transpired.'?",
         "options": [
-          "Understate / Minimize",
           "Amplify",
+          "Understate",
           "Magnify",
           "Overstate"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "'Exaggerate' means to represent as greater than it is; its antonym is understate."
       },
       {
         "id": "mbnew_q24",
-        "text": "NDA II 2023 GAT Q24 (Antonyms): What is the antonym of: 'The crowd displayed a HOSTILE attitude towards the speaker.'?",
+        "text": "NDA II 2023 GAT Q24 (Antonyms): What is the antonym of the underlined word in: 'The crowd displayed a HOSTILE attitude towards the speaker.'?",
         "options": [
-          "Friendly / Cordial",
+          "Friendly",
           "Antagonistic",
           "Aggressive",
           "Unfriendly"
         ],
         "correctAnswer": 0,
-        "explanation": "'Hostile' means unfriendly or aggressive; its antonym is friendly or cordial."
+        "explanation": "'Hostile' means unfriendly; its antonym is friendly."
       },
       {
         "id": "mbnew_q25",
-        "text": "NDA II 2023 GAT Q25 (Antonyms): What is the antonym of: 'The commander decided to AUGMENT the defensive forces.'?",
+        "text": "NDA II 2023 GAT Q25 (Antonyms): What is the antonym of the underlined word in: 'The commander decided to AUGMENT the defensive forces.'?",
         "options": [
-          "Decrease / Diminish",
           "Increase",
           "Expand",
+          "Decrease",
           "Strengthen"
         ],
-        "correctAnswer": 0,
-        "explanation": "'Augment' means to make larger or increase; its antonym is decrease or diminish."
+        "correctAnswer": 2,
+        "explanation": "'Augment' means to increase; its antonym is decrease."
       },
       {
         "id": "mbnew_q26",
-        "text": "NDA II 2023 GAT Q26 (Antonyms): What is the antonym of: 'His career reached its ZENITH after winning the international trophy.'?",
+        "text": "NDA II 2023 GAT Q26 (Antonyms): What is the antonym of the underlined word in: 'His career reached its ZENITH after winning the international trophy.'?",
         "options": [
           "Pinnacle",
-          "Nadir / Lowest point",
+          "Nadir",
           "Apex",
           "Peak"
         ],
@@ -6979,67 +6979,67 @@ const DEFAULT_QUIZZES = [
       },
       {
         "id": "mbnew_q27",
-        "text": "NDA II 2023 GAT Q27 (Antonyms): What is the antonym of: 'The windows were made of OPAQUE glass.'?",
+        "text": "NDA II 2023 GAT Q27 (Antonyms): What is the antonym of the underlined word in: 'The windows were made of OPAQUE glass.'?",
         "options": [
-          "Transparent / Clear",
+          "Transparent",
           "Cloudy",
           "Dark",
           "Dense"
         ],
         "correctAnswer": 0,
-        "explanation": "'Opaque' means not able to be seen through; its antonym is transparent."
+        "explanation": "'Opaque' means not transparent; its antonym is transparent."
       },
       {
         "id": "mbnew_q28",
-        "text": "NDA II 2023 GAT Q28 (Antonyms): What is the antonym of: 'A DILIGENT student always achieves success in exams.'?",
+        "text": "NDA II 2023 GAT Q28 (Antonyms): What is the antonym of the underlined word in: 'A DILIGENT student always achieves success in exams.'?",
         "options": [
           "Hardworking",
-          "Lazy / Idle",
           "Industrious",
+          "Lazy",
           "Attentive"
         ],
-        "correctAnswer": 1,
-        "explanation": "'Diligent' means showing care and conscientiousness; its antonym is lazy or idle."
+        "correctAnswer": 2,
+        "explanation": "'Diligent' means hardworking; its antonym is lazy."
       },
       {
         "id": "mbnew_q29",
-        "text": "NDA II 2023 GAT Q29 (Antonyms): What is the antonym of: 'The two communities lived in complete HARMONY for decades.'?",
+        "text": "NDA II 2023 GAT Q29 (Antonyms): What is the antonym of the underlined word in: 'The two communities lived in complete HARMONY for decades.'?",
         "options": [
-          "Discord / Conflict",
+          "Discord",
           "Agreement",
           "Peace",
           "Unity"
         ],
         "correctAnswer": 0,
-        "explanation": "'Harmony' means agreement and peace; its antonym is discord or conflict."
+        "explanation": "'Harmony' means peace and agreement; its antonym is discord."
       },
       {
         "id": "mbnew_q30",
-        "text": "NDA II 2023 GAT Q30 (Antonyms): What is the antonym of: 'The doctor recommended an EFFECTIVE remedy for the disease.'?",
+        "text": "NDA II 2023 GAT Q30 (Antonyms): What is the antonym of the underlined word in: 'The doctor recommended an EFFECTIVE remedy for the disease.'?",
         "options": [
-          "Ineffective / Useless",
           "Potent",
+          "Ineffective",
           "Successful",
           "Powerful"
         ],
-        "correctAnswer": 0,
-        "explanation": "'Effective' means successful in producing a desired result; antonym is ineffective."
+        "correctAnswer": 1,
+        "explanation": "'Effective' means producing a desired result; its antonym is ineffective."
       },
       {
         "id": "mbnew_q31",
-        "text": "NDA II 2023 GAT Q31 (Idioms): What is the meaning of 'To burn the candle at both ends'?",
+        "text": "NDA II 2023 GAT Q31 (Idioms): What is the meaning of the idiom 'To burn the candle at both ends'?",
         "options": [
-          "To waste money on unnecessary luxuries",
-          "To work very hard from early morning until late at night",
-          "To be extremely careless with fire",
-          "To act foolishly in a dangerous situation"
+          "To waste money on luxuries",
+          "To work late at night and early in the morning",
+          "To be careless with fire",
+          "To act foolishly in danger"
         ],
         "correctAnswer": 1,
-        "explanation": "'To burn the candle at both ends' means to exhaust oneself by working late and waking up early."
+        "explanation": "'To burn the candle at both ends' means to work extremely hard with little rest."
       },
       {
         "id": "mbnew_q32",
-        "text": "NDA II 2023 GAT Q32 (Idioms): What is the meaning of 'Through thick and thin'?",
+        "text": "NDA II 2023 GAT Q32 (Idioms): What is the meaning of the idiom 'Through thick and thin'?",
         "options": [
           "Under all circumstances, good or bad",
           "Only during favorable times",
@@ -7047,11 +7047,11 @@ const DEFAULT_QUIZZES = [
           "Losing weight rapidly"
         ],
         "correctAnswer": 0,
-        "explanation": "'Through thick and thin' means supporting someone through good and bad times."
+        "explanation": "'Through thick and thin' means supporting someone in all circumstances."
       },
       {
         "id": "mbnew_q33",
-        "text": "NDA II 2023 GAT Q33 (Idioms): What is the meaning of 'To turn a blind eye'?",
+        "text": "NDA II 2023 GAT Q33 (Idioms): What is the meaning of the idiom 'To turn a blind eye'?",
         "options": [
           "To lose eyesight",
           "To pretend not to notice something wrong",
@@ -7059,11 +7059,11 @@ const DEFAULT_QUIZZES = [
           "To wear dark glasses"
         ],
         "correctAnswer": 1,
-        "explanation": "'Turn a blind eye' means deliberately ignoring a wrong deed."
+        "explanation": "'Turn a blind eye' means deliberately ignoring a wrong action."
       },
       {
         "id": "mbnew_q34",
-        "text": "NDA II 2023 GAT Q34 (Idioms): What is the meaning of 'To call it a day'?",
+        "text": "NDA II 2023 GAT Q34 (Idioms): What is the meaning of the idiom 'To call it a day'?",
         "options": [
           "To start a new project",
           "To stop working on something for the rest of the day",
@@ -7071,11 +7071,11 @@ const DEFAULT_QUIZZES = [
           "To work overnight"
         ],
         "correctAnswer": 1,
-        "explanation": "'Call it a day' means to decide or agree to stop doing something."
+        "explanation": "'Call it a day' means deciding to stop working."
       },
       {
         "id": "mbnew_q35",
-        "text": "NDA II 2023 GAT Q35 (Idioms): What is the meaning of 'To spill the beans'?",
+        "text": "NDA II 2023 GAT Q35 (Idioms): What is the meaning of the idiom 'To spill the beans'?",
         "options": [
           "To cook food improperly",
           "To reveal a secret prematurely",
@@ -7083,11 +7083,11 @@ const DEFAULT_QUIZZES = [
           "To cause an accidental mess"
         ],
         "correctAnswer": 1,
-        "explanation": "'Spill the beans' means to disclose confidential information."
+        "explanation": "'Spill the beans' means revealing confidential information."
       },
       {
         "id": "mbnew_q36",
-        "text": "NDA II 2023 GAT Q36 (Idioms): What is the meaning of 'To break the ice'?",
+        "text": "NDA II 2023 GAT Q36 (Idioms): What is the meaning of the idiom 'To break the ice'?",
         "options": [
           "To melt polar glaciers",
           "To make people feel more comfortable in a social setting",
@@ -7095,11 +7095,11 @@ const DEFAULT_QUIZZES = [
           "To start a fight"
         ],
         "correctAnswer": 1,
-        "explanation": "'Break the ice' means to initiate conversation and relieve tension."
+        "explanation": "'Break the ice' means making people feel comfortable together."
       },
       {
         "id": "mbnew_q37",
-        "text": "NDA II 2023 GAT Q37 (Idioms): What is the meaning of 'To beat around the bush'?",
+        "text": "NDA II 2023 GAT Q37 (Idioms): What is the meaning of the idiom 'To beat around the bush'?",
         "options": [
           "To trim overgrown shrubs",
           "To avoid coming to the main point directly",
@@ -7107,14 +7107,14 @@ const DEFAULT_QUIZZES = [
           "To hit something repeatedly"
         ],
         "correctAnswer": 1,
-        "explanation": "'Beat around the bush' means discussing matters without getting to the main point."
+        "explanation": "'Beat around the bush' means avoiding the main topic."
       },
       {
         "id": "mbnew_q38",
-        "text": "NDA II 2023 GAT Q38 (Idioms): What is the meaning of 'Once in a blue moon'?",
+        "text": "NDA II 2023 GAT Q38 (Idioms): What is the meaning of the idiom 'Once in a blue moon'?",
         "options": [
           "Very frequently",
-          "Very rarely / Almost never",
+          "Very rarely",
           "On every full moon night",
           "During lunar eclipses"
         ],
@@ -7123,7 +7123,7 @@ const DEFAULT_QUIZZES = [
       },
       {
         "id": "mbnew_q39",
-        "text": "NDA II 2023 GAT Q39 (Idioms): What is the meaning of 'To bite the bullet'?",
+        "text": "NDA II 2023 GAT Q39 (Idioms): What is the meaning of the idiom 'To bite the bullet'?",
         "options": [
           "To chew ammunition",
           "To face a difficult situation with courage",
@@ -7131,11 +7131,11 @@ const DEFAULT_QUIZZES = [
           "To surrender to enemies"
         ],
         "correctAnswer": 1,
-        "explanation": "'Bite the bullet' means to face a painful or difficult situation bravely."
+        "explanation": "'Bite the bullet' means facing a painful or tough situation bravely."
       },
       {
         "id": "mbnew_q40",
-        "text": "NDA II 2023 GAT Q40 (Idioms): What is the meaning of 'A piece of cake'?",
+        "text": "NDA II 2023 GAT Q40 (Idioms): What is the meaning of the idiom 'A piece of cake'?",
         "options": [
           "A sweet bakery item",
           "A very easy task",
@@ -7143,7 +7143,7 @@ const DEFAULT_QUIZZES = [
           "A difficult challenge"
         ],
         "correctAnswer": 1,
-        "explanation": "'A piece of cake' refers to something very easy to perform."
+        "explanation": "'A piece of cake' means something that is very easy to accomplish."
       },
       {
         "id": "mbnew_q41",
@@ -7155,7 +7155,7 @@ const DEFAULT_QUIZZES = [
           "by"
         ],
         "correctAnswer": 1,
-        "explanation": "The verb 'acquitted' takes the fixed preposition 'of'."
+        "explanation": "The verb 'acquitted' takes the preposition 'of'."
       },
       {
         "id": "mbnew_q42",
@@ -7167,7 +7167,7 @@ const DEFAULT_QUIZZES = [
           "on"
         ],
         "correctAnswer": 0,
-        "explanation": "'Obsessed' is followed by the preposition 'with'."
+        "explanation": "'Obsessed' is followed by 'with'."
       },
       {
         "id": "mbnew_q43",
@@ -7215,7 +7215,7 @@ const DEFAULT_QUIZZES = [
           "at"
         ],
         "correctAnswer": 1,
-        "explanation": "The verb 'congratulate' takes 'on' (congratulate someone on something)."
+        "explanation": "'Congratulate' takes the preposition 'on'."
       },
       {
         "id": "mbnew_q47",
@@ -7227,7 +7227,7 @@ const DEFAULT_QUIZZES = [
           "at"
         ],
         "correctAnswer": 0,
-        "explanation": "'Abide' takes the preposition 'by' (abide by rules)."
+        "explanation": "'Abide' takes the preposition 'by'."
       },
       {
         "id": "mbnew_q48",
@@ -7251,7 +7251,7 @@ const DEFAULT_QUIZZES = [
           "in"
         ],
         "correctAnswer": 1,
-        "explanation": "'Among' is used for distributing between more than two people."
+        "explanation": "'Among' is used for distribution among more than two persons."
       },
       {
         "id": "mbnew_q50",
@@ -7275,7 +7275,7 @@ const DEFAULT_QUIZZES = [
           "Diffraction of Light"
         ],
         "correctAnswer": 0,
-        "explanation": "Twinkling of stars is caused by atmospheric refraction of starlight due to fluctuating temperature and air density."
+        "explanation": "Twinkling of stars is caused by atmospheric refraction of starlight."
       },
       {
         "id": "mbnew_q52",
@@ -7287,7 +7287,7 @@ const DEFAULT_QUIZZES = [
           "0.5 Ω"
         ],
         "correctAnswer": 1,
-        "explanation": "1/R_eq = 1/6 + 1/6 + 1/6 = 3/6 = 1/2 => R_eq = 2 Ω."
+        "explanation": "1/Req = 1/6 + 1/6 + 1/6 = 3/6 = 1/2 => Req = 2 Ω."
       },
       {
         "id": "mbnew_q53",
@@ -7299,7 +7299,7 @@ const DEFAULT_QUIZZES = [
           "Third Law of Thermodynamics"
         ],
         "correctAnswer": 0,
-        "explanation": "The Zeroth Law defines thermal equilibrium and establishes the concept of temperature."
+        "explanation": "The Zeroth Law defines thermal equilibrium and introduces temperature."
       },
       {
         "id": "mbnew_q54",
@@ -7311,7 +7311,7 @@ const DEFAULT_QUIZZES = [
           "g' = g (1 + h/R)"
         ],
         "correctAnswer": 0,
-        "explanation": "For height h << R, g' = g(1 + h/R)^(-2) ≈ g(1 - 2h/R)."
+        "explanation": "For h << R, g' ≈ g(1 - 2h/R)."
       },
       {
         "id": "mbnew_q55",
@@ -7319,35 +7319,35 @@ const DEFAULT_QUIZZES = [
         "options": [
           "Below 20 Hz",
           "Between 20 Hz and 20,000 Hz",
-          "Above 20,000 Hz (20 kHz)",
+          "Above 20,000 Hz",
           "Above 1 MHz only"
         ],
         "correctAnswer": 2,
-        "explanation": "Ultrasonic waves are sound waves with frequencies higher than 20,000 Hz."
+        "explanation": "Ultrasonic waves have frequencies higher than 20,000 Hz."
       },
       {
         "id": "mbnew_q56",
         "text": "NDA II 2023 GAT Q56 (Physics): An object is placed at 2F in front of a convex lens. The image formed will be:",
         "options": [
-          "Real, inverted, and of same size at 2F",
+          "Real, inverted, and same size at 2F",
           "Virtual, erect, and magnified",
           "Real, inverted, and diminished",
           "Real, erect, and magnified"
         ],
         "correctAnswer": 0,
-        "explanation": "When an object is placed at 2F of a convex lens, its image is real, inverted, and of the same size at 2F on the other side."
+        "explanation": "An object at 2F of a convex lens produces a real, inverted image of the same size at 2F."
       },
       {
         "id": "mbnew_q57",
         "text": "NDA II 2023 GAT Q57 (Physics): Total Internal Reflection takes place when light travels from:",
         "options": [
-          "Denser to rarer medium with angle of incidence greater than critical angle",
-          "Rarer to denser medium with angle of incidence greater than critical angle",
-          "Denser to rarer medium with angle of incidence equal to 0°",
+          "Denser to rarer medium with i > critical angle",
+          "Rarer to denser medium with i > critical angle",
+          "Denser to rarer medium at i = 0°",
           "Rarer to denser medium at any angle"
         ],
         "correctAnswer": 0,
-        "explanation": "TIR occurs when light travels from optically denser to rarer medium and angle of incidence i > critical angle c."
+        "explanation": "TIR occurs when light travels from denser to rarer medium and angle of incidence exceeds critical angle."
       },
       {
         "id": "mbnew_q58",
@@ -7359,11 +7359,11 @@ const DEFAULT_QUIZZES = [
           "Coulomb"
         ],
         "correctAnswer": 1,
-        "explanation": "Volt (V) is the SI unit of electric potential difference (1 Volt = 1 Joule / 1 Coulomb)."
+        "explanation": "Volt (V) is the SI unit of electric potential difference."
       },
       {
         "id": "mbnew_q59",
-        "text": "NDA II 2023 GAT Q59 (Physics): What is the work done by the centripetal force on a body moving in a uniform circular path?",
+        "text": "NDA II 2023 GAT Q59 (Physics): What is the work done by centripetal force on a body moving in a uniform circular path?",
         "options": [
           "Maximum positive work",
           "Zero work",
@@ -7371,11 +7371,11 @@ const DEFAULT_QUIZZES = [
           "Infinite work"
         ],
         "correctAnswer": 1,
-        "explanation": "Work W = F * d * cos(90°) = 0 because centripetal force is perpendicular to instantaneous velocity."
+        "explanation": "Centripetal force is perpendicular to displacement, so work done is zero."
       },
       {
         "id": "mbnew_q60",
-        "text": "NDA II 2023 GAT Q60 (Physics): According to Ohm's Law, the potential difference V across a conductor is:",
+        "text": "NDA II 2023 GAT Q60 (Physics): According to Ohm's Law, potential difference V across a conductor is:",
         "options": [
           "Directly proportional to current I",
           "Inversely proportional to current I",
@@ -7383,7 +7383,7 @@ const DEFAULT_QUIZZES = [
           "Independent of current I"
         ],
         "correctAnswer": 0,
-        "explanation": "Ohm's Law states V = IR, so V is directly proportional to current I at constant temperature."
+        "explanation": "V = IR, so V is directly proportional to current I."
       },
       {
         "id": "mbnew_q61",
@@ -7395,7 +7395,7 @@ const DEFAULT_QUIZZES = [
           "E = 2mP"
         ],
         "correctAnswer": 0,
-        "explanation": "E = P^2 / (2m) => P = √(2mE)."
+        "explanation": "P = √(2mE)."
       },
       {
         "id": "mbnew_q62",
@@ -7404,10 +7404,10 @@ const DEFAULT_QUIZZES = [
           "Vacuum",
           "Air",
           "Water",
-          "Steel / Iron (Solid)"
+          "Steel"
         ],
         "correctAnswer": 3,
-        "explanation": "Sound travels fastest in solids (like steel ~ 5960 m/s) due to higher elasticity and density."
+        "explanation": "Sound travels fastest in solids like steel."
       },
       {
         "id": "mbnew_q63",
@@ -7419,7 +7419,7 @@ const DEFAULT_QUIZZES = [
           "100 cm"
         ],
         "correctAnswer": 2,
-        "explanation": "A plane mirror has no curvature, so its radius of curvature R = infinity, and focal length f = R/2 = infinity."
+        "explanation": "A plane mirror has infinite radius of curvature, so focal length is infinity."
       },
       {
         "id": "mbnew_q64",
@@ -7431,7 +7431,7 @@ const DEFAULT_QUIZZES = [
           "+5 D"
         ],
         "correctAnswer": 0,
-        "explanation": "Power P = 1 / f (in metres) = 1 / 0.5m = +2 Dioptres (D)."
+        "explanation": "Power P = 1 / f(in m) = 1 / 0.5 = +2 D."
       },
       {
         "id": "mbnew_q65",
@@ -7440,10 +7440,10 @@ const DEFAULT_QUIZZES = [
           "Attract each other",
           "Repel each other",
           "Rotate perpendicular to each other",
-          "Exert no force on each other"
+          "Exert no force"
         ],
         "correctAnswer": 0,
-        "explanation": "Parallel currents in the same direction attract each other due to magnetic force."
+        "explanation": "Parallel currents in the same direction attract each other."
       },
       {
         "id": "mbnew_q66",
@@ -7455,7 +7455,7 @@ const DEFAULT_QUIZZES = [
           "Gravitation"
         ],
         "correctAnswer": 0,
-        "explanation": "Newton's First Law defines inertia (tendency of an object to resist changes in state of motion)."
+        "explanation": "Newton's First Law defines inertia."
       },
       {
         "id": "mbnew_q67",
@@ -7467,7 +7467,7 @@ const DEFAULT_QUIZZES = [
           "Cylindrical lens"
         ],
         "correctAnswer": 0,
-        "explanation": "Concave lens (diverging lens) is used to correct myopia by focusing image on the retina."
+        "explanation": "Myopia is corrected using a concave lens."
       },
       {
         "id": "mbnew_q68",
@@ -7479,7 +7479,7 @@ const DEFAULT_QUIZZES = [
           "Prism"
         ],
         "correctAnswer": 0,
-        "explanation": "Convex lens (converging lens) corrects hypermetropia."
+        "explanation": "Hypermetropia is corrected using a convex lens."
       },
       {
         "id": "mbnew_q69",
@@ -7491,7 +7491,7 @@ const DEFAULT_QUIZZES = [
           "Thermal energy into Electrical energy"
         ],
         "correctAnswer": 0,
-        "explanation": "Electric generator converts mechanical energy into electrical energy based on electromagnetic induction."
+        "explanation": "Electric generator converts mechanical energy into electrical energy."
       },
       {
         "id": "mbnew_q70",
@@ -7515,7 +7515,7 @@ const DEFAULT_QUIZZES = [
           "Gamma rays"
         ],
         "correctAnswer": 3,
-        "explanation": "Gamma rays have the highest frequency and shortest wavelength in the EM spectrum."
+        "explanation": "Gamma rays have the highest frequency."
       },
       {
         "id": "mbnew_q72",
@@ -7527,11 +7527,11 @@ const DEFAULT_QUIZZES = [
           "7.9 km/s"
         ],
         "correctAnswer": 0,
-        "explanation": "Escape velocity from Earth's surface v_e = √(2gR) ≈ 11.2 km/s."
+        "explanation": "Escape velocity from Earth is approximately 11.2 km/s."
       },
       {
         "id": "mbnew_q73",
-        "text": "NDA II 2023 GAT Q73 (Physics): Why is water used as a coolant in car radiators and thermal power plants?",
+        "text": "NDA II 2023 GAT Q73 (Physics): Why is water used as a coolant in engine radiators?",
         "options": [
           "High specific heat capacity",
           "Low density",
@@ -7539,23 +7539,23 @@ const DEFAULT_QUIZZES = [
           "High viscosity"
         ],
         "correctAnswer": 0,
-        "explanation": "Water has a very high specific heat capacity (4200 J/kg·K), enabling it to absorb large heat without significant rise in temperature."
+        "explanation": "Water has a very high specific heat capacity."
       },
       {
         "id": "mbnew_q74",
-        "text": "NDA II 2023 GAT Q74 (Physics): The formation of a rainbow in the sky after rain involves:",
+        "text": "NDA II 2023 GAT Q74 (Physics): The formation of a rainbow in the sky involves:",
         "options": [
-          "Refraction, Dispersion, and Internal Reflection of sunlight by water droplets",
+          "Refraction, Dispersion, and Internal Reflection",
           "Reflection and Interference only",
           "Diffraction and Polarization only",
           "Absorption of light"
         ],
         "correctAnswer": 0,
-        "explanation": "Rainbow is formed due to refraction, dispersion, and total internal reflection of sunlight by atmospheric water drops."
+        "explanation": "Rainbows result from refraction, dispersion, and internal reflection in rain drops."
       },
       {
         "id": "mbnew_q75",
-        "text": "NDA II 2023 GAT Q75 (Physics): Hydraulic brakes used in automobiles operate on the basis of:",
+        "text": "NDA II 2023 GAT Q75 (Physics): Hydraulic brakes in automobiles operate on the basis of:",
         "options": [
           "Pascal's Law",
           "Archimedes' Principle",
@@ -7563,19 +7563,19 @@ const DEFAULT_QUIZZES = [
           "Torricelli's Law"
         ],
         "correctAnswer": 0,
-        "explanation": "Pascal's Law states that pressure applied to an enclosed fluid is transmitted undiminished in all directions."
+        "explanation": "Hydraulic brakes operate on Pascal's Law."
       },
       {
         "id": "mbnew_q76",
         "text": "NDA II 2023 GAT Q76 (Chemistry): Which acid is present in ant sting that causes burning pain?",
         "options": [
           "Acetic acid",
-          "Methanoic acid (Formic acid)",
+          "Methanoic acid",
           "Oxalic acid",
           "Lactic acid"
         ],
         "correctAnswer": 1,
-        "explanation": "Ant stings inject methanoic acid (formic acid, HCOOH), causing pain and swelling."
+        "explanation": "Ant stings inject methanoic acid (formic acid)."
       },
       {
         "id": "mbnew_q77",
@@ -7587,7 +7587,7 @@ const DEFAULT_QUIZZES = [
           "Solder"
         ],
         "correctAnswer": 1,
-        "explanation": "Brass is an alloy of Copper (Cu) and Zinc (Zn)."
+        "explanation": "Brass is an alloy of Copper and Zinc."
       },
       {
         "id": "mbnew_q78",
@@ -7599,16 +7599,16 @@ const DEFAULT_QUIZZES = [
           "Nickel"
         ],
         "correctAnswer": 1,
-        "explanation": "Galvanization applies a zinc coating to steel or iron to prevent rusting."
+        "explanation": "Galvanization applies a zinc coating."
       },
       {
         "id": "mbnew_q79",
         "text": "NDA II 2023 GAT Q79 (Chemistry): Which gas is commonly known as 'Laughing Gas'?",
         "options": [
-          "Nitric oxide (NO)",
-          "Nitrous oxide (N2O)",
-          "Nitrogen dioxide (NO2)",
-          "Dinitrogen tetroxide (N2O4)"
+          "Nitric oxide",
+          "Nitrous oxide",
+          "Nitrogen dioxide",
+          "Dinitrogen tetroxide"
         ],
         "correctAnswer": 1,
         "explanation": "Nitrous oxide (N2O) is known as laughing gas."
@@ -7623,7 +7623,7 @@ const DEFAULT_QUIZZES = [
           "Neutron count"
         ],
         "correctAnswer": 1,
-        "explanation": "Henry Moseley arranged the Modern Periodic Table according to increasing atomic number."
+        "explanation": "The Modern Periodic Table is arranged by atomic number."
       },
       {
         "id": "mbnew_q81",
@@ -7635,7 +7635,7 @@ const DEFAULT_QUIZZES = [
           "Sulfur Dioxide"
         ],
         "correctAnswer": 1,
-        "explanation": "Zn + H2SO4 -> ZnSO4 + H2 ↑ (Hydrogen gas)."
+        "explanation": "Zn + H2SO4 -> ZnSO4 + H2."
       },
       {
         "id": "mbnew_q82",
@@ -7647,31 +7647,31 @@ const DEFAULT_QUIZZES = [
           "5.6"
         ],
         "correctAnswer": 1,
-        "explanation": "Pure water is neutral with pH = 7."
+        "explanation": "Pure water is neutral (pH = 7)."
       },
       {
         "id": "mbnew_q83",
         "text": "NDA II 2023 GAT Q83 (Chemistry): Which metal exists in liquid state at room temperature?",
         "options": [
           "Sodium",
-          "Mercury (Hg)",
+          "Mercury",
           "Gallium",
           "Lead"
         ],
         "correctAnswer": 1,
-        "explanation": "Mercury (Hg) is the only metal that is liquid at room temperature."
+        "explanation": "Mercury is the only metal liquid at room temperature."
       },
       {
         "id": "mbnew_q84",
         "text": "NDA II 2023 GAT Q84 (Chemistry): Which non-metal exists in liquid state at room temperature?",
         "options": [
           "Iodine",
-          "Bromine (Br)",
+          "Bromine",
           "Chlorine",
           "Phosphorus"
         ],
         "correctAnswer": 1,
-        "explanation": "Bromine (Br) is the only non-metal that is liquid at room temperature."
+        "explanation": "Bromine is the only non-metal liquid at room temperature."
       },
       {
         "id": "mbnew_q85",
@@ -7683,7 +7683,7 @@ const DEFAULT_QUIZZES = [
           "CaOCl2"
         ],
         "correctAnswer": 1,
-        "explanation": "Baking soda is Sodium Hydrogen Carbonate (NaHCO3)."
+        "explanation": "Baking soda is NaHCO3."
       },
       {
         "id": "mbnew_q86",
@@ -7695,7 +7695,7 @@ const DEFAULT_QUIZZES = [
           "CuSO4 · 5H2O"
         ],
         "correctAnswer": 0,
-        "explanation": "Washing soda is Sodium Carbonate Decahydrate (Na2CO3 · 10H2O)."
+        "explanation": "Washing soda is Na2CO3 · 10H2O."
       },
       {
         "id": "mbnew_q87",
@@ -7703,11 +7703,11 @@ const DEFAULT_QUIZZES = [
         "options": [
           "Oxidation only",
           "Reduction only",
-          "Redox reaction (Oxidation by oxygen in presence of moisture)",
+          "Redox reaction",
           "Decomposition"
         ],
         "correctAnswer": 2,
-        "explanation": "Rusting is a redox reaction forming hydrated iron(III) oxide (Fe2O3 · xH2O)."
+        "explanation": "Rusting of iron is a redox reaction."
       },
       {
         "id": "mbnew_q88",
@@ -7719,7 +7719,7 @@ const DEFAULT_QUIZZES = [
           "CaO"
         ],
         "correctAnswer": 0,
-        "explanation": "Plaster of Paris is Calcium Sulfate Hemihydrate (CaSO4 · 1/2 H2O)."
+        "explanation": "Plaster of Paris is CaSO4 · 1/2 H2O."
       },
       {
         "id": "mbnew_q89",
@@ -7731,7 +7731,7 @@ const DEFAULT_QUIZZES = [
           "Quartz"
         ],
         "correctAnswer": 1,
-        "explanation": "Diamond, an allotrope of carbon, is the hardest naturally occurring substance."
+        "explanation": "Diamond is the hardest natural substance."
       },
       {
         "id": "mbnew_q90",
@@ -7743,7 +7743,7 @@ const DEFAULT_QUIZZES = [
           "Sublimation"
         ],
         "correctAnswer": 0,
-        "explanation": "Fractional distillation separates petroleum based on differing boiling points."
+        "explanation": "Fractional distillation is used for petroleum refining."
       },
       {
         "id": "mbnew_q91",
@@ -7755,7 +7755,7 @@ const DEFAULT_QUIZZES = [
           "Mitochondria"
         ],
         "correctAnswer": 1,
-        "explanation": "Lysosomes contain digestive enzymes that break down cellular waste and damaged cells."
+        "explanation": "Lysosomes are suicide bags of the cell."
       },
       {
         "id": "mbnew_q92",
@@ -7767,7 +7767,7 @@ const DEFAULT_QUIZZES = [
           "Endoplasmic Reticulum"
         ],
         "correctAnswer": 0,
-        "explanation": "Mitochondria generate ATP (cellular energy currency) through cellular respiration."
+        "explanation": "Mitochondria generate ATP."
       },
       {
         "id": "mbnew_q93",
@@ -7779,11 +7779,11 @@ const DEFAULT_QUIZZES = [
           "Vitamin D"
         ],
         "correctAnswer": 2,
-        "explanation": "Scurvy is caused by deficiency of Vitamin C (ascorbic acid)."
+        "explanation": "Scurvy is caused by Vitamin C deficiency."
       },
       {
         "id": "mbnew_q94",
-        "text": "NDA II 2023 GAT Q94 (Biology): Which hormone regulates blood glucose levels by promoting glucose uptake into body cells?",
+        "text": "NDA II 2023 GAT Q94 (Biology): Which hormone regulates blood glucose levels by promoting glucose uptake into cells?",
         "options": [
           "Glucagon",
           "Insulin",
@@ -7791,19 +7791,19 @@ const DEFAULT_QUIZZES = [
           "Adrenaline"
         ],
         "correctAnswer": 1,
-        "explanation": "Insulin is secreted by pancreas beta cells to lower blood glucose."
+        "explanation": "Insulin lowers blood glucose levels."
       },
       {
         "id": "mbnew_q95",
-        "text": "NDA II 2023 GAT Q95 (Biology): What is the primary function of Red Blood Cells (RBCs / Erythrocytes)?",
+        "text": "NDA II 2023 GAT Q95 (Biology): What is the primary function of Red Blood Cells (RBCs)?",
         "options": [
-          "Transport oxygen via Hemoglobin",
+          "Transport oxygen",
           "Blood clotting",
           "Produce antibodies",
           "Fight bacterial infections"
         ],
         "correctAnswer": 0,
-        "explanation": "RBCs contain hemoglobin which binds and transports oxygen throughout the body."
+        "explanation": "RBCs transport oxygen via hemoglobin."
       },
       {
         "id": "mbnew_q96",
@@ -7815,7 +7815,7 @@ const DEFAULT_QUIZZES = [
           "Pancreas"
         ],
         "correctAnswer": 0,
-        "explanation": "Pituitary gland controls and regulates the secretions of other endocrine glands."
+        "explanation": "Pituitary gland is the master gland."
       },
       {
         "id": "mbnew_q97",
@@ -7827,35 +7827,35 @@ const DEFAULT_QUIZZES = [
           "Chromoplasts"
         ],
         "correctAnswer": 0,
-        "explanation": "Chloroplasts contain chlorophyll pigment which captures light energy for photosynthesis."
+        "explanation": "Chloroplasts carry out photosynthesis."
       },
       {
         "id": "mbnew_q98",
         "text": "NDA II 2023 GAT Q98 (Biology): Which blood group is known as the 'Universal Donor'?",
         "options": [
-          "Blood Group O negative (O-)",
-          "Blood Group AB positive (AB+)",
-          "Blood Group A positive (A+)",
-          "Blood Group B negative (B-)"
+          "Blood Group O negative",
+          "Blood Group AB positive",
+          "Blood Group A positive",
+          "Blood Group B negative"
         ],
         "correctAnswer": 0,
-        "explanation": "Group O negative lacks A, B, and Rh antigens, making it compatible for transfusion to any group."
+        "explanation": "O negative is universal donor."
       },
       {
         "id": "mbnew_q99",
         "text": "NDA II 2023 GAT Q99 (Biology): Which blood group is known as the 'Universal Recipient'?",
         "options": [
-          "Blood Group AB positive (AB+)",
-          "Blood Group O negative (O-)",
-          "Blood Group A negative (A-)",
-          "Blood Group B positive (B+)"
+          "Blood Group AB positive",
+          "Blood Group O negative",
+          "Blood Group A negative",
+          "Blood Group B positive"
         ],
         "correctAnswer": 0,
-        "explanation": "Group AB positive has no anti-A, anti-B, or anti-Rh antibodies in plasma."
+        "explanation": "AB positive is universal recipient."
       },
       {
         "id": "mbnew_q100",
-        "text": "NDA II 2023 GAT Q100 (Biology): Which complex plant tissue is responsible for transporting water and dissolved minerals from roots to leaves?",
+        "text": "NDA II 2023 GAT Q100 (Biology): Which plant tissue is responsible for transporting water and dissolved minerals from roots to leaves?",
         "options": [
           "Xylem",
           "Phloem",
@@ -7863,11 +7863,11 @@ const DEFAULT_QUIZZES = [
           "Collenchyma"
         ],
         "correctAnswer": 0,
-        "explanation": "Xylem transports water and minerals upwards from roots."
+        "explanation": "Xylem transports water and minerals."
       },
       {
         "id": "mbnew_q101",
-        "text": "NDA II 2023 GAT Q101 (Biology): Which plant tissue transports organic food (sucrose/photosynthates) synthesized in leaves to other parts?",
+        "text": "NDA II 2023 GAT Q101 (Biology): Which plant tissue transports organic food synthesized in leaves to other parts?",
         "options": [
           "Phloem",
           "Xylem",
@@ -7875,35 +7875,35 @@ const DEFAULT_QUIZZES = [
           "Meristem"
         ],
         "correctAnswer": 0,
-        "explanation": "Phloem conducts synthesized food bi-directionally across the plant."
+        "explanation": "Phloem transports food."
       },
       {
         "id": "mbnew_q102",
-        "text": "NDA II 2023 GAT Q102 (Biology): Night Blindness (Nyctalopia) is caused by the deficiency of which vitamin?",
+        "text": "NDA II 2023 GAT Q102 (Biology): Night Blindness is caused by the deficiency of which vitamin?",
         "options": [
-          "Vitamin A (Retinol)",
+          "Vitamin A",
           "Vitamin B12",
           "Vitamin C",
           "Vitamin K"
         ],
         "correctAnswer": 0,
-        "explanation": "Vitamin A is essential for rhodopsin synthesis in retinal rod cells."
+        "explanation": "Vitamin A deficiency causes night blindness."
       },
       {
         "id": "mbnew_q103",
         "text": "NDA II 2023 GAT Q103 (Biology): Rickets in children is caused by the deficiency of which vitamin?",
         "options": [
-          "Vitamin D (Calciferol)",
+          "Vitamin D",
           "Vitamin A",
           "Vitamin E",
           "Vitamin C"
         ],
         "correctAnswer": 0,
-        "explanation": "Vitamin D deficiency impairs calcium absorption leading to soft, weak bones (rickets)."
+        "explanation": "Vitamin D deficiency causes rickets."
       },
       {
         "id": "mbnew_q104",
-        "text": "NDA II 2023 GAT Q104 (Biology): What is the basic structural and functional filtering unit of the human kidney?",
+        "text": "NDA II 2023 GAT Q104 (Biology): What is the basic functional filtering unit of the kidney?",
         "options": [
           "Nephron",
           "Neuron",
@@ -7911,11 +7911,11 @@ const DEFAULT_QUIZZES = [
           "Hepatocyte"
         ],
         "correctAnswer": 0,
-        "explanation": "Nephron is the microscopic structural unit of the kidney responsible for filtering blood."
+        "explanation": "Nephron is the filtering unit of kidney."
       },
       {
         "id": "mbnew_q105",
-        "text": "NDA II 2023 GAT Q105 (Biology): What is the structural and functional unit of the human nervous system?",
+        "text": "NDA II 2023 GAT Q105 (Biology): What is the structural and functional unit of the nervous system?",
         "options": [
           "Neuron",
           "Nephron",
@@ -7923,11 +7923,11 @@ const DEFAULT_QUIZZES = [
           "Synapse"
         ],
         "correctAnswer": 0,
-        "explanation": "Neuron (nerve cell) is the fundamental unit of the nervous system."
+        "explanation": "Neuron is the functional unit of nervous system."
       },
       {
         "id": "mbnew_q106",
-        "text": "NDA II 2023 GAT Q106 (History): Who among the following founded the 'Atmiya Sabha' in 1815 in Calcutta?",
+        "text": "NDA II 2023 GAT Q106 (History): Who founded the 'Atmiya Sabha' in 1815 in Calcutta?",
         "options": [
           "Swami Dayananda Saraswati",
           "Raja Ram Mohan Roy",
@@ -7935,7 +7935,7 @@ const DEFAULT_QUIZZES = [
           "Keshab Chandra Sen"
         ],
         "correctAnswer": 1,
-        "explanation": "Raja Ram Mohan Roy established Atmiya Sabha in 1815 to propagate monotheistic principles."
+        "explanation": "Raja Ram Mohan Roy founded Atmiya Sabha in 1815."
       },
       {
         "id": "mbnew_q107",
@@ -7947,11 +7947,11 @@ const DEFAULT_QUIZZES = [
           "1942"
         ],
         "correctAnswer": 1,
-        "explanation": "Non-Cooperation Movement was launched on 1 August 1920."
+        "explanation": "Non-Cooperation Movement was launched in 1920."
       },
       {
         "id": "mbnew_q108",
-        "text": "NDA II 2023 GAT Q108 (History): Which Indus Valley Civilization site features a unique ancient brick dockyard?",
+        "text": "NDA II 2023 GAT Q108 (History): Which Indus Valley site features a unique ancient brick dockyard?",
         "options": [
           "Kalibangan",
           "Lothal",
@@ -7959,7 +7959,7 @@ const DEFAULT_QUIZZES = [
           "Banawali"
         ],
         "correctAnswer": 1,
-        "explanation": "Lothal in Gujarat possessed an ancient tidal dockyard."
+        "explanation": "Lothal had a tidal dockyard."
       },
       {
         "id": "mbnew_q109",
@@ -7971,11 +7971,11 @@ const DEFAULT_QUIZZES = [
           "Sher Shah Suri"
         ],
         "correctAnswer": 0,
-        "explanation": "Babur defeated Ibrahim Lodi in 1526, establishing the Mughal Empire."
+        "explanation": "Babur defeated Ibrahim Lodi in 1526."
       },
       {
         "id": "mbnew_q110",
-        "text": "NDA II 2023 GAT Q110 (History): The Quit India Movement resolution was passed at the Bombay session of AICC in August of which year?",
+        "text": "NDA II 2023 GAT Q110 (History): The Quit India Movement resolution was passed in August of which year?",
         "options": [
           "1920",
           "1930",
@@ -7983,7 +7983,7 @@ const DEFAULT_QUIZZES = [
           "1945"
         ],
         "correctAnswer": 2,
-        "explanation": "Quit India Movement ('Do or Die') was launched on 8 August 1942."
+        "explanation": "Quit India Movement was launched in 1942."
       },
       {
         "id": "mbnew_q111",
@@ -8007,11 +8007,11 @@ const DEFAULT_QUIZZES = [
           "Lord Wellesley"
         ],
         "correctAnswer": 0,
-        "explanation": "Lord William Bentinck passed Regulation XVII in 1829 banning Sati, supported by Raja Ram Mohan Roy."
+        "explanation": "Lord William Bentinck abolished Sati in 1829."
       },
       {
         "id": "mbnew_q113",
-        "text": "NDA II 2023 GAT Q113 (History): Who wrote the famous book 'Hind Swaraj' in 1909?",
+        "text": "NDA II 2023 GAT Q113 (History): Who wrote the book 'Hind Swaraj' in 1909?",
         "options": [
           "Jawaharlal Nehru",
           "Mahatma Gandhi",
@@ -8019,7 +8019,7 @@ const DEFAULT_QUIZZES = [
           "Subhash Chandra Bose"
         ],
         "correctAnswer": 1,
-        "explanation": "Mahatma Gandhi wrote 'Hind Swaraj' (Indian Home Rule) in Gujarati in 1909."
+        "explanation": "Mahatma Gandhi wrote Hind Swaraj."
       },
       {
         "id": "mbnew_q114",
@@ -8031,11 +8031,11 @@ const DEFAULT_QUIZZES = [
           "1907"
         ],
         "correctAnswer": 0,
-        "explanation": "Partition of Bengal took effect on 16 October 1905."
+        "explanation": "Partition of Bengal took place in 1905."
       },
       {
         "id": "mbnew_q115",
-        "text": "NDA II 2023 GAT Q115 (History): The tragic Jallianwala Bagh Massacre in Amritsar took place on:",
+        "text": "NDA II 2023 GAT Q115 (History): The tragic Jallianwala Bagh Massacre took place on:",
         "options": [
           "13th April 1919",
           "15th August 1919",
@@ -8043,11 +8043,11 @@ const DEFAULT_QUIZZES = [
           "1st August 1920"
         ],
         "correctAnswer": 0,
-        "explanation": "British troops under General Dyer opened fire on unarmed gathering on Baisakhi day, 13 April 1919."
+        "explanation": "Jallianwala Bagh Massacre happened on 13 April 1919."
       },
       {
         "id": "mbnew_q116",
-        "text": "NDA II 2023 GAT Q116 (History): Mahatma Gandhi undertook the famous Dandi March (Salt Satyagraha) from Sabarmati Ashram in which year?",
+        "text": "NDA II 2023 GAT Q116 (History): Mahatma Gandhi undertook the famous Dandi March in which year?",
         "options": [
           "1920",
           "1930",
@@ -8055,35 +8055,35 @@ const DEFAULT_QUIZZES = [
           "1942"
         ],
         "correctAnswer": 1,
-        "explanation": "Dandi March began on 12 March 1930 and reached Dandi on 6 April 1930."
+        "explanation": "Dandi March was undertaken in 1930."
       },
       {
         "id": "mbnew_q117",
-        "text": "NDA II 2023 GAT Q117 (History): Who presided over the historic 1929 Lahore Session of the Indian National Congress where 'Poorna Swaraj' (Complete Independence) was declared?",
+        "text": "NDA II 2023 GAT Q117 (History): Who presided over the 1929 Lahore Session of Congress declaring 'Poorna Swaraj'?",
         "options": [
           "Jawaharlal Nehru",
           "Mahatma Gandhi",
           "Subhash Chandra Bose",
-          "Sardar Vallabhbhai Patel"
+          "Sardar Patel"
         ],
         "correctAnswer": 0,
-        "explanation": "Jawaharlal Nehru presided over the 1929 Lahore session demanding Poorna Swaraj."
+        "explanation": "Jawaharlal Nehru presided over the 1929 Lahore session."
       },
       {
         "id": "mbnew_q118",
-        "text": "NDA II 2023 GAT Q118 (History): Who was the main founder-organizer of the Indian National Congress (INC) in 1885?",
+        "text": "NDA II 2023 GAT Q118 (History): Who was the main founder of the Indian National Congress in 1885?",
         "options": [
-          "Allan Octavian Hume (A.O. Hume)",
+          "Allan Octavian Hume",
           "W.C. Bonnerjee",
           "Dadabhai Naoroji",
-          "Gopalkrishna Gokhale"
+          "G.K. Gokhale"
         ],
         "correctAnswer": 0,
-        "explanation": "A.O. Hume, a retired Civil Service officer, founded the Indian National Congress in Dec 1885."
+        "explanation": "A.O. Hume founded the Indian National Congress in 1885."
       },
       {
         "id": "mbnew_q119",
-        "text": "NDA II 2023 GAT Q119 (History): Who served as the first Governor-General of Independent India (1947–1948)?",
+        "text": "NDA II 2023 GAT Q119 (History): Who served as the first Governor-General of Independent India?",
         "options": [
           "Lord Mountbatten",
           "C. Rajagopalachari",
@@ -8091,7 +8091,7 @@ const DEFAULT_QUIZZES = [
           "Dr. Rajendra Prasad"
         ],
         "correctAnswer": 0,
-        "explanation": "Lord Mountbatten served as first Governor-General of independent India from Aug 1947 to June 1948."
+        "explanation": "Lord Mountbatten was the first Governor-General of Independent India."
       },
       {
         "id": "mbnew_q120",
@@ -8103,23 +8103,23 @@ const DEFAULT_QUIZZES = [
           "Sardar Patel"
         ],
         "correctAnswer": 0,
-        "explanation": "C. Rajagopalachari (Rajaji) served as Governor-General from 1948 until India became a Republic in 1950."
+        "explanation": "C. Rajagopalachari was the first and last Indian Governor-General."
       },
       {
         "id": "mbnew_q121",
-        "text": "NDA II 2023 GAT Q121 (History): Purushapura (modern Peshawar) was the capital of which ancient dynasty ruler?",
+        "text": "NDA II 2023 GAT Q121 (History): Purushapura (modern Peshawar) was the capital of which ruler?",
         "options": [
-          "Kanishka (Kushan Dynasty)",
-          "Ashoka (Maurya Dynasty)",
-          "Chandragupta II (Gupta Dynasty)",
+          "Kanishka",
+          "Ashoka",
+          "Chandragupta II",
           "Harshavardhana"
         ],
         "correctAnswer": 0,
-        "explanation": "Kanishka established his capital at Purushapura (Peshawar)."
+        "explanation": "Purushapura was Kanishka's capital."
       },
       {
         "id": "mbnew_q122",
-        "text": "NDA II 2023 GAT Q122 (History): The grand rock-cut Kailash Temple (Cave 16) at Ellora was commissioned by which Rashtrakuta king?",
+        "text": "NDA II 2023 GAT Q122 (History): The rock-cut Kailash Temple at Ellora was built by which Rashtrakuta king?",
         "options": [
           "Krishna I",
           "Amoghavarsha I",
@@ -8127,11 +8127,11 @@ const DEFAULT_QUIZZES = [
           "Govinda III"
         ],
         "correctAnswer": 0,
-        "explanation": "Rashtrakuta king Krishna I built the monolithic rock-cut Kailash Temple at Ellora in 8th century AD."
+        "explanation": "Krishna I built the Kailash Temple at Ellora."
       },
       {
         "id": "mbnew_q123",
-        "text": "NDA II 2023 GAT Q123 (History): Subhash Chandra Bose resigned from Congress presidency and founded the All India Forward Bloc in:",
+        "text": "NDA II 2023 GAT Q123 (History): Subhash Chandra Bose founded the All India Forward Bloc in:",
         "options": [
           "1939",
           "1942",
@@ -8139,11 +8139,11 @@ const DEFAULT_QUIZZES = [
           "1945"
         ],
         "correctAnswer": 0,
-        "explanation": "Netaji formed the Forward Bloc inside Congress in May 1939."
+        "explanation": "Netaji formed the Forward Bloc in 1939."
       },
       {
         "id": "mbnew_q124",
-        "text": "NDA II 2023 GAT Q124 (History): The Sepoy Mutiny / Indian Revolt of 1857 officially broke out on 10th May 1857 at:",
+        "text": "NDA II 2023 GAT Q124 (History): The Indian Revolt of 1857 officially broke out on 10th May 1857 at:",
         "options": [
           "Meerut",
           "Barrackpore",
@@ -8151,23 +8151,23 @@ const DEFAULT_QUIZZES = [
           "Jhansi"
         ],
         "correctAnswer": 0,
-        "explanation": "The revolt broke out at Meerut military cantonment on 10 May 1857."
+        "explanation": "The 1857 revolt broke out at Meerut."
       },
       {
         "id": "mbnew_q125",
-        "text": "NDA II 2023 GAT Q125 (History): The Permanent Settlement of Bengal (Istamrari Settlement) was introduced in 1793 by:",
+        "text": "NDA II 2023 GAT Q125 (History): The Permanent Settlement of Bengal was introduced in 1793 by:",
         "options": [
           "Lord Cornwallis",
           "Warren Hastings",
           "Lord Wellesley",
-          "Lord Thomas Munro"
+          "Thomas Munro"
         ],
         "correctAnswer": 0,
-        "explanation": "Lord Cornwallis enacted the Permanent Settlement system in Bengal, Bihar, and Orissa."
+        "explanation": "Lord Cornwallis introduced Permanent Settlement."
       },
       {
         "id": "mbnew_q126",
-        "text": "NDA II 2023 GAT Q126 (Geography): Which narrow strait connects the Bay of Bengal with Palk Bay and separates India from Sri Lanka?",
+        "text": "NDA II 2023 GAT Q126 (Geography): Which strait separates India from Sri Lanka?",
         "options": [
           "Palk Strait",
           "Malacca Strait",
@@ -8175,11 +8175,11 @@ const DEFAULT_QUIZZES = [
           "Duncan Passage"
         ],
         "correctAnswer": 0,
-        "explanation": "Palk Strait separates Tamil Nadu (India) from Jaffna Peninsula (Sri Lanka)."
+        "explanation": "Palk Strait separates India and Sri Lanka."
       },
       {
         "id": "mbnew_q127",
-        "text": "NDA II 2023 GAT Q127 (Geography): Which peninsular river system is known as 'Dakshin Ganga'?",
+        "text": "NDA II 2023 GAT Q127 (Geography): Which peninsular river is known as 'Dakshin Ganga'?",
         "options": [
           "Godavari",
           "Krishna",
@@ -8187,19 +8187,19 @@ const DEFAULT_QUIZZES = [
           "Narmada"
         ],
         "correctAnswer": 0,
-        "explanation": "Godavari is the largest river in Peninsular India and is called Dakshin Ganga."
+        "explanation": "Godavari is called Dakshin Ganga."
       },
       {
         "id": "mbnew_q128",
-        "text": "NDA II 2023 GAT Q128 (Geography): Which is the longest river flowing entirely within India?",
+        "text": "NDA II 2023 GAT Q128 (Geography): Which is the longest river in India?",
         "options": [
-          "Ganga (2,525 km)",
+          "Ganga",
           "Godavari",
           "Yamuna",
           "Narmada"
         ],
         "correctAnswer": 0,
-        "explanation": "Ganga is the longest river in India (2,525 km)."
+        "explanation": "Ganga is the longest river in India."
       },
       {
         "id": "mbnew_q129",
@@ -8211,11 +8211,11 @@ const DEFAULT_QUIZZES = [
           "Maharashtra"
         ],
         "correctAnswer": 0,
-        "explanation": "Gujarat has the longest coastline in India (~1,600 km)."
+        "explanation": "Gujarat has the longest coastline."
       },
       {
         "id": "mbnew_q130",
-        "text": "NDA II 2023 GAT Q130 (Geography): The Tropic of Cancer (23.5° N latitude) passes through how many states of India?",
+        "text": "NDA II 2023 GAT Q130 (Geography): The Tropic of Cancer passes through how many states of India?",
         "options": [
           "8 States",
           "7 States",
@@ -8223,47 +8223,47 @@ const DEFAULT_QUIZZES = [
           "9 States"
         ],
         "correctAnswer": 0,
-        "explanation": "Tropic of Cancer passes through 8 states: Gujarat, Rajasthan, MP, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram."
+        "explanation": "Tropic of Cancer passes through 8 Indian states."
       },
       {
         "id": "mbnew_q131",
-        "text": "NDA II 2023 GAT Q131 (Geography): Which soil type is known as 'Regur Soil' and is ideal for growing Cotton?",
+        "text": "NDA II 2023 GAT Q131 (Geography): Which soil type is known as 'Regur Soil'?",
         "options": [
           "Black Soil",
           "Alluvial Soil",
-          "Red & Yellow Soil",
+          "Red Soil",
           "Laterite Soil"
         ],
         "correctAnswer": 0,
-        "explanation": "Black soil (Regur soil) has high water retention capacity and is best suited for cotton cultivation."
+        "explanation": "Regur soil is another name for Black soil."
       },
       {
         "id": "mbnew_q132",
-        "text": "NDA II 2023 GAT Q132 (Geography): Which is the highest mountain peak located in India (in Sikkim)?",
+        "text": "NDA II 2023 GAT Q132 (Geography): Which is the highest mountain peak located in India?",
         "options": [
-          "Kanchenjunga (8,586 m)",
+          "Kanchenjunga",
           "Nanda Devi",
           "Kamet",
           "Anamudi"
         ],
         "correctAnswer": 0,
-        "explanation": "Kanchenjunga (8,586 m) in Sikkim is the highest peak in India."
+        "explanation": "Kanchenjunga is the highest mountain peak in India."
       },
       {
         "id": "mbnew_q133",
         "text": "NDA II 2023 GAT Q133 (Geography): Which is the highest mountain peak in Peninsular India?",
         "options": [
-          "Anamudi (2,695 m)",
+          "Anamudi",
           "Doddabetta",
           "Mahendragiri",
           "Kalsubai"
         ],
         "correctAnswer": 0,
-        "explanation": "Anamudi in the Western Ghats (Kerala) is the highest peak in Peninsular India."
+        "explanation": "Anamudi is the highest peak in Peninsular India."
       },
       {
         "id": "mbnew_q134",
-        "text": "NDA II 2023 GAT Q134 (Geography): What is the Standard Meridian of India used to determine Indian Standard Time (IST)?",
+        "text": "NDA II 2023 GAT Q134 (Geography): What is the Standard Meridian of India?",
         "options": [
           "82°30' E longitude",
           "80°00' E longitude",
@@ -8271,11 +8271,11 @@ const DEFAULT_QUIZZES = [
           "90°00' E longitude"
         ],
         "correctAnswer": 0,
-        "explanation": "82°30' E passing through Mirzapur (UP) is India's Standard Meridian (5 hours 30 mins ahead of GMT)."
+        "explanation": "82°30' E is the Standard Meridian of India."
       },
       {
         "id": "mbnew_q135",
-        "text": "NDA II 2023 GAT Q135 (Geography): Almost all atmospheric weather phenomena (clouds, rainfall, fog) occur in which layer of atmosphere?",
+        "text": "NDA II 2023 GAT Q135 (Geography): Weather phenomena occur in which layer of atmosphere?",
         "options": [
           "Troposphere",
           "Stratosphere",
@@ -8283,11 +8283,11 @@ const DEFAULT_QUIZZES = [
           "Thermosphere"
         ],
         "correctAnswer": 0,
-        "explanation": "Troposphere is the lowest atmospheric layer containing 75% of atmosphere's mass and all weather phenomena."
+        "explanation": "Weather phenomena occur in the Troposphere."
       },
       {
         "id": "mbnew_q136",
-        "text": "NDA II 2023 GAT Q136 (Geography): The protective Ozone layer which absorbs solar UV-B rays is located in which atmospheric layer?",
+        "text": "NDA II 2023 GAT Q136 (Geography): The Ozone layer is present in which atmospheric layer?",
         "options": [
           "Stratosphere",
           "Troposphere",
@@ -8295,11 +8295,11 @@ const DEFAULT_QUIZZES = [
           "Exosphere"
         ],
         "correctAnswer": 0,
-        "explanation": "Ozone layer is situated in the Stratosphere (15 to 35 km above Earth)."
+        "explanation": "Ozone layer is situated in the Stratosphere."
       },
       {
         "id": "mbnew_q137",
-        "text": "NDA II 2023 GAT Q137 (Geography): Kaziranga National Park in Assam is world-famous for protecting which endangered animal?",
+        "text": "NDA II 2023 GAT Q137 (Geography): Kaziranga National Park is famous for which animal?",
         "options": [
           "Great Indian One-Horned Rhinoceros",
           "Royal Bengal Tiger",
@@ -8307,11 +8307,11 @@ const DEFAULT_QUIZZES = [
           "Snow Leopard"
         ],
         "correctAnswer": 0,
-        "explanation": "Kaziranga hosts two-thirds of the world's Great One-Horned Rhinoceros population."
+        "explanation": "Kaziranga is famous for the One-Horned Rhinoceros."
       },
       {
         "id": "mbnew_q138",
-        "text": "NDA II 2023 GAT Q138 (Geography): The Western Ghats and Eastern Ghats mountain ranges converge at which hill range?",
+        "text": "NDA II 2023 GAT Q138 (Geography): Western Ghats and Eastern Ghats meet at:",
         "options": [
           "Nilgiri Hills",
           "Anaimalai Hills",
@@ -8319,11 +8319,11 @@ const DEFAULT_QUIZZES = [
           "Palani Hills"
         ],
         "correctAnswer": 0,
-        "explanation": "Nilgiri Hills in Tamil Nadu meet both Western Ghats and Eastern Ghats."
+        "explanation": "Western and Eastern Ghats meet at Nilgiri Hills."
       },
       {
         "id": "mbnew_q139",
-        "text": "NDA II 2023 GAT Q139 (Geography): Majuli, the world's largest inhabited riverine island, is situated on which river in Assam?",
+        "text": "NDA II 2023 GAT Q139 (Geography): Majuli river island is situated on which river?",
         "options": [
           "Brahmaputra",
           "Ganga",
@@ -8331,19 +8331,19 @@ const DEFAULT_QUIZZES = [
           "Subansiri"
         ],
         "correctAnswer": 0,
-        "explanation": "Majuli island is located on the Brahmaputra River in Assam."
+        "explanation": "Majuli is on the Brahmaputra River."
       },
       {
         "id": "mbnew_q140",
-        "text": "NDA II 2023 GAT Q140 (Geography): India's climate is broadly categorized as:",
+        "text": "NDA II 2023 GAT Q140 (Geography): India's climate is categorized as:",
         "options": [
           "Tropical Monsoon Climate",
           "Mediterranean Climate",
           "Equatorial Climate",
-          "Arid Desert Climate"
+          "Arid Climate"
         ],
         "correctAnswer": 0,
-        "explanation": "India has a tropical monsoon climate influenced by southwest and northeast monsoons."
+        "explanation": "India has a tropical monsoon climate."
       },
       {
         "id": "mbnew_q141",
@@ -8355,23 +8355,23 @@ const DEFAULT_QUIZZES = [
           "Right against Exploitation"
         ],
         "correctAnswer": 0,
-        "explanation": "Article 32 gives citizens the right to move the Supreme Court for enforcement of Fundamental Rights."
+        "explanation": "Article 32 grants the Right to Constitutional Remedies."
       },
       {
         "id": "mbnew_q142",
-        "text": "NDA II 2023 GAT Q142 (Polity): The terms 'Socialist', 'Secular', and 'Integrity' were added to the Preamble by which Constitutional Amendment Act?",
+        "text": "NDA II 2023 GAT Q142 (Polity): The terms 'Socialist', 'Secular', and 'Integrity' were added to the Preamble by which Amendment?",
         "options": [
-          "42nd Constitutional Amendment Act, 1976",
-          "44th Constitutional Amendment Act, 1978",
-          "86th Constitutional Amendment Act, 2002",
-          "73rd Constitutional Amendment Act, 1992"
+          "42nd Amendment Act",
+          "44th Amendment Act",
+          "86th Amendment Act",
+          "73rd Amendment Act"
         ],
         "correctAnswer": 0,
-        "explanation": "42nd Amendment (1976) introduced these three words into the Preamble."
+        "explanation": "42nd Amendment added Socialist, Secular, and Integrity to the Preamble."
       },
       {
         "id": "mbnew_q143",
-        "text": "NDA II 2023 GAT Q143 (Polity): Who is the Supreme Commander of the Indian Armed Forces under Article 53(2) of the Constitution?",
+        "text": "NDA II 2023 GAT Q143 (Polity): Who is the Supreme Commander of the Indian Armed Forces?",
         "options": [
           "President of India",
           "Prime Minister of India",
@@ -8379,11 +8379,11 @@ const DEFAULT_QUIZZES = [
           "Chief of Defence Staff"
         ],
         "correctAnswer": 0,
-        "explanation": "Under Article 53(2), supreme command of Union Armed Forces is vested in the President."
+        "explanation": "President of India is Supreme Commander of the Armed Forces."
       },
       {
         "id": "mbnew_q144",
-        "text": "NDA II 2023 GAT Q144 (Polity): What is the minimum age requirement for a person to be eligible for election as the President of India?",
+        "text": "NDA II 2023 GAT Q144 (Polity): What is the minimum age requirement for election as President of India?",
         "options": [
           "35 Years",
           "30 Years",
@@ -8391,11 +8391,11 @@ const DEFAULT_QUIZZES = [
           "21 Years"
         ],
         "correctAnswer": 0,
-        "explanation": "Article 58 specifies a minimum age of 35 years for presidential candidates."
+        "explanation": "Minimum age for President of India is 35 years."
       },
       {
-        "id": "mbnew_q145",
-        "text": "NDA II 2023 GAT Q145 (Polity): Who is considered the 'Guardian of the Constitution' and protector of Fundamental Rights in India?",
+        "id": "mbnew_q150",
+        "text": "NDA II 2023 GAT Q145 (Polity): Who is considered the Guardian of the Indian Constitution?",
         "options": [
           "Supreme Court of India",
           "Parliament of India",
@@ -8403,11 +8403,11 @@ const DEFAULT_QUIZZES = [
           "Prime Minister of India"
         ],
         "correctAnswer": 0,
-        "explanation": "The Supreme Court acts as the custodian and final interpreter of the Constitution."
+        "explanation": "Supreme Court of India is the Guardian of the Constitution."
       },
       {
         "id": "mbnew_q146",
-        "text": "NDA II 2023 GAT Q146 (Polity): What is the maximum permissible gap allowed between two consecutive sessions of the Indian Parliament?",
+        "text": "NDA II 2023 GAT Q146 (Polity): What is the maximum gap allowed between two sessions of Parliament?",
         "options": [
           "6 Months",
           "3 Months",
@@ -8415,11 +8415,11 @@ const DEFAULT_QUIZZES = [
           "9 Months"
         ],
         "correctAnswer": 0,
-        "explanation": "Under Article 85, Parliament must meet at least twice a year with a maximum interval of 6 months."
+        "explanation": "Maximum gap between Parliament sessions is 6 months."
       },
       {
         "id": "mbnew_q147",
-        "text": "NDA II 2023 GAT Q147 (Polity): Fundamental Duties (Article 51A) were incorporated into the Indian Constitution on the recommendation of which committee?",
+        "text": "NDA II 2023 GAT Q147 (Polity): Fundamental Duties were incorporated on the recommendation of which committee?",
         "options": [
           "Swaran Singh Committee",
           "Sarkaria Commission",
@@ -8427,23 +8427,23 @@ const DEFAULT_QUIZZES = [
           "M.N. Venkatachaliah Commission"
         ],
         "correctAnswer": 0,
-        "explanation": "Swaran Singh Committee (1976) recommended adding Part IV-A (Fundamental Duties)."
+        "explanation": "Swaran Singh Committee recommended Fundamental Duties."
       },
       {
         "id": "mbnew_q148",
-        "text": "NDA II 2023 GAT Q148 (Polity): Constitutional status was granted to Panchayati Raj Institutions by which Constitutional Amendment Act?",
+        "text": "NDA II 2023 GAT Q148 (Polity): Constitutional status was granted to Panchayati Raj by which Amendment?",
         "options": [
-          "73rd Constitutional Amendment Act, 1992",
-          "74th Constitutional Amendment Act, 1992",
-          "44th Constitutional Amendment Act, 1978",
-          "86th Constitutional Amendment Act, 2002"
+          "73rd Amendment Act",
+          "74th Amendment Act",
+          "44th Amendment Act",
+          "86th Amendment Act"
         ],
         "correctAnswer": 0,
-        "explanation": "73rd Amendment added Part IX and 11th Schedule to constitutionalize Panchayati Raj."
+        "explanation": "73rd Amendment granted constitutional status to Panchayati Raj."
       },
       {
         "id": "mbnew_q149",
-        "text": "NDA II 2023 GAT Q149 (Polity): Which Article empowers the President of India to declare Financial Emergency?",
+        "text": "NDA II 2023 GAT Q149 (Polity): Which Article empowers the President to declare Financial Emergency?",
         "options": [
           "Article 360",
           "Article 352",
@@ -8451,11 +8451,11 @@ const DEFAULT_QUIZZES = [
           "Article 370"
         ],
         "correctAnswer": 0,
-        "explanation": "Article 360 allows declaration of Financial Emergency if financial stability is threatened."
+        "explanation": "Article 360 deals with Financial Emergency."
       },
       {
         "id": "mbnew_q150",
-        "text": "NDA II 2023 GAT Q150 (Polity): Who is the Ex-Officio Chairman of the Rajya Sabha (Council of States)?",
+        "text": "NDA II 2023 GAT Q150 (Polity): Who is the Ex-Officio Chairman of the Rajya Sabha?",
         "options": [
           "Vice-President of India",
           "Speaker of Lok Sabha",
@@ -8463,7 +8463,7 @@ const DEFAULT_QUIZZES = [
           "President of India"
         ],
         "correctAnswer": 0,
-        "explanation": "Under Article 64, the Vice-President of India is the ex-officio Chairman of the Rajya Sabha."
+        "explanation": "Vice-President of India is Ex-Officio Chairman of Rajya Sabha."
       }
     ]
   }
