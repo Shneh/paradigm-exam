@@ -157,7 +157,7 @@ class AdminManager {
         return true;
       } else {
         if (errBox) {
-          errBox.textContent = "⚠️ Invalid Admin ID or Password! Credentials: shneh / shneh@1234";
+          errBox.textContent = "⚠️ Invalid Admin ID or Password!";
           errBox.classList.remove("hidden");
         }
         return false;
