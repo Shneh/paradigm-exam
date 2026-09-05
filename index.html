@@ -8,7 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <!-- KaTeX Math Notation Engine -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body class="proctor-strict-mode">
 
@@ -211,100 +215,114 @@
       </div>
     </section>
 
-    <!-- 3. ACTIVE EXAM VIEW -->
-    <section id="view-exam" class="view-section hidden">
-      <!-- Exam Control Bar -->
-      <div class="exam-header-bar glass-card">
-        <div class="exam-info">
-          <h2 id="exam-title">Examination Paper</h2>
-          <span id="header-candidate-info" class="sub-info">Candidate</span>
+    <!-- 3. ACTIVE EXAM VIEW (OFFICIAL NTA CBT INTERFACE) -->
+    <section id="view-exam" class="view-section hidden" style="padding: 0; max-width: 100%;">
+      <!-- NTA Top Header Bar -->
+      <div class="nta-header">
+        <div class="nta-brand-title">
+          <span class="nta-emblem">🇮🇳</span>
+          <div>
+            <div id="exam-title" class="nta-exam-name">NATIONAL TESTING AGENCY (NTA) - VIJAYANTHA TEST SERIES</div>
+            <div id="header-candidate-info" class="nta-sub-title">Candidate: Roll ID - Name</div>
+          </div>
         </div>
 
-        <div class="proctor-status-cluster">
-          <span id="proctor-violation-badge" class="badge badge-warning">
-            ⚠️ Warnings: 0/3
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <span id="proctor-violation-badge" class="badge badge-warning" style="font-size: 0.85rem;">
+            ⚠️ Security Warnings: 0/3
           </span>
-          <div class="timer-box">
-            <span class="timer-label">TIME REMAINING</span>
-            <span id="timer-display" class="timer-digits">00:00</span>
+          <div class="nta-header-timer">
+            <div style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">REMAINING TIME</div>
+            <div id="timer-display" class="nta-timer-clock">02:30:00</div>
           </div>
-          <button id="btn-submit-exam" class="btn btn-danger btn-sm">
-            📥 Submit Form
-          </button>
         </div>
       </div>
 
-      <!-- Exam Main Split View -->
-      <div class="exam-split-container">
-        <!-- Main Form Container -->
-        <div class="question-main-card glass-card">
-          <div class="q-card-header">
-            <span id="q-number-badge" class="q-badge">Question 1 of 10</span>
-            <button id="btn-flag" class="btn btn-outline btn-sm">
-              🏳️ Mark for Review
-            </button>
-          </div>
+      <!-- NTA Subject Tabs Bar -->
+      <div class="nta-subject-bar">
+        <div class="nta-tab active" id="nta-tab-subject-name">Section 1: Test Paper</div>
+      </div>
 
-          <div class="q-card-body">
-            <h3 id="q-text" class="q-statement">
-              Loading question...
-            </h3>
-
-            <!-- MCQ Options List -->
-            <div id="q-options-container" class="options-container">
-              <!-- Dynamically populated -->
+      <!-- NTA CBT Main Split Workspace -->
+      <div class="nta-cbt-layout">
+        <!-- Question Workspace -->
+        <div class="nta-question-container">
+          <div class="nta-question-meta-bar">
+            <span id="q-number-badge" class="nta-q-badge">Question No. 1</span>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <span class="nta-q-type">Single Choice Type (MCQ)</span>
+              <span id="inst-marking-scheme-badge" class="nta-marking-badge">+2.5 / -0.83 Marks</span>
             </div>
           </div>
 
-          <div class="q-card-footer">
-            <button id="btn-prev" class="btn btn-secondary">
-              ⬅️ Previous
-            </button>
+          <div id="q-text" class="nta-question-text">
+            Loading question text...
+          </div>
 
-            <div class="footer-center-actions">
-              <button id="btn-clear" class="btn btn-link">
-                Clear Response
+          <!-- MCQ Options List -->
+          <div id="q-options-container" class="nta-options-list">
+            <!-- Dynamically rendered -->
+          </div>
+
+          <!-- NTA Control Action Bar -->
+          <div class="nta-action-bar">
+            <div class="nta-action-left">
+              <button id="btn-save-mark" type="button" class="btn-nta btn-nta-save-mark">
+                🟣🟢 Save & Mark for Review
+              </button>
+              <button id="btn-clear" type="button" class="btn-nta btn-nta-clear">
+                ⚪ Clear Response
               </button>
             </div>
 
-            <button id="btn-next" class="btn btn-primary">
-              Next Question ➡️
-            </button>
+            <div class="nta-action-right">
+              <button id="btn-flag" type="button" class="btn-nta btn-nta-mark-next">
+                🟣 Mark for Review & Next
+              </button>
+              <button id="btn-next" type="button" class="btn-nta btn-nta-save-next">
+                🟢 Save & Next ➡️
+              </button>
+              <button id="btn-submit-exam" type="button" class="btn-nta btn-nta-submit">
+                📥 Submit Test
+              </button>
+            </div>
           </div>
         </div>
 
-        <!-- Sidebar Question Status Grid Navigator -->
-        <div class="question-sidebar glass-card">
-          <div class="sidebar-header">
-            <h3>Question Status Grid</h3>
+        <!-- NTA Right Sidebar (Candidate & Question Palette) -->
+        <div class="nta-sidebar-card">
+          <!-- Candidate Card -->
+          <div class="nta-candidate-profile">
+            <div class="nta-avatar-box">👤</div>
+            <div class="nta-candidate-info">
+              <h4 id="nta-candidate-card-name">Candidate Name</h4>
+              <span id="nta-candidate-card-id">Roll No: STU-101</span>
+            </div>
           </div>
 
-          <!-- Status Legend -->
-          <div class="grid-legend">
-            <div class="legend-item"><span class="dot dot-answered"></span> Answered</div>
-            <div class="legend-item"><span class="dot dot-unanswered"></span> Unanswered</div>
-            <div class="legend-item"><span class="dot dot-flagged"></span> Flagged</div>
+          <!-- NTA 5-Color Status Legend Summary -->
+          <div class="nta-legend-grid">
+            <div class="nta-legend-item">
+              <span class="nta-badge-shape shape-not-visited" id="stat-not-visited">0</span> Not Visited
+            </div>
+            <div class="nta-legend-item">
+              <span class="nta-badge-shape shape-not-answered" id="stat-unanswered">0</span> Not Answered
+            </div>
+            <div class="nta-legend-item">
+              <span class="nta-badge-shape shape-answered" id="stat-answered">0</span> Answered
+            </div>
+            <div class="nta-legend-item">
+              <span class="nta-badge-shape shape-marked" id="stat-flagged">0</span> Marked for Review
+            </div>
+            <div class="nta-legend-item" style="grid-column: 1 / -1;">
+              <span class="nta-badge-shape shape-answered-marked" id="stat-answered-marked">0</span> Answered & Marked for Review
+            </div>
           </div>
 
-          <!-- Grid Items -->
-          <div id="question-nav-grid" class="nav-grid">
+          <!-- Question Palette Title & Grid -->
+          <div class="nta-palette-title">QUESTION PALETTE GRID</div>
+          <div id="question-nav-grid" class="nta-palette-grid">
             <!-- Dynamically populated -->
-          </div>
-
-          <!-- Summary Stats Box -->
-          <div class="sidebar-stats-box">
-            <div class="stat-row">
-              <span>Answered:</span>
-              <strong id="stat-answered" class="text-green">0</strong>
-            </div>
-            <div class="stat-row">
-              <span>Unanswered:</span>
-              <strong id="stat-unanswered">0</strong>
-            </div>
-            <div class="stat-row">
-              <span>Marked for Review:</span>
-              <strong id="stat-flagged" class="text-yellow">0</strong>
-            </div>
           </div>
         </div>
       </div>

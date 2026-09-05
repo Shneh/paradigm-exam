@@ -1629,5 +1629,465 @@ textarea.form-control {
   border-color: #6366f1 !important;
 }
 
+/* ==========================================================================
+   OFFICIAL NTA CBT (COMPUTER BASED TEST) PORTAL DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  --nta-navy: #003366;
+  --nta-navy-dark: #002244;
+  --nta-navy-light: #0f4c81;
+  --nta-bg: #f4f6f9;
+  --nta-card: #ffffff;
+  --nta-border: #cbd5e1;
+  
+  --nta-not-visited: #e2e8f0;
+  --nta-not-visited-text: #334155;
+  --nta-not-answered: #dc2626;
+  --nta-answered: #16a34a;
+  --nta-marked: #7c3aed;
+  --nta-answered-marked: #7c3aed;
+}
+
+/* NTA Top Branding Header */
+.nta-header {
+  background: linear-gradient(135deg, var(--nta-navy-dark), var(--nta-navy));
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #0284c7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nta-brand-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nta-emblem {
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+
+.nta-exam-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.nta-sub-title {
+  font-size: 0.8rem;
+  color: #93c5fd;
+}
+
+.nta-header-timer {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-align: right;
+}
+
+.nta-timer-clock {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: 'Outfit', monospace;
+  color: #fde047;
+}
+
+/* NTA Subject Tabs Bar */
+.nta-subject-bar {
+  background: #e2e8f0;
+  border-bottom: 2px solid var(--nta-navy);
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nta-tab {
+  padding: 0.7rem 1.2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #334155;
+  background: #cbd5e1;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  border: 1px solid #94a3b8;
+  border-bottom: none;
+  transition: all 0.2s ease;
+}
+
+.nta-tab.active {
+  background: var(--nta-navy);
+  color: #ffffff;
+  border-color: var(--nta-navy);
+}
+
+/* NTA Question Area & Sidebar Layout */
+.nta-cbt-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--nta-bg);
+  min-height: calc(100vh - 120px);
+}
+
+@media (max-width: 1024px) {
+  .nta-cbt-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nta-question-container {
+  background: #ffffff;
+  border: 1px solid var(--nta-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nta-question-meta-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.nta-q-badge {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--nta-navy);
+}
+
+.nta-q-type {
+  font-size: 0.85rem;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.nta-marking-badge {
+  font-size: 0.85rem;
+  background: #fef3c7;
+  color: #b45309;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.nta-question-text {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  user-select: none;
+}
+
+/* KaTeX Formula Enhancements */
+.katex-display {
+  margin: 1em 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.katex {
+  font-size: 1.1em !important;
+}
+
+/* NTA Options Grid */
+.nta-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.nta-option-item {
+  display: flex;
+  align-items: center;
+  padding: 0.85rem 1.2rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nta-option-item:hover {
+  background: #e0e7ff;
+  border-color: #6366f1;
+}
+
+.nta-option-item.selected {
+  background: #e0e7ff;
+  border-color: var(--nta-navy);
+  box-shadow: 0 0 0 2px rgba(0, 51, 102, 0.2);
+}
+
+.nta-option-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  color: #1e293b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.nta-option-item.selected .nta-option-badge {
+  background: var(--nta-navy);
+  color: #ffffff;
+}
+
+.nta-option-text {
+  font-size: 1rem;
+  color: #1e293b;
+  flex: 1;
+}
+
+/* NTA Bottom Control Action Bar */
+.nta-action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 2px solid #e2e8f0;
+  flex-wrap: wrap;
+}
+
+.nta-action-left, .nta-action-right {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-nta {
+  padding: 0.65rem 1.1rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn-nta-save-next {
+  background: var(--nta-answered);
+  color: #ffffff;
+}
+.btn-nta-save-next:hover { background: #15803d; }
+
+.btn-nta-clear {
+  background: #cbd5e1;
+  color: #1e293b;
+}
+.btn-nta-clear:hover { background: #94a3b8; }
+
+.btn-nta-mark-next {
+  background: #d97706;
+  color: #ffffff;
+}
+.btn-nta-mark-next:hover { background: #b45309; }
+
+.btn-nta-save-mark {
+  background: var(--nta-marked);
+  color: #ffffff;
+}
+.btn-nta-save-mark:hover { background: #6d28d9; }
+
+.btn-nta-submit {
+  background: #dc2626;
+  color: #ffffff;
+  font-weight: 700;
+}
+.btn-nta-submit:hover { background: #b91c1c; }
+
+/* NTA Right Sidebar & Palette Grid */
+.nta-sidebar-card {
+  background: #ffffff;
+  border: 1px solid var(--nta-border);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nta-candidate-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: #f1f5f9;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.nta-avatar-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 6px;
+  background: var(--nta-navy);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.nta-candidate-info h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+  color: #0f172a;
+}
+
+.nta-candidate-info span {
+  font-size: 0.8rem;
+  color: #64748b;
+  display: block;
+}
+
+/* NTA 5-Color Status Legend Summary Box */
+.nta-legend-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  background: #f8fafc;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.nta-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.nta-badge-shape {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+}
+
+.shape-not-visited {
+  background: var(--nta-not-visited);
+  color: var(--nta-not-visited-text);
+  border-radius: 4px;
+}
+
+.shape-not-answered {
+  background: var(--nta-not-answered);
+  border-radius: 4px 12px 4px 12px;
+}
+
+.shape-answered {
+  background: var(--nta-answered);
+  border-radius: 12px 4px 12px 4px;
+}
+
+.shape-marked {
+  background: var(--nta-marked);
+  border-radius: 50%;
+}
+
+.shape-answered-marked {
+  background: var(--nta-answered-marked);
+  border-radius: 50%;
+}
+
+.shape-answered-marked::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background: #16a34a;
+  border-radius: 50%;
+  border: 1.5px solid #ffffff;
+}
+
+/* NTA Question Palette Grid */
+.nta-palette-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--nta-navy);
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.4rem;
+}
+
+.nta-palette-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.4rem;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 0.2rem;
+}
+
+.nta-palette-item {
+  height: 36px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+  border: none;
+  position: relative;
+}
+
+.nta-palette-item:hover {
+  transform: scale(1.08);
+}
+
+.nta-palette-item.current-active {
+  outline: 3px solid #0284c7;
+  outline-offset: 1px;
+}
+
+
 
 

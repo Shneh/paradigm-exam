@@ -3,7 +3,7 @@
     {
       "id": "vijayantha-nda-math-2026",
       "title": "VIJAYANTHA TEST SERIES - NDA Mathematics Mock Test (13 Sept 2026)",
-      "description": "Official UPSC NDA II 2026 Mock Test Paper. 120 Moderate to Tough Level Questions | 2.5 Hours (150 Mins) | Total Marks: 300. Marking Scheme: +2.5 marks for correct, -0.8333 (1/3 of 2.5) deduction for incorrect, 0 for unattempted.",
+      "description": "Official UPSC NDA II 2026 Mock Test Paper. 120 Moderate to Tough Level Questions | 2.5 Hours (150 Mins) | Total Marks: 300. Marking Scheme: +2.5 marks for correct, -0.8333 (1/3) deduction for incorrect, 0 for unattempted.",
       "timeLimitMinutes": 150,
       "maxViolationsAllowed": 3,
       "marksPerCorrect": 2.5,
@@ -15,19 +15,19 @@
       "questions": [
         {
           "id": "vmath_q1",
-          "text": "If z = (1 + i√3)/(1 - i√3), then what is the principal argument of z?",
+          "text": "If $z = \\frac{1 + i\\sqrt{3}}{1 - i\\sqrt{3}}$, then what is the principal argument of $z$?",
           "options": [
-            "2π/3",
-            "-2π/3",
-            "π/3",
-            "-π/3"
+            "$\\frac{2\\pi}{3}$",
+            "$-\\frac{2\\pi}{3}$",
+            "$\\frac{\\pi}{3}$",
+            "$-\\frac{\\pi}{3}$"
           ],
           "correctAnswer": 0,
-          "explanation": "z = (1+i√3)/(1-i√3) = (e^(iπ/3))/(e^(-iπ/3)) = e^(i 2π/3). The principal argument is 2π/3."
+          "explanation": "$z = \\frac{1+i\\sqrt{3}}{1-i\\sqrt{3}} = \\frac{e^{i\\pi/3}}{e^{-i\\pi/3}} = e^{i 2\\pi/3}$. The principal argument is $\\frac{2\\pi}{3}$."
         },
         {
           "id": "vmath_q2",
-          "text": "What is the number of terms in the expansion of (x + y + z)^10?",
+          "text": "What is the number of terms in the algebraic expansion of $(x + y + z)^{10}$?",
           "options": [
             "66",
             "55",
@@ -35,23 +35,23 @@
             "78"
           ],
           "correctAnswer": 0,
-          "explanation": "The number of terms in (x_1 + x_2 + ... + x_r)^n is C(n+r-1, r-1). Here n=10, r=3. C(10+3-1, 3-1) = C(12, 2) = (12 × 11)/2 = 66."
+          "explanation": "The number of terms in $(x_1 + x_2 + \\dots + x_r)^n$ is $\\binom{n+r-1}{r-1}$. For $n=10, r=3$: $\\binom{10+3-1}{3-1} = \\binom{12}{2} = \\frac{12 \\times 11}{2} = 66$."
         },
         {
           "id": "vmath_q3",
-          "text": "If α and β are the roots of equation x² - 6x + 2 = 0, what is the value of α³ + β³?",
+          "text": "If $\\alpha$ and $\\beta$ are the roots of equation $x^2 - 6x + 2 = 0$, what is the value of $\\alpha^3 + \\beta^3$?",
           "options": [
             "180",
             "216",
-            "180",
-            "144"
+            "144",
+            "160"
           ],
           "correctAnswer": 0,
-          "explanation": "α + β = 6, αβ = 2. α³ + β³ = (α + β)³ - 3αβ(α + β) = 6³ - 3(2)(6) = 216 - 36 = 180."
+          "explanation": "$\\alpha + \\beta = 6$ and $\\alpha\\beta = 2$. Using identity: $\\alpha^3 + \\beta^3 = (\\alpha + \\beta)^3 - 3\\alpha\\beta(\\alpha + \\beta) = 6^3 - 3(2)(6) = 216 - 36 = 180$."
         },
         {
           "id": "vmath_q4",
-          "text": "What is the sum of all 3-digit natural numbers formed using digits 1, 2, 3, 4 without repetition?",
+          "text": "What is the sum of all 3-digit natural numbers formed using the non-zero digits $1, 2, 3, 4$ without repetition?",
           "options": [
             "6660",
             "3330",
@@ -59,23 +59,23 @@
             "4440"
           ],
           "correctAnswer": 0,
-          "explanation": "Each digit appears in unit, tens, and hundreds place 3! = 6 times. Sum = (1+2+3+4) × 6 × (100 + 10 + 1) = 10 × 6 × 111 = 6660."
+          "explanation": "Each digit appears in unit, tens, and hundreds place $3! = 6$ times. Sum $= (1+2+3+4) \\times 6 \\times (100 + 10 + 1) = 10 \\times 6 \\times 111 = 6660$."
         },
         {
           "id": "vmath_q5",
-          "text": "If the 4th, 7th and 10th terms of a Geometric Progression (GP) are a, b, c respectively, then which one of the following is correct?",
+          "text": "If the 4th, 7th, and 10th terms of a Geometric Progression (GP) are $a, b, c$ respectively, then which relation is correct?",
           "options": [
-            "b² = ac",
-            "a² = bc",
-            "c² = ab",
-            "a + c = 2b"
+            "$b^2 = ac$",
+            "$a^2 = bc$",
+            "$c^2 = ab$",
+            "$a + c = 2b$"
           ],
           "correctAnswer": 0,
-          "explanation": "T_4 = A r³, T_7 = A r⁶, T_10 = A r⁹. Since (A r⁶)² = (A r³)(A r⁹), b² = ac. Thus a, b, c are in GP."
+          "explanation": "$T_4 = A r^3$, $T_7 = A r^6$, $T_{10} = A r^9$. Notice $(A r^6)^2 = (A r^3)(A r^9) \\implies b^2 = ac$. Thus $a, b, c$ are in GP."
         },
         {
           "id": "vmath_q6",
-          "text": "What is the value of log₂ 3 · log₃ 4 · log₄ 5 ... log₃₁ 32?",
+          "text": "What is the evaluated value of $\\log_2 3 \\cdot \\log_3 4 \\cdot \\log_4 5 \\dots \\log_{31} 32$?",
           "options": [
             "5",
             "4",
@@ -83,11 +83,11 @@
             "16"
           ],
           "correctAnswer": 0,
-          "explanation": "By base change rule, log_a b · log_b c = log_a c. The chain collapses to log₂ 32 = log₂ (2⁵) = 5."
+          "explanation": "Using base-change property $\\log_a b \\cdot \\log_b c = \\log_a c$, the product simplifies to $\\log_2 32 = \\log_2 (2^5) = 5$."
         },
         {
           "id": "vmath_q7",
-          "text": "If A and B are two sets such that n(A) = 15, n(B) = 25 and n(A ∪ B) = 30, what is n(P(A ∩ B))?",
+          "text": "If $A$ and $B$ are two finite sets such that $n(A) = 15$, $n(B) = 25$, and $n(A \\cup B) = 30$, what is the cardinality of power set $n(P(A \\cap B))$?",
           "options": [
             "1024",
             "512",
@@ -95,35 +95,35 @@
             "128"
           ],
           "correctAnswer": 0,
-          "explanation": "n(A ∩ B) = n(A) + n(B) - n(A ∪ B) = 15 + 25 - 30 = 10. Number of elements in power set P(A ∩ B) is 2¹⁰ = 1024."
+          "explanation": "$n(A \\cap B) = n(A) + n(B) - n(A \\cup B) = 15 + 25 - 30 = 10$. Cardinality of power set $n(P(A \\cap B)) = 2^{10} = 1024$."
         },
         {
           "id": "vmath_q8",
-          "text": "What is the modulus of the complex number z = (2 + 3i)/(3 - 2i)?",
+          "text": "What is the modulus of the complex fraction $z = \\frac{2 + 3i}{3 - 2i}$?",
           "options": [
             "1",
-            "√13",
+            "$\\sqrt{13}$",
             "13",
-            "√5"
+            "$\\sqrt{5}$"
           ],
           "correctAnswer": 0,
-          "explanation": "|z| = |2+3i| / |3-2i| = √(2²+3²) / √(3²+(-2)²) = √13 / √13 = 1."
+          "explanation": "$|z| = \\frac{|2+3i|}{|3-2i|} = \\frac{\\sqrt{2^2+3^2}}{\\sqrt{3^2+(-2)^2}} = \\frac{\\sqrt{13}}{\\sqrt{13}} = 1$."
         },
         {
           "id": "vmath_q9",
-          "text": "If log₁₀(x² - 4x + 5) = 0, what are the values of x?",
+          "text": "If $\\log_{10}(x^2 - 4x + 5) = 0$, what are the real solutions for $x$?",
           "options": [
-            "0, 4",
-            "1, 3",
-            "2, 4",
-            "-1, 5"
+            "$x = 2$",
+            "$x = 0, 4$",
+            "$x = 1, 3$",
+            "$x = -1, 5$"
           ],
           "correctAnswer": 0,
-          "explanation": "x² - 4x + 5 = 10⁰ = 1 => x² - 4x + 4 = 0 => (x - 2)² = 0 => x = 2. Wait, x² - 4x + 5 = 1 => x(x-4) = 0 => x = 0 or x = 4."
+          "explanation": "$x^2 - 4x + 5 = 10^0 = 1 \\implies x^2 - 4x + 4 = 0 \\implies (x - 2)^2 = 0 \\implies x = 2$."
         },
         {
           "id": "vmath_q10",
-          "text": "How many diagonals can be drawn in a regular polygon of 12 sides (Dodecagon)?",
+          "text": "How many distinct diagonals can be drawn inside a regular polygon of 12 sides (Dodecagon)?",
           "options": [
             "54",
             "66",
@@ -131,11 +131,11 @@
             "36"
           ],
           "correctAnswer": 0,
-          "explanation": "Number of diagonals in n-gon = n(n-3)/2 = 12(9)/2 = 54."
+          "explanation": "Formula for diagonals in $n$-sided polygon is $\\frac{n(n-3)}{2}$. For $n=12$: $\\frac{12(9)}{2} = 54$."
         },
         {
           "id": "vmath_q11",
-          "text": "If the ratio of sums of n terms of two Arithmetic Progressions is (7n + 1) : (4n + 27), what is the ratio of their 11th terms?",
+          "text": "If the ratio of sums of $n$ terms of two APs is $(7n + 1) : (4n + 27)$, what is the ratio of their 11th terms?",
           "options": [
             "4 : 3",
             "7 : 4",
@@ -143,35 +143,35 @@
             "3 : 2"
           ],
           "correctAnswer": 0,
-          "explanation": "To find ratio of 11th terms, replace n by 2(11) - 1 = 21. Ratio = (7×21 + 1)/(4×21 + 27) = (147 + 1)/(84 + 27) = 148/111 = 4/3."
+          "explanation": "To find ratio of 11th terms, replace $n$ by $2(11) - 1 = 21$. Ratio $= \\frac{7(21)+1}{4(21)+27} = \\frac{148}{111} = \\frac{4}{3}$."
         },
         {
           "id": "vmath_q12",
-          "text": "What is the coefficient of x⁹ in the expansion of (x² - 1/(3x))⁹?",
+          "text": "What is the coefficient of $x^9$ in the binomial expansion of $\\left(x^2 - \\frac{1}{3x}\\right)^9$?",
           "options": [
-            "-18/9",
-            "-2268",
-            "18/9",
-            "-1/27"
+            "$-\\frac{28}{9}$",
+            "$-2268$",
+            "$\\frac{28}{9}$",
+            "$-\\frac{1}{27}$"
           ],
           "correctAnswer": 0,
-          "explanation": "General term T_{r+1} = ⁹C_r (x²)^{9-r} (-1/3x)^r = ⁹C_r (-1/3)^r x^{18-3r}. Set 18-3r = 9 => 3r = 9 => r = 3. T₄ = ⁹C₃ (-1/3)³ = 84 × (-1/27) = -28/9."
+          "explanation": "General term $T_{r+1} = \\binom{9}{r} (x^2)^{9-r} \\left(-\\frac{1}{3x}\\right)^r = \\binom{9}{r} \\left(-\\frac{1}{3}\\right)^r x^{18-3r}$. Set $18-3r = 9 \\implies r = 3$. $T_4 = \\binom{9}{3} \\left(-\\frac{1}{3}\\right)^3 = 84 \\times \\left(-\\frac{1}{27}\\right) = -\\frac{28}{9}$."
         },
         {
           "id": "vmath_q13",
-          "text": "If x = 1 + a + a² + ... ∞ and y = 1 + b + b² + ... ∞ where |a|<1, |b|<1, what is 1 + ab + a²b² + ... ∞?",
+          "text": "If $x = 1 + a + a^2 + \\dots \\infty$ and $y = 1 + b + b^2 + \\dots \\infty$ where $|a|<1, |b|<1$, what is $1 + ab + a^2b^2 + \\dots \\infty$?",
           "options": [
-            "xy / (x + y - 1)",
-            "xy / (x + y + 1)",
-            "x + y - 1",
-            "xy / (x - y + 1)"
+            "$\\frac{xy}{x + y - 1}$",
+            "$\\frac{xy}{x + y + 1}$",
+            "$x + y - 1$",
+            "$\\frac{xy}{x - y + 1}$"
           ],
           "correctAnswer": 0,
-          "explanation": "x = 1/(1-a) => a = 1 - 1/x. y = 1/(1-b) => b = 1 - 1/y. Sum S = 1/(1-ab) = 1/(1 - (1 - 1/x)(1 - 1/y)) = xy / (x + y - 1)."
+          "explanation": "$x = \\frac{1}{1-a} \\implies a = 1 - \\frac{1}{x}$. $y = \\frac{1}{1-b} \\implies b = 1 - \\frac{1}{y}$. Sum $S = \\frac{1}{1-ab} = \\frac{1}{1 - (1 - 1/x)(1 - 1/y)} = \\frac{xy}{x + y - 1}$."
         },
         {
           "id": "vmath_q14",
-          "text": "If (1 + i)⁶ + (1 - i)⁶ = K, what is the value of K?",
+          "text": "If $(1 + i)^6 + (1 - i)^6 = K$, what is the value of $K$?",
           "options": [
             "0",
             "-16",
@@ -179,35 +179,35 @@
             "32"
           ],
           "correctAnswer": 0,
-          "explanation": "(1+i)² = 2i, so (1+i)⁶ = (2i)³ = -8i. (1-i)² = -2i, so (1-i)⁶ = (-2i)³ = 8i. K = -8i + 8i = 0."
+          "explanation": "$(1+i)^2 = 2i \\implies (1+i)^6 = (2i)^3 = -8i$. $(1-i)^2 = -2i \\implies (1-i)^6 = (-2i)^3 = 8i$. $K = -8i + 8i = 0$."
         },
         {
           "id": "vmath_q15",
-          "text": "If f: R -> R is defined by f(x) = 3x - 4, what is f⁻¹(x)?",
+          "text": "If $f: \\mathbb{R} \\to \\mathbb{R}$ is defined by $f(x) = 3x - 4$, what is the inverse function $f^{-1}(x)$?",
           "options": [
-            "(x + 4)/3",
-            "(x - 4)/3",
-            "3x + 4",
-            "(3x + 4)/3"
+            "$\\frac{x + 4}{3}$",
+            "$\\frac{x - 4}{3}$",
+            "$3x + 4$",
+            "$\\frac{3x + 4}{3}$"
           ],
           "correctAnswer": 0,
-          "explanation": "y = 3x - 4 => 3x = y + 4 => x = (y + 4)/3. Therefore f⁻¹(x) = (x + 4)/3."
+          "explanation": "Let $y = 3x - 4 \\implies 3x = y + 4 \\implies x = \\frac{y+4}{3}$. Therefore $f^{-1}(x) = \\frac{x+4}{3}$."
         },
         {
           "id": "vmath_q16",
-          "text": "What is the domain of the function f(x) = √(9 - x²)?",
+          "text": "What is the domain of the real-valued function $f(x) = \\sqrt{9 - x^2}$?",
           "options": [
-            "[-3, 3]",
-            "(-3, 3)",
-            "(-∞, -3] ∪ [3, ∞)",
-            "[0, 3]"
+            "$[-3, 3]$",
+            "$(-3, 3)$",
+            "$(-\\infty, -3] \\cup [3, \\infty)$",
+            "$[0, 3]$"
           ],
           "correctAnswer": 0,
-          "explanation": "For real f(x), 9 - x² ≥ 0 => x² ≤ 9 => -3 ≤ x ≤ 3. Domain is [-3, 3]."
+          "explanation": "For real $f(x)$, $9 - x^2 \\ge 0 \\implies x^2 \\le 9 \\implies -3 \\le x \\le 3$. Domain is $[-3, 3]$."
         },
         {
           "id": "vmath_q17",
-          "text": "If a, b, c are in AP, then b + c, c + a, a + b are in:",
+          "text": "If $a, b, c$ are in AP, then $b + c, c + a, a + b$ are in:",
           "options": [
             "AP",
             "GP",
@@ -215,11 +215,11 @@
             "Neither AP nor GP"
           ],
           "correctAnswer": 0,
-          "explanation": "Add (a+b+c) to each term of AP -a, -b, -c. Thus (b+c), (c+a), (a+b) are also in AP."
+          "explanation": "Subtract $(a+b+c)$ from each term: $-a, -b, -c$ are in AP. Multiplying by $-1$ shows $(b+c), (c+a), (a+b)$ are in AP."
         },
         {
           "id": "vmath_q18",
-          "text": "If ⁿC₁₂ = ⁿC₈, what is the value of ⁿC₁₇?",
+          "text": "If $\\binom{n}{12} = \\binom{n}{8}$, what is the value of $\\binom{n}{17}$?",
           "options": [
             "1140",
             "380",
@@ -227,11 +227,11 @@
             "570"
           ],
           "correctAnswer": 0,
-          "explanation": "ⁿC_x = ⁿC_y implies x + y = n => n = 12 + 8 = 20. ²⁰C₁₇ = ²⁰C₃ = (20 × 19 × 18) / 6 = 1140."
+          "explanation": "$\\binom{n}{x} = \\binom{n}{y} \\implies x + y = n \\implies n = 12 + 8 = 20$. $\\binom{20}{17} = \\binom{20}{3} = \\frac{20 \\times 19 \\times 18}{6} = 1140$."
         },
         {
           "id": "vmath_q19",
-          "text": "What is the remainder when 2¹⁰⁰ is divided by 7?",
+          "text": "What is the remainder when $2^{100}$ is divided by 7?",
           "options": [
             "2",
             "1",
@@ -239,47 +239,47 @@
             "6"
           ],
           "correctAnswer": 0,
-          "explanation": "2³ = 8 ≡ 1 (mod 7). 2¹⁰⁰ = (2³)³³ · 2¹ ≡ (1)³³ · 2 ≡ 2 (mod 7)."
+          "explanation": "$2^3 = 8 \\equiv 1 \\pmod 7$. $2^{100} = (2^3)^{33} \\cdot 2^1 \\equiv (1)^{33} \\cdot 2 \\equiv 2 \\pmod 7$."
         },
         {
           "id": "vmath_q20",
-          "text": "If quadratic equation ax² + bx + c = 0 has imaginary roots, then for all real x, ax² + bx + c has:",
+          "text": "If quadratic equation $ax^2 + bx + c = 0$ has complex imaginary roots, then for all real $x$, the quadratic expression $ax^2 + bx + c$ has:",
           "options": [
-            "Same sign as 'a'",
-            "Same sign as 'b'",
-            "Opposite sign to 'a'",
+            "Same sign as $a$",
+            "Same sign as $b$",
+            "Opposite sign to $a$",
             "Sign changes at origin"
           ],
           "correctAnswer": 0,
-          "explanation": "When D = b² - 4ac < 0, the parabola ax² + bx + c never touches the x-axis, so it lies entirely above/below the x-axis with the same sign as 'a'."
+          "explanation": "When $D = b^2 - 4ac < 0$, the parabola $ax^2 + bx + c$ never intersects the x-axis, preserving the sign of $a$ everywhere."
         },
         {
           "id": "vmath_q21",
-          "text": "If relation R on set A = {1, 2, 3} is R = {(1,1), (2,2), (3,3), (1,2), (2,1), (2,3)}, then R is:",
+          "text": "If relation $R$ on set $A = \\{1, 2, 3\\}$ is $R = \\{(1,1), (2,2), (3,3), (1,2), (2,1), (2,3)\\}$, then $R$ is:",
           "options": [
-            "Reflexive but not symmetric",
-            "Symmetric but not transitive",
             "Reflexive but neither symmetric nor transitive",
+            "Reflexive and symmetric but not transitive",
+            "Symmetric but not transitive",
             "An equivalence relation"
           ],
-          "correctAnswer": 2,
-          "explanation": "R is reflexive since (1,1),(2,2),(3,3) ∈ R. It is NOT symmetric because (2,3) ∈ R but (3,2) ∉ R. It is NOT transitive because (1,2) & (2,3) ∈ R but (1,3) ∉ R."
+          "correctAnswer": 0,
+          "explanation": "$R$ is reflexive since $(1,1),(2,2),(3,3) \\in R$. Not symmetric because $(2,3) \\in R$ but $(3,2) \\notin R$. Not transitive because $(1,2), (2,3) \\in R$ but $(1,3) \\notin R$."
         },
         {
           "id": "vmath_q22",
-          "text": "What is the sum of infinite series 1 + 2/3 + 3/9 + 4/27 + ... ?",
+          "text": "What is the sum of the infinite arithmetico-geometric series $S = 1 + \\frac{2}{3} + \\frac{3}{9} + \\frac{4}{27} + \\dots$?",
           "options": [
-            "9/4",
-            "3/2",
+            "$\\frac{9}{4}$",
+            "$\\frac{3}{2}$",
             "2",
-            "4/3"
+            "$\\frac{4}{3}$"
           ],
           "correctAnswer": 0,
-          "explanation": "This is an AGP. S = 1 + 2/3 + 3/9 + ... (1/3)S = 1/3 + 2/9 + ... Subtracting: (2/3)S = 1 + 1/3 + 1/9 + ... = 1/(1 - 1/3) = 3/2. S = 9/4."
+          "explanation": "$S = 1 + \\frac{2}{3} + \\frac{3}{9} + \\dots$. $\\frac{1}{3} S = \\frac{1}{3} + \\frac{2}{9} + \\dots$. Subtracting: $\\frac{2}{3} S = 1 + \\frac{1}{3} + \\frac{1}{9} + \\dots = \\frac{1}{1-1/3} = \\frac{3}{2} \\implies S = \\frac{9}{4}$."
         },
         {
           "id": "vmath_q23",
-          "text": "If ω is a complex cube root of unity, what is the value of (1 - ω + ω²)⁵ + (1 + ω - ω²)⁵?",
+          "text": "If $\\omega$ is a complex cube root of unity, what is the value of $(1 - \\omega + \\omega^2)^5 + (1 + \\omega - \\omega^2)^5$?",
           "options": [
             "32",
             "64",
@@ -287,31 +287,31 @@
             "-64"
           ],
           "correctAnswer": 0,
-          "explanation": "1 + ω + ω² = 0 => 1 + ω² = -ω and 1 + ω = -ω². (-2ω)⁵ + (-2ω²)⁵ = -32(ω⁵ + ω¹⁰) = -32(ω² + ω) = -32(-1) = 32."
+          "explanation": "$1 + \\omega + \\omega^2 = 0 \\implies 1 + \\omega^2 = -\\omega$ and $1 + \\omega = -\\omega^2$. Expression $= (-2\\omega)^5 + (-2\\omega^2)^5 = -32(\\omega^5 + \\omega^{10}) = -32(\\omega^2 + \\omega) = -32(-1) = 32$."
         },
         {
           "id": "vmath_q24",
-          "text": "What is the number of non-empty subsets of a set containing 7 elements?",
+          "text": "What is the number of non-empty proper subsets of a set containing 7 elements?",
           "options": [
+            "126",
             "127",
             "128",
-            "255",
-            "64"
+            "254"
           ],
           "correctAnswer": 0,
-          "explanation": "Total subsets = 2⁷ = 128. Non-empty subsets = 2⁷ - 1 = 127."
+          "explanation": "Total subsets $= 2^7 = 128$. Non-empty proper subsets $= 2^7 - 2 = 126$."
         },
         {
           "id": "vmath_q25",
-          "text": "The roots of equation x² - p x + q = 0 differ by 1. Which relation is correct?",
+          "text": "The roots of equation $x^2 - px + q = 0$ differ by 1. Which relation holds true?",
           "options": [
-            "p² = 4q + 1",
-            "p² = 4q - 1",
-            "q² = 4p + 1",
-            "p² = q + 4"
+            "$p^2 = 4q + 1$",
+            "$p^2 = 4q - 1$",
+            "$q^2 = 4p + 1$",
+            "$p^2 = q + 4$"
           ],
           "correctAnswer": 0,
-          "explanation": "|α - β| = 1 => (α - β)² = 1 => (α + β)² - 4αβ = 1 => p² - 4q = 1 => p² = 4q + 1."
+          "explanation": "$|\\alpha - \\beta| = 1 \\implies (\\alpha - \\beta)^2 = 1 \\implies (\\alpha + \\beta)^2 - 4\\alpha\\beta = 1 \\implies p^2 - 4q = 1 \\implies p^2 = 4q + 1$."
         },
         {
           "id": "vmath_q26",
@@ -323,59 +323,59 @@
             "576"
           ],
           "correctAnswer": 0,
-          "explanation": "First seat 5 boys at circular table in (5-1)! = 24 ways. The 5 girls can sit in 5 vacant places in 5! = 120 ways. Total = 24 × 120 = 2880 ways."
+          "explanation": "Seat 5 boys at circular table in $(5-1)! = 24$ ways. 5 girls sit in 5 vacant gaps in $5! = 120$ ways. Total $= 24 \\times 120 = 2880$ ways."
         },
         {
           "id": "vmath_q27",
-          "text": "If HM between two numbers is 4 and their AP is A and GP is G such that 2A + G² = 27, what are the numbers?",
+          "text": "If Harmonic Mean (HM) between two numbers is 4, Arithmetic Mean is $A$, and Geometric Mean is $G$ such that $2A + G^2 = 27$, what are the numbers?",
           "options": [
-            "6, 3",
-            "8, 2",
-            "12, 3",
-            "9, 3"
+            "6 and 3",
+            "8 and 2",
+            "12 and 3",
+            "9 and 3"
           ],
           "correctAnswer": 0,
-          "explanation": "We know G² = A · H = 4A. Given 2A + 4A = 27 => 6A = 27 => A = 4.5. G² = 18. Numbers have sum 2A = 9, product G² = 18. Roots of x² - 9x + 18 = 0 are 6 and 3."
+          "explanation": "$G^2 = A H = 4A$. Given $2A + 4A = 27 \\implies 6A = 27 \\implies A = 4.5$. $G^2 = 18$. Numbers sum $= 2A = 9$, product $= G^2 = 18$. Roots of $x^2 - 9x + 18 = 0$ are 6 and 3."
         },
         {
           "id": "vmath_q28",
-          "text": "What is the value of ¹⁵C₀² + ¹⁵C₁² + ¹⁵C₂² + ... + ¹⁵C₁₅²?",
+          "text": "What is the sum of squares of binomial coefficients $\\binom{15}{0}^2 + \\binom{15}{1}^2 + \\dots + \\binom{15}{15}^2$?",
           "options": [
-            "³⁰C₁₅",
-            "³⁰C₁₄",
-            "¹⁵C₇",
-            "³⁰C₁₆"
+            "$\\binom{30}{15}$",
+            "$\\binom{30}{14}$",
+            "$\\binom{15}{7}$",
+            "$\\binom{30}{16}$"
           ],
           "correctAnswer": 0,
-          "explanation": "The sum of squares of binomial coefficients ∑ (ⁿC_r)² = ²ⁿC_n. For n=15, sum is ³⁰C₁₅."
+          "explanation": "Sum of squares of binomial coefficients $\\sum_{r=0}^n \\binom{n}{r}^2 = \\binom{2n}{n}$. For $n=15$, sum is $\\binom{30}{15}$."
         },
         {
           "id": "vmath_q29",
-          "text": "If f(x) = log((1+x)/(1-x)), then f(2x/(1+x²)) is equal to:",
+          "text": "If $f(x) = \\log\\left(\\frac{1+x}{1-x}\\right)$, then what is $f\\left(\\frac{2x}{1+x^2}\\right)$ equal to?",
           "options": [
-            "2 f(x)",
-            "[f(x)]²",
-            "f(x) / 2",
-            "-f(x)"
+            "$2 f(x)$",
+            "$[f(x)]^2$",
+            "$\\frac{f(x)}{2}$",
+            "$-f(x)$"
           ],
           "correctAnswer": 0,
-          "explanation": "f(2x/(1+x²)) = log[ (1 + 2x/(1+x²)) / (1 - 2x/(1+x²)) ] = log[ ((1+x)²)/((1-x)²) ] = 2 log((1+x)/(1-x)) = 2 f(x)."
+          "explanation": "$f\\left(\\frac{2x}{1+x^2}\\right) = \\log\\left[ \\frac{1 + \\frac{2x}{1+x^2}}{1 - \\frac{2x}{1+x^2}} \\right] = \\log\\left[ \\frac{(1+x)^2}{(1-x)^2} \\right] = 2 \\log\\left(\\frac{1+x}{1-x}\\right) = 2 f(x)$."
         },
         {
           "id": "vmath_q30",
-          "text": "What is the conjugate of the complex number (1 - i)/(1 + i)?",
+          "text": "What is the complex conjugate of $z = \\frac{1 - i}{1 + i}$?",
           "options": [
-            "i",
-            "-i",
-            "1 + i",
-            "1 - i"
+            "$i$",
+            "$-i$",
+            "$1 + i$",
+            "$1 - i$"
           ],
           "correctAnswer": 0,
-          "explanation": "z = (1-i)/(1+i) = -i. Conjugate z̄ = +i."
+          "explanation": "$z = \\frac{1-i}{1+i} = -i$. Conjugate $\\bar{z} = +i$."
         },
         {
           "id": "vmath_q31",
-          "text": "If A is a square matrix of order 3 and det(A) = 4, what is det(3 A)?",
+          "text": "If $A$ is a square matrix of order 3 and $\\det(A) = 4$, what is $\\det(3 A)$?",
           "options": [
             "108",
             "36",
@@ -383,83 +383,83 @@
             "48"
           ],
           "correctAnswer": 0,
-          "explanation": "For an n × n matrix, det(k A) = kⁿ det(A). Here n=3, k=3. det(3 A) = 3³ × 4 = 27 × 4 = 108."
+          "explanation": "For an $n \\times n$ matrix, $\\det(k A) = k^n \\det(A)$. For $n=3, k=3$: $\\det(3 A) = 3^3 \\times 4 = 27 \\times 4 = 108$."
         },
         {
           "id": "vmath_q32",
-          "text": "If A = [[1, 2], [3, 4]], what is A² - 5A - 2I equal to?",
+          "text": "If matrix $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$, what is $A^2 - 5A - 2I$ equal to?",
           "options": [
-            "O (Null matrix)",
-            "I (Identity matrix)",
-            "A",
-            "-I"
+            "$O$ (Null matrix)",
+            "$I$ (Identity matrix)",
+            "$A$",
+            "$-I$"
           ],
           "correctAnswer": 0,
-          "explanation": "By Cayley-Hamilton theorem, a matrix satisfies its characteristic equation. λ² - tr(A)λ + det(A) = 0 => λ² - 5λ - 2 = 0. Hence A² - 5A - 2I = O."
+          "explanation": "By Cayley-Hamilton theorem, $A$ satisfies its characteristic equation $\\lambda^2 - \\text{tr}(A)\\lambda + \\det(A) = 0 \\implies \\lambda^2 - 5\\lambda - 2 = 0$. Hence $A^2 - 5A - 2I = O$."
         },
         {
           "id": "vmath_q33",
-          "text": "For what value of k will the system of equations x + y + z = 1, x + 2y + 4z = k, x + 4y + 10z = k² have a solution?",
+          "text": "For what values of $k$ will the system of equations $x + y + z = 1$, $x + 2y + 4z = k$, $x + 4y + 10z = k^2$ be consistent?",
           "options": [
-            "k = 1 or k = 2",
-            "k = 1 or k = -1",
-            "k = 2 or k = 3",
-            "k = 0 or k = 1"
+            "$k = 1$ or $k = 2$",
+            "$k = 1$ or $k = -1$",
+            "$k = 2$ or $k = 3$",
+            "$k = 0$ or $k = 1$"
           ],
           "correctAnswer": 0,
-          "explanation": "D = |[1,1,1],[1,2,4],[1,4,10]| = 0. For consistent system, D_x = D_y = D_z = 0. Solving D_z = 0 gives k² - 3k + 2 = 0 => k = 1 or k = 2."
+          "explanation": "Coefficient determinant $D = \\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 4 \\\\ 1 & 4 & 10 \\end{vmatrix} = 0$. For consistency, $D_z = \\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 2 & k \\\\ 1 & 4 & k^2 \\end{vmatrix} = 0 \\implies k^2 - 3k + 2 = 0 \\implies k = 1$ or $2$."
         },
         {
           "id": "vmath_q34",
-          "text": "If A is a non-singular matrix of order 3, then det(adj(A)) is equal to:",
+          "text": "If $A$ is a non-singular matrix of order 3, then $\\det(\\text{adj}(A))$ is equal to:",
           "options": [
-            "(det A)²",
-            "det A",
-            "(det A)³",
-            "1 / det A"
+            "$(\\det A)^2$",
+            "$\\det A$",
+            "$(\\det A)^3$",
+            "$\\frac{1}{\\det A}$"
           ],
           "correctAnswer": 0,
-          "explanation": "det(adj A) = (det A)^(n-1). For n=3, det(adj A) = (det A)²."
+          "explanation": "Standard property: $\\det(\\text{adj } A) = (\\det A)^{n-1}$. For $n=3$, $\\det(\\text{adj } A) = (\\det A)^2$."
         },
         {
           "id": "vmath_q35",
-          "text": "If A = [[cos θ, sin θ], [-sin θ, cos θ]], then Aⁿ is equal to:",
+          "text": "If $A = \\begin{pmatrix} \\cos \\theta & \\sin \\theta \\\\ -\\sin \\theta & \\cos \\theta \\end{pmatrix}$, then matrix $A^n$ is equal to:",
           "options": [
-            "[[cos nθ, sin nθ], [-sin nθ, cos nθ]]",
-            "[[cosⁿ θ, sinⁿ θ], [-sinⁿ θ, cosⁿ θ]]",
-            "n A",
-            "I"
+            "$\\begin{pmatrix} \\cos n\\theta & \\sin n\\theta \\\\ -\\sin n\\theta & \\cos n\\theta \\end{pmatrix}$",
+            "$\\begin{pmatrix} \\cos^n \\theta & \\sin^n \\theta \\\\ -\\sin^n \\theta & \\cos^n \\theta \\end{pmatrix}$",
+            "$n A$",
+            "$I$"
           ],
           "correctAnswer": 0,
-          "explanation": "By mathematical induction / Euler form e^(iθ), Aⁿ = [[cos nθ, sin nθ], [-sin nθ, cos nθ]]."
+          "explanation": "By Euler representation $e^{i\\theta}$ and matrix induction, $A^n = \\begin{pmatrix} \\cos n\\theta & \\sin n\\theta \\\\ -\\sin n\\theta & \\cos n\\theta \\end{pmatrix}$."
         },
         {
           "id": "vmath_q36",
-          "text": "If matrix A is both symmetric and skew-symmetric, then A must be:",
+          "text": "If a matrix $A$ is both symmetric and skew-symmetric, then $A$ must be a:",
           "options": [
-            "Zero matrix",
+            "Zero matrix ($O$)",
             "Diagonal matrix",
-            "Identity matrix",
+            "Identity matrix ($I$)",
             "Scalar matrix"
           ],
           "correctAnswer": 0,
-          "explanation": "Aᵀ = A and Aᵀ = -A => A = -A => 2A = O => A is a Zero matrix."
+          "explanation": "$A^T = A$ and $A^T = -A \\implies A = -A \\implies 2A = O \\implies A$ is a Zero matrix."
         },
         {
           "id": "vmath_q37",
-          "text": "What is the inverse of matrix A = [[2, 0], [0, 3]]?",
+          "text": "What is the inverse of the diagonal matrix $A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$?",
           "options": [
-            "[[1/2, 0], [0, 1/3]]",
-            "[[1/3, 0], [0, 1/2]]",
-            "[[3, 0], [0, 2]]",
-            "[[-2, 0], [0, -3]]"
+            "$\\begin{pmatrix} 1/2 & 0 \\\\ 0 & 1/3 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 1/3 & 0 \\\\ 0 & 1/2 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 3 & 0 \\\\ 0 & 2 \\end{pmatrix}$",
+            "$\\begin{pmatrix} -2 & 0 \\\\ 0 & -3 \\end{pmatrix}$"
           ],
           "correctAnswer": 0,
-          "explanation": "Inverse of diagonal matrix diag(d₁, d₂) is diag(1/d₁, 1/d₂). Hence A⁻¹ = [[1/2, 0], [0, 1/3]]."
+          "explanation": "Inverse of diagonal matrix $\\text{diag}(d_1, d_2)$ is $\\text{diag}(1/d_1, 1/d_2) = \\begin{pmatrix} 1/2 & 0 \\\\ 0 & 1/3 \\end{pmatrix}$."
         },
         {
           "id": "vmath_q38",
-          "text": "What is the rank of matrix A = [[1, 2, 3], [2, 4, 6], [3, 6, 9]]?",
+          "text": "What is the rank of matrix $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{pmatrix}$?",
           "options": [
             "1",
             "2",
@@ -467,179 +467,179 @@
             "0"
           ],
           "correctAnswer": 0,
-          "explanation": "R₂ = 2 R₁, R₃ = 3 R₁. Only 1 row is linearly independent, so rank is 1."
+          "explanation": "Rows $R_2 = 2 R_1$ and $R_3 = 3 R_1$. Only 1 row is linearly independent, so rank $= 1$."
         },
         {
           "id": "vmath_q39",
-          "text": "If A and B are square matrices of same order such that AB = A and BA = B, then A² + B² is:",
+          "text": "If $A$ and $B$ are square matrices of same order such that $AB = A$ and $BA = B$, then $A^2 + B^2$ is:",
           "options": [
-            "A + B",
-            "AB",
-            "2 AB",
-            "O"
+            "$A + B$",
+            "$AB$",
+            "$2 AB$",
+            "$O$"
           ],
           "correctAnswer": 0,
-          "explanation": "A² = A(AB) = (AB)B = AB = A. B² = B(BA) = (BA)A = BA = B. Thus A² + B² = A + B."
+          "explanation": "$A^2 = A(AB) = (AB)B = AB = A$. Similarly $B^2 = B(BA) = (BA)A = BA = B$. Thus $A^2 + B^2 = A + B$."
         },
         {
           "id": "vmath_q40",
-          "text": "Value of determinant |[x, x+y, x+y+z], [2x, 3x+2y, 4x+3y+2z], [3x, 6x+3y, 10x+6y+3z]| is:",
+          "text": "Evaluate the determinant $\\begin{vmatrix} x & x+y & x+y+z \\\\ 2x & 3x+2y & 4x+3y+2z \\\\ 3x & 6x+3y & 10x+6y+3z \\end{vmatrix}$:",
           "options": [
-            "x³",
-            "x²y",
-            "x y z",
+            "$x^3$",
+            "$x^2 y$",
+            "$x y z$",
             "0"
           ],
           "correctAnswer": 0,
-          "explanation": "Apply R₂ -> R₂ - 2R₁ and R₃ -> R₃ - 3R₁. The determinant simplifies to x³."
+          "explanation": "Apply row operations $R_2 \\to R_2 - 2R_1$ and $R_3 \\to R_3 - 3R_1$. The determinant simplifies directly to $x^3$."
         },
         {
           "id": "vmath_q41",
-          "text": "If A is skew-symmetric matrix of odd order n, then det(A) is:",
+          "text": "If $A$ is a skew-symmetric matrix of odd order $n$, then $\\det(A)$ is:",
           "options": [
             "0",
             "1",
             "-1",
-            "n"
+            "$n$"
           ],
           "correctAnswer": 0,
-          "explanation": "det(A) = det(Aᵀ) = det(-A) = (-1)ⁿ det(A). Since n is odd, det(A) = -det(A) => 2 det(A) = 0 => det(A) = 0."
+          "explanation": "$\\det(A) = \\det(A^T) = \\det(-A) = (-1)^n \\det(A)$. Since $n$ is odd, $(-1)^n = -1 \\implies 2\\det(A) = 0 \\implies \\det(A) = 0$."
         },
         {
           "id": "vmath_q42",
-          "text": "If A = [[1, 1], [1, 1]], then A¹⁰ is equal to:",
+          "text": "If $A = \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$, then $A^{10}$ is equal to:",
           "options": [
-            "512 A",
-            "1024 A",
-            "256 A",
-            "10 A"
+            "$512 A$",
+            "$1024 A$",
+            "$256 A$",
+            "$10 A$"
           ],
           "correctAnswer": 0,
-          "explanation": "A² = 2 A, A³ = 4 A, ..., Aⁿ = 2ⁿ⁻¹ A. For n=10, A¹⁰ = 2⁹ A = 512 A."
+          "explanation": "$A^2 = 2 A, A^3 = 4 A, \\dots, A^n = 2^{n-1} A$. For $n=10$: $A^{10} = 2^9 A = 512 A$."
         },
         {
           "id": "vmath_q43",
-          "text": "If adj(A) = [[2, 0], [1, 4]] and det(A) = 2, what is A?",
+          "text": "If $\\text{adj}(A) = \\begin{pmatrix} 2 & 0 \\\\ 1 & 4 \\end{pmatrix}$ and $\\det(A) = 2$, what is $A$?",
           "options": [
-            "[[2, 0], [-1/2, 1]]",
-            "[[4, 0], [2, 8]]",
-            "[[1, 0], [-1/2, 2]]",
-            "[[2, 1], [0, 4]]"
+            "$\\begin{pmatrix} 1 & 0 \\\\ -1/4 & 1/2 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 4 & 0 \\\\ 2 & 8 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 1 & 0 \\\\ -1/2 & 2 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 2 & 1 \\\\ 0 & 4 \\end{pmatrix}$"
           ],
           "correctAnswer": 0,
-          "explanation": "A⁻¹ = adj(A)/det(A) => A = det(A) (adj A)⁻¹. adj(A)⁻¹ = 1/8 [[4, 0], [-1, 2]]. A = 2 × 1/8 [[4, 0], [-1, 2]] = [[1, 0], [-1/4, 1/2]] => wait, formula A = (adj(adj A))/det(A)^(n-2)."
+          "explanation": "$A = \\det(A) [\\text{adj}(A)]^{-1}$. $[\\text{adj}(A)]^{-1} = \\frac{1}{8} \\begin{pmatrix} 4 & 0 \\\\ -1 & 2 \\end{pmatrix}$. $A = 2 \\times \\frac{1}{8} \\begin{pmatrix} 4 & 0 \\\\ -1 & 2 \\end{pmatrix} = \\begin{pmatrix} 1 & 0 \\\\ -1/4 & 1/2 \\end{pmatrix}$."
         },
         {
           "id": "vmath_q44",
-          "text": "System of linear equations Ax = B has unique solution if:",
+          "text": "A system of linear equations $A X = B$ has a unique solution if and only if:",
           "options": [
-            "det(A) ≠ 0",
-            "det(A) = 0 and (adj A)B = 0",
-            "det(A) = 0 and (adj A)B ≠ 0",
-            "A is singular"
+            "$\\det(A) \\neq 0$",
+            "$\\det(A) = 0$ and $(\\text{adj } A)B = 0$",
+            "$\\det(A) = 0$ and $(\\text{adj } A)B \\neq 0$",
+            "$A$ is singular"
           ],
           "correctAnswer": 0,
-          "explanation": "Unique solution exists if and only if matrix coefficient A is non-singular, i.e., det(A) ≠ 0."
+          "explanation": "Unique solution exists if coefficient matrix $A$ is non-singular, i.e., $\\det(A) \\neq 0$."
         },
         {
           "id": "vmath_q45",
-          "text": "If matrix A satisfies A² - A + I = O, then A⁻¹ is equal to:",
+          "text": "If matrix $A$ satisfies $A^2 - A + I = O$, then the inverse matrix $A^{-1}$ is:",
           "options": [
-            "I - A",
-            "A - I",
-            "A + I",
-            "-A"
+            "$I - A$",
+            "$A - I$",
+            "$A + I$",
+            "$-A$"
           ],
           "correctAnswer": 0,
-          "explanation": "Multiply A² - A + I = O by A⁻¹ => A - I + A⁻¹ = O => A⁻¹ = I - A."
+          "explanation": "Multiply $A^2 - A + I = O$ by $A^{-1} \\implies A - I + A^{-1} = O \\implies A^{-1} = I - A$."
         },
         {
           "id": "vmath_q46",
-          "text": "What is the value of tan 15° + cot 15°?",
+          "text": "What is the value of $\\tan 15^\\circ + \\cot 15^\\circ$?",
           "options": [
             "4",
             "2",
-            "2√3",
-            "√3"
+            "$2\\sqrt{3}$",
+            "$\\sqrt{3}$"
           ],
           "correctAnswer": 0,
-          "explanation": "tan 15° = 2 - √3, cot 15° = 2 + √3. Sum = (2 - √3) + (2 + √3) = 4."
+          "explanation": "$\\tan 15^\\circ = 2 - \\sqrt{3}$ and $\\cot 15^\\circ = 2 + \\sqrt{3}$. Sum $= (2 - \\sqrt{3}) + (2 + \\sqrt{3}) = 4$."
         },
         {
           "id": "vmath_q47",
-          "text": "What is the value of sin 10° · sin 50° · sin 70°?",
+          "text": "What is the product value of $\\sin 10^\\circ \\cdot \\sin 50^\\circ \\cdot \\sin 70^\\circ$?",
           "options": [
-            "1/8",
-            "1/4",
-            "1/16",
-            "3/8"
+            "$\\frac{1}{8}$",
+            "$\\frac{1}{4}$",
+            "$\\frac{1}{16}$",
+            "$\\frac{3}{8}$"
           ],
           "correctAnswer": 0,
-          "explanation": "sin θ · sin (60°-θ) · sin (60°+θ) = (1/4) sin 3θ. For θ = 10°, (1/4) sin 30° = 1/8."
+          "explanation": "Using standard identity $\\sin \\theta \\cdot \\sin(60^\\circ-\\theta) \\cdot \\sin(60^\\circ+\\theta) = \\frac{1}{4} \\sin 3\\theta$. For $\\theta = 10^\\circ$: $\\frac{1}{4} \\sin 30^\\circ = \\frac{1}{8}$."
         },
         {
           "id": "vmath_q48",
-          "text": "If sin θ + cos θ = √2 cos θ, then what is cos θ - sin θ equal to?",
+          "text": "If $\\sin \\theta + \\cos \\theta = \\sqrt{2} \\cos \\theta$, then what is $\\cos \\theta - \\sin \\theta$ equal to?",
           "options": [
-            "√2 sin θ",
-            "√2 cos θ",
-            "-√2 sin θ",
-            "sin θ"
+            "$\\sqrt{2} \\sin \\theta$",
+            "$\\sqrt{2} \\cos \\theta$",
+            "$-\\sqrt{2} \\sin \\theta$",
+            "$\\sin \\theta$"
           ],
           "correctAnswer": 0,
-          "explanation": "sin θ = (√2 - 1) cos θ => cos θ = (√2 + 1) sin θ => cos θ - sin θ = √2 sin θ."
+          "explanation": "$\\sin \\theta = (\\sqrt{2} - 1) \\cos \\theta \\implies \\cos \\theta = (\\sqrt{2} + 1) \\sin \\theta \\implies \\cos \\theta - \\sin \\theta = \\sqrt{2} \\sin \\theta$."
         },
         {
           "id": "vmath_q49",
-          "text": "What is the principal value of sin⁻¹(sin(2π/3))?",
+          "text": "What is the principal value of $\\sin^{-1}\\left(\\sin\\frac{2\\pi}{3}\\right)$?",
           "options": [
-            "π/3",
-            "2π/3",
-            "-π/3",
-            "4π/3"
+            "$\\frac{\\pi}{3}$",
+            "$\\frac{2\\pi}{3}$",
+            "$-\\frac{\\pi}{3}$",
+            "$\\frac{4\\pi}{3}$"
           ],
           "correctAnswer": 0,
-          "explanation": "sin(2π/3) = sin(π - π/3) = sin(π/3). Range of sin⁻¹ is [-π/2, π/2], so principal value is π/3."
+          "explanation": "$\\sin\\left(\\frac{2\\pi}{3}\\right) = \\sin\\left(\\pi - \\frac{\\pi}{3}\\right) = \\sin\\left(\\frac{\\pi}{3}\\right)$. Range of $\\sin^{-1}$ is $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$, so principal value is $\\frac{\\pi}{3}$."
         },
         {
           "id": "vmath_q50",
-          "text": "A vertical pole subtends an angle of 30° at a point on ground. On walking 20 m towards pole, angle of elevation becomes 60°. Height of pole is:",
+          "text": "A vertical pole subtends an angle of $30^\\circ$ at a point on ground. Walking 20 m towards pole, angle of elevation becomes $60^\\circ$. Height of pole is:",
           "options": [
-            "10√3 m",
-            "20√3 m",
+            "$10\\sqrt{3}$ m",
+            "$20\\sqrt{3}$ m",
             "10 m",
             "15 m"
           ],
           "correctAnswer": 0,
-          "explanation": "h = d / (cot θ₁ - cot θ₂) = 20 / (cot 30° - cot 60°) = 20 / (√3 - 1/√3) = 20 / (2/√3) = 10√3 m."
+          "explanation": "$h = \\frac{d}{\\cot \\theta_1 - \\cot \\theta_2} = \\frac{20}{\\cot 30^\\circ - \\cot 60^\\circ} = \\frac{20}{\\sqrt{3} - 1/\\sqrt{3}} = \\frac{20}{2/\\sqrt{3}} = 10\\sqrt{3}$ m."
         },
         {
           "id": "vmath_q51",
-          "text": "What is the value of tan⁻¹(1/2) + tan⁻¹(1/3)?",
+          "text": "What is the value of $\\tan^{-1}\\left(\\frac{1}{2}\\right) + \\tan^{-1}\\left(\\frac{1}{3}\\right)$?",
           "options": [
-            "π/4",
-            "π/2",
-            "π/3",
-            "3π/4"
+            "$\\frac{\\pi}{4}$",
+            "$\\frac{\\pi}{2}$",
+            "$\\frac{\\pi}{3}$",
+            "$\\frac{3\\pi}{4}$"
           ],
           "correctAnswer": 0,
-          "explanation": "tan⁻¹(1/2) + tan⁻¹(1/3) = tan⁻¹[ (1/2 + 1/3) / (1 - (1/2)(1/3)) ] = tan⁻¹( (5/6)/(5/6) ) = tan⁻¹(1) = π/4."
+          "explanation": "$\\tan^{-1}(1/2) + \\tan^{-1}(1/3) = \\tan^{-1}\\left[ \\frac{1/2 + 1/3}{1 - (1/2)(1/3)} \\right] = \\tan^{-1}(1) = \\frac{\\pi}{4}$."
         },
         {
           "id": "vmath_q52",
-          "text": "If cos A = 3/5 and cos B = 4/5, where A, B are acute angles, what is the value of cos(A - B)?",
+          "text": "If $\\cos A = \\frac{3}{5}$ and $\\cos B = \\frac{4}{5}$ for acute angles $A, B$, what is $\\cos(A - B)$?",
           "options": [
-            "24/25",
+            "$\\frac{24}{25}$",
             "1",
-            "7/25",
-            "12/25"
+            "$\\frac{7}{25}$",
+            "$\\frac{12}{25}$"
           ],
           "correctAnswer": 0,
-          "explanation": "sin A = 4/5, sin B = 3/5. cos(A - B) = cos A cos B + sin A sin B = (3/5)(4/5) + (4/5)(3/5) = 12/25 + 12/25 = 24/25."
+          "explanation": "$\\sin A = 4/5, \\sin B = 3/5$. $\\cos(A - B) = \\cos A \\cos B + \\sin A \\sin B = (3/5)(4/5) + (4/5)(3/5) = 24/25$."
         },
         {
           "id": "vmath_q53",
-          "text": "What is the maximum value of 3 sin x + 4 cos x + 5?",
+          "text": "What is the maximum value of $3 \\sin x + 4 \\cos x + 5$?",
           "options": [
             "10",
             "5",
@@ -647,203 +647,203 @@
             "8"
           ],
           "correctAnswer": 0,
-          "explanation": "Max of a sin x + b cos x is √(a² + b²) = √(3² + 4²) = 5. Max value of expression = 5 + 5 = 10."
+          "explanation": "Max of $a \\sin x + b \\cos x$ is $\\sqrt{a^2 + b^2} = \\sqrt{3^2 + 4^2} = 5$. Maximum value $= 5 + 5 = 10$."
         },
         {
           "id": "vmath_q54",
-          "text": "If tan θ = 3/4, what is the value of (1 - cos 2θ)/(1 + cos 2θ)?",
+          "text": "If $\\tan \\theta = \\frac{3}{4}$, what is the value of $\\frac{1 - \\cos 2\\theta}{1 + \\cos 2\\theta}$?",
           "options": [
-            "9/16",
-            "16/9",
-            "3/4",
-            "4/3"
+            "$\\frac{9}{16}$",
+            "$\\frac{16}{9}$",
+            "$\\frac{3}{4}$",
+            "$\\frac{4}{3}$"
           ],
           "correctAnswer": 0,
-          "explanation": "(1 - cos 2θ)/(1 + cos 2θ) = tan² θ = (3/4)² = 9/16."
+          "explanation": "$\\frac{1 - \\cos 2\\theta}{1 + \\cos 2\\theta} = \\tan^2 \\theta = \\left(\\frac{3}{4}\\right)^2 = \\frac{9}{16}$."
         },
         {
           "id": "vmath_q55",
-          "text": "What is the period of the function f(x) = sin(3x/4) + cos(2x/3)?",
+          "text": "What is the fundamental period of the function $f(x) = \\sin\\left(\\frac{3x}{4}\\right) + \\cos\\left(\\frac{2x}{3}\\right)$?",
           "options": [
-            "24π",
-            "12π",
-            "6π",
-            "8π"
+            "$24\\pi$",
+            "$12\\pi$",
+            "$6\\pi$",
+            "$8\\pi$"
           ],
           "correctAnswer": 0,
-          "explanation": "Period of sin(3x/4) is 2π / (3/4) = 8π/3. Period of cos(2x/3) is 2π / (2/3) = 3π. LCM(8π/3, 3π) = LCM(8π, 3π)/HCF(3, 1) = 24π."
+          "explanation": "Period of $\\sin(3x/4)$ is $\\frac{2\\pi}{3/4} = \\frac{8\\pi}{3}$. Period of $\\cos(2x/3)$ is $\\frac{2\\pi}{2/3} = 3\\pi$. LCM$(8\\pi/3, 3\\pi) = 24\\pi$."
         },
         {
           "id": "vmath_q56",
-          "text": "In a triangle ABC, if a = 3, b = 5, c = 7, what is angle C?",
+          "text": "In a triangle $ABC$, if side lengths are $a = 3, b = 5, c = 7$, what is angle $C$?",
           "options": [
-            "120°",
-            "60°",
-            "135°",
-            "90°"
+            "$120^\\circ$",
+            "$60^\\circ$",
+            "$135^\\circ$",
+            "$90^\\circ$"
           ],
           "correctAnswer": 0,
-          "explanation": "cos C = (a² + b² - c²) / (2ab) = (9 + 25 - 49) / (2 × 3 × 5) = -15 / 30 = -1/2. C = 120°."
+          "explanation": "$\\cos C = \\frac{a^2 + b^2 - c^2}{2ab} = \\frac{9 + 25 - 49}{2(3)(5)} = -\\frac{15}{30} = -\\frac{1}{2} \\implies C = 120^\\circ$."
         },
         {
           "id": "vmath_q57",
-          "text": "What is the value of cos 20° + cos 100° + cos 140°?",
+          "text": "What is the exact sum of $\\cos 20^\\circ + \\cos 100^\\circ + \\cos 140^\\circ$?",
           "options": [
             "0",
             "1",
-            "1/2",
-            "-1/2"
+            "$\\frac{1}{2}$",
+            "$-\\frac{1}{2}$"
           ],
           "correctAnswer": 0,
-          "explanation": "cos 100° + cos 140° = 2 cos 120° cos 20° = 2 (-1/2) cos 20° = -cos 20°. Sum = cos 20° - cos 20° = 0."
+          "explanation": "$\\cos 100^\\circ + \\cos 140^\\circ = 2 \\cos 120^\\circ \\cos 20^\\circ = 2(-1/2)\\cos 20^\\circ = -\\cos 20^\\circ$. Sum $= \\cos 20^\\circ - \\cos 20^\\circ = 0$."
         },
         {
           "id": "vmath_q58",
-          "text": "If sin⁻¹ x + sin⁻¹ y = 2π/3, what is cos⁻¹ x + cos⁻¹ y?",
+          "text": "If $\\sin^{-1} x + \\sin^{-1} y = \\frac{2\\pi}{3}$, what is $\\cos^{-1} x + \\cos^{-1} y$?",
           "options": [
-            "π/3",
-            "π/6",
-            "2π/3",
-            "π/2"
+            "$\\frac{\\pi}{3}$",
+            "$\\frac{\\pi}{6}$",
+            "$\\frac{2\\pi}{3}$",
+            "$\\frac{\\pi}{2}$"
           ],
           "correctAnswer": 0,
-          "explanation": "sin⁻¹ x + cos⁻¹ x = π/2. (π/2 - cos⁻¹ x) + (π/2 - cos⁻¹ y) = 2π/3 => π - (cos⁻¹ x + cos⁻¹ y) = 2π/3 => cos⁻¹ x + cos⁻¹ y = π/3."
+          "explanation": "$\\sin^{-1} x + \\cos^{-1} x = \\frac{\\pi}{2}$. $\\left(\\frac{\\pi}{2} - \\cos^{-1} x\\right) + \\left(\\frac{\\pi}{2} - \\cos^{-1} y\\right) = \\frac{2\\pi}{3} \\implies \\cos^{-1} x + \\cos^{-1} y = \\frac{\\pi}{3}$."
         },
         {
           "id": "vmath_q59",
-          "text": "If tan A = 1/2 and tan B = 1/3, what is A + B equal to?",
+          "text": "If $\\tan A = \\frac{1}{2}$ and $\\tan B = \\frac{1}{3}$, what is the angle $A + B$?",
           "options": [
-            "π/4",
-            "π/2",
-            "3π/4",
-            "π/3"
+            "$\\frac{\\pi}{4}$",
+            "$\\frac{\\pi}{2}$",
+            "$\\frac{3\\pi}{4}$",
+            "$\\frac{\\pi}{3}$"
           ],
           "correctAnswer": 0,
-          "explanation": "tan(A + B) = (tan A + tan B)/(1 - tan A tan B) = (1/2 + 1/3)/(1 - 1/6) = (5/6)/(5/6) = 1. A + B = π/4."
+          "explanation": "$\\tan(A + B) = \\frac{\\tan A + \\tan B}{1 - \\tan A \\tan B} = \\frac{1/2 + 1/3}{1 - 1/6} = \\frac{5/6}{5/6} = 1 \\implies A + B = \\frac{\\pi}{4}$."
         },
         {
           "id": "vmath_q60",
-          "text": "What is the general solution of the equation sin x + cos x = 1?",
+          "text": "What is the general solution of trigonometric equation $\\sin x + \\cos x = 1$?",
           "options": [
-            "2nπ or 2nπ + π/2",
-            "nπ + π/4",
-            "2nπ ± π/4",
-            "nπ"
+            "$2n\\pi$ or $2n\\pi + \\frac{\\pi}{2}$",
+            "$n\\pi + \\frac{\\pi}{4}$",
+            "$2n\\pi \\pm \\frac{\\pi}{4}$",
+            "$n\\pi$"
           ],
           "correctAnswer": 0,
-          "explanation": "Divide by √2: sin(x + π/4) = 1/√2 = sin(π/4). x + π/4 = nπ + (-1)ⁿ π/4. For even n=2k, x = 2kπ. For odd n=2k+1, x = 2kπ + π/2."
+          "explanation": "Divide by $\\sqrt{2}$: $\\sin(x + \\pi/4) = \\frac{1}{\\sqrt{2}} = \\sin(\\pi/4)$. $x + \\pi/4 = n\\pi + (-1)^n \\pi/4 \\implies x = 2k\\pi$ or $2k\\pi + \\pi/2$."
         },
         {
           "id": "vmath_q61",
-          "text": "Distance between parallel lines 3x + 4y + 5 = 0 and 6x + 8y + 15 = 0 is:",
+          "text": "Distance between parallel lines $3x + 4y + 5 = 0$ and $6x + 8y + 15 = 0$ is:",
           "options": [
-            "1/2",
+            "$\\frac{1}{2}$",
             "1",
-            "5/2",
+            "$\\frac{5}{2}$",
             "2"
           ],
           "correctAnswer": 0,
-          "explanation": "Rewrite second line as 3x + 4y + 7.5 = 0. Distance d = |c₁ - c₂| / √(a² + b²) = |5 - 7.5| / √(3² + 4²) = 2.5 / 5 = 1/2."
+          "explanation": "Rewrite 2nd line: $3x + 4y + 7.5 = 0$. Distance $d = \\frac{|c_1 - c_2|}{\\sqrt{a^2 + b^2}} = \\frac{|5 - 7.5|}{\\sqrt{3^2 + 4^2}} = \\frac{2.5}{5} = \\frac{1}{2}$."
         },
         {
           "id": "vmath_q62",
-          "text": "Equation of circle with center (2, -3) and passing through origin is:",
+          "text": "Equation of circle with center $(2, -3)$ passing through origin is:",
           "options": [
-            "x² + y² - 4x + 6y = 0",
-            "x² + y² + 4x - 6y = 0",
-            "x² + y² - 2x + 3y = 0",
-            "x² + y² - 4x - 6y = 0"
+            "$x^2 + y^2 - 4x + 6y = 0$",
+            "$x^2 + y^2 + 4x - 6y = 0$",
+            "$x^2 + y^2 - 2x + 3y = 0$",
+            "$x^2 + y^2 - 4x - 6y = 0$"
           ],
           "correctAnswer": 0,
-          "explanation": "Radius r² = (2 - 0)² + (-3 - 0)² = 4 + 9 = 13. Equation: (x - 2)² + (y + 3)² = 13 => x² - 4x + 4 + y² + 6y + 9 = 13 => x² + y² - 4x + 6y = 0."
+          "explanation": "Radius $r^2 = 2^2 + (-3)^2 = 13$. Equation: $(x-2)^2 + (y+3)^2 = 13 \\implies x^2 + y^2 - 4x + 6y = 0$."
         },
         {
           "id": "vmath_q63",
-          "text": "Latus rectum of ellipse 9x² + 25y² = 225 is equal to:",
+          "text": "Length of latus rectum of ellipse $9x^2 + 25y^2 = 225$ is equal to:",
           "options": [
-            "18/5",
-            "5/18",
-            "9/5",
-            "10/3"
+            "$\\frac{18}{5}$",
+            "$\\frac{5}{18}$",
+            "$\\frac{9}{5}$",
+            "$\\frac{10}{3}$"
           ],
           "correctAnswer": 0,
-          "explanation": "x²/25 + y²/9 = 1 => a²=25 (a=5), b²=9 (b=3). Length of latus rectum = 2b²/a = 2(9)/5 = 18/5."
+          "explanation": "$\\frac{x^2}{25} + \\frac{y^2}{9} = 1 \\implies a^2=25 (a=5), b^2=9 (b=3)$. Latus rectum $= \\frac{2b^2}{a} = \\frac{2(9)}{5} = \\frac{18}{5}$."
         },
         {
           "id": "vmath_q64",
-          "text": "What is eccentricity of hyperbola 16x² - 9y² = 144?",
+          "text": "What is the eccentricity $e$ of hyperbola $16x^2 - 9y^2 = 144$?",
           "options": [
-            "5/3",
-            "5/4",
-            "4/3",
-            "3/5"
+            "$\\frac{5}{3}$",
+            "$\\frac{5}{4}$",
+            "$\\frac{4}{3}$",
+            "$\\frac{3}{5}$"
           ],
           "correctAnswer": 0,
-          "explanation": "x²/9 - y²/16 = 1 => a²=9, b²=16. Eccentricity e = √(1 + b²/a²) = √(1 + 16/9) = √(25/9) = 5/3."
+          "explanation": "$\\frac{x^2}{9} - \\frac{y^2}{16} = 1 \\implies a^2=9, b^2=16$. $e = \\sqrt{1 + b^2/a^2} = \\sqrt{1 + 16/9} = \\sqrt{25/9} = \\frac{5}{3}$."
         },
         {
           "id": "vmath_q65",
-          "text": "Angle between lines x/2 = y/2 = z/1 and x/5 = y/4 = z/(-3) is:",
+          "text": "Acute angle between 3D lines $\\frac{x}{2} = \\frac{y}{2} = \\frac{z}{1}$ and $\\frac{x}{5} = \\frac{y}{4} = \\frac{z}{-3}$ is:",
           "options": [
-            "π/2",
-            "π/3",
-            "π/4",
-            "cos⁻¹(1/9)"
+            "$\\frac{\\pi}{4}$",
+            "$\\frac{\\pi}{2}$",
+            "$\\frac{\\pi}{3}$",
+            "$\\cos^{-1}\\left(\\frac{1}{9}\\right)$"
           ],
           "correctAnswer": 0,
-          "explanation": "Direction ratios: a₁=(2,2,1), a₂=(5,4,-3). cos θ = (2(5)+2(4)+1(-3)) / (√(4+4+1) √(25+16+9)) = (10+8-3)/(3 √50) = 15/(15√2) = 1/√2. θ = 45° = π/4 => wait, cos θ = (10+8-3)/(3 × 5√2) = 15/(15√2) = 1/√2 => angle is π/4. Wait, dot product: 2(5)+2(4)+1(-3)=15. 15 / (3 * 5√2) = 1/√2. Angle is π/4!"
+          "explanation": "Direction ratios $\\vec{a}_1 = (2,2,1)$, $\\vec{a}_2 = (5,4,-3)$. $\\cos \\theta = \\frac{2(5)+2(4)+1(-3)}{\\sqrt{4+4+1} \\sqrt{25+16+9}} = \\frac{15}{3 \\times 5\\sqrt{2}} = \\frac{1}{\\sqrt{2}} \\implies \\theta = \\frac{\\pi}{4}$."
         },
         {
           "id": "vmath_q66",
-          "text": "Equation of plane passing through (1, 2, 3) and perpendicular to line with direction ratios (2, -1, 4) is:",
+          "text": "Equation of plane passing through $(1, 2, 3)$ and perpendicular to line with direction ratios $(2, -1, 4)$ is:",
           "options": [
-            "2x - y + 4z = 12",
-            "2x - y + 4z = 0",
-            "x + 2y + 3z = 12",
-            "2x + y - 4z = 10"
+            "$2x - y + 4z = 12$",
+            "$2x - y + 4z = 0$",
+            "$x + 2y + 3z = 12$",
+            "$2x + y - 4z = 10$"
           ],
           "correctAnswer": 0,
-          "explanation": "Normal vector to plane is (2, -1, 4). Plane equation: 2(x-1) - 1(y-2) + 4(z-3) = 0 => 2x - 2 - y + 2 + 4z - 12 = 0 => 2x - y + 4z = 12."
+          "explanation": "Normal vector $\\vec{n} = (2, -1, 4)$. Plane: $2(x-1) - 1(y-2) + 4(z-3) = 0 \\implies 2x - y + 4z = 12$."
         },
         {
           "id": "vmath_q67",
-          "text": "Foot of perpendicular from point (1, 6, 3) on line x/1 = (y-1)/2 = (z-2)/3 is:",
+          "text": "Foot of perpendicular from point $(1, 6, 3)$ on line $\\frac{x}{1} = \\frac{y-1}{2} = \\frac{z-2}{3}$ is:",
           "options": [
-            "(1, 3, 5)",
-            "(0, 1, 2)",
-            "(2, 5, 8)",
-            "(1, 2, 3)"
+            "$(1, 3, 5)$",
+            "$(0, 1, 2)$",
+            "$(2, 5, 8)$",
+            "$(1, 2, 3)$"
           ],
           "correctAnswer": 0,
-          "explanation": "General point on line P(λ, 2λ+1, 3λ+2). Vector AP = (λ-1, 2λ-5, 3λ-1). AP · (1, 2, 3) = 0 => 1(λ-1) + 2(2λ-5) + 3(3λ-1) = 0 => 14λ - 14 = 0 => λ = 1. Foot P = (1, 3, 5)."
+          "explanation": "Point on line $P(\\lambda, 2\\lambda+1, 3\\lambda+2)$. Vector $AP \\cdot (1, 2, 3) = 0 \\implies 1(\\lambda-1) + 2(2\\lambda-5) + 3(3\\lambda-1) = 0 \\implies 14\\lambda = 14 \\implies \\lambda = 1 \\implies P(1,3,5)$."
         },
         {
           "id": "vmath_q68",
-          "text": "Point of intersection of lines 2x - 3y + 4 = 0 and 3x + 4y - 11 = 0 is:",
+          "text": "Point of intersection of lines $2x - 3y + 4 = 0$ and $3x + 4y - 11 = 0$ is:",
           "options": [
-            "(1, 2)",
-            "(2, 1)",
-            "(-1, 2)",
-            "(2, -1)"
+            "$(1, 2)$",
+            "$(2, 1)$",
+            "$(-1, 2)$",
+            "$(2, -1)$"
           ],
           "correctAnswer": 0,
-          "explanation": "Substitute x=1, y=2: 2(1)-3(2)+4 = 0, 3(1)+4(2)-11 = 0. Solution is (1, 2)."
+          "explanation": "Substituting $x=1, y=2$: $2(1)-3(2)+4 = 0$ and $3(1)+4(2)-11 = 0$. Intersection is $(1,2)$."
         },
         {
           "id": "vmath_q69",
-          "text": "Equation of parabola with vertex at origin and focus at (0, 3) is:",
+          "text": "Equation of parabola with vertex at origin and focus at $(0, 3)$ is:",
           "options": [
-            "x² = 12y",
-            "y² = 12x",
-            "x² = -12y",
-            "y² = -12x"
+            "$x^2 = 12y$",
+            "$y^2 = 12x$",
+            "$x^2 = -12y$",
+            "$y^2 = -12x$"
           ],
           "correctAnswer": 0,
-          "explanation": "Focus lies on positive y-axis, so parabola opens upwards: x² = 4ay. Here a=3 => x² = 12y."
+          "explanation": "Focus lies on positive y-axis ($a=3$). Parabola opens upwards: $x^2 = 4ay = 12y$."
         },
         {
           "id": "vmath_q70",
-          "text": "Area of triangle formed by points (0, 0), (4, 0), and (0, 6) is:",
+          "text": "Area of triangle formed by vertices $(0, 0)$, $(4, 0)$, and $(0, 6)$ is:",
           "options": [
             "12 sq units",
             "24 sq units",
@@ -851,83 +851,83 @@
             "10 sq units"
           ],
           "correctAnswer": 0,
-          "explanation": "Right angled triangle with base 4 and height 6. Area = (1/2) × 4 × 6 = 12 sq units."
+          "explanation": "Right triangle with base 4 and height 6. Area $= \\frac{1}{2} \\times 4 \\times 6 = 12$ sq units."
         },
         {
           "id": "vmath_q71",
-          "text": "Condition for line y = mx + c to be tangent to circle x² + y² = a² is:",
+          "text": "Condition for line $y = mx + c$ to be tangent to circle $x^2 + y^2 = a^2$ is:",
           "options": [
-            "c² = a²(1 + m²)",
-            "c² = a²(1 - m²)",
-            "c = a m",
-            "c² = a² m²"
+            "$c^2 = a^2(1 + m^2)$",
+            "$c^2 = a^2(1 - m^2)$",
+            "$c = a m$",
+            "$c^2 = a^2 m^2$"
           ],
           "correctAnswer": 0,
-          "explanation": "Perpendicular distance from center (0,0) to line mx - y + c = 0 equals radius a: |c| / √(1 + m²) = a => c² = a²(1 + m²)."
+          "explanation": "Perpendicular distance from $(0,0)$ to line $mx - y + c = 0$ equals radius $a$: $\\frac{|c|}{\\sqrt{1+m^2}} = a \\implies c^2 = a^2(1+m^2)$."
         },
         {
           "id": "vmath_q72",
-          "text": "What is the distance of point (2, 3, 4) from x-axis?",
+          "text": "What is the perpendicular distance of point $(2, 3, 4)$ from the x-axis?",
           "options": [
             "5",
-            "√29",
-            "√20",
-            "√13"
+            "$\\sqrt{29}$",
+            "$\\sqrt{20}$",
+            "$\\sqrt{13}$"
           ],
           "correctAnswer": 0,
-          "explanation": "Distance from x-axis to (x, y, z) is √(y² + z²) = √(3² + 4²) = √(9 + 16) = 5."
+          "explanation": "Distance from x-axis to point $(x, y, z)$ is $\\sqrt{y^2 + z^2} = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$."
         },
         {
           "id": "vmath_q73",
-          "text": "What are direction cosines of line joining (1, 2, 3) and (3, 4, 5)?",
+          "text": "What are the direction cosines of vector joining $(1, 2, 3)$ and $(3, 4, 5)$?",
           "options": [
-            "(1/√3, 1/√3, 1/√3)",
-            "(1/3, 2/3, 2/3)",
-            "(2, 2, 2)",
-            "(1/√2, 1/√2, 0)"
+            "$\\left(\\frac{1}{\\sqrt{3}}, \\frac{1}{\\sqrt{3}}, \\frac{1}{\\sqrt{3}}\\right)$",
+            "$\\left(\\frac{1}{3}, \\frac{2}{3}, \\frac{2}{3}\\right)$",
+            "$(2, 2, 2)$",
+            "$\\left(\\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}, 0\\right)$"
           ],
           "correctAnswer": 0,
-          "explanation": "DRs are (3-1, 4-2, 5-3) = (2, 2, 2). Length = √(4+4+4) = √12 = 2√3. DCs are (2/2√3, 2/2√3, 2/2√3) = (1/√3, 1/√3, 1/√3)."
+          "explanation": "Direction ratios $= (2, 2, 2)$. Length $= \\sqrt{4+4+4} = 2\\sqrt{3}$. Direction cosines $= \\left(\\frac{1}{\\sqrt{3}}, \\frac{1}{\\sqrt{3}}, \\frac{1}{\\sqrt{3}}\\right)$."
         },
         {
           "id": "vmath_q74",
-          "text": "Equation of sphere with center (1, -2, 3) and radius 4 is:",
+          "text": "Equation of sphere with center $(1, -2, 3)$ and radius 4 is:",
           "options": [
-            "x² + y² + z² - 2x + 4y - 6z - 2 = 0",
-            "x² + y² + z² + 2x - 4y + 6z - 2 = 0",
-            "x² + y² + z² - 2x + 4y - 6z + 14 = 0",
-            "x² + y² + z² - 4 = 0"
+            "$x^2 + y^2 + z^2 - 2x + 4y - 6z - 2 = 0$",
+            "$x^2 + y^2 + z^2 + 2x - 4y + 6z - 2 = 0$",
+            "$x^2 + y^2 + z^2 - 2x + 4y - 6z + 14 = 0$",
+            "$x^2 + y^2 + z^2 - 4 = 0$"
           ],
           "correctAnswer": 0,
-          "explanation": "(x-1)² + (y+2)² + (z-3)² = 16 => x² - 2x + 1 + y² + 4y + 4 + z² - 6z + 9 = 16 => x² + y² + z² - 2x + 4y - 6z - 2 = 0."
+          "explanation": "$(x-1)^2 + (y+2)^2 + (z-3)^2 = 16 \\implies x^2 + y^2 + z^2 - 2x + 4y - 6z - 2 = 0$."
         },
         {
           "id": "vmath_q75",
-          "text": "Coordinates of centroid of triangle with vertices (2, 3), (-4, 7), (8, 2) are:",
+          "text": "Coordinates of centroid $G$ of triangle with vertices $(2, 3)$, $(-4, 7)$, $(8, 2)$ are:",
           "options": [
-            "(2, 4)",
-            "(3, 4)",
-            "(2, 6)",
-            "(4, 2)"
+            "$(2, 4)$",
+            "$(3, 4)$",
+            "$(2, 6)$",
+            "$(4, 2)$"
           ],
           "correctAnswer": 0,
-          "explanation": "Centroid G = ((2 - 4 + 8)/3, (3 + 7 + 2)/3) = (6/3, 12/3) = (2, 4)."
+          "explanation": "$G = \\left(\\frac{2 - 4 + 8}{3}, \\frac{3 + 7 + 2}{3}\\right) = (2, 4)$."
         },
         {
           "id": "vmath_q76",
-          "text": "Angle between pair of lines 2x² - 5xy + 2y² = 0 is:",
+          "text": "Acute angle between pair of lines $2x^2 - 5xy + 2y^2 = 0$ is:",
           "options": [
-            "tan⁻¹(3/4)",
-            "π/2",
-            "tan⁻¹(4/3)",
-            "π/4"
+            "$\\tan^{-1}\\left(\\frac{3}{4}\\right)$",
+            "$\\frac{\\pi}{2}$",
+            "$\\tan^{-1}\\left(\\frac{4}{3}\\right)$",
+            "$\\frac{\\pi}{4}$"
           ],
           "correctAnswer": 0,
-          "explanation": "a=2, h=-5/2, b=2. tan θ = 2√(h² - ab) / |a + b| = 2√((25/4) - 4) / 4 = 2√(9/4) / 4 = 2(3/2) / 4 = 3/4. θ = tan⁻¹(3/4)."
+          "explanation": "$a=2, h=-5/2, b=2$. $\\tan \\theta = \\frac{2\\sqrt{h^2 - ab}}{|a + b|} = \\frac{2\\sqrt{25/4 - 4}}{4} = \\frac{3}{4} \\implies \\theta = \\tan^{-1}(3/4)$."
         },
         {
           "id": "vmath_q77",
-          "text": "Distance of plane 2x - 3y + 6z + 14 = 0 from origin is:",
+          "text": "Perpendicular distance of plane $2x - 3y + 6z + 14 = 0$ from origin is:",
           "options": [
             "2",
             "7",
@@ -935,107 +935,107 @@
             "3"
           ],
           "correctAnswer": 0,
-          "explanation": "d = |14| / √(2² + (-3)² + 6²) = 14 / √(4 + 9 + 36) = 14 / √49 = 14 / 7 = 2."
+          "explanation": "$d = \\frac{|14|}{\\sqrt{2^2 + (-3)^2 + 6^2}} = \\frac{14}{\\sqrt{49}} = \\frac{14}{7} = 2$."
         },
         {
           "id": "vmath_q78",
-          "text": "Equation of tangent to parabola y² = 4x at point (1, 2) is:",
+          "text": "Equation of tangent line to parabola $y^2 = 4x$ at point $(1, 2)$ is:",
           "options": [
-            "x - y + 1 = 0",
-            "x + y - 3 = 0",
-            "2x - y = 0",
-            "x - 2y + 3 = 0"
+            "$x - y + 1 = 0$",
+            "$x + y - 3 = 0$",
+            "$2x - y = 0$",
+            "$x - 2y + 3 = 0$"
           ],
           "correctAnswer": 0,
-          "explanation": "Equation of tangent is y y₁ = 2a(x + x₁). Here a=1, x₁=1, y₁=2. 2y = 2(1)(x + 1) => y = x + 1 => x - y + 1 = 0."
+          "explanation": "Tangent equation: $y y_1 = 2a(x + x_1) \\implies 2y = 2(1)(x + 1) \\implies x - y + 1 = 0$."
         },
         {
           "id": "vmath_q79",
-          "text": "Symmetric form of line x - y + 2z = 5 and 3x + y + z = 6 has direction vector:",
+          "text": "Symmetric vector direction of line of intersection of planes $x - y + 2z = 5$ and $3x + y + z = 6$ is:",
           "options": [
-            "(-3, 5, 4)",
-            "(3, -5, -4)",
-            "(1, -1, 2)",
-            "(3, 1, 1)"
+            "$-3\\hat{i} + 5\\hat{j} + 4\\hat{k}$",
+            "$3\\hat{i} - 5\\hat{j} - 4\\hat{k}$",
+            "$\\hat{i} - \\hat{j} + 2\\hat{k}$",
+            "$3\\hat{i} + \\hat{j} + \\hat{k}$"
           ],
           "correctAnswer": 0,
-          "explanation": "Direction vector is v₁ × v₂ = (1, -1, 2) × (3, 1, 1) = i(-1 - 2) - j(1 - 6) + k(1 - (-3)) = -3i + 5j + 4k."
+          "explanation": "Direction vector $\\vec{v} = \\vec{n}_1 \\times \\vec{n}_2 = (1, -1, 2) \\times (3, 1, 1) = -3\\hat{i} + 5\\hat{j} + 4\\hat{k}$."
         },
         {
           "id": "vmath_q80",
-          "text": "Length of intercept made by circle x² + y² - 6x + 8y - 11 = 0 on x-axis is:",
+          "text": "Length of x-intercept made by circle $x^2 + y^2 - 6x + 8y - 11 = 0$ is:",
           "options": [
-            "4√5",
-            "2√20",
+            "$4\\sqrt{5}$",
+            "$2\\sqrt{20}$",
             "10",
             "8"
           ],
           "correctAnswer": 0,
-          "explanation": "x-intercept length = 2 √(g² - c). Here g = -3, c = -11. Length = 2 √((-3)² - (-11)) = 2 √(9 + 11) = 2 √20 = 4√5."
+          "explanation": "x-intercept length $= 2\\sqrt{g^2 - c} = 2\\sqrt{(-3)^2 - (-11)} = 2\\sqrt{20} = 4\\sqrt{5}$."
         },
         {
           "id": "vmath_q81",
-          "text": "What is lim (x->0) (sin 5x - sin 3x) / x?",
+          "text": "What is the limit value $\\lim_{x \\to 0} \\frac{\\sin 5x - \\sin 3x}{x}$?",
           "options": [
             "2",
             "8",
             "15",
-            "1/2"
+            "$\\frac{1}{2}$"
           ],
           "correctAnswer": 0,
-          "explanation": "lim (x->0) (sin 5x/x - sin 3x/x) = 5 - 3 = 2."
+          "explanation": "$\\lim_{x \\to 0} \\left( \\frac{\\sin 5x}{x} - \\frac{\\sin 3x}{x} \\right) = 5 - 3 = 2$."
         },
         {
           "id": "vmath_q82",
-          "text": "Derivative of e^(x²) with respect to x² is:",
+          "text": "Derivative of $e^{x^2}$ with respect to $x^2$ is equal to:",
           "options": [
-            "e^(x²)",
-            "2x e^(x²)",
-            "x² e^(x²)",
-            "2 e^(x²)"
+            "$e^{x^2}$",
+            "$2x e^{x^2}$",
+            "$x^2 e^{x^2}$",
+            "$2 e^{x^2}$"
           ],
           "correctAnswer": 0,
-          "explanation": "Let u = x². We need d(e^u)/du = e^u = e^(x²)."
+          "explanation": "Let $u = x^2$. We need $\\frac{d(e^u)}{du} = e^u = e^{x^2}$."
         },
         {
           "id": "vmath_q83",
-          "text": "Value of ∫ (0 to π/2) (√sin x) / (√sin x + √cos x) dx is:",
+          "text": "Evaluate definite integral $\\int_{0}^{\\pi/2} \\frac{\\sqrt{\\sin x}}{\\sqrt{\\sin x} + \\sqrt{\\cos x}} \\, dx$:",
           "options": [
-            "π/4",
-            "π/2",
+            "$\\frac{\\pi}{4}$",
+            "$\\frac{\\pi}{2}$",
             "0",
-            "π"
+            "$\\pi$"
           ],
           "correctAnswer": 0,
-          "explanation": "Using property ∫ (0 to a) f(x) dx = ∫ (0 to a) f(a-x) dx, I + I = ∫ (0 to π/2) 1 dx = π/2 => I = π/4."
+          "explanation": "Using King's property $\\int_0^a f(x)dx = \\int_0^a f(a-x)dx$: $2I = \\int_0^{\\pi/2} 1 \\, dx = \\frac{\\pi}{2} \\implies I = \\frac{\\pi}{4}$."
         },
         {
           "id": "vmath_q84",
-          "text": "Order and degree of differential equation [1 + (dy/dx)²]^(3/2) = c (d²y/dx²) are:",
+          "text": "Order and degree of differential equation $\\left[1 + \\left(\\frac{dy}{dx}\\right)^2\\right]^{3/2} = c \\frac{d^2y}{dx^2}$ are:",
           "options": [
-            "2, 2",
-            "2, 3",
-            "3, 2",
-            "1, 3"
+            "2 and 2",
+            "2 and 3",
+            "3 and 2",
+            "1 and 3"
           ],
           "correctAnswer": 0,
-          "explanation": "Square both sides: [1 + (dy/dx)²]³ = c² (d²y/dx²)². Highest derivative is d²y/dx² (Order 2), its power is 2 (Degree 2)."
+          "explanation": "Square both sides: $\\left[1 + \\left(\\frac{dy}{dx}\\right)^2\\right]^3 = c^2 \\left(\\frac{d^2y}{dx^2}\\right)^2$. Highest order derivative is $\\frac{d^2y}{dx^2}$ (Order 2), power is 2 (Degree 2)."
         },
         {
           "id": "vmath_q85",
-          "text": "What is the area bounded by curve y = x², x-axis and lines x = 1, x = 3?",
+          "text": "Area bounded by curve $y = x^2$, x-axis and vertical lines $x = 1, x = 3$ is:",
           "options": [
-            "26/3 sq units",
+            "$\\frac{26}{3}$ sq units",
             "8 sq units",
-            "27/3 sq units",
-            "13/3 sq units"
+            "9 sq units",
+            "$\\frac{13}{3}$ sq units"
           ],
           "correctAnswer": 0,
-          "explanation": "Area = ∫ (1 to 3) x² dx = [x³/3] (1 to 3) = 27/3 - 1/3 = 26/3 sq units."
+          "explanation": "Area $= \\int_1^3 x^2 \\, dx = \\left[ \\frac{x^3}{3} \\right]_1^3 = \\frac{27}{3} - \\frac{1}{3} = \\frac{26}{3}$ sq units."
         },
         {
           "id": "vmath_q86",
-          "text": "Maximum value of function f(x) = x³ - 3x + 2 in interval [0, 2] is:",
+          "text": "Absolute maximum value of function $f(x) = x^3 - 3x + 2$ in interval $[0, 2]$ is:",
           "options": [
             "4",
             "2",
@@ -1043,59 +1043,59 @@
             "6"
           ],
           "correctAnswer": 0,
-          "explanation": "f'(x) = 3x² - 3 = 0 => x = 1 (in [0,2]). f(0)=2, f(1)=0, f(2)=8-6+2=4. Max value is 4."
+          "explanation": "$f'(x) = 3x^2 - 3 = 0 \\implies x = 1 \\in [0,2]$. $f(0)=2, f(1)=0, f(2)=8-6+2=4$. Max value $= 4$."
         },
         {
           "id": "vmath_q87",
-          "text": "What is lim (x->∞) (1 + 1/x)^x equal to?",
+          "text": "What is $\\lim_{x \\to \\infty} \\left(1 + \\frac{1}{x}\\right)^x$ equal to?",
           "options": [
-            "e",
+            "$e$",
             "1",
             "0",
-            "∞"
+            "$\\infty$"
           ],
           "correctAnswer": 0,
-          "explanation": "By standard definition of Euler constant e, lim (x->∞) (1 + 1/x)^x = e."
+          "explanation": "By standard limit definition of Euler's number $e$: $\\lim_{x \\to \\infty} \\left(1 + \\frac{1}{x}\\right)^x = e$."
         },
         {
           "id": "vmath_q88",
-          "text": "If y = log(sec x + tan x), what is dy/dx?",
+          "text": "If $y = \\log(\\sec x + \\tan x)$, what is $\\frac{dy}{dx}$?",
           "options": [
-            "sec x",
-            "tan x",
-            "cosec x",
-            "sec x tan x"
+            "$\\sec x$",
+            "$\\tan x$",
+            "$\\csc x$",
+            "$\\sec x \\tan x$"
           ],
           "correctAnswer": 0,
-          "explanation": "dy/dx = 1/(sec x + tan x) · (sec x tan x + sec² x) = sec x(tan x + sec x)/(sec x + tan x) = sec x."
+          "explanation": "$\\frac{dy}{dx} = \\frac{1}{\\sec x + \\tan x} (\\sec x \\tan x + \\sec^2 x) = \\frac{\\sec x (\\tan x + \\sec x)}{\\sec x + \\tan x} = \\sec x$."
         },
         {
           "id": "vmath_q89",
-          "text": "Integrating factor (IF) of differential equation dy/dx + y tan x = sec x is:",
+          "text": "Integrating Factor (IF) of linear differential equation $\\frac{dy}{dx} + y \\tan x = \\sec x$ is:",
           "options": [
-            "sec x",
-            "cos x",
-            "log sec x",
-            "tan x"
+            "$\\sec x$",
+            "$\\cos x$",
+            "$\\log \\sec x$",
+            "$\\tan x$"
           ],
           "correctAnswer": 0,
-          "explanation": "IF = e^(∫ tan x dx) = e^(log sec x) = sec x."
+          "explanation": "$\\text{IF} = e^{\\int \\tan x \\, dx} = e^{\\log \\sec x} = \\sec x$."
         },
         {
           "id": "vmath_q90",
-          "text": "Value of ∫ (1/(x (log x))) dx is:",
+          "text": "Evaluate integral $\\int \\frac{1}{x \\log x} \\, dx$:",
           "options": [
-            "log(log x) + C",
-            "log x + C",
-            "(log x)² / 2 + C",
-            "1/log x + C"
+            "$\\log(\\log x) + C$",
+            "$\\log x + C$",
+            "$\\frac{(\\log x)^2}{2} + C$",
+            "$\\frac{1}{\\log x} + C$"
           ],
           "correctAnswer": 0,
-          "explanation": "Put u = log x => du = (1/x) dx. ∫ (1/u) du = log|u| + C = log(log x) + C."
+          "explanation": "Substitute $u = \\log x \\implies du = \\frac{1}{x} dx$. $\\int \\frac{1}{u} du = \\log|u| + C = \\log(\\log x) + C$."
         },
         {
           "id": "vmath_q91",
-          "text": "Function f(x) = |x| at x = 0 is:",
+          "text": "Function $f(x) = |x|$ at $x = 0$ is:",
           "options": [
             "Continuous but not differentiable",
             "Differentiable but not continuous",
@@ -1103,131 +1103,131 @@
             "Both continuous and differentiable"
           ],
           "correctAnswer": 0,
-          "explanation": "|x| is continuous everywhere, but LHD at 0 is -1 while RHD is +1, so it is not differentiable at 0."
+          "explanation": "$|x|$ is continuous everywhere, but LHD at 0 is $-1$ while RHD is $+1$, so it is not differentiable at $x=0$."
         },
         {
           "id": "vmath_q92",
-          "text": "What is ∫ e^x (sin x + cos x) dx equal to?",
+          "text": "What is $\\int e^x (\\sin x + \\cos x) \\, dx$ equal to?",
           "options": [
-            "e^x sin x + C",
-            "e^x cos x + C",
-            "-e^x sin x + C",
-            "e^x (sin x - cos x) + C"
+            "$e^x \\sin x + C$",
+            "$e^x \\cos x + C$",
+            "$-e^x \\sin x + C$",
+            "$e^x (\\sin x - \\cos x) + C$"
           ],
           "correctAnswer": 0,
-          "explanation": "Standard form ∫ e^x [f(x) + f'(x)] dx = e^x f(x) + C. Here f(x) = sin x, so integral is e^x sin x + C."
+          "explanation": "Standard form $\\int e^x [f(x) + f'(x)] \\, dx = e^x f(x) + C$. Here $f(x) = \\sin x \\implies e^x \\sin x + C$."
         },
         {
           "id": "vmath_q93",
-          "text": "Slope of normal to curve y = 2x² + 3 sin x at x = 0 is:",
+          "text": "Slope of normal to curve $y = 2x^2 + 3 \\sin x$ at $x = 0$ is:",
           "options": [
-            "-1/3",
+            "$-\\frac{1}{3}$",
             "3",
-            "1/3",
+            "$\\frac{1}{3}$",
             "-3"
           ],
           "correctAnswer": 0,
-          "explanation": "dy/dx = 4x + 3 cos x. At x = 0, dy/dx = 3. Slope of normal = -1 / (dy/dx) = -1/3."
+          "explanation": "$\\frac{dy}{dx} = 4x + 3 \\cos x$. At $x=0$, $\\frac{dy}{dx} = 3$. Slope of normal $= -\\frac{1}{dy/dx} = -\\frac{1}{3}$."
         },
         {
           "id": "vmath_q94",
-          "text": "General solution of dy/dx = (1 + y²)/(1 + x²) is:",
+          "text": "General solution of differential equation $\\frac{dy}{dx} = \\frac{1 + y^2}{1 + x^2}$ is:",
           "options": [
-            "tan⁻¹ y - tan⁻¹ x = C",
-            "tan⁻¹ y + tan⁻¹ x = C",
-            "y = x + C",
-            "log(1+y²) = log(1+x²) + C"
+            "$\\tan^{-1} y - \\tan^{-1} x = C$",
+            "$\\tan^{-1} y + \\tan^{-1} x = C$",
+            "$y = x + C$",
+            "$\\log(1+y^2) = \\log(1+x^2) + C$"
           ],
           "correctAnswer": 0,
-          "explanation": "Separating variables: dy/(1 + y²) = dx/(1 + x²). Integrating both sides gives tan⁻¹ y = tan⁻¹ x + C => tan⁻¹ y - tan⁻¹ x = C."
+          "explanation": "Separating variables: $\\frac{dy}{1+y^2} = \\frac{dx}{1+x^2}$. Integrating gives $\\tan^{-1} y - \\tan^{-1} x = C$."
         },
         {
           "id": "vmath_q95",
-          "text": "What is lim (x->0) (1 - cos x) / x²?",
+          "text": "What is $\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2}$?",
           "options": [
-            "1/2",
+            "$\\frac{1}{2}$",
             "1",
             "0",
             "2"
           ],
           "correctAnswer": 0,
-          "explanation": "Using L'Hopital rule twice: lim (sin x)/(2x) = 1/2."
+          "explanation": "Using L'Hopital's rule twice: $\\lim_{x \\to 0} \\frac{\\sin x}{2x} = \\frac{1}{2}$."
         },
         {
           "id": "vmath_q96",
-          "text": "If f(x) = x sin(1/x) for x ≠ 0 and f(0) = 0, then at x = 0 f(x) is:",
+          "text": "If $f(x) = x \\sin\\left(\\frac{1}{x}\\right)$ for $x \\neq 0$ and $f(0) = 0$, then at $x = 0$ $f(x)$ is:",
           "options": [
             "Continuous",
             "Discontinuous",
             "Not defined",
-            "Has infinite discontinuity"
+            "Infinite"
           ],
           "correctAnswer": 0,
-          "explanation": "lim (x->0) x sin(1/x) = 0 × (bounded value between -1 and 1) = 0 = f(0). Hence continuous."
+          "explanation": "$\\lim_{x \\to 0} x \\sin(1/x) = 0 \\times \\text{(bounded between -1 and 1)} = 0 = f(0)$. Hence continuous."
         },
         {
           "id": "vmath_q97",
-          "text": "What is ∫ (-π/2 to π/2) sin⁵ x dx?",
+          "text": "Evaluate definite integral $\\int_{-\\pi/2}^{\\pi/2} \\sin^5 x \\, dx$:",
           "options": [
             "0",
-            "2/5",
+            "$\\frac{2}{5}$",
             "1",
-            "π/2"
+            "$\\frac{\\pi}{2}$"
           ],
           "correctAnswer": 0,
-          "explanation": "f(x) = sin⁵ x is an odd function since f(-x) = sin⁵(-x) = -sin⁵ x. Integral of odd function over [-a, a] is 0."
+          "explanation": "$f(x) = \\sin^5 x$ is an odd function because $f(-x) = -f(x)$. Definite integral of odd function over $[-a, a]$ is 0."
         },
         {
           "id": "vmath_q98",
-          "text": "Point of inflection for curve y = x³ - 3x² + 6 is:",
+          "text": "Point of inflection for curve $y = x^3 - 3x^2 + 6$ is:",
           "options": [
-            "(1, 4)",
-            "(0, 6)",
-            "(2, 2)",
-            "(1, 0)"
+            "$(1, 4)$",
+            "$(0, 6)$",
+            "$(2, 2)$",
+            "$(1, 0)$"
           ],
           "correctAnswer": 0,
-          "explanation": "d²y/dx² = 6x - 6 = 0 => x = 1. At x = 1, y = 1 - 3 + 6 = 4. Point of inflection is (1, 4)."
+          "explanation": "$\\frac{d^2y}{dx^2} = 6x - 6 = 0 \\implies x = 1$. At $x=1$, $y = 1 - 3 + 6 = 4$. Point of inflection is $(1, 4)$."
         },
         {
           "id": "vmath_q99",
-          "text": "Derivative of sin⁻¹(2x / (1 + x²)) with respect to tan⁻¹ x is:",
+          "text": "Derivative of $\\sin^{-1}\\left(\\frac{2x}{1+x^2}\\right)$ with respect to $\\tan^{-1} x$ is:",
           "options": [
             "2",
             "1",
-            "1/2",
-            "2x"
+            "$\\frac{1}{2}$",
+            "$2x$"
           ],
           "correctAnswer": 0,
-          "explanation": "Let u = sin⁻¹(2x/(1+x²)) = 2 tan⁻¹ x. Let v = tan⁻¹ x. du/dv = d(2v)/dv = 2."
+          "explanation": "Let $u = \\sin^{-1}\\left(\\frac{2x}{1+x^2}\\right) = 2 \\tan^{-1} x$ and $v = \\tan^{-1} x$. $\\frac{du}{dv} = \\frac{d(2v)}{dv} = 2$."
         },
         {
           "id": "vmath_q100",
-          "text": "What is ∫ x e^x dx equal to?",
+          "text": "Evaluate $\\int x e^x \\, dx$:",
           "options": [
-            "(x - 1) e^x + C",
-            "(x + 1) e^x + C",
-            "x e^x + C",
-            "x² e^x / 2 + C"
+            "$(x - 1) e^x + C$",
+            "$(x + 1) e^x + C$",
+            "$x e^x + C$",
+            "$\\frac{x^2 e^x}{2} + C$"
           ],
           "correctAnswer": 0,
-          "explanation": "Integration by parts: x e^x - ∫ 1 · e^x dx = x e^x - e^x + C = (x - 1) e^x + C."
+          "explanation": "Integration by parts: $x e^x - \\int 1 \\cdot e^x \\, dx = (x - 1) e^x + C$."
         },
         {
           "id": "vmath_q101",
-          "text": "Solution of dy/dx = y/x is:",
+          "text": "Solution of differential equation $\\frac{dy}{dx} = \\frac{y}{x}$ is:",
           "options": [
-            "y = c x",
-            "y = c / x",
-            "y = x + c",
-            "x² + y² = c"
+            "$y = c x$",
+            "$y = \\frac{c}{x}$",
+            "$y = x + c$",
+            "$x^2 + y^2 = c$"
           ],
           "correctAnswer": 0,
-          "explanation": "dy/y = dx/x => log y = log x + log c => y = c x."
+          "explanation": "$\\frac{dy}{y} = \\frac{dx}{x} \\implies \\log y = \\log x + \\log c \\implies y = c x$."
         },
         {
           "id": "vmath_q102",
-          "text": "What is the degree of differential equation (d³y/dx³) + 2 (d²y/dx²)² - dy/dx + y = 0?",
+          "text": "Degree of differential equation $\\frac{d^3y}{dx^3} + 2 \\left(\\frac{d^2y}{dx^2}\\right)^2 - \\frac{dy}{dx} + y = 0$ is:",
           "options": [
             "1",
             "2",
@@ -1235,47 +1235,47 @@
             "4"
           ],
           "correctAnswer": 0,
-          "explanation": "Highest order derivative is d³y/dx³ (Order 3). Its exponent is 1, so degree is 1."
+          "explanation": "Highest order derivative is $\\frac{d^3y}{dx^3}$ (Order 3). Its power is 1, so Degree is 1."
         },
         {
           "id": "vmath_q103",
-          "text": "Value of ∫ (0 to 1) dx / (1 + x²) is:",
+          "text": "Value of $\\int_0^1 \\frac{1}{1 + x^2} \\, dx$ is:",
           "options": [
-            "π/4",
-            "π/2",
+            "$\\frac{\\pi}{4}$",
+            "$\\frac{\\pi}{2}$",
             "1",
             "0"
           ],
           "correctAnswer": 0,
-          "explanation": "[tan⁻¹ x] (0 to 1) = tan⁻¹(1) - tan⁻¹(0) = π/4."
+          "explanation": "$[\\tan^{-1} x]_0^1 = \\tan^{-1}(1) - \\tan^{-1}(0) = \\frac{\\pi}{4}$."
         },
         {
           "id": "vmath_q104",
-          "text": "Rate of change of area of a circle with respect to radius r when r = 5 cm is:",
+          "text": "Rate of change of area of a circle with respect to radius $r$ when $r = 5$ cm is:",
           "options": [
-            "10π cm²/cm",
-            "25π cm²/cm",
-            "5π cm²/cm",
-            "20π cm²/cm"
+            "$10\\pi$ cm$^2$/cm",
+            "$25\\pi$ cm$^2$/cm",
+            "$5\\pi$ cm$^2$/cm",
+            "$20\\pi$ cm$^2$/cm"
           ],
           "correctAnswer": 0,
-          "explanation": "A = π r² => dA/dr = 2π r. At r = 5, dA/dr = 10π cm²/cm."
+          "explanation": "$A = \\pi r^2 \\implies \\frac{dA}{dr} = 2\\pi r$. At $r = 5$, $\\frac{dA}{dr} = 10\\pi$ cm$^2$/cm."
         },
         {
           "id": "vmath_q105",
-          "text": "Subtangent length to curve y = f(x) at any point is:",
+          "text": "Length of subtangent to curve $y = f(x)$ at any point is:",
           "options": [
-            "|y / (dy/dx)|",
-            "|y (dy/dx)|",
-            "|x / (dy/dx)|",
-            "|y √(1 + (dy/dx)²)|"
+            "$\\left| \\frac{y}{dy/dx} \\right|$",
+            "$\\left| y \\frac{dy}{dx} \\right|$",
+            "$\\left| \\frac{x}{dy/dx} \\right|$",
+            "$\\left| y \\sqrt{1 + (dy/dx)^2} \\right|$"
           ],
           "correctAnswer": 0,
-          "explanation": "Standard formula for length of subtangent is |y / y'| = |y / (dy/dx)|."
+          "explanation": "Standard formula for length of subtangent is $\\left| \\frac{y}{y'} \\right| = \\left| \\frac{y}{dy/dx} \\right|$."
         },
         {
           "id": "vmath_q106",
-          "text": "If vectors a = 2i + j + 3k and b = 3i + 5j - 2k, what is a · b?",
+          "text": "If vectors $\\vec{a} = 2\\hat{i} + \\hat{j} + 3\\hat{k}$ and $\\vec{b} = 3\\hat{i} + 5\\hat{j} - 2\\hat{k}$, what is $\\vec{a} \\cdot \\vec{b}$?",
           "options": [
             "5",
             "15",
@@ -1283,47 +1283,47 @@
             "0"
           ],
           "correctAnswer": 0,
-          "explanation": "a · b = (2)(3) + (1)(5) + (3)(-2) = 6 + 5 - 6 = 5."
+          "explanation": "$\\vec{a} \\cdot \\vec{b} = (2)(3) + (1)(5) + (3)(-2) = 6 + 5 - 6 = 5$."
         },
         {
           "id": "vmath_q107",
-          "text": "What is magnitude of vector cross product |(i + j) × (j + k)|?",
+          "text": "What is magnitude of vector cross product $|(\\hat{i} + \\hat{j}) \\times (\\hat{j} + \\hat{k})|$?",
           "options": [
-            "√3",
+            "$\\sqrt{3}$",
             "1",
-            "√2",
+            "$\\sqrt{2}$",
             "2"
           ],
           "correctAnswer": 0,
-          "explanation": "(i+j) × (j+k) = i×j + i×k + j×j + j×k = k - j + 0 + i = i - j + k. Magnitude = √(1² + (-1)² + 1²) = √3."
+          "explanation": "$(\\hat{i}+\\hat{j}) \\times (\\hat{j}+\\hat{k}) = \\hat{i} - \\hat{j} + \\hat{k}$. Magnitude $= \\sqrt{1^2 + (-1)^2 + 1^2} = \\sqrt{3}$."
         },
         {
           "id": "vmath_q108",
-          "text": "If a and b are unit vectors and θ is angle between them, then |a - b| is equal to:",
+          "text": "If $\\vec{a}$ and $\\vec{b}$ are unit vectors with angle $\\theta$ between them, then $|\\vec{a} - \\vec{b}|$ is equal to:",
           "options": [
-            "2 sin(θ/2)",
-            "2 cos(θ/2)",
-            "sin(θ/2)",
-            "cos(θ/2)"
+            "$2 \\sin(\\theta/2)$",
+            "$2 \\cos(\\theta/2)$",
+            "$\\sin(\\theta/2)$",
+            "$\\cos(\\theta/2)$"
           ],
           "correctAnswer": 0,
-          "explanation": "|a - b|² = |a|² + |b|² - 2|a||b| cos θ = 1 + 1 - 2 cos θ = 2(1 - cos θ) = 4 sin²(θ/2). Hence |a - b| = 2 sin(θ/2)."
+          "explanation": "$|\\vec{a} - \\vec{b}|^2 = 1 + 1 - 2 \\cos \\theta = 2(1 - \\cos \\theta) = 4 \\sin^2(\\theta/2) \\implies |\\vec{a} - \\vec{b}| = 2 \\sin(\\theta/2)$."
         },
         {
           "id": "vmath_q109",
-          "text": "Projection of vector a = i - 2j + k on vector b = 4i - 4j + 7k is:",
+          "text": "Vector projection of $\\vec{a} = \\hat{i} - 2\\hat{j} + \\hat{k}$ on $\\vec{b} = 4\\hat{i} - 4\\hat{j} + 7\\hat{k}$ is:",
           "options": [
-            "19/9",
-            "19/3",
-            "9/19",
-            "5/9"
+            "$\\frac{19}{9}$",
+            "$\\frac{19}{3}$",
+            "$\\frac{9}{19}$",
+            "$\\frac{5}{9}$"
           ],
           "correctAnswer": 0,
-          "explanation": "Projection = (a · b)/|b| = (1(4) + (-2)(-4) + 1(7)) / √(16 + 16 + 49) = (4 + 8 + 7) / √81 = 19/9."
+          "explanation": "Projection $= \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|} = \\frac{4 + 8 + 7}{\\sqrt{16 + 16 + 49}} = \\frac{19}{9}$."
         },
         {
           "id": "vmath_q110",
-          "text": "Value of scalar triple product [i - j, j - k, k - i] is:",
+          "text": "Value of scalar triple product $[\\hat{i} - \\hat{j}, \\hat{j} - \\hat{k}, \\hat{k} - \\hat{i}]$ is:",
           "options": [
             "0",
             "1",
@@ -1331,11 +1331,11 @@
             "2"
           ],
           "correctAnswer": 0,
-          "explanation": "Det |[1,-1,0],[0,1,-1],[-1,0,1]| = 1(1 - 0) - (-1)(0 - 1) + 0 = 1 - 1 = 0."
+          "explanation": "Determinant $\\begin{vmatrix} 1 & -1 & 0 \\\\ 0 & 1 & -1 \\\\ -1 & 0 & 1 \\end{vmatrix} = 1(1) - (-1)(-1) = 1 - 1 = 0$."
         },
         {
           "id": "vmath_q111",
-          "text": "If vectors a, b, c are coplanar, then [a, b, c] is equal to:",
+          "text": "If vectors $\\vec{a}, \\vec{b}, \\vec{c}$ are coplanar, then scalar triple product $[\\vec{a}, \\vec{b}, \\vec{c}]$ is equal to:",
           "options": [
             "0",
             "1",
@@ -1343,35 +1343,35 @@
             "3"
           ],
           "correctAnswer": 0,
-          "explanation": "Scalar triple product of three coplanar vectors is always 0."
+          "explanation": "Scalar triple product of coplanar vectors is identically zero."
         },
         {
           "id": "vmath_q112",
-          "text": "Area of parallelogram whose adjacent sides are vectors a = i - j + 3k and b = 2i - 7j + k is:",
+          "text": "Area of parallelogram whose adjacent side vectors are $\\vec{a} = \\hat{i} - \\hat{j} + 3\\hat{k}$ and $\\vec{b} = 2\\hat{i} - 7\\hat{j} + \\hat{k}$ is:",
           "options": [
-            "15√2 sq units",
+            "$15\\sqrt{2}$ sq units",
             "15 sq units",
             "30 sq units",
-            "5√3 sq units"
+            "$5\\sqrt{3}$ sq units"
           ],
           "correctAnswer": 0,
-          "explanation": "a × b = |[i,j,k],[1,-1,3],[2,-7,1]| = i(-1+21) - j(1-6) + k(-7+2) = 20i + 5j - 5k. |a × b| = √(400+25+25) = √450 = 15√2."
+          "explanation": "$\\vec{a} \\times \\vec{b} = 20\\hat{i} + 5\\hat{j} - 5\\hat{k}$. Area $= |\\vec{a} \\times \\vec{b}| = \\sqrt{400+25+25} = 15\\sqrt{2}$."
         },
         {
           "id": "vmath_q113",
-          "text": "If a + b + c = 0 and |a|=3, |b|=5, |c|=7, then angle between a and b is:",
+          "text": "If $\\vec{a} + \\vec{b} + \\vec{c} = \\vec{0}$ and $|\\vec{a}|=3, |\\vec{b}|=5, |\\vec{c}|=7$, angle between $\\vec{a}$ and $\\vec{b}$ is:",
           "options": [
-            "60°",
-            "120°",
-            "45°",
-            "90°"
+            "$60^\\circ$",
+            "$120^\\circ$",
+            "$45^\\circ$",
+            "$90^\\circ$"
           ],
           "correctAnswer": 0,
-          "explanation": "c = -(a + b) => |c|² = |a|² + |b|² + 2 a · b => 49 = 9 + 25 + 2(3)(5) cos θ => 15 = 30 cos θ => cos θ = 1/2 => θ = 60°."
+          "explanation": "$|\\vec{c}|^2 = |\\vec{a}|^2 + |\\vec{b}|^2 + 2 \\vec{a}\\cdot\\vec{b} \\implies 49 = 9 + 25 + 30 \\cos \\theta \\implies \\cos \\theta = 1/2 \\implies \\theta = 60^\\circ$."
         },
         {
           "id": "vmath_q114",
-          "text": "If P(A) = 0.4, P(B) = 0.8 and P(B|A) = 0.6, what is P(A ∪ B)?",
+          "text": "If $P(A) = 0.4$, $P(B) = 0.8$, and $P(B|A) = 0.6$, what is $P(A \\cup B)$?",
           "options": [
             "0.96",
             "0.84",
@@ -1379,43 +1379,43 @@
             "0.90"
           ],
           "correctAnswer": 0,
-          "explanation": "P(A ∩ B) = P(A) · P(B|A) = 0.4 × 0.6 = 0.24. P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 0.4 + 0.8 - 0.24 = 0.96."
+          "explanation": "$P(A \\cap B) = P(A) \\cdot P(B|A) = 0.4 \\times 0.6 = 0.24$. $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = 0.4 + 0.8 - 0.24 = 0.96$."
         },
         {
           "id": "vmath_q115",
-          "text": "Variance of first n natural numbers is:",
+          "text": "Variance of first $n$ natural numbers is equal to:",
           "options": [
-            "(n² - 1)/12",
-            "(n² + 1)/12",
-            "n(n+1)/6",
-            "(n - 1)/6"
+            "$\\frac{n^2 - 1}{12}$",
+            "$\\frac{n^2 + 1}{12}$",
+            "$\\frac{n(n+1)}{6}$",
+            "$\\frac{n - 1}{6}$"
           ],
           "correctAnswer": 0,
-          "explanation": "Standard formula for variance of first n natural numbers is Var = (n² - 1) / 12."
+          "explanation": "Standard formula for variance of first $n$ natural numbers is $\\sigma^2 = \\frac{n^2 - 1}{12}$."
         },
         {
           "id": "vmath_q116",
-          "text": "Two dice are thrown simultaneously. What is probability of getting sum 8?",
+          "text": "Two fair dice are thrown simultaneously. What is probability of getting sum 8?",
           "options": [
-            "5/36",
-            "1/6",
-            "7/36",
-            "1/9"
+            "$\\frac{5}{36}$",
+            "$\\frac{1}{6}$",
+            "$\\frac{7}{36}$",
+            "$\\frac{1}{9}$"
           ],
           "correctAnswer": 0,
-          "explanation": "Favorable outcomes for sum 8: (2,6), (3,5), (4,4), (5,3), (6,2) -> 5 outcomes. Total = 36. P = 5/36."
+          "explanation": "Favorable outcomes for sum 8: $(2,6), (3,5), (4,4), (5,3), (6,2)$ (5 outcomes). Total $= 36$. $P = \\frac{5}{36}$."
         },
         {
           "id": "vmath_q117",
-          "text": "In a binomial distribution B(n, p), if mean is 4 and variance is 3, what are values of n and p?",
+          "text": "In a binomial distribution $B(n, p)$, if mean is 4 and variance is 3, what are values of $n$ and $p$?",
           "options": [
-            "n = 16, p = 1/4",
-            "n = 12, p = 1/3",
-            "n = 8, p = 1/2",
-            "n = 20, p = 1/5"
+            "$n = 16, p = 1/4$",
+            "$n = 12, p = 1/3$",
+            "$n = 8, p = 1/2$",
+            "$n = 20, p = 1/5$"
           ],
           "correctAnswer": 0,
-          "explanation": "Mean = np = 4, Variance = npq = 3. q = (npq)/(np) = 3/4. p = 1 - q = 1/4. n = 4 / p = 16."
+          "explanation": "Mean $= np = 4$, Variance $= npq = 3 \\implies q = 3/4 \\implies p = 1/4 \\implies n = 16$."
         },
         {
           "id": "vmath_q118",
@@ -1427,27 +1427,27 @@
             "55"
           ],
           "correctAnswer": 0,
-          "explanation": "If x̄ is mean, new mean after transformation y = 2x + 5 is ȳ = 2 x̄ + 5 = 2(50) + 5 = 105."
+          "explanation": "If $y = 2x + 5$, then new mean $\\bar{y} = 2\\bar{x} + 5 = 2(50) + 5 = 105$."
         },
         {
           "id": "vmath_q119",
-          "text": "A card is drawn from a well shuffled deck of 52 cards. What is probability that it is a King or a Heart?",
+          "text": "A card is drawn from a deck of 52 cards. What is probability that it is a King or a Heart?",
           "options": [
-            "4/13",
-            "17/52",
-            "1/4",
-            "9/26"
+            "$\\frac{4}{13}$",
+            "$\\frac{17}{52}$",
+            "$\\frac{1}{4}$",
+            "$\\frac{9}{26}$"
           ],
           "correctAnswer": 0,
-          "explanation": "P(King ∪ Heart) = P(King) + P(Heart) - P(King of Hearts) = 4/52 + 13/52 - 1/52 = 16/52 = 4/13."
+          "explanation": "$P(\\text{King} \\cup \\text{Heart}) = \\frac{4}{52} + \\frac{13}{52} - \\frac{1}{52} = \\frac{16}{52} = \\frac{4}{13}$."
         },
         {
           "id": "vmath_q120",
-          "text": "Standard deviation of values 3, 3, 3, 3, 3 is:",
+          "text": "Standard deviation of observations $3, 3, 3, 3, 3$ is:",
           "options": [
             "0",
             "3",
-            "√3",
+            "$\\sqrt{3}$",
             "1"
           ],
           "correctAnswer": 0,
@@ -1458,7 +1458,7 @@
     {
       "id": "vijayantha-nda-gat-2026",
       "title": "VIJAYANTHA TEST SERIES - NDA General Ability Test (GAT) Mock Test (13 Sept 2026)",
-      "description": "Official UPSC NDA II 2026 Mock Test Paper. 150 Moderate to Tough Level Questions | 2.5 Hours (150 Mins) | Total Marks: 600. Marking Scheme: +4.0 marks for correct, -1.3333 (1/3 of 4.0) deduction for incorrect, 0 for unattempted.",
+      "description": "Official UPSC NDA II 2026 Mock Test Paper. 150 Moderate to Tough Level Questions | 2.5 Hours (150 Mins) | Total Marks: 600. Marking Scheme: +4.0 marks for correct, -1.3333 (1/3) deduction for incorrect, 0 for unattempted.",
       "timeLimitMinutes": 150,
       "maxViolationsAllowed": 3,
       "marksPerCorrect": 4,

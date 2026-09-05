@@ -214,12 +214,14 @@ class App {
     const btnPrev = document.getElementById("btn-prev");
     const btnNext = document.getElementById("btn-next");
     const btnFlag = document.getElementById("btn-flag");
+    const btnSaveMark = document.getElementById("btn-save-mark");
     const btnClear = document.getElementById("btn-clear");
     const btnSubmitExam = document.getElementById("btn-submit-exam");
 
     if (btnPrev) btnPrev.addEventListener("click", () => this.navigateQuestion(-1));
     if (btnNext) btnNext.addEventListener("click", () => this.navigateQuestion(1));
     if (btnFlag) btnFlag.addEventListener("click", () => this.toggleFlagQuestion());
+    if (btnSaveMark) btnSaveMark.addEventListener("click", () => this.saveAndMarkForReview());
     if (btnClear) btnClear.addEventListener("click", () => this.clearCurrentResponse());
     if (btnSubmitExam) btnSubmitExam.addEventListener("click", () => this.confirmSubmitExam());
 
@@ -550,6 +552,7 @@ class App {
 
     this.userAnswers = {};
     this.flaggedQuestions = new Set();
+    this.visitedQuestions = new Set();
     this.currentQuestionIndex = 0;
     this.isExamActive = true;
     this.examStartTime = new Date();
@@ -568,8 +571,12 @@ class App {
     this.startTimer();
 
     // Render exam UI
-    document.getElementById("exam-title").textContent = this.currentQuiz.title;
-    document.getElementById("header-candidate-info").textContent = `${this.candidateName} (${this.candidateId})`;
+    const titleElem = document.getElementById("exam-title");
+    if (titleElem) titleElem.textContent = this.currentQuiz.title;
+
+    const candElem = document.getElementById("header-candidate-info");
+    if (candElem) candElem.textContent = `Candidate: ${this.candidateId} - ${this.candidateName}`;
+    
     this.updateViolationBadge(0, this.currentQuiz.maxViolationsAllowed);
     
     this.renderQuestionNavigator();
@@ -610,9 +617,10 @@ class App {
     const timerElem = document.getElementById("timer-display");
     if (!timerElem) return;
 
-    const mins = Math.floor(this.remainingSeconds / 60);
+    const hours = Math.floor(this.remainingSeconds / 3600);
+    const mins = Math.floor((this.remainingSeconds % 3600) / 60);
     const secs = this.remainingSeconds % 60;
-    const formatted = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    const formatted = `${String(hours).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
     
     timerElem.textContent = formatted;
 
@@ -626,7 +634,7 @@ class App {
   updateViolationBadge(count, max) {
     const badge = document.getElementById("proctor-violation-badge");
     if (badge) {
-      badge.textContent = `⚠️ Warnings: ${count}/${max}`;
+      badge.textContent = `⚠️ Security Warnings: ${count}/${max}`;
       if (count > 0) {
         badge.classList.add("has-violations");
       } else {
@@ -643,69 +651,85 @@ class App {
     const question = this.currentQuiz.questions[this.currentQuestionIndex];
     if (!question) return;
 
+    if (!this.visitedQuestions) this.visitedQuestions = new Set();
+    this.visitedQuestions.add(question.id);
+
     const qNum = this.currentQuestionIndex + 1;
     const totalQ = this.currentQuiz.questions.length;
 
-    document.getElementById("q-number-badge").textContent = `Question ${qNum} of ${totalQ}`;
-    document.getElementById("q-text").textContent = question.text;
+    const qBadge = document.getElementById("q-number-badge");
+    if (qBadge) qBadge.textContent = `Question No. ${qNum}`;
 
-    // Flag button state
-    const btnFlag = document.getElementById("btn-flag");
-    if (this.flaggedQuestions.has(question.id)) {
-      btnFlag.classList.add("flagged");
-      btnFlag.innerHTML = "🚩 Marked for Review";
-    } else {
-      btnFlag.classList.remove("flagged");
-      btnFlag.innerHTML = "🏳️ Mark for Review";
+    const markingScheme = document.getElementById("inst-marking-scheme-badge");
+    const marksPerCorrect = this.currentQuiz.marksPerCorrect !== undefined ? this.currentQuiz.marksPerCorrect : 1;
+    const negativeMarks = this.currentQuiz.negativeMarksPerWrong !== undefined ? this.currentQuiz.negativeMarksPerWrong : 0;
+    if (markingScheme) {
+      markingScheme.textContent = `+${marksPerCorrect} / -${negativeMarks.toFixed(2)} Marks`;
+    }
+
+    // Candidate Profile Card on NTA Sidebar
+    const candidateNameCard = document.getElementById("nta-candidate-card-name");
+    const candidateIdCard = document.getElementById("nta-candidate-card-id");
+    const subjectTabName = document.getElementById("nta-tab-subject-name");
+    if (candidateNameCard) candidateNameCard.textContent = this.candidateName || "Candidate";
+    if (candidateIdCard) candidateIdCard.textContent = `Roll No: ${this.candidateId || 'STU-101'}`;
+    if (subjectTabName) subjectTabName.textContent = this.currentQuiz.title;
+
+    // Render Question Text
+    const qTextElem = document.getElementById("q-text");
+    if (qTextElem) {
+      qTextElem.innerHTML = this.escapeHtml(question.text);
     }
 
     // Render Options
     const optionsContainer = document.getElementById("q-options-container");
-    optionsContainer.innerHTML = "";
+    if (optionsContainer) {
+      optionsContainer.innerHTML = "";
+      const selectedAnswer = this.userAnswers[question.id];
 
-    const selectedAnswer = this.userAnswers[question.id];
+      question.options.forEach((optText, optIdx) => {
+        const isSelected = selectedAnswer === optIdx;
+        const optionLabel = document.createElement("div");
+        optionLabel.className = `nta-option-item ${isSelected ? "selected" : ""}`;
+        
+        const letter = String.fromCharCode(65 + optIdx); // A, B, C, D
 
-    question.options.forEach((optText, optIdx) => {
-      const isSelected = selectedAnswer === optIdx;
-      const optionLabel = document.createElement("div");
-      optionLabel.className = `option-item ${isSelected ? "selected" : ""}`;
-      
-      const letter = String.fromCharCode(65 + optIdx); // A, B, C, D
+        optionLabel.innerHTML = `
+          <input type="radio" name="mcq-option-${question.id}" value="${optIdx}" ${isSelected ? "checked" : ""}>
+          <span class="nta-option-badge">${letter}</span>
+          <span class="nta-option-text">${this.escapeHtml(optText)}</span>
+        `;
 
-      optionLabel.innerHTML = `
-        <input type="radio" name="mcq-option-${question.id}" value="${optIdx}" ${isSelected ? "checked" : ""}>
-        <span class="option-badge">${letter}</span>
-        <span class="option-text">${this.escapeHtml(optText)}</span>
-      `;
+        optionLabel.addEventListener("click", (e) => {
+          e.stopPropagation();
+          this.selectOption(question.id, optIdx);
+        });
 
-      optionLabel.addEventListener("click", (e) => {
-        e.stopPropagation();
-        this.selectOption(question.id, optIdx);
+        optionsContainer.appendChild(optionLabel);
       });
-
-      optionsContainer.appendChild(optionLabel);
-    });
-
-    // Disable / Enable Prev / Next Buttons
-    const btnPrev = document.getElementById("btn-prev");
-    const btnNext = document.getElementById("btn-next");
-
-    if (btnPrev) btnPrev.disabled = (this.currentQuestionIndex === 0);
-    if (btnNext) {
-      if (this.currentQuestionIndex === totalQ - 1) {
-        btnNext.textContent = "Finish Form 📥";
-      } else {
-        btnNext.textContent = "Next Question ➡️";
-      }
     }
 
-    this.updateQuestionGridHighlight();
+    // Trigger KaTeX Auto-Render for Math Expressions ($...$ and $$...$$)
+    try {
+      if (window.renderMathInElement) {
+        window.renderMathInElement(document.getElementById("view-exam"), {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false }
+          ],
+          throwOnError: false
+        });
+      }
+    } catch (e) {
+      console.warn("KaTeX render note:", e.message);
+    }
+
+    this.renderQuestionNavigator();
   }
 
   selectOption(questionId, optionIndex) {
     this.userAnswers[questionId] = optionIndex;
     this.renderCurrentQuestion();
-    this.renderQuestionNavigator();
   }
 
   clearCurrentResponse() {
@@ -713,23 +737,25 @@ class App {
     if (question && this.userAnswers.hasOwnProperty(question.id)) {
       delete this.userAnswers[question.id];
       this.renderCurrentQuestion();
-      this.renderQuestionNavigator();
     }
   }
 
   toggleFlagQuestion() {
+    // NTA "Mark for Review & Next"
     const question = this.currentQuiz.questions[this.currentQuestionIndex];
     if (!question) return;
-    const qId = question.id || `${this.currentQuiz.id || 'quiz'}_q_${this.currentQuestionIndex + 1}`;
-    question.id = qId;
 
-    if (this.flaggedQuestions.has(qId)) {
-      this.flaggedQuestions.delete(qId);
-    } else {
-      this.flaggedQuestions.add(qId);
-    }
-    this.renderCurrentQuestion();
-    this.renderQuestionNavigator();
+    this.flaggedQuestions.add(question.id);
+    this.navigateQuestion(1);
+  }
+
+  saveAndMarkForReview() {
+    // NTA "Save & Mark for Review"
+    const question = this.currentQuiz.questions[this.currentQuestionIndex];
+    if (!question) return;
+
+    this.flaggedQuestions.add(question.id);
+    this.navigateQuestion(1);
   }
 
   navigateQuestion(delta) {
@@ -754,54 +780,97 @@ class App {
     if (!grid) return;
 
     grid.innerHTML = "";
+
+    let countNotVisited = 0;
+    let countNotAnswered = 0;
+    let countAnswered = 0;
+    let countMarked = 0;
+    let countAnsweredMarked = 0;
+
+    if (!this.visitedQuestions) this.visitedQuestions = new Set();
+
     this.currentQuiz.questions.forEach((q, idx) => {
       const btn = document.createElement("button");
-      btn.className = "nav-grid-item";
+      btn.className = "nta-palette-item";
 
+      const isVisited = this.visitedQuestions.has(q.id);
       const isAnswered = this.userAnswers.hasOwnProperty(q.id);
-      const isFlagged = this.flaggedQuestions.has(q.id);
+      const isMarked = this.flaggedQuestions.has(q.id);
       const isCurrent = idx === this.currentQuestionIndex;
 
-      if (isCurrent) btn.classList.add("current");
-      if (isAnswered) btn.classList.add("answered");
-      if (isFlagged) btn.classList.add("flagged");
+      if (isCurrent) btn.classList.add("current-active");
+
+      if (!isVisited) {
+        btn.classList.add("shape-not-visited");
+        countNotVisited++;
+        btn.title = `Question ${idx + 1}: Not Visited`;
+      } else if (isAnswered && isMarked) {
+        btn.classList.add("shape-answered-marked");
+        countAnsweredMarked++;
+        btn.title = `Question ${idx + 1}: Answered & Marked for Review`;
+      } else if (isMarked) {
+        btn.classList.add("shape-marked");
+        countMarked++;
+        btn.title = `Question ${idx + 1}: Marked for Review`;
+      } else if (isAnswered) {
+        btn.classList.add("shape-answered");
+        countAnswered++;
+        btn.title = `Question ${idx + 1}: Answered`;
+      } else {
+        btn.classList.add("shape-not-answered");
+        countNotAnswered++;
+        btn.title = `Question ${idx + 1}: Not Answered`;
+      }
 
       btn.textContent = idx + 1;
-      btn.title = `Question ${idx + 1} (${isAnswered ? "Answered" : "Unanswered"}${isFlagged ? ", Marked for review" : ""})`;
-      
       btn.addEventListener("click", () => this.jumpToQuestion(idx));
       grid.appendChild(btn);
     });
 
-    // Update Summary Stats on Sidebar
-    const answeredCount = Object.keys(this.userAnswers).length;
-    const totalCount = this.currentQuiz.questions.length;
-    const flaggedCount = this.flaggedQuestions.size;
+    // Update NTA Summary Stats Legend
+    const elemNotVisited = document.getElementById("stat-not-visited");
+    const elemNotAnswered = document.getElementById("stat-unanswered");
+    const elemAnswered = document.getElementById("stat-answered");
+    const elemMarked = document.getElementById("stat-flagged");
+    const elemAnsweredMarked = document.getElementById("stat-answered-marked");
 
-    document.getElementById("stat-answered").textContent = answeredCount;
-    document.getElementById("stat-unanswered").textContent = totalCount - answeredCount;
-    document.getElementById("stat-flagged").textContent = flaggedCount;
+    if (elemNotVisited) elemNotVisited.textContent = countNotVisited;
+    if (elemNotAnswered) elemNotAnswered.textContent = countNotAnswered;
+    if (elemAnswered) elemAnswered.textContent = countAnswered;
+    if (elemMarked) elemMarked.textContent = countMarked;
+    if (elemAnsweredMarked) elemAnsweredMarked.textContent = countAnsweredMarked;
   }
 
   updateQuestionGridHighlight() {
-    const items = document.querySelectorAll(".nav-grid-item");
-    items.forEach((item, idx) => {
-      if (idx === this.currentQuestionIndex) {
-        item.classList.add("current");
-      } else {
-        item.classList.remove("current");
-      }
-    });
+    this.renderQuestionNavigator();
   }
 
   confirmSubmitExam() {
     const totalQ = this.currentQuiz.questions.length;
-    const answeredQ = Object.keys(this.userAnswers).length;
-    const unansweredQ = totalQ - answeredQ;
+    let countNotVisited = 0;
+    let countNotAnswered = 0;
+    let countAnswered = 0;
+    let countMarked = 0;
+    let countAnsweredMarked = 0;
 
-    let msg = `Are you sure you want to submit your exam form?\n\n• Answered: ${answeredQ}\n• Unanswered: ${unansweredQ}`;
-    if (unansweredQ > 0) {
-      msg += `\n\n⚠️ Warning: You have ${unansweredQ} unanswered question(s)!`;
+    if (!this.visitedQuestions) this.visitedQuestions = new Set();
+
+    this.currentQuiz.questions.forEach(q => {
+      const isVisited = this.visitedQuestions.has(q.id);
+      const isAnswered = this.userAnswers.hasOwnProperty(q.id);
+      const isMarked = this.flaggedQuestions.has(q.id);
+
+      if (!isVisited) countNotVisited++;
+      else if (isAnswered && isMarked) countAnsweredMarked++;
+      else if (isMarked) countMarked++;
+      else if (isAnswered) countAnswered++;
+      else countNotAnswered++;
+    });
+
+    let msg = `NATIONAL TESTING AGENCY (NTA) - TEST SUBMISSION SUMMARY\n\nAre you sure you want to submit your exam?\n\n• Total Questions: ${totalQ}\n• 🟢 Answered: ${countAnswered}\n• 🔴 Not Answered: ${countNotAnswered}\n• ⚪ Not Visited: ${countNotVisited}\n• 🟣 Marked for Review: ${countMarked}\n• 🟣🟢 Answered & Marked for Review: ${countAnsweredMarked}`;
+
+    if (countNotAnswered > 0 || countNotVisited > 0) {
+      msg += `\n\n⚠️ Warning: You have unattempted/unvisited question(s)!`;
     }
 
     if (confirm(msg)) {
