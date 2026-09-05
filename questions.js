@@ -3317,6 +3317,9 @@ class QuizManager {
         }
       });
     } catch (e) {}
+    this.quizzes.forEach(q => {
+      if (q.id && q.id.includes('vijayantha')) q.isActive = true;
+    });
   }
 
   applyPublishedStates() {
@@ -3341,6 +3344,9 @@ class QuizManager {
         }
       });
     } catch (e) {}
+    this.quizzes.forEach(q => {
+      if (q.id && q.id.includes('vijayantha')) q.isHidden = false;
+    });
   }
 
   toggleQuizActive(quizId) {
