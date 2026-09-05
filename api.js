@@ -32,13 +32,24 @@ class ApiClient {
     try {
       if (window.quizManager) {
         const defaultQuizzes = window.quizManager.getAllQuizzes();
+        const validIds = new Set(defaultQuizzes.map(q => q.id));
+
+        // Purge deprecated quizzes from Firestore
+        const snap = await this.db.collection('quizzes').get();
+        if (!snap.empty) {
+          snap.forEach(async doc => {
+            if (!validIds.has(doc.id)) {
+              await this.db.collection('quizzes').doc(doc.id).delete();
+              console.log(`🔥 Firebase: Removed deprecated quiz ${doc.id} from Firestore`);
+            }
+          });
+        }
+
+        // Seed / Update current default quizzes in Firestore
         for (const q of defaultQuizzes) {
           const docRef = this.db.collection('quizzes').doc(q.id);
-          const docSnap = await docRef.get();
-          if (!docSnap.exists) {
-            await docRef.set(q, { merge: true });
-            console.log(`🔥 Firebase: Quiz ${q.id} auto-seeded into Firestore`);
-          }
+          await docRef.set(q, { merge: true });
+          console.log(`🔥 Firebase: Quiz ${q.id} auto-seeded into Firestore`);
         }
       }
 

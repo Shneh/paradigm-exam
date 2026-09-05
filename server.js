@@ -42,15 +42,29 @@ function loadInitialQuizzes() {
   // Basic fallback
   return [
     {
-      id: "nda-2-2023-maths",
-      title: "UPSC NDA (II) 2023 - Mathematics Official Question Paper",
-      description: "Authentic UPSC NDA & NA II 2023 Mathematics Paper. 120 Questions | 2.5 Hours | Total Marks: 300.",
+      id: "vijayantha-nda-math-2026",
+      title: "VIJAYANTHA TEST SERIES - NDA Mathematics Mock Test (13 Sept 2026)",
+      description: "Official Mock Examination for NDA II 2026. 120 Questions | 2.5 Hours | Total Marks: 300.",
       timeLimitMinutes: 150,
       maxViolationsAllowed: 3,
       marksPerCorrect: 2.5,
       negativeMarksPerWrong: 0.8333333333333334,
       totalMarks: 300,
       passingMarks: 120,
+      isActive: true,
+      isResultPublished: false,
+      questions: []
+    },
+    {
+      id: "vijayantha-nda-gat-2026",
+      title: "VIJAYANTHA TEST SERIES - NDA General Ability Test (GAT) Mock Test (13 Sept 2026)",
+      description: "Official Mock Examination for NDA II 2026. 150 Questions | 2.5 Hours | Total Marks: 600.",
+      timeLimitMinutes: 150,
+      maxViolationsAllowed: 3,
+      marksPerCorrect: 4.0,
+      negativeMarksPerWrong: 1.3333333333333333,
+      totalMarks: 600,
+      passingMarks: 240,
       isActive: true,
       isResultPublished: false,
       questions: []
