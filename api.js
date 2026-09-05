@@ -116,18 +116,20 @@ class ApiClient {
 
   // Quizzes CRUD
   async getQuizzes() {
-    await this.initSeed();
-    if (this.db) {
-      try {
+    try {
+      await this.initSeed();
+      if (this.db) {
         const snap = await this.db.collection('quizzes').get();
         if (!snap.empty) {
           const quizzes = [];
           snap.forEach(doc => quizzes.push(doc.data()));
-          return quizzes;
+          if (quizzes.some(q => q.id && q.id.includes('vijayantha'))) {
+            return quizzes;
+          }
         }
-      } catch (e) {
-        console.warn("Firestore getQuizzes fallback:", e.message);
       }
+    } catch (e) {
+      console.warn("Firestore getQuizzes fallback:", e.message);
     }
     return window.quizManager ? window.quizManager.getAllQuizzes() : [];
   }
