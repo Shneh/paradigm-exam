@@ -3312,6 +3312,8 @@ class QuizManager {
       this.quizzes.forEach(q => {
         if (states.hasOwnProperty(q.id)) {
           q.isActive = states[q.id];
+        } else {
+          q.isActive = true; // Default live for new test series
         }
       });
     } catch (e) {}
@@ -3334,6 +3336,8 @@ class QuizManager {
       this.quizzes.forEach(q => {
         if (states.hasOwnProperty(q.id)) {
           q.isHidden = states[q.id];
+        } else {
+          q.isHidden = false; // Default visible on dashboard
         }
       });
     } catch (e) {}

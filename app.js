@@ -265,7 +265,11 @@ class App {
     try {
       quizzes = await window.api.getQuizzes();
     } catch (e) {
-      quizzes = window.quizManager.getAllQuizzes();
+      quizzes = window.quizManager ? window.quizManager.getAllQuizzes() : [];
+    }
+
+    if (!quizzes || quizzes.length === 0) {
+      quizzes = window.quizManager ? window.quizManager.getAllQuizzes() : [];
     }
 
     const visibleQuizzes = quizzes.filter(q => !q.isHidden);

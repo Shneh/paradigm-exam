@@ -37,12 +37,16 @@ class ApiClient {
         // Purge deprecated quizzes from Firestore
         const snap = await this.db.collection('quizzes').get();
         if (!snap.empty) {
-          snap.forEach(async doc => {
+          const deletePromises = [];
+          snap.forEach(doc => {
             if (!validIds.has(doc.id)) {
-              await this.db.collection('quizzes').doc(doc.id).delete();
+              deletePromises.push(this.db.collection('quizzes').doc(doc.id).delete());
               console.log(`🔥 Firebase: Removed deprecated quiz ${doc.id} from Firestore`);
             }
           });
+          if (deletePromises.length > 0) {
+            await Promise.all(deletePromises);
+          }
         }
 
         // Seed / Update current default quizzes in Firestore
@@ -112,6 +116,7 @@ class ApiClient {
 
   // Quizzes CRUD
   async getQuizzes() {
+    await this.initSeed();
     if (this.db) {
       try {
         const snap = await this.db.collection('quizzes').get();
