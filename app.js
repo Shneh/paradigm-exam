@@ -104,6 +104,21 @@ class App {
   }
 
   showView(viewName) {
+    const protectedStudentViews = ["studentMenu", "availableTests", "publishedResults", "instructions", "exam", "results"];
+    if (protectedStudentViews.includes(viewName) && !this.loggedInStudent) {
+      if (viewName !== "login" && this.views["login"]) {
+        Object.keys(this.views).forEach(key => {
+          if (this.views[key]) this.views[key].classList.add("hidden");
+        });
+        this.views["login"].classList.remove("hidden");
+        if (window.proctorEngine && window.proctorEngine.showToast) {
+          window.proctorEngine.showToast("🔒 Authentication Required: Please log in as a student to access test papers.", "error");
+        } else {
+          alert("🔒 Authentication Required: Please log in as a student to access test papers.");
+        }
+        return;
+      }
+    }
     Object.keys(this.views).forEach(key => {
       if (this.views[key]) {
         this.views[key].classList.add("hidden");
@@ -119,7 +134,6 @@ class App {
     // Student Login Form Submit & Button Click
     const formLogin = document.getElementById("form-candidate-login");
     const btnStudentLogin = document.getElementById("btn-student-login");
-    const btnQuickBrowse = document.getElementById("btn-quick-browse-tests");
 
     if (formLogin) {
       formLogin.addEventListener("submit", (e) => {
@@ -132,17 +146,6 @@ class App {
       btnStudentLogin.addEventListener("click", (e) => {
         e.preventDefault();
         this.handleStudentLogin();
-      });
-    }
-
-    if (btnQuickBrowse) {
-      btnQuickBrowse.addEventListener("click", () => {
-        if (!this.loggedInStudent) {
-          this.candidateName = "NDA Candidate";
-          this.candidateId = "STU-GUEST";
-        }
-        this.renderAvailableTests();
-        this.showView("availableTests");
       });
     }
 
@@ -258,13 +261,9 @@ class App {
       student = window.quizManager ? window.quizManager.authenticateStudent(candidateId, candidatePass) : null;
     }
 
-    if (!student && candidateId) {
-      student = {
-        id: candidateId.toUpperCase(),
-        name: candidateId.toUpperCase(),
-        class: "NDA Aspirant",
-        password: candidatePass
-      };
+    if (!student) {
+      alert("⚠️ Invalid Student Roll ID or Password! Please use a valid registered student login.");
+      return;
     }
 
     this.loggedInStudent = student;
