@@ -321,26 +321,37 @@ class ApiClient {
     // Clean payload to prevent undefined property errors in Firestore
     const cleanSubmission = JSON.parse(JSON.stringify(submission));
 
+    // 1. ALWAYS persist to local QuizManager / localStorage first (Zero Data Loss)
+    if (window.quizManager) {
+      window.quizManager.addSubmission(cleanSubmission);
+      window.quizManager.recordStudentAttempt(normStudent, quizId);
+    }
+
+    // 2. Also try posting to local Express server if available
+    try {
+      fetch('/api/submissions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(cleanSubmission)
+      }).catch(() => {});
+    } catch (e) {}
+
+    // 3. Save to Firebase Firestore via SDK if available
     if (this.db) {
       try {
-        // Save submission doc via Firebase SDK
-        await this.db.collection('submissions').doc(subId).set(cleanSubmission);
-
-        // Record attempt lock in Firestore
+        await this.db.collection('submissions').doc(subId).set(cleanSubmission, { merge: true });
         await this.db.collection('attempts').doc(attemptKey).set({
           studentId: normStudent,
           quizId,
           timestamp: new Date().toLocaleString()
         });
-
         console.log("🔥 Firebase SDK: Exam submission & attempt lock saved successfully");
-        return { success: true };
       } catch (e) {
-        console.warn("Firestore SDK submitExam error, trying REST API fallback:", e.message);
+        console.warn("Firestore SDK submitExam note:", e.message);
       }
     }
 
-    // Direct REST API Fallback to Firebase Firestore
+    // 4. Save to Firebase REST API as cloud backup
     try {
       const BASE_URL = `https://firestore.googleapis.com/v1/projects/paradigm-exam/databases/(default)/documents`;
       const API_KEY = `AIzaSyDeW2w-xOYLCXVlMYeARvKbjkWHDdxFEXM`;
@@ -385,43 +396,70 @@ class ApiClient {
         body: JSON.stringify({ fields: attemptFields })
       });
 
-      console.log("🔥 Firebase REST API: Exam submission & attempt lock saved successfully");
-      return { success: true };
+      console.log("🔥 Firebase REST API: Exam submission synced to cloud");
     } catch (restErr) {
-      console.warn("Firestore REST submitExam error:", restErr.message);
+      console.warn("Firestore REST submitExam note:", restErr.message);
     }
 
-    if (window.quizManager) {
-      window.quizManager.addSubmission(cleanSubmission);
-      window.quizManager.recordStudentAttempt(normStudent, quizId);
-    }
     return { success: true };
   }
 
   async getSubmissions(studentId = '') {
+    const combinedMap = new Map();
+
+    // Layer 1: Load from local QuizManager (localStorage)
+    if (window.quizManager) {
+      const localSubs = window.quizManager.getSubmissions() || [];
+      localSubs.forEach(s => {
+        if (s && s.id) combinedMap.set(s.id, s);
+      });
+    }
+
+    // Layer 2: Load from Firebase Firestore
     if (this.db) {
       try {
         const snap = await this.db.collection('submissions').get();
-        let subs = [];
-        snap.forEach(doc => subs.push(doc.data()));
-        if (studentId) {
-          const normStudent = studentId.trim().toUpperCase();
-          subs = subs.filter(s => (s.candidateId || '').toUpperCase() === normStudent);
+        if (!snap.empty) {
+          snap.forEach(doc => {
+            const data = doc.data();
+            if (data && data.id) combinedMap.set(data.id, data);
+          });
         }
-        return subs;
       } catch (e) {
-        console.warn("Firestore getSubmissions fallback:", e.message);
+        console.warn("Firestore getSubmissions note:", e.message);
       }
     }
-    if (window.quizManager) {
-      const allSubs = window.quizManager.getSubmissions();
-      if (studentId) {
-        const normStudent = studentId.trim().toUpperCase();
-        return allSubs.filter(s => (s.candidateId || '').toUpperCase() === normStudent);
+
+    // Layer 3: Load from Express server API if available
+    try {
+      const res = await fetch('/api/submissions');
+      if (res.ok) {
+        const serverSubs = await res.json();
+        if (Array.isArray(serverSubs)) {
+          serverSubs.forEach(s => {
+            if (s && s.id) combinedMap.set(s.id, s);
+          });
+        }
       }
-      return allSubs;
+    } catch (e) {}
+
+    let allSubmissions = Array.from(combinedMap.values());
+
+    // Sort newest first
+    allSubmissions.sort((a, b) => {
+      const tA = new Date(a.timestamp || 0).getTime() || 0;
+      const tB = new Date(b.timestamp || 0).getTime() || 0;
+      return tB - tA;
+    });
+
+    if (studentId) {
+      const normStudent = String(studentId).trim().toUpperCase();
+      allSubmissions = allSubmissions.filter(s => 
+        String(s.candidateId || '').trim().toUpperCase() === normStudent
+      );
     }
-    return [];
+
+    return allSubmissions;
   }
 
   async resetStudentAttempt(studentId) {

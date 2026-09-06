@@ -11,7 +11,7 @@
       "totalMarks": 300,
       "passingMarks": 120,
       "isActive": true,
-      "isResultPublished": false,
+      "isResultPublished": true,
       "questions": [
         {
           "id": "vmath_q1",
@@ -1466,7 +1466,7 @@
       "totalMarks": 600,
       "passingMarks": 240,
       "isActive": true,
-      "isResultPublished": false,
+      "isResultPublished": true,
       "questions": [
         {
           "id": "vgat_q1",

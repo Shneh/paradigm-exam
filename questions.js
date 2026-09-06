@@ -12,7 +12,7 @@ const DEFAULT_QUIZZES = [
     "totalMarks": 300,
     "passingMarks": 120,
     "isActive": true,
-    "isResultPublished": false,
+    "isResultPublished": true,
     "questions": [
       {
         "id": "vmath_q1",
@@ -1467,7 +1467,7 @@ const DEFAULT_QUIZZES = [
     "totalMarks": 600,
     "passingMarks": 240,
     "isActive": true,
-    "isResultPublished": false,
+    "isResultPublished": true,
     "questions": [
       {
         "id": "vgat_q1",
@@ -3328,9 +3328,14 @@ class QuizManager {
       this.quizzes.forEach(q => {
         if (states.hasOwnProperty(q.id)) {
           q.isResultPublished = states[q.id];
+        } else {
+          q.isResultPublished = true;
         }
       });
     } catch (e) {}
+    this.quizzes.forEach(q => {
+      if (q.id && q.id.includes('vijayantha')) q.isResultPublished = true;
+    });
   }
 
   applyHiddenStates() {
